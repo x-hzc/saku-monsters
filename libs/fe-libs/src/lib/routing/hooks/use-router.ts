@@ -34,11 +34,18 @@ export function useRouter() {
     window.open(url, '_blank');
   }
 
+  function goToAppleSakuMonsters() {
+    goToExternalSite(
+      'https://apps.apple.com/us/app/saku-monsters/id6475238373'
+    );
+  }
+
   return {
     routes,
     currentPath: location.pathname,
     goToHome,
     goToInventory,
     goToExternalSite,
+    goToAppleSakuMonsters,
   };
 }

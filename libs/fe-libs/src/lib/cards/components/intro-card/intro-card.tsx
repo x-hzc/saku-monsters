@@ -8,9 +8,7 @@ import IntroBirdmonster from '../../../../../assets/pngs/intro_birdmonster.png';
 
 export function IntroCard() {
   const { t } = useTranslation();
-  const { goToExternalSite } = useRouter();
-  const sakuAppleURL =
-    'https://apps.apple.com/us/app/saku-monsters/id6475238373';
+  const { goToAppleSakuMonsters } = useRouter();
 
   return (
     <div className={styles['container']}>
@@ -27,7 +25,7 @@ export function IntroCard() {
             <p className={styles['paragraph']}>{t('intro-card.paragraph')}</p>
             <Button
               className={styles['btn']}
-              onClick={() => goToExternalSite(sakuAppleURL)}
+              onClick={goToAppleSakuMonsters}
             >
               {t('intro-card.button')}
             </Button>
