@@ -4,11 +4,14 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  background: transparent
+    linear-gradient(179deg, #f8f5f5 0%, #a6ebd6 52%, #ecf5d1 100%) 0 0 no-repeat
+    padding-box;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 25px 15px;
+  padding: 9px 0.94% 9px 0.63%;
 }

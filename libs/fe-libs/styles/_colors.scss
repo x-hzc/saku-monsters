@@ -1,8 +1,12 @@
 :root {
   --white-100: #ffffff;
+  --gray-500: #1e1e1e;
+  --gray-600: #111111;
   --black-700: #000000;
 }
 
 :root {
   --primary-color: var(--white-100);
+  --title-color: var(--gray-500);
+  --nav-link-color: var(--gray-600);
 }

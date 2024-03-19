@@ -6,5 +6,17 @@
   "inventory": {
     "inventory": "Inventaire",
     "goToHome": "Aller à l'accueil"
+  },
+  "navigation": {
+    "home": "Maison",
+    "monsters": "Monstres",
+    "store": "Magasin"
+  },
+  "landing": {
+    "saku": "saku",
+    "monsters": "monstres",
+    "collect": "Collectez les tous",
+    "download": "Téléchargez maintenant, faites éclore des œufs, gagnez des récompenses dès aujourd'hui!",
+    "apple": "Apple Store"
   }
 }

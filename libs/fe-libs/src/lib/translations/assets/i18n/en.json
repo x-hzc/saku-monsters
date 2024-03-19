@@ -6,5 +6,17 @@
   "inventory": {
     "inventory": "Inventory",
     "goToHome": "Go to home"
+  },
+  "navigation": {
+    "home": "Home",
+    "monsters": "Monsters",
+    "store": "Store"
+  },
+  "landing": {
+    "saku": "saku",
+    "monsters": "monsters",
+    "collect": "Collect them all",
+    "download": "Download Now, Hatch Eggs, Earn Rewards Today!",
+    "apple": "Apple Store"
   }
 }
