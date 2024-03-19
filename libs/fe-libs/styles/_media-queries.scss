@@ -1,0 +1,96 @@
+@use 'sass:math';
+
+@mixin mobile-small {
+  $change-at: 325px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin large-handset {
+  $change-at: 480px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin flexible-mobile {
+  $change-at: 540px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin tablet-small {
+  $change-at: 600px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  $change-at: 768px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin tablet-large {
+  $change-at: 960px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin large-tablet {
+  $change-at: 1024px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  $change-at: 1240px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin medium-window {
+  $change-at: 1280px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin large-window {
+  $change-at: 1440px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  $change-at: 1920px;
+  @media (min-width: #{$change-at}) {
+    @content;
+  }
+}
+
+@mixin fluid($property, $lower-bound, $upper-bound, $min-value, $max-value) {
+  $bounds-diff: (math.div($upper-bound, 1px) - math.div($lower-bound, 1px));
+  $values-diff: (math.div($max-value, 1px) - math.div($min-value, 1px));
+
+  @media (max-width: #{$lower-bound}) {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: #{$lower-bound - 1}) and (max-width:  #{$upper-bound - 1}) {
+    #{$property}: calc(
+      #{$min-value} + (100vw - #{$lower-bound}) / #{$bounds-diff} * #{$values-diff}
+    );
+  }
+  @media (min-width: #{$upper-bound}) {
+    #{$property}: $max-value;
+  }
+}
