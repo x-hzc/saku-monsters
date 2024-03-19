@@ -1,8 +1,6 @@
 import styles from './button.module.scss';
-import { forwardRef } from 'react';
+import { forwardRef, MouseEventHandler, ReactNode } from 'react';
 import cn from 'classnames';
-
-import { MouseEventHandler, ReactNode } from 'react';
 
 export interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
