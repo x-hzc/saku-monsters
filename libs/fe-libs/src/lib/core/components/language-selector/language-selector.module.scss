@@ -1,5 +1,11 @@
-.container{
+.container {
   display: flex;
   align-items: center;
   gap: 20px;
+  .button {
+    box-shadow: none;
+  }
+  .selected {
+    border-color: var(--primary-color);
+  }
 }
