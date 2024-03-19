@@ -1,0 +1,52 @@
+@use 'button' as btn;
+@use 'media-queries' as mq;
+
+.btn {
+  @include btn.button-base;
+  gap: 14px;
+  color: var(--btn-color, var(--white-100));
+  padding: var(--btn-padding-y, 6px) var(--btn-padding-x, 17px);
+  font-size: 19px;
+  line-height: 23px;
+  transition: all 240ms ease-in-out;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
+
+  &:hover {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+  }
+
+  @include mq.large-handset {
+    padding: var(--btn-padding-y, 15px) var(--btn-padding-x, 36px);
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.contained {
+  background-color: var(--btn-bg-color, var(--black-700));
+}
+
+.outlined {
+  background-color: transparent;
+  @include btn.bordered-button;
+}
+
+.round {
+  border-radius: 50%;
+  font-size: 17px;
+  line-height: 49px;
+  letter-spacing: 0;
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  --btn-padding-y: 14px;
+  --btn-padding-x: 17px;
+}

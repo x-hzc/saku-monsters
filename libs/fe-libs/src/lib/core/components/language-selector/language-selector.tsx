@@ -1,12 +1,24 @@
 import styles from './language-selector.module.scss';
+import LanguageIcon from '../../../../../assets/icons/language.svg';
+import { Button } from '../../../ui/components/button/button';
+import { useTranslation } from 'react-i18next';
 
-/* eslint-disable-next-line */
-export interface LanguageSelectorProps {}
+export function LanguageSelector() {
+  const { i18n } = useTranslation();
+  const languages = ['en', 'fr'];
 
-export function LanguageSelector(props: LanguageSelectorProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to LanguageSelector!</h1>
+      <LanguageIcon />
+      {languages.map((language, index) => (
+        <Button
+          key={index}
+          onClick={() => i18n.changeLanguage(language)}
+          type={'round'}
+        >
+          {language.toUpperCase()}
+        </Button>
+      ))}
     </div>
   );
 }

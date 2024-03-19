@@ -1,7 +1,5 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
