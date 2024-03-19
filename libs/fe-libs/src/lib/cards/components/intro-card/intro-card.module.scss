@@ -1,0 +1,177 @@
+@use 'media-queries' as mq;
+@use 'button' as btn;
+@use 'card' as c;
+
+.container {
+  height: 485px;
+  width: 916px;
+
+  @include mq.desktop-large {
+    height: 890px;
+    width: 1620px;
+  }
+}
+
+.card-container {
+  align-items: center;
+  display: flex;
+  height: 435px;
+  justify-content: center;
+  position: relative;
+  width: 904px;
+
+  @include mq.desktop-large {
+    height: 762px;
+    width: 1582px;
+  }
+}
+
+.bg {
+  @include c.card;
+  aspect-ratio: 1 / 1;
+  background-image: url('../../../../../assets/pngs/bg_intro_green.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 122px;
+  height: 100%;
+  position: absolute;
+}
+
+.content {
+  align-items: center;
+  color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 52% 48%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 18px 16px 65px;
+
+  @include mq.desktop-large {
+    padding: 16px 18px 16px 126px;
+  }
+
+  .t-container {
+    align-items: center;
+    display: flex;
+
+    @include mq.desktop-large {
+      gap: 25px;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 40px;
+
+      @include mq.desktop-large {
+        font-size: 46px;
+        line-height: 103px;
+      }
+    }
+
+    .ik-container {
+      height: 21px;
+      width: 195px;
+
+      @include mq.desktop-large {
+        height: 31px;
+        width: 205px;
+      }
+    }
+  }
+
+  .paragraph {
+    font-size: 27px;
+    line-height: 39px;
+
+    @include mq.desktop-large {
+      font-size: 47px;
+      line-height: 59px;
+    }
+  }
+
+  .btn {
+    @include btn.discover-button;
+    height: 37px;
+    margin-top: 10px;
+    width: 214px;
+
+    @include mq.desktop-large {
+      font-size: 20px;
+      height: 57px;
+      margin-top: 20px;
+      padding: 10px 25px;
+      width: 254px;
+    }
+  }
+}
+
+img,
+svg {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.right {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 16px 18px;
+  position: relative;
+
+  .bg-egg {
+    aspect-ratio: 1 / 1;
+    background-image: url('../../../../../assets/pngs/bg_intro_egg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95%;
+    position: absolute;
+  }
+
+  .bttm {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 20;
+
+    .ism-container {
+      height: 105px;
+      width: 105px;
+
+      @include mq.desktop-large {
+        height: 194px;
+        margin: 10px 15px;
+        width: 194px;
+      }
+    }
+  }
+
+  .ib-container {
+    bottom: -19%;
+    height: 196px;
+    width: 196px;
+    position: absolute;
+    right: -6%;
+    z-index: 30;
+
+    @include mq.desktop-large {
+      bottom: -23%;
+      height: 383px;
+      right: -9%;
+      width: 384px;
+    }
+  }
+}

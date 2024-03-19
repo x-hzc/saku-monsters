@@ -1,0 +1,42 @@
+@use 'media-queries' as mq;
+@use 'button' as btn;
+
+.btn {
+  @include btn.button-base;
+  color: var(--btn-color, var(--white-100));
+  box-shadow: 0 3px 9px var(--black-700-transparence-8);
+  gap: 14px;
+  line-height: 23px;
+  transition: all 240ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 3px 9px var(--black-700-transparence-15);
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.contained {
+  background-color: var(--black-700);
+}
+
+.outlined {
+  @include btn.bordered-button;
+  background-color: transparent;
+}
+
+.round {
+  background-color: var(--container-bg-color);
+  border-radius: 24px;
+  box-shadow: 0px 3px 13px #1d0a4f14;
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 20px;
+}
