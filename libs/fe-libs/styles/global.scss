@@ -1,0 +1,8 @@
+@import 'reset';
+@import 'colors';
+@import 'typographies';
+
+body,
+button {
+  font-family: var(--primary-font-family);
+}

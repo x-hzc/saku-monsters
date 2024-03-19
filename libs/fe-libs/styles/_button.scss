@@ -1,0 +1,30 @@
+:root {
+  --btn-base-height: 57px;
+}
+
+@mixin button-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--btn-height, var(--btn-base-height));
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+@mixin bordered-button {
+  @include button-base;
+  border: 1px solid var(--primary-color);
+}
+
+@mixin rounded-button($size) {
+  width: $size;
+  height: $size;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

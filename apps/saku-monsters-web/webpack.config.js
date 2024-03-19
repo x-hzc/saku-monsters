@@ -1,31 +1,27 @@
-const { NxWebpackPlugin } = require('@nx/webpack');
-const { NxReactWebpackPlugin } = require('@nx/react');
+const { composePlugins, withNx } = require('@nx/webpack');
+const { withReact } = require('@nx/react');
 const { join } = require('path');
 
-module.exports = {
-  output: {
-    path: join(__dirname, '../../dist/apps/saku-monsters-web'),
-  },
-  devServer: {
-    port: 4200,
-    historyApiFallback: true,
-  },
-  plugins: [
-    new NxWebpackPlugin({
-      tsConfig: './tsconfig.app.json',
-      compiler: 'babel',
-      main: './src/main.tsx',
-      index: './src/index.html',
-      baseHref: '/',
-      assets: ['./src/favicon.ico', './src/assets'],
-      styles: ['./src/styles.scss'],
-      outputHashing: process.env['NODE_ENV'] === 'production' ? 'all' : 'none',
-      optimization: process.env['NODE_ENV'] === 'production',
-    }),
-    new NxReactWebpackPlugin({
-      // Uncomment this line if you don't want to use SVGR
-      // See: https://react-svgr.com/
-      // svgr: false
-    }),
-  ],
-};
+// Nx plugins for webpack.
+module.exports = composePlugins(
+  withNx({
+    tsConfig: 'apps/saku-monsters-web/tsconfig.app.json',
+    compiler: 'babel',
+    main: 'apps/saku-monsters-web/src/main.tsx',
+    index: 'apps/saku-monsters-web/src/index.html',
+    baseHref: 'apps/saku-monsters/',
+    outputHashing: process.env['NODE_ENV'] === 'production' ? 'all' : 'none',
+    optimization: process.env['NODE_ENV'] === 'production',
+  }),
+  withReact(),
+  (config) => {
+    config.output = {
+      path: join(__dirname, '../../dist/apps/main-app'),
+    };
+    config.devServer = {
+      port: 4200,
+      historyApiFallback: true,
+    };
+    return config;
+  }
+);
