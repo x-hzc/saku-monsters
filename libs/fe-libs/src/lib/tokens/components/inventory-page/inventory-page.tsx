@@ -7,9 +7,9 @@ export function InventoryPage() {
 
   return (
     <div>
-      <h1>{t('inventory')}</h1>
+      <h1>{t('inventory.inventory')}</h1>
       <div onClick={goToHome} style={{ cursor: 'pointer' }}>
-        {t('goToHome')}
+        {t('inventory.goToHome')}
       </div>
     </div>
   );
