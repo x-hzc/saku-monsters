@@ -1,0 +1,10 @@
+{
+  "home": {
+    "welcome": "Welcome to Saku Monsters - Home",
+    "goToInventory": "Go to inventory"
+  },
+  "inventory": {
+    "inventory": "Inventory",
+    "goToHome": "Go to home"
+  }
+}

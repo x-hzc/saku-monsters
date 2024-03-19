@@ -1,0 +1,10 @@
+{
+  "home": {
+    "welcome": "Bienvenue chez Saku Monsters - Accueil",
+    "goToInventory": "Aller à l'inventaire"
+  },
+  "inventory": {
+    "inventory": "Inventaire",
+    "goToHome": "Aller à l'accueil"
+  }
+}
