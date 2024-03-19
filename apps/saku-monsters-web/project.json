@@ -12,7 +12,7 @@
         "compiler": "babel",
         "outputPath": "dist/apps/saku-monsters-web",
         "index": "apps/saku-monsters-web/src/index.html",
-        "baseHref": "apps/saku-monsters/",
+        "baseHref": "/",
         "main": "apps/saku-monsters-web/src/main.tsx",
         "tsConfig": "apps/saku-monsters-web/tsconfig.app.json",
         "styles": [
