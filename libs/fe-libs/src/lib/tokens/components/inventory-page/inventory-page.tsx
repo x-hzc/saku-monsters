@@ -1,13 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { useRouter } from '../../../routing/hooks/use-router';
 
 export function InventoryPage() {
+  const { t } = useTranslation();
   const { goToHome } = useRouter();
 
   return (
     <div>
-      <div>Inventory</div>
+      <h1>{t('inventory')}</h1>
       <div onClick={goToHome} style={{ cursor: 'pointer' }}>
-        Go to home
+        {t('goToHome')}
       </div>
     </div>
   );
