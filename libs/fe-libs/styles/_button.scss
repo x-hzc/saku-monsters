@@ -1,16 +1,13 @@
-:root {
-  --btn-base-height: 57px;
-}
+@use 'media-queries' as mq;
 
 @mixin button-base {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: var(--btn-height, var(--btn-base-height));
-  border-radius: 12px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
+  display: flex;
   font-weight: 500;
+  justify-content: center;
 }
 
 @mixin bordered-button {
@@ -19,12 +16,31 @@
 }
 
 @mixin rounded-button($size) {
-  width: $size;
-  height: $size;
-  border: 1px solid var(--primary-color);
-  border-radius: 50%;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
+  display: flex;
+  height: $size;
+  justify-content: center;
+  width: $size;
+}
+
+@mixin discover-button {
+  @include button-base;
+  background: var(--yellow-300); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    var(--yellow-300),
+    var(--orange-300)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    var(--yellow-300),
+    var(--orange-300)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 3px 3px 17px var(--black-700-transparence-16);
+  color: var(--black-700);
+  font-family: var(--secondary-font-family);
+  line-height: 31px;
 }

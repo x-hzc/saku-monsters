@@ -1,9 +1,10 @@
 import styles from './home-page.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from '../../../routing/hooks/use-router';
+import { IntroCard } from '../../../cards/components/intro-card/intro-card';
 
 export function HomePage() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { goToInventory } = useRouter();
   return (
     <div className={styles['container']}>
@@ -11,6 +12,7 @@ export function HomePage() {
       <div onClick={goToInventory} style={{ cursor: 'pointer' }}>
         {t('home.goToInventory')}
       </div>
+      <IntroCard />
     </div>
   );
 }

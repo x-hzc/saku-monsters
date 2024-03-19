@@ -1,23 +1,26 @@
 import styles from './button.module.scss';
-import { forwardRef } from 'react';
-import { BaseButtonProps } from '../../types/base-button-props';
+import { forwardRef, MouseEventHandler, ReactNode } from 'react';
 import cn from 'classnames';
 
-export interface ButtonProps extends BaseButtonProps {
+export interface ButtonProps {
+  onClick: MouseEventHandler<HTMLButtonElement>;
+  children: ReactNode;
   type?: 'contained' | 'outlined' | 'round';
+  disabled?: boolean;
   fullWidth?: boolean;
   contrasted?: boolean;
+  className?: string;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(props, ref) {
     const {
+      onClick,
+      children,
       type = 'contained',
+      disabled = false,
       fullWidth = false,
       contrasted = false,
-      onClick,
-      disabled = false,
-      children,
       className,
     } = props;
 

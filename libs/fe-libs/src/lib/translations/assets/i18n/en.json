@@ -6,5 +6,10 @@
   "inventory": {
     "inventory": "Inventory",
     "goToHome": "Go to home"
+  },
+  "intro-card": {
+    "title": "Intro",
+    "paragraph": "Saku Monsters transforms the way we collect in Web3, drawing inspiration from classic '90s RPGs and toys to create a groundbreaking experience.",
+    "button": "DISCOVER"
   }
 }
