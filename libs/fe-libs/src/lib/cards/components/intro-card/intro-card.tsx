@@ -1,5 +1,6 @@
 import styles from './intro-card.module.scss';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
 import IntroKanjis from '../../../../../assets/svgs/intro_kanjis.svg';
 import IntroSakuMonster from '../../../../../assets/pngs/intro_saku_monster.png';
@@ -7,6 +8,9 @@ import IntroBirdmonster from '../../../../../assets/pngs/intro_birdmonster.png';
 
 export function IntroCard() {
   const { t } = useTranslation();
+  const { goToExternalSite } = useRouter();
+  const sakuAppleURL =
+    'https://apps.apple.com/us/app/saku-monsters/id6475238373';
 
   return (
     <div className={styles['container']}>
@@ -21,7 +25,10 @@ export function IntroCard() {
               </div>
             </div>
             <p className={styles['paragraph']}>{t('intro-card.paragraph')}</p>
-            <Button  className={styles['btn']} onClick={() => console.log('intro click')}>
+            <Button
+              className={styles['btn']}
+              onClick={() => goToExternalSite(sakuAppleURL)}
+            >
               {t('intro-card.button')}
             </Button>
           </div>
