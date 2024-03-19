@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 export function LanguageSelector() {
   const { i18n } = useTranslation();
-  const languages = ['en', 'fr'];
+  const languages = ['en-US', 'fr-FR'];
 
   return (
     <div className={styles['container']}>
@@ -16,7 +16,7 @@ export function LanguageSelector() {
           onClick={() => i18n.changeLanguage(language)}
           type={'round'}
         >
-          {language.toUpperCase()}
+          {language.split('-')[0].toUpperCase()}
         </Button>
       ))}
     </div>
