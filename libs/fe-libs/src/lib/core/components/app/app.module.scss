@@ -1,0 +1,14 @@
+.app-container {
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 25px 15px;
+}

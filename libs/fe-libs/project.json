@@ -1,0 +1,9 @@
+{
+  "name": "fe-libs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/fe-libs/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project fe-libs --web",
+  "targets": {}
+}
