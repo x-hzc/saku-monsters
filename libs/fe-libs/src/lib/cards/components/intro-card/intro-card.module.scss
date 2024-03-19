@@ -101,7 +101,6 @@
   .btn {
     @include btn.discover-button;
     height: 37px;
-    margin-top: 10px;
     width: 214px;
 
     @include mq.desktop-large {
