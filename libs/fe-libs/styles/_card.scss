@@ -1,6 +1,6 @@
 @mixin card {
   border: 1px solid var(--container-border-color);
-  border-radius: 0px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
