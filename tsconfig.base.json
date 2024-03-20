@@ -16,7 +16,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@saku-monsters/fe-libs": ["libs/fe-libs/src/index.ts"]
+      "@saku-monsters/fe-libs": ["libs/fe-libs/src/index.ts"],
+      "@saku-monsters/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
