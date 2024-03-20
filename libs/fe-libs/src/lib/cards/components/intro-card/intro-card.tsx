@@ -26,6 +26,7 @@ export function IntroCard() {
             <Button
               className={styles['btn']}
               onClick={goToAppleSakuMonsters}
+              type={'discover'}
             >
               {t('intro-card.button')}
             </Button>

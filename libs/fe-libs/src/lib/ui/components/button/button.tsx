@@ -5,7 +5,7 @@ import cn from 'classnames';
 export interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
-  type?: 'contained' | 'outlined' | 'round';
+  type?: 'contained' | 'outlined' | 'round' | 'discover';
   disabled?: boolean;
   fullWidth?: boolean;
   contrasted?: boolean;

@@ -13,7 +13,7 @@ import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 
 export function Landing() {
-  const { goToInventory, goToHome } = useRouter();
+  const { goToInventory, goToHome, goToAppleSakuMonsters } = useRouter();
   const { t } = useTranslation();
   return (
     <div className={styles['container']}>
@@ -54,13 +54,13 @@ export function Landing() {
         <div className={styles['bottom-content']}>
           <div
             className={styles['saku-card']}
-            onClick={() => console.log('Redirect to ios store')}
+            onClick={goToAppleSakuMonsters}
           />
           <div className={styles['content']}>
             <div className={styles['title']}>{t('landing.collect')}</div>
             <div>{t('landing.download')}</div>
             <Button
-              onClick={() => console.log('Redirect to ios store')}
+              onClick={goToAppleSakuMonsters}
               type={'contained'}
               className={styles['btn']}
             >

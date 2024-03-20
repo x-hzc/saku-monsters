@@ -18,5 +18,10 @@
     "collect": "Collectez les tous",
     "download": "Téléchargez maintenant, faites éclore des œufs, gagnez des récompenses dès aujourd'hui!",
     "apple": "Apple Store"
+  },
+  "intro-card": {
+    "title": "Intro",
+    "paragraph": "Saku Monsters transforme la façon dont nous collectons dans Web3, en s'inspirant RPGs et des jouets classiques '90s pour créer une expérience révolutionnaire.",
+    "button": "DÉCOUVRIR"
   }
 }

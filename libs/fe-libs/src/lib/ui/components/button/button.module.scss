@@ -8,7 +8,7 @@
   gap: 14px;
   line-height: 23px;
   transition: all 240ms ease-in-out;
-
+  padding: var(--btn-padding-y, 6px) var(--btn-padding-x, 17px);
   &:hover {
     box-shadow: 0 3px 9px var(--black-700-transparence-15);
   }
@@ -24,7 +24,7 @@
 }
 
 .contained {
-  background-color: var(--black-700);
+  background-color: var(--btn-bg-color, var(--black-700));
 }
 
 .outlined {
@@ -39,4 +39,7 @@
   color: var(--primary-color);
   font-size: 16px;
   line-height: 20px;
+}
+.discover {
+  @include btn.discover-button;
 }
