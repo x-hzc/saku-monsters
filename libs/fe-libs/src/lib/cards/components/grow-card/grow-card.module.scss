@@ -1,0 +1,164 @@
+@use 'media-queries' as mq;
+@use 'button' as btn;
+@use 'card' as c;
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  width: 910px;
+
+  @include mq.desktop-large {
+    height: 979px;
+    width: 1590px;
+  }
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.bg {
+  @include c.card;
+  @include c.bg-card;
+  background-image: url('../../../../../assets/pngs/bg_grow_green.png');
+  border-radius: 128px;
+  position: absolute;
+
+  @include mq.desktop-large {
+    border-radius: 224px;
+  }
+}
+
+.content {
+  align-items: center;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.gh-container {
+  height: 90%;
+  padding: 2.6% 3%;
+  width: 100%;
+}
+
+.down {
+  align-items: center;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1% 11%;
+
+  .opts-container,
+  .phases {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  .opts-container {
+    width: 100%;
+  }
+
+  .phases {
+    bottom: 3%;
+    position: absolute;
+    width: 70%;
+  }
+
+  .opt {
+    position: relative;
+  }
+
+  .disabled-opt,
+  .active-opt {
+    font-family: var(--secondary-font-family);
+    font-size: 30px;
+    line-height: 22px;
+
+    @include mq.desktop-large {
+      font-size: 62px;
+      line-height: 69px;
+    }
+  }
+
+  .disabled-opt,
+  .disabled-sup {
+    color: var(--lime-green-300);
+  }
+
+  .disabled-sup,
+  .active-sup {
+    bottom: 0;
+    font-family: var(--primary-font-family);
+    font-size: 10px;
+    left: 103%;
+    line-height: 40px;
+    position: absolute;
+    vertical-align: super;
+
+    @include mq.desktop-large {
+      font-size: 14px;
+      left: 101%;
+      line-height: 103px;
+    }
+  }
+
+  .paragraph {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 3%;
+    text-align: center;
+
+    @include mq.desktop-large {
+      font-size: 22px;
+      line-height: 31px;
+    }
+  }
+
+  .phase {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    width: 100%;
+
+    span {
+      font-family: var(--secondary-font-family);
+      font-size: 12px;
+      line-height: 30px;
+
+      @include mq.desktop-large {
+        font-size: 17px;
+        line-height: 69px;
+      }
+    }
+  }
+
+  .egg-container {
+    width: 14%;
+  }
+
+  .egg-span {
+    margin-top: 2.5%;
+  }
+
+  .img-container {
+    width: 70%;
+  }
+}
