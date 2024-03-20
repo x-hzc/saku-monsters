@@ -5,10 +5,17 @@
 .container {
   height: 485px;
   width: 916px;
-
+  margin: 0 auto;
   @include mq.desktop-large {
     height: 890px;
     width: 1620px;
+  }
+
+  img,
+  svg {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -28,6 +35,7 @@
 
 .bg {
   @include c.card;
+  border: none;
   aspect-ratio: 1 / 1;
   background-image: url('../../../../../assets/pngs/bg_intro_green.png');
   background-position: center;
@@ -99,7 +107,6 @@
   }
 
   .btn {
-    @include btn.discover-button;
     height: 37px;
     width: 214px;
 
@@ -111,13 +118,6 @@
       width: 254px;
     }
   }
-}
-
-img,
-svg {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
 }
 
 .right {

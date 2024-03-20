@@ -7,6 +7,18 @@
     "inventory": "Inventory",
     "goToHome": "Go to home"
   },
+  "navigation": {
+    "home": "Home",
+    "monsters": "Monsters",
+    "store": "Store"
+  },
+  "landing": {
+    "saku": "saku",
+    "monsters": "monsters",
+    "collect": "Collect them all",
+    "download": "Download Now, Hatch Eggs, Earn Rewards Today!",
+    "apple": "Apple Store"
+  },
   "intro-card": {
     "title": "Intro",
     "paragraph": "Saku Monsters transforms the way we collect in Web3, drawing inspiration from classic '90s RPGs and toys to create a groundbreaking experience.",

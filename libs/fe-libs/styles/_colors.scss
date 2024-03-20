@@ -1,13 +1,15 @@
 :root {
   --white-100: #ffffff;
-  --yellow-300: #FBF383;
-  --orange-300: #FDBC67;
   --black-700: #000000;
-  --black-700-transparence-8: rgba(0, 0, 0, 0.08)
-  --black-700-transparence-15: rgba(0, 0, 0, 0.15)
-  --black-700-transparence-16: rgba(0, 0, 0, 0.16); /* #00000029 */
+  --orange-300: #fdbc67;
+  --yellow-300: #fbf383;
+  --black-700-transparence-8: rgba(0, 0, 0, 0.08);
+  --black-700-transparence-15: rgba(0, 0, 0, 0.15);
+  --black-700-transparence-16: rgba(0, 0, 0, 0.16);
 }
 
 :root {
   --primary-color: var(--white-100);
+  --title-color: var(--gray-500);
+  --nav-link-color: var(--gray-600);
 }
