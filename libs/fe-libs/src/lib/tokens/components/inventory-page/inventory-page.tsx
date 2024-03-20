@@ -16,10 +16,6 @@ export function InventoryPage() {
 
   return (
     <div className={styles['container']}>
-      <h1>{t('inventory.inventory')}</h1>
-      <div onClick={goToHome} style={{ cursor: 'pointer' }}>
-        {t('inventory.goToHome')}
-      </div>
       <div className={styles['grid-area']}>
         {loadingTokens && <div>Loader</div>}
         {!loadingTokens &&
