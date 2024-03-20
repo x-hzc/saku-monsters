@@ -1,12 +1,55 @@
 import styles from './grow-card.module.scss';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import GrowHappiness from '../../../../../assets/pngs/grow_happiness.png';
 import Egg from '../../../../../assets/pngs/egg.png';
 import AdultChu from '../../../../../assets/Adult Chu.gif';
 import Chu from '../../../../../assets/Chu_1.gif';
+import cn from 'classnames';
+
+interface Option {
+  title: string;
+  sup: string;
+}
 
 export function GrowCard() {
   const { t } = useTranslation();
+  const options = [
+    { title: t('grow-card.shop'), sup: '01' },
+    { title: t('grow-card.grow'), sup: '02' },
+    { title: t('grow-card.collect'), sup: '03' },
+  ];
+  const paragraphPerOption = {
+    [t('grow-card.shop')]: t('grow-card.shop-paragraph'),
+    [t('grow-card.grow')]: t('grow-card.grow-paragraph'),
+    [t('grow-card.collect')]: t('grow-card.collect-paragraph'),
+  };
+  const [currentOption, setCurrentOption] = useState(options[1].title);
+
+  const handleSelect = (selectedOption: string) => {
+    setCurrentOption(selectedOption);
+  };
+
+  const optionComponent = (option: Option) => {
+    return (
+      <div
+        key={`${option.title}-${option.sup}`}
+        onClick={() => handleSelect(option.title)}
+        className={cn(styles['opt'], {
+          [styles['is-selected']]: option.title === currentOption,
+        })}
+      >
+        <span className={styles['tittle']}>{option.title}</span>
+        <sup className={styles['sup']}>{option.sup}</sup>
+      </div>
+    );
+  };
+
+  const paragraphComponent = () => {
+    return (
+      <p className={styles['paragraph']}>{paragraphPerOption[currentOption]}</p>
+    );
+  };
 
   return (
     <div className={styles['container']}>
@@ -17,26 +60,9 @@ export function GrowCard() {
         </div>
         <div className={styles['down']}>
           <div className={styles['opts-container']}>
-            <div className={styles['opt']}>
-              <span className={styles['disabled-opt']}>
-                {t('grow-card.shop')}
-              </span>
-              <sup className={styles['disabled-sup']}>01</sup>
-            </div>
-            <div className={styles['opt']}>
-              <span className={styles['active-opt']}>
-                {t('grow-card.grow')}
-              </span>
-              <sup className={styles['active-sup']}>02</sup>
-            </div>
-            <div className={styles['opt']}>
-              <span className={styles['disabled-opt']}>
-                {t('grow-card.collect')}
-              </span>
-              <sup className={styles['disabled-sup']}>03</sup>
-            </div>
+            {options && options.map((option) => optionComponent(option))}
           </div>
-          <p className={styles['paragraph']}>{t('grow-card.paragraph')}</p>
+          {paragraphPerOption && currentOption && paragraphComponent()}
           <div className={styles['phases']}>
             <div className={styles['phase']}>
               <div className={styles['egg-container']}>
