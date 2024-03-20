@@ -23,5 +23,14 @@
     "title": "Intro",
     "paragraph": "Saku Monsters transforms the way we collect in Web3, drawing inspiration from classic '90s RPGs and toys to create a groundbreaking experience.",
     "button": "DISCOVER"
+  },
+  "grow-card": {
+    "shop": "SHOP",
+    "grow": "GROW",
+    "collect": "COLLECT",
+    "paragraph": "Collect Saku Monsters by hatching them from Saku Monster eggs! There are 150 unique Gen 1 monsters to discover, each with their own characteristics and abilities. Visit the Sakulog to discover each monster and it's phases.",
+    "egg": "EGG PHASE",
+    "baby": "BABY PHASE",
+    "adult": "ADULT PHASE"
   }
 }
