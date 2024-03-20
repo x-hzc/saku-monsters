@@ -6,18 +6,16 @@
   height: 485px;
   width: 916px;
   margin: 0 auto;
-
+  img,
+  svg {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
   @include mq.desktop-large {
     height: 890px;
     width: 1620px;
   }
-}
-
-img,
-svg {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
 }
 
 .card-container {

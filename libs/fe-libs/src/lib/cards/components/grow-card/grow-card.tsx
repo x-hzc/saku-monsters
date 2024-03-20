@@ -2,8 +2,8 @@ import styles from './grow-card.module.scss';
 import { useTranslation } from 'react-i18next';
 import GrowHappiness from '../../../../../assets/pngs/grow_happiness.png';
 import Egg from '../../../../../assets/pngs/egg.png';
-import AdultChu from '../../../../../assets/Adult Chu.gif';
-import Chu from '../../../../../assets/Chu_1.gif';
+import AdultChu from '../../../../../assets/adult_chu.gif';
+import BabyChu from '../../../../../assets/baby_chu.gif';
 
 export function GrowCard() {
   const { t } = useTranslation();
@@ -46,7 +46,7 @@ export function GrowCard() {
             </div>
             <div className={styles['phase']}>
               <div className={styles['img-container']}>
-                <img src={Chu} alt="chu" />
+                <img src={BabyChu} alt="chu" />
               </div>
               <span>{t('grow-card.baby')}</span>
             </div>
