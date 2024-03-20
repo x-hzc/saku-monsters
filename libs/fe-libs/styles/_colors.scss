@@ -1,5 +1,6 @@
 :root {
   --white-100: #ffffff;
+  --grey-200: #f8f5f5;
   --black-700: #000000;
   --orange-300: #fdbc67;
   --yellow-300: #fbf383;
@@ -13,4 +14,5 @@
   --primary-color: var(--white-100);
   --title-color: var(--gray-500);
   --nav-link-color: var(--gray-600);
+  --inventory-bg-color: var(--grey-200);
 }
