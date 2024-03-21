@@ -27,7 +27,9 @@
     "shop": "SHOP",
     "grow": "GROW",
     "collect": "COLLECT",
-    "paragraph": "Collect Saku Monsters by hatching them from Saku Monster eggs! There are 150 unique Gen 1 monsters to discover, each with their own characteristics and abilities. Visit the Sakulog to discover each monster and it's phases.",
+    "shop-paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum finibus metus scelerisque commodo. Praesent id mauris massa.",
+    "grow-paragraph": "Collect Saku Monsters by hatching them from Saku Monster eggs! There are 150 unique Gen 1 monsters to discover, each with their own characteristics and abilities. Visit the Sakulog to discover each monster and it's phases.",
+    "collect-paragraph": "Sed tristique pellentesque massa sit amet consequat. In tempus, purus quis rhoncus mollis, nunc erat finibus tortor, non viverra purus orci vitae nulla.",
     "egg": "EGG PHASE",
     "baby": "BABY PHASE",
     "adult": "ADULT PHASE"

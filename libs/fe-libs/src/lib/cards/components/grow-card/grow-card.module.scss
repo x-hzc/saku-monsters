@@ -18,12 +18,6 @@
   }
 }
 
-img {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
 .bg {
   @include c.card;
   @include c.bg-card;
@@ -46,6 +40,12 @@ img {
   position: relative;
   width: 100%;
   z-index: 10;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 .gh-container {
@@ -74,18 +74,21 @@ img {
     width: 100%;
   }
 
-  .phases {
-    bottom: 3%;
-    position: absolute;
-    width: 70%;
-  }
-
   .opt {
+    cursor: pointer;
     position: relative;
+    color: var(--lime-green-300);
+
+    &:hover {
+      color: var(--primary-color);
+    }
   }
 
-  .disabled-opt,
-  .active-opt {
+  .is-selected {
+    color: var(--primary-color);
+  }
+
+  .tittle {
     font-family: var(--secondary-font-family);
     font-size: 30px;
     line-height: 22px;
@@ -96,13 +99,7 @@ img {
     }
   }
 
-  .disabled-opt,
-  .disabled-sup {
-    color: var(--lime-green-300);
-  }
-
-  .disabled-sup,
-  .active-sup {
+  .sup {
     bottom: 0;
     font-family: var(--primary-font-family);
     font-size: 10px;
@@ -128,6 +125,12 @@ img {
       font-size: 22px;
       line-height: 31px;
     }
+  }
+
+  .phases {
+    bottom: 3%;
+    position: absolute;
+    width: 70%;
   }
 
   .phase {
