@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 0 15%;
-    height: 482px;
+    height: var(--token-height, 482px);
     padding: 40px 0 50px;
   }
   .adulthood-container,
@@ -48,7 +48,7 @@
     cursor: pointer;
   }
   .name-container {
-    display: flex;
+    display: var(--token-name-display, flex);
     align-items: center;
     padding: 4px 6px 5px;
     border-radius: 27px;
@@ -59,13 +59,13 @@
     }
   }
   .adulthood-img-container {
-    $size: 67px;
+    $size: var(--adulthood-size, 67px);
     width: $size;
     height: $size;
     background-color: var(--primary-color);
     position: absolute;
-    top: 5%;
-    right: -15%;
+    top: var(--adulthood-container-top, 5%);
+    right: var(--adulthood-container-right, -15%);
     .adulthood-img {
       height: 53px;
       width: 49px;
@@ -80,6 +80,6 @@
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1/1;
-    margin-bottom: 40px;
+    margin-bottom: var(--token-img-mg-bt, 40px);
   }
 }

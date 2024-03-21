@@ -41,11 +41,16 @@ export function useTokensFacade() {
     );
   }
 
+  function findTokenById(id: string) {
+    return tokens.find((token) => token.id === id);
+  }
+
   return {
     ...tokensStorage,
     ...tokenFilterStorage,
     filteredTokens,
     syncTokens,
     toggleAdulthood,
+    findTokenById,
   };
 }

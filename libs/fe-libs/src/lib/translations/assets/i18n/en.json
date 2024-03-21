@@ -66,5 +66,10 @@
     "epic": "Epic",
     "legendary": "Legendary",
     "store": "Store"
+  },
+  "phase-two": {
+    "phase": "Phase 2",
+    "title": "Visit the SakuLog",
+    "discover": "Explore and learn about the saku monster universe!"
   }
 }
