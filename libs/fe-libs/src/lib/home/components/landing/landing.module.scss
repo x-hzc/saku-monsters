@@ -1,4 +1,5 @@
 .container {
+  max-height: 1060px;
   height: calc(100vh - 18px);
   position: relative;
 }
@@ -108,6 +109,8 @@
       --btn-bg-color: var(--primary-color);
       --btn-color: var(--black-900);
       border-radius: 30px;
+      justify-content: flex-start;
+      max-width: 190px;
     }
     .title {
       font-size: 28px;
