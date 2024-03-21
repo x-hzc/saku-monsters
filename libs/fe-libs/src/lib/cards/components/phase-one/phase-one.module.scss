@@ -6,13 +6,14 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 71px;
+  gap: 34px;
   height: 560px;
   margin: 0 auto;
   position: relative;
   width: 910px;
 
   @include mq.desktop-large {
+    gap: 71px;
     height: 990px;
     width: 1590px;
   }
@@ -32,36 +33,53 @@
 
 .comp {
   color: var(--black-400);
-  font-size: 62px;
-  line-height: 103px;
+  font-size: 37px;
+  line-height: 78px;
+
+  @include mq.desktop-large {
+    font-size: 62px;
+    line-height: 103px;
+  }
 }
 
 .p-container {
   position: relative;
 
-  .phs {
+  .phase {
     align-items: center;
     background-color: var(--lime-green-500);
-    border-radius: 20px;
+    border-radius: 10px;
     color: var(--primary-color);
     display: flex;
     font-family: var(--secondary-font-family);
-    font-size: 33px;
+    font-size: 20px;
     justify-content: center;
     left: -20%;
-    line-height: 50px;
+    line-height: 34px;
     padding: 0 5.5%;
     position: absolute;
-    top: -80%;
+    top: -60%;
     text-transform: uppercase;
     transform: rotate(358deg);
     width: fit-content;
+
+    @include mq.desktop-large {
+      border-radius: 20px;
+      font-size: 33px;
+      line-height: 50px;
+      top: -80%;
+    }
   }
 
   .p {
     color: var(--black-500);
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 13px;
+    line-height: 18px;
+
+    @include mq.desktop-large {
+      font-size: 22px;
+      line-height: 27px;
+    }
   }
 }
 
@@ -87,16 +105,24 @@
   .bg-blue-c,
   .bg-green-c,
   .bg-orange-c {
-    border-radius: 100px;
-    width: 494px;
+    border-radius: 55px;
+    width: 284px;
+
+    @include mq.desktop-large {
+      border-radius: 100px;
+      width: 494px;
+    }
   }
 
   .bg-blue-c,
   .bg-orange-c {
+    height: 414px;
     justify-content: space-around;
-
-    height: 717px;
     padding: 10%;
+
+    @include mq.desktop-large {
+      height: 717px;
+    }
   }
 
   .bg-green-c,
@@ -110,9 +136,13 @@
 
   .bg-green-c {
     background-image: url('../../../../../assets/pngs/bg_phase_one_green.png');
-    height: 811px;
+    height: 469px;
     justify-content: space-between;
     padding: 10% 5%;
+
+    @include mq.desktop-large {
+      height: 811px;
+    }
   }
 
   .bg-orange-c {
@@ -124,39 +154,58 @@
     align-self: flex-start;
     color: var(--primary-color);
     display: flex;
-    gap: 15px;
+    gap: 13%;
     opacity: 0.93;
 
     .rating {
-      font-size: 50px;
-      line-height: 31px;
+      font-size: 30px;
+      line-height: 21px;
+
+      @include mq.desktop-large {
+        font-size: 50px;
+        line-height: 31px;
+      }
     }
 
     .ar {
-      font-size: 16px;
-      line-height: 19px;
+      font-size: 9px;
+      line-height: 12px;
       text-transform: capitalize;
       width: min-content;
+
+      @include mq.desktop-large {
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
   }
 
   .mid-section {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
+
+    @include mq.desktop-large {
+      gap: 15px;
+    }
   }
 
   .blue-title,
-  .orange-title {
+  .green-orange-title {
     color: var(--primary-color);
     font-family: var(--secondary-font-family);
-    font-size: 62px;
-    line-height: 69px;
+    font-size: 32px;
+    line-height: 39px;
     position: relative;
     text-transform: uppercase;
+
+    @include mq.desktop-large {
+      font-size: 62px;
+      line-height: 69px;
+    }
   }
 
-  .orange-title {
+  .green-orange-title {
     text-align: center;
   }
 
@@ -170,9 +219,13 @@
   }
 
   .arrow-container {
-    @include btn.rounded-button(65px);
+    @include btn.rounded-button(35px);
     cursor: default;
     margin-right: 5%;
+
+    @include mq.desktop-large {
+      @include btn.rounded-button(65px);
+    }
 
     svg {
       color: var(--lime-green-500);
@@ -189,36 +242,62 @@
   .phone-container {
     left: 0;
     top: -5%;
+
+    @include mq.desktop-large {
+      left: 0;
+      top: -5%;
+    }
   }
 
   .drop-container {
     bottom: 0;
-    left: 75%;
-    width: 50px;
+    left: 67%;
+    width: 30px;
+
+    @include mq.desktop-large {
+      left: 75%;
+      width: 50px;
+    }
   }
 
   .egg-container {
     bottom: -8%;
-    left: 73%;
-    width: 46px;
+    left: 71%;
+    width: 26px;
+
+    @include mq.desktop-large {
+      left: 73%;
+      width: 46px;
+    }
   }
 
   .coin-container {
     bottom: -5%;
-    left: 76%;
-    width: 60px;
+    left: 73%;
+    width: 33px;
+
+    @include mq.desktop-large {
+      left: 76%;
+      width: 60px;
+    }
   }
 
   .p-blue,
   .p-green,
   .p-orange {
     color: var(--primary-color);
-    font-size: 22px;
-    line-height: 31px;
+    font-size: 12px;
+    line-height: 17px;
+
+    @include mq.desktop-large {
+      font-size: 22px;
+      line-height: 31px;
+    }
   }
 
   .p-blue {
     text-align: left;
+    text-transform: capitalize;
   }
 
   .p-green {
@@ -236,16 +315,26 @@
     opacity: 0.93;
 
     .uk {
-      font-size: 33px;
-      line-height: 31px;
+      font-size: 20px;
+      line-height: 17px;
       text-transform: uppercase;
+
+      @include mq.desktop-large {
+        font-size: 33px;
+        line-height: 31px;
+      }
     }
 
     .users {
-      font-size: 16px;
-      line-height: 31px;
+      font-size: 9px;
+      line-height: 11px;
       text-transform: capitalize;
       width: min-content;
+
+      @include mq.desktop-large {
+        font-size: 16px;
+        line-height: 31px;
+      }
     }
   }
 
@@ -253,53 +342,10 @@
     display: flex;
     gap: 20px;
     justify-content: center;
-
-    .btn {
-      font-size: 14px;
-      line-height: 19px;
-      padding: 15px;
-      width: 100%;
-    }
   }
 
-  .bg-sub {
-    background-image: url('../../../../../assets/svgs/bg_phase_one_subtraction_shape.svg');
-    height: 114px;
-    position: relative;
-    width: 220px;
-  }
-
-  .g-container {
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    opacity: 0.93;
-    padding: 15%;
-    width: 100%;
-    z-index: 10;
-
-    .q {
-      font-size: 50px;
-      line-height: 24px;
-    }
-
-    .gen {
-      font-size: 18px;
-      line-height: 21px;
-      text-transform: capitalize;
-    }
-  }
-
+  .btn,
   .phantom-container {
-    @include btn.rounded-button(53px);
-    cursor: default;
-    padding: 5%;
-    position: absolute;
-    right: -15%;
-    top: -15%;
-    z-index: 10;
-
     svg {
       height: 100%;
       object-fit: cover;
@@ -307,10 +353,94 @@
     }
   }
 
-  .nessi-container {
-    bottom: -35%;
-    left: 20%;
+  .btn {
+    color: var(--primary-color);
+    display: flex;
+    font-size: 10px;
+    line-height: 5px;
+    padding: 15px;
+    text-transform: capitalize;
+    width: 100%;
+
+    @include mq.desktop-large {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .store-container {
+    height: 100%;
+  }
+
+  .bg-sub {
+    background-image: url('../../../../../assets/svgs/bg_phase_one_subtraction_shape.svg');
+    height: 57px;
+    position: relative;
+    width: 110px;
+
+    @include mq.desktop-large {
+      height: 114px;
+      width: 220px;
+    }
+  }
+
+  .g-container {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.93;
+    padding: 15%;
+    width: 100%;
+    z-index: 10;
+
+    .q {
+      font-size: 25px;
+      line-height: 11px;
+
+      @include mq.desktop-large {
+        font-size: 50px;
+        line-height: 24px;
+      }
+    }
+
+    .gen {
+      font-size: 10px;
+      line-height: 31px;
+      text-transform: capitalize;
+
+      @include mq.desktop-large {
+        font-size: 18px;
+        line-height: 51px;
+      }
+    }
+  }
+
+  .phantom-container {
+    @include btn.rounded-button(28px);
+    cursor: default;
+    padding: 5%;
     position: absolute;
-    width: 255%;
+    right: -15%;
+    top: -15%;
+    z-index: 10;
+
+    @include mq.desktop-large {
+      @include btn.rounded-button(53px);
+      right: -15%;
+      top: -15%;
+    }
+  }
+
+  .nessi-container {
+    bottom: -65%;
+    left: 0;
+    position: absolute;
+    width: 325%;
+
+    @include mq.desktop-large {
+      bottom: -35%;
+      left: 20%;
+      width: 255%;
+    }
   }
 }
