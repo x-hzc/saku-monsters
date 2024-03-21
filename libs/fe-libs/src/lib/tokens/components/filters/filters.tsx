@@ -135,7 +135,9 @@ export function Filters() {
         <div className={styles['title']}>
           {t('filter.store')} <LogoKanji />
         </div>
-        <div className={styles['saku-card']} onClick={goToAppleSakuMonsters} />
+        <div className={styles['saku-card']} onClick={goToAppleSakuMonsters}>
+          <div className={styles['egg']} />
+        </div>
       </div>
     </div>
   );
