@@ -28,7 +28,11 @@
 }
 
 .up {
-  grid-template-columns: 62% 33%;
+  grid-template-columns: 61% 34%;
+
+  @include mq.desktop-large {
+    grid-template-columns: 62% 33%;
+  }
 }
 
 .comp {
@@ -58,7 +62,7 @@
     line-height: 34px;
     padding: 0 5.5%;
     position: absolute;
-    top: -60%;
+    top: -80%;
     text-transform: uppercase;
     transform: rotate(358deg);
     width: fit-content;
@@ -67,7 +71,6 @@
       border-radius: 20px;
       font-size: 33px;
       line-height: 50px;
-      top: -80%;
     }
   }
 
@@ -183,7 +186,6 @@
   .mid-section {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 
     @include mq.desktop-large {
       gap: 15px;
@@ -357,8 +359,11 @@
     color: var(--primary-color);
     display: flex;
     font-size: 10px;
+    justify-content: flex-end;
     line-height: 5px;
-    padding: 15px;
+    // padding: 15px;
+    padding: 4% 8%;
+    position: relative;
     text-transform: capitalize;
     width: 100%;
 
@@ -368,8 +373,29 @@
     }
   }
 
-  .store-container {
-    height: 100%;
+  .apple-container,
+  .google-container {
+    position: absolute;
+  }
+
+  .apple-container {
+    color: var(--primary-color);
+    left: 10%;
+    height: 60%;
+    top: 15%;
+
+    @include mq.desktop-large {
+      left: 17%;
+    }
+  }
+
+  .google-container {
+    left: 2%;
+    height: 90%;
+
+    @include mq.desktop-large {
+      left: 8%;
+    }
   }
 
   .bg-sub {
