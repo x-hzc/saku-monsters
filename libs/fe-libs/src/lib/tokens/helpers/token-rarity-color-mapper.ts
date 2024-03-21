@@ -1,4 +1,4 @@
-import { TokenRarityType } from '@saku-monsters/shared';
+import { TokenAdulthoodType, TokenRarityType } from '@saku-monsters/shared';
 
 export const TOKEN_RARITY_COLOR: Record<TokenRarityType, string> = {
   [TokenRarityType.COMMON]: '#5CB561',
@@ -11,4 +11,9 @@ export const TOKEN_RARITY_BG_COLOR: Record<TokenRarityType, string> = {
   [TokenRarityType.RARE]: '#CCE3F9',
   [TokenRarityType.EPIC]: '#EBB2FF',
   [TokenRarityType.LEGENDARY]: '#FEF1DB',
+};
+
+export const TOKEN_ADULTHOOD_COLOR: Record<TokenAdulthoodType, string> = {
+  [TokenAdulthoodType.Adult]: '#FE92E4',
+  [TokenAdulthoodType.Baby]: '#5BAFFD',
 };

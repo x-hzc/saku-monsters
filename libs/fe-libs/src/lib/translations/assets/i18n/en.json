@@ -4,8 +4,7 @@
     "goToInventory": "Go to inventory"
   },
   "inventory": {
-    "inventory": "Inventory",
-    "goToHome": "Go to home"
+    "log": "Explore and learn about the saku monster universe"
   },
   "navigation": {
     "home": "Home",
@@ -32,5 +31,22 @@
     "egg": "EGG PHASE",
     "baby": "BABY PHASE",
     "adult": "ADULT PHASE"
+  },
+  "filter": {
+    "search": "Search Any Monster",
+    "show": "Show filters",
+    "hide": "Hide filters",
+    "clear": "Clear filters",
+    "unique": "{{count}} Unique Monsters",
+    "filters": "Filters",
+    "adulthood": "Adulthood",
+    "baby": "Baby",
+    "adult": "Adult",
+    "rarity": "Rarity",
+    "common": "Common",
+    "rare": "Rare",
+    "epic": "Epic",
+    "legendary": "Legendary",
+    "store": "Store"
   }
 }
