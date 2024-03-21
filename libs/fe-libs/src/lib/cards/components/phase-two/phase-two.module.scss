@@ -104,7 +104,7 @@
     --adulthood-container-right: -35%;
     --adulthood-size: 50px;
     @include mq.desktop-large {
-      height: 429px;
+      --token-height: 429px;
       --token-name-display: flex;
       --token-img-mg-bt: 20px;
       --adulthood-container-top: 5%;
