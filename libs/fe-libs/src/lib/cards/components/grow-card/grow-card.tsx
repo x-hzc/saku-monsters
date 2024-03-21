@@ -30,25 +30,58 @@ export function GrowCard() {
     setCurrentOption(selectedOption);
   };
 
-  const optionComponent = (option: Option) => {
+  const option = (opt: Option) => {
     return (
       <div
-        key={`${option.title}-${option.sup}`}
-        onClick={() => handleSelect(option.title)}
+        key={`${opt.title}-${opt.sup}`}
+        onClick={() => handleSelect(opt.title)}
         className={cn(styles['opt'], {
-          [styles['is-selected']]: option.title === currentOption,
+          [styles['is-selected']]: opt.title === currentOption,
         })}
       >
-        <span className={styles['tittle']}>{option.title}</span>
-        <sup className={styles['sup']}>{option.sup}</sup>
+        <span className={styles['tittle']}>{opt.title}</span>
+        <sup className={styles['sup']}>{opt.sup}</sup>
       </div>
     );
   };
 
-  const paragraphComponent = () => {
+  const paragraph = () => {
     return (
       <p className={styles['paragraph']}>{paragraphPerOption[currentOption]}</p>
     );
+  };
+
+  const shopImages = () => {
+    return <></>;
+  };
+
+  const growImages = () => {
+    return (
+      <div className={styles['phases']}>
+        <div className={styles['phase']}>
+          <div className={styles['egg-container']}>
+            <img src={Egg} alt="egg" />
+          </div>
+          <span className={styles['egg-span']}>{t('grow-card.egg')}</span>
+        </div>
+        <div className={styles['phase']}>
+          <div className={styles['img-container']}>
+            <img src={BabyChu} alt="chu" />
+          </div>
+          <span>{t('grow-card.baby')}</span>
+        </div>
+        <div className={styles['phase']}>
+          <div className={styles['img-container']}>
+            <img src={AdultChu} alt="adult-chu" />
+          </div>
+          <span>{t('grow-card.adult')}</span>
+        </div>
+      </div>
+    );
+  };
+
+  const collectImages = () => {
+    return <></>;
   };
 
   return (
@@ -60,29 +93,14 @@ export function GrowCard() {
         </div>
         <div className={styles['down']}>
           <div className={styles['opts-container']}>
-            {options && options.map((option) => optionComponent(option))}
+            {options && options.map((opt) => option(opt))}
           </div>
-          {paragraphPerOption && currentOption && paragraphComponent()}
-          <div className={styles['phases']}>
-            <div className={styles['phase']}>
-              <div className={styles['egg-container']}>
-                <img src={Egg} alt="egg" />
-              </div>
-              <span className={styles['egg-span']}>{t('grow-card.egg')}</span>
-            </div>
-            <div className={styles['phase']}>
-              <div className={styles['img-container']}>
-                <img src={BabyChu} alt="chu" />
-              </div>
-              <span>{t('grow-card.baby')}</span>
-            </div>
-            <div className={styles['phase']}>
-              <div className={styles['img-container']}>
-                <img src={AdultChu} alt="adult-chu" />
-              </div>
-              <span>{t('grow-card.adult')}</span>
-            </div>
-          </div>
+          {paragraphPerOption && currentOption && paragraph()}
+          {currentOption && currentOption === t('grow-card.shop')
+            ? shopImages()
+            : currentOption === t('grow-card.grow')
+            ? growImages()
+            : collectImages()}
         </div>
       </div>
     </div>
