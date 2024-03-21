@@ -24,19 +24,19 @@
     "button": "DÉCOUVRIR"
   },
   "phase-one": {
-    "compete": "Compete against others",
+    "compete": "Rivaliser avec les autres",
     "phase": "PHASE 1",
-    "p-phase": "During Phase 1 of the Saku Monsters experience, over 70,000 users competed against each other to take care of a Saku Monster egg and earn Saku coins.",
+    "p-phase": "Au cours de la phase 1 de l'expérience Saku Monsters, plus de 70,000 utilisateurs se sont affrontés pour prendre soin d'un œuf de Saku Monster et gagner des pièces Saku.",
     "app-rating": "App Rating",
     "blue-title": "DOWNLOAD THE APP",
-    "p-blue": "Download Now, Hatch Eggs, Earn Rewards Today!",
+    "p-blue": "Téléchargez maintenant, faites éclore des œufs, gagnez des récompenses dès aujourd'hui!",
     "users": "Users",
     "apple": "Apple Store",
     "google": "Google Play",
-    "p-green": "Your egg needs love and attention on a daily basis, so make sure you take good care of it.",
+    "p-green": "Votre œuf a besoin d’amour et d’attention au quotidien, alors assurez-vous d’en prendre bien soin.",
     "green-title": "LOVE",
     "orange-title": "HATCH AND EARN",
-    "p-orange": "Each Saku Monster has its own unique traits, abilities, and personality.",
+    "p-orange": "Chaque monstre Saku a ses propres traits, capacités et personnalité.",
     "gen": "Gen 1 Monsters"
   },
   "grow-card": {
@@ -49,6 +49,13 @@
     "egg": "PHASE ŒUF",
     "baby": "PHASE BÉBÉ",
     "adult": "PHASE ADULTE"
+  },
+  "phase-three": {
+    "phase": "PHASE 3",
+    "community": "COMMUNAUTÉ",
+    "saku": "$SAKU",
+    "community-paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum finibus metus scelerisque commodo. Praesent id mauris massa.",
+    "saku-paragraph": "Désormais, l’événement très attendu de genèse et le largage de Saku Monster approchent à grands pas. Cela marquera une étape majeure pour le projet alors que le jeton $SAKU commencera à alimenter notre écosystème et notre modèle Sakunomics. $SAKU permettra des fonctions clés telles que le jalonnement, la sélection et l'habilitation des détenteurs avec des droits de gouvernance. L'utilité et la demande de $SAKU continueront de croître à mesure que nous construisons le reste de notre vision."
   },
   "filter": {
     "search": "Rechercher n'importe quel monstre",

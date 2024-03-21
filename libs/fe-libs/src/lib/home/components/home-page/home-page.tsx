@@ -5,6 +5,7 @@ import { PhaseOne } from '../../../cards/components/phase-one/phase-one';
 import { GrowCard } from '../../../cards/components/grow-card/grow-card';
 import { PhaseTwo } from '../../../cards/components/phase-two/phase-two';
 import { Roadmap } from '../roadmap/roadmap';
+import { PhaseThree } from '../../../cards/components/phase-three/phase-three';
 
 export function HomePage() {
   return (
@@ -21,6 +22,7 @@ export function HomePage() {
         <div className={styles['bg-container']} />
       </div>
       <PhaseTwo />
+      <PhaseThree />
       <div className={styles['roadmap']}>
         <Roadmap />
       </div>

@@ -1,16 +1,17 @@
 :root {
   --white-100: #ffffff;
   --grey-200: #f8f5f5;
-  --grey-500: #e6ebe9;
+  --blue-300: #82c2fd;
+  --lime-green-300: #78dcb3;
+  --lime-green-500: #4fd49f;
+  --yellow-300: #fbf383;
+  --orange-200: #fdbf68;
+  --orange-300: #fdbc67;
+  --red-300: #e78181;
   --black-200: #2b2b2b;
   --black-300: #1e1e1e;
   --black-400: #303030;
   --black-500: #111111;
-  --orange-300: #fdbc67;
-  --orange-700: #e78181;
-  --yellow-300: #fbf383;
-  --lime-green-300: #78dcb3;
-  --lime-green-500: #4fd49f;
   --black-900: #000000;
   --black-900-transparence-8: rgba(0, 0, 0, 0.08);
   --black-900-transparence-15: rgba(0, 0, 0, 0.15);
@@ -28,4 +29,5 @@
   --phase-two-bg-title-color: var(--orange-700);
   --roadmap-bg-color: var(--grey-500);
   --roadmap-content-color: var(--black-400);
+  --phase-two-bg-title-color: var(--red-300);
 }

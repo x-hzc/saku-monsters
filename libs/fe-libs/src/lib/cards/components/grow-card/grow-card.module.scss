@@ -74,48 +74,11 @@
     width: 100%;
   }
 
-  .opt {
-    cursor: pointer;
-    position: relative;
+  .opt-g {
     color: var(--lime-green-300);
-
-    &:hover {
-      color: var(--primary-color);
-    }
   }
 
-  .is-selected {
-    color: var(--primary-color);
-  }
-
-  .tittle {
-    font-family: var(--secondary-font-family);
-    font-size: 30px;
-    line-height: 22px;
-
-    @include mq.desktop-large {
-      font-size: 62px;
-      line-height: 69px;
-    }
-  }
-
-  .sup {
-    bottom: 0;
-    font-family: var(--primary-font-family);
-    font-size: 10px;
-    left: 103%;
-    line-height: 40px;
-    position: absolute;
-    vertical-align: super;
-
-    @include mq.desktop-large {
-      font-size: 14px;
-      left: 101%;
-      line-height: 103px;
-    }
-  }
-
-  .paragraph {
+  .p {
     font-size: 13px;
     line-height: 20px;
     margin-top: 3%;
@@ -154,7 +117,7 @@
   }
 
   .egg-container {
-    width: 14%;
+    width: 16%;
   }
 
   .egg-span {
