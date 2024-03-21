@@ -2,7 +2,7 @@ import styles from './intro-card.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
-import IntroKanjis from '../../../../../assets/svgs/intro_kanjis.svg';
+import Kanjis from '../../../../../assets/svgs/kanjis.svg';
 import IntroSakuMonster from '../../../../../assets/pngs/intro_saku_monster.png';
 import IntroBirdmonster from '../../../../../assets/pngs/intro_birdmonster.png';
 
@@ -18,8 +18,8 @@ export function IntroCard() {
           <div className={styles['left']}>
             <div className={styles['t-container']}>
               <h4 className={styles['title']}>{t('intro-card.title')}</h4>
-              <div className={styles['ik-container']}>
-                <IntroKanjis />
+              <div className={styles['k-container']}>
+                <Kanjis />
               </div>
             </div>
             <p className={styles['paragraph']}>{t('intro-card.paragraph')}</p>

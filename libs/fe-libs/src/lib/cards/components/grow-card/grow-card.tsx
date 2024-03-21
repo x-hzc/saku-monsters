@@ -1,53 +1,41 @@
 import styles from './grow-card.module.scss';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
 import GrowHappiness from '../../../../../assets/pngs/grow_happiness.png';
 import Egg from '../../../../../assets/pngs/egg.png';
 import AdultChu from '../../../../../assets/adult_chu.gif';
 import BabyChu from '../../../../../assets/baby_chu.gif';
-import cn from 'classnames';
-
-interface Option {
-  title: string;
-  sup: string;
-}
+import { useCardTitleStore } from '../../hooks/use-card-title-store';
+import { CardTitleOption } from '../card-title-option/card-title-option';
+import { useOnInit } from '../../../shared/hooks/use-on-init';
 
 export function GrowCard() {
   const { t } = useTranslation();
-  const options = [
+  const growTitleOptions = [
     { title: t('grow-card.shop'), sup: '01' },
     { title: t('grow-card.grow'), sup: '02' },
     { title: t('grow-card.collect'), sup: '03' },
   ];
-  const paragraphPerOption = {
+  const paragraphPerTitleOption = {
     [t('grow-card.shop')]: t('grow-card.shop-paragraph'),
     [t('grow-card.grow')]: t('grow-card.grow-paragraph'),
     [t('grow-card.collect')]: t('grow-card.collect-paragraph'),
   };
-  const [currentOption, setCurrentOption] = useState(options[1].title);
+  const { currentGrowOption, setCurrentGrowOption } = useCardTitleStore();
 
   const handleSelect = (selectedOption: string) => {
-    setCurrentOption(selectedOption);
-  };
-
-  const option = (opt: Option) => {
-    return (
-      <div
-        key={`${opt.title}-${opt.sup}`}
-        onClick={() => handleSelect(opt.title)}
-        className={cn(styles['opt'], {
-          [styles['is-selected']]: opt.title === currentOption,
-        })}
-      >
-        <span className={styles['tittle']}>{opt.title}</span>
-        <sup className={styles['sup']}>{opt.sup}</sup>
-      </div>
-    );
+    setCurrentGrowOption(selectedOption);
   };
 
   const paragraph = () => {
     return (
-      <p className={styles['paragraph']}>{paragraphPerOption[currentOption]}</p>
+      // eslint-disable-next-line react/jsx-no-useless-fragment
+      <>
+        {currentGrowOption && (
+          <p className={styles['p']}>
+            {paragraphPerTitleOption[currentGrowOption]}
+          </p>
+        )}
+      </>
     );
   };
 
@@ -84,6 +72,10 @@ export function GrowCard() {
     return <></>;
   };
 
+  useOnInit(() => {
+    setCurrentGrowOption(growTitleOptions[1].title);
+  });
+
   return (
     <div className={styles['container']}>
       <div className={styles['bg']} />
@@ -93,12 +85,21 @@ export function GrowCard() {
         </div>
         <div className={styles['down']}>
           <div className={styles['opts-container']}>
-            {options && options.map((opt) => option(opt))}
+            {growTitleOptions &&
+              growTitleOptions.map((opt) => (
+                <CardTitleOption
+                  key={`${opt.title}-${opt.sup}`}
+                  onClick={() => handleSelect(opt.title)}
+                  option={opt}
+                  selected={opt.title === currentGrowOption}
+                  className={styles['opt-g']}
+                />
+              ))}
           </div>
-          {paragraphPerOption && currentOption && paragraph()}
-          {currentOption && currentOption === t('grow-card.shop')
+          {paragraphPerTitleOption && currentGrowOption && paragraph()}
+          {currentGrowOption && currentGrowOption === t('grow-card.shop')
             ? shopImages()
-            : currentOption === t('grow-card.grow')
+            : currentGrowOption === t('grow-card.grow')
             ? growImages()
             : collectImages()}
         </div>

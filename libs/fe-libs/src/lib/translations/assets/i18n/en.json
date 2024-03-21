@@ -50,6 +50,13 @@
     "baby": "BABY PHASE",
     "adult": "ADULT PHASE"
   },
+  "phase-three": {
+    "phase": "PHASE 3",
+    "community": "COMMUNITY",
+    "saku": "$SAKU",
+    "community-paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum finibus metus scelerisque commodo. Praesent id mauris massa.",
+    "saku-paragraph": "Now, the highly anticipated Saku Monster genesis event and airdrop are right around the corner. This will mark a major milestone for the project as the $SAKU token starts powering our ecosystem and Sakunomics model. $SAKU will enable key functions like staking, breeding, and empowering holders with governance rights. The utility and demand for $SAKU will continue expanding as we build the rest of our vision."
+  },
   "filter": {
     "search": "Search Any Monster",
     "show": "Show filters",

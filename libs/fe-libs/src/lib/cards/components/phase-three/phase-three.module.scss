@@ -1,0 +1,165 @@
+@use 'media-queries' as mq;
+@use 'button' as btn;
+@use 'card' as c;
+
+.container {
+  height: 590px;
+  margin: 0 auto;
+  width: 916px;
+
+  @include mq.desktop-large {
+    height: 1068px;
+    width: 1620px;
+  }
+}
+
+.card-container {
+  align-items: center;
+  display: flex;
+  height: 437px;
+  justify-content: center;
+  position: relative;
+  width: 904px;
+
+  @include mq.desktop-large {
+    height: 762px;
+    width: 1582px;
+  }
+}
+
+.bg-pt-card {
+  @include c.card;
+  @include c.bg-card;
+  background-image: url('../../../../../assets/pngs/bg_phase_three_blue.png');
+  border-radius: 122px;
+  position: absolute;
+
+  @include mq.desktop-large {
+    border-radius: 215px;
+  }
+}
+
+.content {
+  align-items: center;
+  color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 64% 36%;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+
+  img,
+  svg {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 9% 2% 2% 12%;
+  width: 100%;
+
+  @include mq.desktop-large {
+    padding: 10% 2% 2% 12%;
+  }
+
+  .t-container {
+    align-items: center;
+    display: flex;
+    width: 430px;
+
+    @include mq.desktop-large {
+      gap: 25px;
+    }
+
+    .phase {
+      align-items: center;
+      background-color: var(--orange-200);
+      border-radius: 10px;
+      color: var(--primary-color);
+      display: flex;
+      font-family: var(--secondary-font-family);
+      font-size: 20px;
+      justify-content: center;
+      line-height: 34px;
+      padding: 0 5.5%;
+      text-transform: uppercase;
+      text-wrap: nowrap;
+      transform: rotate(3deg);
+      width: fit-content;
+
+      @include mq.desktop-large {
+        border-radius: 20px;
+        font-size: 33px;
+        line-height: 50px;
+      }
+    }
+
+    .k-container {
+      height: 21px;
+      width: 195px;
+
+      @include mq.desktop-large {
+        height: 31px;
+        width: 205px;
+      }
+    }
+  }
+
+  .opts-container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 6% 0;
+    width: 100%;
+
+    .opt-pt {
+      color: var(--blue-300);
+    }
+  }
+
+  .p {
+    font-size: 20px;
+    line-height: 27px;
+    opacity: 0.93;
+
+    @include mq.desktop-large {
+      font-size: 30px;
+      line-height: 39px;
+    }
+  }
+}
+
+.right {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  padding-right: 3%;
+  width: 100%;
+
+  .coins-container {
+    width: 80%;
+  }
+
+  .ptb-container {
+    bottom: -47%;
+    height: 272px;
+    position: absolute;
+    right: -1%;
+    width: 272px;
+    z-index: 30;
+
+    @include mq.desktop-large {
+      bottom: -49%;
+      height: 486px;
+      width: 488px;
+    }
+  }
+}
