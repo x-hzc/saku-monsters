@@ -21,10 +21,11 @@
   aspect-ratio: 1 / 1;
   max-height: 1060px;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 0.94% - 0.63%);
+  margin: 0 auto;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0.63%;
   z-index: 1;
 }
 

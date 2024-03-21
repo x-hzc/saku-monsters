@@ -71,5 +71,12 @@
     "phase": "Phase 2",
     "title": "Visit the SakuLog",
     "discover": "Explore and learn about the saku monster universe!"
+  },
+  "roadmap": {
+    "stream": "The never-ending stream",
+    "1": {
+      "title": "Battle Mode",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu"
+    }
   }
 }
