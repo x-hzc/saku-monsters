@@ -32,7 +32,8 @@
 }
 
 .comp {
-  color: var(--black-400);
+  color: var(--black-300);
+  font-weight: bold;
   font-size: 37px;
   line-height: 78px;
 
@@ -361,7 +362,10 @@
     padding: 15px;
     text-transform: capitalize;
     width: 100%;
-
+  svg{
+    width: 21px;
+    height: 26px;
+  }
     @include mq.desktop-large {
       font-size: 14px;
       line-height: 19px;
