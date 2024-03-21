@@ -1,3 +1,5 @@
+@use 'media-queries' as mq;
+
 .container {
   background: var(--primary-color) 0 0 no-repeat padding-box;
   border-radius: 42px;
@@ -7,10 +9,14 @@
   height: min-content;
   .title {
     font-family: var(--secondary-font-family);
-    font-size: 29px;
-    line-height: 103px;
-    letter-spacing: 0;
     color: var(--inventory-title-color);
+    letter-spacing: 0;
+    font-size: 21px;
+    line-height: 95px;
+    @include mq.large-window {
+      font-size: 29px;
+      line-height: 103px;
+    }
   }
 }
 
@@ -26,8 +32,12 @@
     grid-column: 1/3;
     font-family: var(--primary-font-family);
     color: var(--inventory-text-color);
-    font-size: 24px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 12px;
+    @include mq.large-window {
+      font-size: 24px;
+      line-height: 20px;
+    }
   }
 }
 .store-section {
@@ -41,14 +51,27 @@
     align-items: center;
     gap: 10px;
   }
-  .saku-card {
-    background-image: url('../../../../../assets/pngs/filter-saku.png');
+  .saku-card,
+  .egg {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     aspect-ratio: 1 / 1;
+  }
+  .saku-card {
+    position: relative;
+    background-image: url('../../../../../assets/pngs/filter-saku.png');
     width: 364px;
     height: 195px;
     cursor: pointer;
+  }
+  .egg {
+    position: absolute;
+    background-image: url('libs/fe-libs/assets/pngs/egg.png');
+    width: 112px;
+    height: 125px;
+    right: calc(-112px / 2);
+    bottom: 50%;
+    transform: translate(0, 50%);
   }
 }
 .button {
@@ -56,13 +79,21 @@
   align-items: center;
   justify-content: flex-start;
   border-radius: 23px;
-  font-size: 21px;
+  font-size: 16px;
   --btn-bg-color: #f8f5f5;
   --btn-color: #e2dfdf;
   --btn-padding-y: 9px;
   .icon {
     display: flex;
     align-items: center;
+    svg {
+      $size: 14px;
+      height: $size;
+      width: $size;
+    }
+  }
+  @include mq.large-window {
+    font-size: 21px;
     svg {
       $size: 18px;
       height: $size;
