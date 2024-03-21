@@ -28,7 +28,9 @@
     "shop": "BOUTIQUE",
     "grow": "GRANDIR",
     "collect": "COLLECTER",
-    "paragraph": "Collectionnez Saku Monsters en les faisant éclore à partir d'œufs de Saku Monsters! Il y a 150 monstres Gen 1 uniques à découvrir, chacun avec ses propres caractéristiques et capacités. Visitez le Sakulog pour découvrir chaque monstre et ses phases.",
+    "shop-paragraph": "Aliquam dolor erat, aliquet eget magna non, venenatis ornare risus. Sed non fermentum felis. Suspendisse ut tellus eget mi eleifend aliquet.",
+    "grow-paragraph": "Collectionnez Saku Monsters en les faisant éclore à partir d'œufs de Saku Monsters! Il y a 150 monstres Gen 1 uniques à découvrir, chacun avec ses propres caractéristiques et capacités. Visitez le Sakulog pour découvrir chaque monstre et ses phases.",
+    "collect-paragraph": "Duis luctus mollis nulla sit amet faucibus. Cras lacus nibh, ullamcorper id nibh a, viverra rhoncus turpis. Integer fringilla tincidunt justo, eget vulputate nibh sodales eu.",
     "egg": "PHASE ŒUF",
     "baby": "PHASE BÉBÉ",
     "adult": "PHASE ADULTE"
