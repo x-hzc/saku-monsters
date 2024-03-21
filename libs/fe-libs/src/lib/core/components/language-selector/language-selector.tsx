@@ -4,12 +4,19 @@ import { Button } from '../../../ui/components/button/button';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 
-export function LanguageSelector() {
+export interface LanguageSelectorProps {
+  contrasted?: boolean;
+}
+export function LanguageSelector({ contrasted }: LanguageSelectorProps) {
   const { i18n } = useTranslation();
   const languages = ['en-US', 'fr-FR'];
 
   return (
-    <div className={styles['container']}>
+    <div
+      className={classNames(styles['container'], {
+        [styles['contrasted']]: contrasted,
+      })}
+    >
       <LanguageIcon />
       {languages.map((language, index) => (
         <Button

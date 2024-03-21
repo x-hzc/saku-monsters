@@ -4,8 +4,7 @@
     "goToInventory": "Aller à l'inventaire"
   },
   "inventory": {
-    "inventory": "Inventaire",
-    "goToHome": "Aller à l'accueil"
+    "log": "Explorez et découvrez l'univers des monstres saku"
   },
   "navigation": {
     "home": "Maison",
@@ -34,5 +33,22 @@
     "egg": "PHASE ŒUF",
     "baby": "PHASE BÉBÉ",
     "adult": "PHASE ADULTE"
+  },
+  "filter": {
+    "search": "Rechercher n'importe quel monstre",
+    "show": "Afficher les filtres",
+    "hide": "Masquer les filtres",
+    "clear": "Clair les filtres",
+    "unique": "{{count}} Monstres Uniques",
+    "filters": "Filtres",
+    "adulthood": "L'âge adulte",
+    "baby": "Bébé",
+    "adult": "Adulte",
+    "rarity": "Rareté",
+    "common": "Commun",
+    "rare": "Rare",
+    "epic": "Épique",
+    "legendary": "Légendaire",
+    "store": "Magasin"
   }
 }

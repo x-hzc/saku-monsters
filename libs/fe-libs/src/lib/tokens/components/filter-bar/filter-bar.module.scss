@@ -1,0 +1,31 @@
+.container {
+  background-color: var(--primary-color);
+  border-radius: 34px;
+  flex-grow: 1;
+  display: flex;
+  gap: 25px;
+  padding: 11px 22px;
+  align-items: center;
+}
+.input-container {
+  margin-left: auto;
+  border: 1px solid #707070;
+  border-radius: 23px;
+  width: 100%;
+  max-width: 448px;
+  height: 100%;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 11px 16px;
+  .input {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    line-height: 20px;
+    border: none;
+    flex-grow: 1;
+    &:focus {
+      outline: none;
+    }
+  }
+}

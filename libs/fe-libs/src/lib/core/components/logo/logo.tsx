@@ -1,5 +1,11 @@
 import styles from './logo.module.scss';
+import { useRouter } from '../../../routing/hooks/use-router';
 
 export function Logo() {
-  return <div className={styles['container']}>Logo</div>;
+  const { goToHome } = useRouter();
+  return (
+    <div className={styles['container']} onClick={goToHome}>
+      Logo
+    </div>
+  );
 }

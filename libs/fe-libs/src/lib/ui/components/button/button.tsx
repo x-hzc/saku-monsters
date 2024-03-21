@@ -1,5 +1,5 @@
 import styles from './button.module.scss';
-import { forwardRef, MouseEventHandler, ReactNode } from 'react';
+import { CSSProperties, forwardRef, MouseEventHandler, ReactNode } from 'react';
 import cn from 'classnames';
 
 export interface ButtonProps {
@@ -10,6 +10,7 @@ export interface ButtonProps {
   fullWidth?: boolean;
   contrasted?: boolean;
   className?: string;
+  componentStyles?: CSSProperties;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -22,6 +23,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       fullWidth = false,
       contrasted = false,
       className,
+      componentStyles,
     } = props;
 
     return (
@@ -37,6 +39,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         onClick={onClick}
+        style={componentStyles}
       >
         {children}
       </button>
