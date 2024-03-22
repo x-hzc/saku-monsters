@@ -1,3 +1,5 @@
+@use 'media-queries' as mq;
+
 .container {
   background-color: var(--primary-color);
   border-radius: 34px;
@@ -26,6 +28,39 @@
     flex-grow: 1;
     &:focus {
       outline: none;
+    }
+  }
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 23px;
+    font-size: 16px;
+    --btn-bg-color: #f8f5f5;
+    --btn-color: #e2dfdf;
+    --btn-padding-y: 9px;
+    .icon {
+      display: flex;
+      align-items: center;
+      svg {
+        $size: 14px;
+        height: $size;
+        width: $size;
+      }
+    }
+    @include mq.large-window {
+      font-size: 21px;
+      svg {
+        $size: 18px;
+        height: $size;
+        width: $size;
+      }
     }
   }
 }

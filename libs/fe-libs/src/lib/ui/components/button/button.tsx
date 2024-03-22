@@ -38,7 +38,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           styles[type],
           className
         )}
-        onClick={onClick}
+        onClick={(event) => {
+          event.stopPropagation();
+          onClick(event);
+        }}
         style={componentStyles}
       >
         {children}

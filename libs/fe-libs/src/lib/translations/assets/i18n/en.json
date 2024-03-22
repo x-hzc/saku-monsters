@@ -77,7 +77,10 @@
     "rare": "Rare",
     "epic": "Epic",
     "legendary": "Legendary",
-    "store": "Store"
+    "store": "Store",
+    "blue": "Blue Egg",
+    "purple": "Purple Egg",
+    "golden": "Golden Egg"
   },
   "roadmap": {
     "stream": "The never-ending stream",

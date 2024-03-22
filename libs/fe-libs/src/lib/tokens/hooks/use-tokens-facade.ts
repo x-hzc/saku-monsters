@@ -7,12 +7,14 @@ export function useTokensFacade() {
   const tokensStorage = useTokensStorage();
   const tokenFilterStorage = useTokenFilterStorage();
   const { setTokens, setLoadingTokens, tokens } = tokensStorage;
-  const { rarityFilter, searchTerm, adulthoodFilter } = tokenFilterStorage;
+  const { rarityFilter, searchTerm, adulthoodFilter, eggFilter } =
+    tokenFilterStorage;
   const filteredTokens = tokens
     .filter((token) => (rarityFilter ? token.rarity === rarityFilter : true))
     .filter((token) =>
       adulthoodFilter ? token.adulthood === adulthoodFilter : true
     )
+    .filter((token) => (eggFilter ? token.egg === eggFilter : true))
     .filter((token) =>
       searchTerm
         ? token.name.toLowerCase().includes(searchTerm.toLowerCase())

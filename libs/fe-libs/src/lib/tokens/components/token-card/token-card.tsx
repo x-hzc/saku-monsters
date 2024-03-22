@@ -4,7 +4,7 @@ import { tokenImageMapper } from '../../helpers/token-image-mapper';
 import {
   TOKEN_RARITY_BG_COLOR,
   TOKEN_RARITY_COLOR,
-} from '../../helpers/token-rarity-color-mapper';
+} from '../../helpers/token-color-mapper';
 import { TOKEN_RARITY_ICON } from '../../helpers/token-rarity-icon-mapper';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
 export interface TokenCardProps {
@@ -31,7 +31,10 @@ export function TokenCard({ token }: TokenCardProps) {
         <div className={styles['adulthood-img-container']}>
           <div
             className={styles['adulthood-img']}
-            onClick={() => toggleAdulthood(id)}
+            onClick={(event) => {
+              event.stopPropagation();
+              toggleAdulthood(id);
+            }}
             style={{
               backgroundImage: `url(${tokenImageMapper(
                 id,

@@ -89,7 +89,10 @@ export function GrowCard() {
               growTitleOptions.map((opt) => (
                 <CardTitleOption
                   key={`${opt.title}-${opt.sup}`}
-                  onClick={() => handleSelect(opt.title)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleSelect(opt.title);
+                  }}
                   option={opt}
                   selected={opt.title === currentGrowOption}
                   className={styles['opt-g']}

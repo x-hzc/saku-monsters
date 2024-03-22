@@ -25,7 +25,10 @@ export function RoadmapSection(props: RoadmapSectionProps) {
     >
       <div
         className={styles['number']}
-        onClick={() => setIsOpen((prevState) => !prevState)}
+        onClick={(event) => {
+          event.stopPropagation();
+          setIsOpen((prevState) => !prevState);
+        }}
       >
         {number}
       </div>
