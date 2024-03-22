@@ -2,19 +2,19 @@
 
 .opt {
   cursor: pointer;
-  position: relative;
-
   font-family: var(--secondary-font-family);
   font-size: 30px;
   line-height: 22px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 
   @include mq.desktop-large {
     font-size: 62px;
     line-height: 69px;
-  }
-
-  &:hover {
-    color: var(--primary-color);
   }
 }
 

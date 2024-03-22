@@ -61,16 +61,16 @@
     justify-content: center;
     left: -20%;
     line-height: 34px;
-    padding: 0 5.5%;
+    padding: 1% 6%;
     position: absolute;
-    top: -80%;
+    top: -90%;
     text-transform: uppercase;
     text-wrap: nowrap;
     transform: rotate(358deg);
     width: fit-content;
 
     @include mq.desktop-large {
-      border-radius: 20px;
+      border-radius: 17px;
       font-size: 33px;
       line-height: 50px;
     }

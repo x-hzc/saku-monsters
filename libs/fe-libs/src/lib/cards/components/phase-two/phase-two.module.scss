@@ -52,15 +52,16 @@
     .phase {
       text-align: center;
       font-family: var(--secondary-font-family);
-      border-radius: 17px;
-      padding: 5px 15px;
+      border-radius: 10px;
+      padding: 1% 6%;
       background-color: var(--phase-two-bg-title-color);
       transform: matrix(1, -0.03, 0.03, 1, 0, 0);
       font-size: 20px;
       line-height: 34px;
       @include mq.desktop-large {
+        border-radius: 17px;
         font-size: 33px;
-        line-height: 50px;
+        line-height: 61px;
       }
     }
   }

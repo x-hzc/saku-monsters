@@ -104,6 +104,7 @@
 
   .btn {
     height: 37px;
+    text-transform: uppercase;
     width: 214px;
 
     @include mq.desktop-large {

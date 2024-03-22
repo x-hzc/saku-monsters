@@ -109,6 +109,7 @@
       font-family: var(--secondary-font-family);
       font-size: 12px;
       line-height: 30px;
+      text-transform: uppercase;
 
       @include mq.desktop-large {
         font-size: 17px;

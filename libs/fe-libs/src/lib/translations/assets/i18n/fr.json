@@ -50,6 +50,11 @@
     "baby": "PHASE BÉBÉ",
     "adult": "PHASE ADULTE"
   },
+  "phase-two": {
+    "phase": "PHASE 2",
+    "title": "Visitez le SakuLog",
+    "discover": "Explorez et découvrez l'univers des monstres saku!"
+  },
   "phase-three": {
     "phase": "PHASE 3",
     "community": "COMMUNAUTÉ",
@@ -73,11 +78,6 @@
     "epic": "Épique",
     "legendary": "Légendaire",
     "store": "Magasin"
-  },
-  "phase-two": {
-    "phase": "Phase 2",
-    "title": "Visitez le SakuLog",
-    "discover": "Explorez et découvrez l'univers des monstres saku!"
   },
   "roadmap": {
     "stream": "Le flux sans fin",

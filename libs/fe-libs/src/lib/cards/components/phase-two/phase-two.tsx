@@ -6,10 +6,11 @@ import { useRouter } from '../../../routing/hooks/use-router';
 import { TokenCard } from '../../../tokens/components/token-card/token-card';
 import { useTokensFacade } from '../../../tokens/hooks/use-tokens-facade';
 import { useOnInit } from '../../../shared/hooks/use-on-init';
+
 export function PhaseTwo() {
   const { t } = useTranslation();
   const { goToInventory } = useRouter();
-  const { findTokenById, syncTokens, tokens } = useTokensFacade();
+  const { findTokenById, syncTokens } = useTokensFacade();
   const axle = findTokenById('AXLE');
   const odin = findTokenById('ODIN');
 

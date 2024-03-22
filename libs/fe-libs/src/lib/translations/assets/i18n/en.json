@@ -50,6 +50,11 @@
     "baby": "BABY PHASE",
     "adult": "ADULT PHASE"
   },
+  "phase-two": {
+    "phase": "PHASE 2",
+    "title": "Visit the SakuLog",
+    "discover": "Explore and learn about the saku monster universe!"
+  },
   "phase-three": {
     "phase": "PHASE 3",
     "community": "COMMUNITY",
@@ -73,11 +78,6 @@
     "epic": "Epic",
     "legendary": "Legendary",
     "store": "Store"
-  },
-  "phase-two": {
-    "phase": "Phase 2",
-    "title": "Visit the SakuLog",
-    "discover": "Explore and learn about the saku monster universe!"
   },
   "roadmap": {
     "stream": "The never-ending stream",
