@@ -3,13 +3,55 @@ import { Button } from '../../../ui/components/button/button';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
 import { useTranslation } from 'react-i18next';
 import SearchIcon from '../../../../../assets/icons/search.svg';
+import { TokenEggType } from '@saku-monsters/shared';
+import { TOKEN_EGG_COLOR } from '../../helpers/token-color-mapper';
 
 export function FilterBar() {
-  const { tokens, clearFilters, setSearchTerm } = useTokensFacade();
+  const { tokens, setSearchTerm, toggleEggFilter, eggFilter } =
+    useTokensFacade();
   const { t } = useTranslation();
   return (
     <div className={styles['container']}>
-      <Button onClick={clearFilters}>{t('filter.clear')}</Button>
+      <div className={styles['filter']}>
+        <Button
+          className={styles['btn']}
+          onClick={() => toggleEggFilter(TokenEggType.BlueEgg)}
+          componentStyles={{
+            backgroundColor:
+              eggFilter === TokenEggType.BlueEgg
+                ? TOKEN_EGG_COLOR[TokenEggType.BlueEgg]
+                : undefined,
+          }}
+        >
+          {t('filter.blue')}
+        </Button>
+        <Button
+          className={styles['btn']}
+          disabled
+          onClick={() => toggleEggFilter(TokenEggType.PurpleEgg)}
+          componentStyles={{
+            backgroundColor:
+              eggFilter === TokenEggType.PurpleEgg
+                ? TOKEN_EGG_COLOR[TokenEggType.PurpleEgg]
+                : undefined,
+          }}
+        >
+          {t('filter.purple')}
+        </Button>
+        <Button
+          className={styles['btn']}
+          disabled
+          onClick={() => toggleEggFilter(TokenEggType.GoldenEgg)}
+          componentStyles={{
+            backgroundColor:
+              eggFilter === TokenEggType.GoldenEgg
+                ? TOKEN_EGG_COLOR[TokenEggType.GoldenEgg]
+                : undefined,
+          }}
+        >
+          {t('filter.golden')}
+        </Button>
+      </div>
       <div className={styles['input-container']}>
         <SearchIcon />
         <input
