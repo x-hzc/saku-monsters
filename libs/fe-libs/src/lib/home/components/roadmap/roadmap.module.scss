@@ -1,38 +1,46 @@
 .board {
+  align-items: center;
   background-image: url('libs/fe-libs/assets/pngs/board.png');
   background-size: cover;
-  width: 600px;
-  height: 401px;
   display: flex;
-  align-items: center;
-  padding: 0 165px 0 107px;
+  height: 401px;
   margin-left: 22%;
+  padding: 0 165px 0 107px;
+  width: 600px;
+
   .text {
-    transform: matrix(1, 0.03, -0.03, 1, 0, 0);
-    text-align: center;
+    color: var(--primary-color);
     font: normal normal normal 51px/54px var(--secondary-font-family);
     letter-spacing: 0;
-    color: var(--primary-color);
+    text-align: center;
+    transform: matrix(1, 0.03, -0.03, 1, 0, 0);
   }
 }
+
 .road {
   display: flex;
   flex-direction: column;
+
   .s1 {
     margin: 0 auto 0 62.5%;
   }
+
   .s2 {
     margin: 11% auto 0 70%;
   }
+
   .s3 {
     margin: 10% 75.3% 0 auto;
   }
+
   .s4 {
     margin: 9% auto 0 40.5%;
   }
+
   .s5 {
     margin: 13% auto 0 71.5%;
   }
+  
   .s6 {
     margin: 9% 78.7% 10% auto;
   }

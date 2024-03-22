@@ -1,7 +1,5 @@
 import styles from './roadmap-section.module.scss';
-import classNames from 'classnames';
-import { useRef, useState } from 'react';
-import { useOutsideAlerter } from '../../../ui/hooks/use-outside-alerter';
+import cn from 'classnames';
 
 export interface RoadmapSectionProps {
   number: number;
@@ -15,27 +13,18 @@ export interface RoadmapSectionProps {
 export function RoadmapSection(props: RoadmapSectionProps) {
   const { number, description, title, contentPosition, image, className } =
     props;
-  const [isOpen, setIsOpen] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  useOutsideAlerter(sectionRef, () => setIsOpen(false));
+
   return (
     <div
-      className={classNames(styles['container'], className)}
-      ref={sectionRef}
+      className={cn(styles['container'], className)}
     >
       <div
         className={styles['number']}
-        onClick={(event) => {
-          event.stopPropagation();
-          setIsOpen((prevState) => !prevState);
-        }}
       >
         {number}
       </div>
       <div
-        className={classNames(styles['content-container'], {
-          [styles['active']]: isOpen,
-        })}
+        className={styles['content-container']}
         style={
           contentPosition === 'left'
             ? {

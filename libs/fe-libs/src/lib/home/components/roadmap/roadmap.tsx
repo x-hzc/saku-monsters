@@ -2,6 +2,7 @@ import styles from './roadmap.module.scss';
 import { useTranslation } from 'react-i18next';
 import { RoadmapSection } from '../roadmap-section/roadmap-section';
 import RoadMapImage from '../../../../../assets/pngs/rodmap-image.png';
+
 export function Roadmap() {
   const { t } = useTranslation();
   return (
