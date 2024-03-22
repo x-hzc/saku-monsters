@@ -1,6 +1,6 @@
 import styles from './logo.module.scss';
 import { useRouter } from '../../../routing/hooks/use-router';
-
+import SakuLogo from '../../../../../assets/pngs/saku_logo.png';
 export function Logo() {
   const { goToHome } = useRouter();
   return (
@@ -11,7 +11,7 @@ export function Logo() {
         goToHome();
       }}
     >
-      Logo
+      <img src={SakuLogo} alt={'App logo'} />
     </div>
   );
 }

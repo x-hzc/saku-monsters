@@ -14,8 +14,7 @@ import { FilterBar } from '../filter-bar/filter-bar';
 
 export function InventoryPage() {
   const { t } = useTranslation();
-  const { syncTokens, loadingTokens, filteredTokens, clearFilters } =
-    useTokensFacade();
+  const { syncTokens, loadingTokens, filteredTokens } = useTokensFacade();
 
   useOnInit(() => {
     syncTokens();
@@ -31,9 +30,6 @@ export function InventoryPage() {
         <div className={styles['text-container']}>
           <div className={styles['title']}>SakuLog</div>
           <div className={styles['text']}>{t('inventory.log')}</div>
-          <div className={styles['actions']}>
-            <Button onClick={clearFilters}>{t('filter.clear')}</Button>
-          </div>
         </div>
         <FilterBar />
       </div>
