@@ -1,14 +1,17 @@
+@use 'media-queries' as mq;
 .container {
   display: flex;
   flex-direction: column;
-  gap: 163px;
   height: 100%;
   width: 100%;
 }
 
 .grow-card {
   position: relative;
-  padding-top: 12%;
+  margin-top: 150px;
+  @include mq.desktop-large {
+    margin-top: 334px;
+  }
   .card {
     position: relative;
     z-index: 5;
@@ -25,7 +28,7 @@
   }
 }
 
-.roadmap{
+.roadmap {
   position: relative;
   z-index: 2;
 }

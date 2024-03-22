@@ -1,6 +1,7 @@
 :root {
   --white-100: #ffffff;
   --grey-200: #f8f5f5;
+  --grey-500: #e6ebe9;
   --blue-300: #82c2fd;
   --lime-green-300: #78dcb3;
   --lime-green-500: #4fd49f;
@@ -26,8 +27,7 @@
   --language-contrast-color: var(--black-500);
   --inventory-title-color: var(--black-300);
   --inventory-text-color: var(--black-200);
-  --phase-two-bg-title-color: var(--orange-700);
+  --phase-two-bg-title-color: var(--red-300);
   --roadmap-bg-color: var(--grey-500);
   --roadmap-content-color: var(--black-400);
-  --phase-two-bg-title-color: var(--red-300);
 }

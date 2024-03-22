@@ -11,10 +11,11 @@
   margin: 0 auto;
   position: relative;
   width: 910px;
-
+  margin-top: 240px;
   @include mq.desktop-large {
     height: 979px;
     width: 1590px;
+    margin-top: 0;
   }
 }
 

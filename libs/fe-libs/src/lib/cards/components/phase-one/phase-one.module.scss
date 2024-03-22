@@ -8,14 +8,14 @@
   flex-direction: column;
   gap: 34px;
   height: 560px;
-  margin: 0 auto;
+  margin: 150px auto 0;
   position: relative;
   width: 910px;
-
   @include mq.desktop-large {
     gap: 71px;
     height: 990px;
     width: 1590px;
+    margin-top: 325px;
   }
 }
 
@@ -367,7 +367,7 @@
     position: relative;
     text-transform: capitalize;
     width: 100%;
-  
+
     @include mq.desktop-large {
       font-size: 14px;
       line-height: 19px;
