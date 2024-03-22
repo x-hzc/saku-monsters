@@ -1,17 +1,21 @@
 import styles from './logo.module.scss';
 import { useRouter } from '../../../routing/hooks/use-router';
-
-export function Logo() {
+import SakuLogo from '../../../../../assets/pngs/saku_logo.png';
+import classNames from 'classnames';
+export interface LogoProps {
+  className?: string;
+}
+export function Logo({ className }: LogoProps) {
   const { goToHome } = useRouter();
   return (
     <div
-      className={styles['container']}
+      className={classNames(styles['container'], className)}
       onClick={(event) => {
         event.stopPropagation();
         goToHome();
       }}
     >
-      Logo
+      <img src={SakuLogo} alt={'App logo'} />
     </div>
   );
 }
