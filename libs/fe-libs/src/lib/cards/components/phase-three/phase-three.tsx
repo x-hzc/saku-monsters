@@ -58,7 +58,10 @@ export function PhaseThree() {
                 phaseThreeTitleOptions.map((opt) => (
                   <CardTitleOption
                     key={`${opt.title}-${opt.sup}`}
-                    onClick={() => handleSelect(opt.title)}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      handleSelect(opt.title);
+                    }}
                     option={opt}
                     selected={opt.title === currentPhaseThreeOption}
                     className={styles['opt-pt']}

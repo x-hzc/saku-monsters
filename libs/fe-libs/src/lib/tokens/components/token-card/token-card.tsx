@@ -31,7 +31,10 @@ export function TokenCard({ token }: TokenCardProps) {
         <div className={styles['adulthood-img-container']}>
           <div
             className={styles['adulthood-img']}
-            onClick={() => toggleAdulthood(id)}
+            onClick={(event) => {
+              event.stopPropagation();
+              toggleAdulthood(id);
+            }}
             style={{
               backgroundImage: `url(${tokenImageMapper(
                 id,

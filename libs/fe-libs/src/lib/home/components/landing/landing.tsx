@@ -21,15 +21,33 @@ export function Landing() {
       <div className={styles['content-container']}>
         <div className={styles['nav-menu']}>
           <Logo />
-          <div className={styles['link']} onClick={goToHome}>
+          <div
+            className={styles['link']}
+            onClick={(event) => {
+              event.stopPropagation();
+              goToHome();
+            }}
+          >
             <HomeIcon />
             <div className={styles['text']}>{t('navigation.home')}</div>
           </div>
-          <div className={styles['link']} onClick={goToInventory}>
+          <div
+            className={styles['link']}
+            onClick={(event) => {
+              event.stopPropagation();
+              goToInventory();
+            }}
+          >
             <MonstersIcon />
             <div className={styles['text']}>{t('navigation.monsters')}</div>
           </div>
-          <div className={styles['link']}>
+          <div
+            className={styles['link']}
+            onClick={(event) => {
+              event.stopPropagation();
+              goToAppleSakuMonsters();
+            }}
+          >
             <StoreIcon />
             <div className={styles['text']}>{t('navigation.store')}</div>
           </div>
@@ -44,7 +62,12 @@ export function Landing() {
             <LogoKanjiIcon />
           </div>
           <div className={classNames(styles['bottom-title'], styles['title'])}>
-            <div className={styles['play-container']}>
+            <div
+              className={styles['play-container']}
+              onClick={(event) => {
+                event.stopPropagation();
+              }}
+            >
               <PlayIcon />
             </div>
             <div>{t('landing.monsters')}</div>
@@ -54,7 +77,10 @@ export function Landing() {
         <div className={styles['bottom-content']}>
           <div
             className={styles['saku-card']}
-            onClick={goToAppleSakuMonsters}
+            onClick={(event) => {
+              event.stopPropagation();
+              goToAppleSakuMonsters();
+            }}
           />
           <div className={styles['content']}>
             <div className={styles['title']}>{t('landing.collect')}</div>

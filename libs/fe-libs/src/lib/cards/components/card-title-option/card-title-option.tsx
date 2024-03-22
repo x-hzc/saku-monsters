@@ -1,5 +1,6 @@
 import styles from './card-title-option.module.scss';
 import cn from 'classnames';
+import { MouseEventHandler } from 'react';
 
 export interface Option {
   title: string;
@@ -7,7 +8,7 @@ export interface Option {
 }
 
 export interface CardTitleOptionProps {
-  onClick: () => void;
+  onClick: MouseEventHandler<HTMLDivElement>;
   option: Option;
   selected: boolean;
   className?: string;
