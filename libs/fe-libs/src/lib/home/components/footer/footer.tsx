@@ -1,7 +1,7 @@
 import styles from './footer.module.scss';
 import { useTranslation } from 'react-i18next';
-import { useRouter } from '../routing/hooks/use-router';
-import { Button } from '../ui/components/button/button';
+import { useRouter } from '../../../routing/hooks/use-router';
+import { Button } from '../../../ui/components/button/button';
 
 export function Footer() {
   const { t } = useTranslation();
