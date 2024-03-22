@@ -23,7 +23,7 @@ export function InventoryPage() {
   return (
     <div className={styles['container']}>
       <div className={styles['header']}>
-        <Logo />
+        <Logo className={styles['logo']} />
         <LanguageSelector contrasted={true} />
       </div>
       <div className={styles['top-content']}>

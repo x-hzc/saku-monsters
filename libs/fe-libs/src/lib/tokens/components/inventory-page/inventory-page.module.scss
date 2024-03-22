@@ -12,12 +12,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .logo {
+    height: 100px;
+  }
 }
 .top-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 120px;
+
   .text-container {
     padding-left: 39px;
     display: flex;
