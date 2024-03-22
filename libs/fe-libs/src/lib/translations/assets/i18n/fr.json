@@ -88,5 +88,14 @@
       "title": "Mode de Combat",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu"
     }
+  },
+  "footer": {
+    "place": "UN LIEU D'AMITIÉ ET DE DÉCOUVERTE",
+    "marketplace": "MARCHÉ",
+    "sakulog": "SAKULOG",
+    "download": "TÉLÉCHARGER LE JEU",
+    "privacy": "POLITIQUE DE CONFIDENTIALITÉ",
+    "terms": "CONDITIONS D'UTILISATION",
+    "rights": "Tous droits réservés"
   }
 }
