@@ -55,7 +55,7 @@
         },
         "production": {
           "assets": [
-            "apps/saku-monsters-web/src/favicon.svg",
+            "apps/saku-monsters-web/src/favicon.ico",
             {
               "glob": "*",
               "input": "libs/fe-libs/assets",
