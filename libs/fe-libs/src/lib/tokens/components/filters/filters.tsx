@@ -9,7 +9,7 @@ import { useTokensFacade } from '../../hooks/use-tokens-facade';
 import {
   TOKEN_ADULTHOOD_COLOR,
   TOKEN_RARITY_COLOR,
-} from '../../helpers/token-rarity-color-mapper';
+} from '../../helpers/token-color-mapper';
 
 export function Filters() {
   const { t } = useTranslation();

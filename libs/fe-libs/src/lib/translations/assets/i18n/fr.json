@@ -77,7 +77,10 @@
     "rare": "Rare",
     "epic": "Épique",
     "legendary": "Légendaire",
-    "store": "Magasin"
+    "store": "Magasin",
+    "blue": "Oeuf Bleu",
+    "purple": "Oeuf Violet",
+    "golden": "Oeuf D'or"
   },
   "roadmap": {
     "stream": "Le flux sans fin",
