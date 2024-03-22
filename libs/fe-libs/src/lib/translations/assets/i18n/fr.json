@@ -78,5 +78,12 @@
     "phase": "Phase 2",
     "title": "Visitez le SakuLog",
     "discover": "Explorez et découvrez l'univers des monstres saku!"
+  },
+  "roadmap": {
+    "stream": "Le flux sans fin",
+    "1": {
+      "title": "Mode de Combat",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu"
+    }
   }
 }

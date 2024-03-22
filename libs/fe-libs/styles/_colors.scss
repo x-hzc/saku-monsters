@@ -1,6 +1,7 @@
 :root {
   --white-100: #ffffff;
   --grey-200: #f8f5f5;
+  --grey-500: #e6ebe9;
   --blue-300: #82c2fd;
   --lime-green-300: #78dcb3;
   --lime-green-500: #4fd49f;
@@ -10,6 +11,7 @@
   --red-300: #e78181;
   --black-200: #2b2b2b;
   --black-300: #1e1e1e;
+  --black-400: #303030;
   --black-500: #111111;
   --black-900: #000000;
   --black-900-transparence-8: rgba(0, 0, 0, 0.08);
@@ -19,11 +21,13 @@
 
 :root {
   --primary-color: var(--white-100);
-  --title-color: var(--gray-500);
-  --nav-link-color: var(--gray-600);
+  --title-color: var(--black-300);
+  --nav-link-color: var(--black-500);
   --inventory-bg-color: var(--grey-200);
   --language-contrast-color: var(--black-500);
   --inventory-title-color: var(--black-300);
   --inventory-text-color: var(--black-200);
   --phase-two-bg-title-color: var(--red-300);
+  --roadmap-bg-color: var(--grey-500);
+  --roadmap-content-color: var(--black-400);
 }

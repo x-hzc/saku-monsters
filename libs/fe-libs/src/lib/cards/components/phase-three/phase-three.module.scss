@@ -4,12 +4,13 @@
 
 .container {
   height: 590px;
-  margin: 0 auto;
+  margin: 316px auto 0;
   width: 916px;
 
   @include mq.desktop-large {
     height: 1068px;
     width: 1620px;
+    margin-top: 316px;
   }
 }
 
@@ -30,6 +31,7 @@
 .bg-pt-card {
   @include c.card;
   @include c.bg-card;
+  z-index: 2;
   background-image: url('../../../../../assets/pngs/bg_phase_three_blue.png');
   border-radius: 122px;
   position: absolute;
