@@ -1,20 +1,23 @@
 import styles from './grow-card.module.scss';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useMemo } from 'react';
+import { useCardTitleStore } from '../../hooks/use-card-title-store';
+import { CardTitleOption } from '../card-title-option/card-title-option';
 import GrowHappiness from '../../../../../assets/pngs/grow_happiness.png';
 import Egg from '../../../../../assets/pngs/egg.png';
 import AdultChu from '../../../../../assets/adult_chu.gif';
 import BabyChu from '../../../../../assets/baby_chu.gif';
-import { useCardTitleStore } from '../../hooks/use-card-title-store';
-import { CardTitleOption } from '../card-title-option/card-title-option';
-import { useOnInit } from '../../../shared/hooks/use-on-init';
 
 export function GrowCard() {
-  const { t } = useTranslation();
-  const growTitleOptions = [
-    { title: t('grow-card.shop'), sup: '01' },
-    { title: t('grow-card.grow'), sup: '02' },
-    { title: t('grow-card.collect'), sup: '03' },
-  ];
+  const { i18n, t } = useTranslation();
+  const growTitleOptions = useMemo(
+    () => [
+      { title: t('grow-card.shop'), sup: '01' },
+      { title: t('grow-card.grow'), sup: '02' },
+      { title: t('grow-card.collect'), sup: '03' },
+    ],
+    [t]
+  );
   const paragraphPerTitleOption = {
     [t('grow-card.shop')]: t('grow-card.shop-paragraph'),
     [t('grow-card.grow')]: t('grow-card.grow-paragraph'),
@@ -72,9 +75,13 @@ export function GrowCard() {
     return <></>;
   };
 
-  useOnInit(() => {
+  // useEffect(() => {
+  //   setCurrentGrowOption(growTitleOptions[1].title);
+  // }, [i18n.resolvedLanguage]);
+
+  useEffect(() => {
     setCurrentGrowOption(growTitleOptions[1].title);
-  });
+  }, [growTitleOptions, i18n.resolvedLanguage, setCurrentGrowOption]);
 
   return (
     <div className={styles['container']}>

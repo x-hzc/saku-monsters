@@ -1,18 +1,21 @@
 import styles from './phase-three.module.scss';
 import { useTranslation } from 'react-i18next';
-import { CardTitleOption } from '../card-title-option/card-title-option';
+import { useEffect, useMemo } from 'react';
 import { useCardTitleStore } from '../../hooks/use-card-title-store';
-import { useOnInit } from '../../../shared/hooks/use-on-init';
+import { CardTitleOption } from '../card-title-option/card-title-option';
 import Kanjis from '../../../../../assets/svgs/kanjis.svg';
 import Coins from '../../../../../assets/pngs/bg_phase_three_coins.png';
 import PhaseThreeBirdmonster from '../../../../../assets/pngs/phase_three_birdmonster.png';
 
 export function PhaseThree() {
-  const { t } = useTranslation();
-  const phaseThreeTitleOptions = [
-    { title: t('phase-three.community'), sup: '01' },
-    { title: t('phase-three.saku'), sup: '02' },
-  ];
+  const { i18n, t } = useTranslation();
+  const phaseThreeTitleOptions = useMemo(
+    () => [
+      { title: t('phase-three.community'), sup: '01' },
+      { title: t('phase-three.saku'), sup: '02' },
+    ],
+    [t]
+  );
   const paragraphPerTitleOption = {
     [t('phase-three.community')]: t('phase-three.community-paragraph'),
     [t('phase-three.saku')]: t('phase-three.saku-paragraph'),
@@ -37,9 +40,13 @@ export function PhaseThree() {
     );
   };
 
-  useOnInit(() => {
+  useEffect(() => {
     setCurrentPhaseThreeOption(phaseThreeTitleOptions[1].title);
-  });
+  }, [
+    i18n.resolvedLanguage,
+    phaseThreeTitleOptions,
+    setCurrentPhaseThreeOption,
+  ]);
 
   return (
     <div className={styles['container']}>
