@@ -75,10 +75,6 @@ export function GrowCard() {
     return <></>;
   };
 
-  // useEffect(() => {
-  //   setCurrentGrowOption(growTitleOptions[1].title);
-  // }, [i18n.resolvedLanguage]);
-
   useEffect(() => {
     setCurrentGrowOption(growTitleOptions[1].title);
   }, [growTitleOptions, i18n.resolvedLanguage, setCurrentGrowOption]);
