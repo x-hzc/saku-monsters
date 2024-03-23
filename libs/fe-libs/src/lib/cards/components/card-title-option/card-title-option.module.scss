@@ -7,6 +7,9 @@
   line-height: 22px;
   position: relative;
   text-transform: uppercase;
+  transition: color 0.5s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out;
+  z-index: 20;
 
   &:hover {
     color: var(--primary-color);

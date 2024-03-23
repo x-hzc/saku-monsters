@@ -9,13 +9,14 @@
   height: 560px;
   justify-content: center;
   margin: 0 auto;
+  margin-top: 240px;
   position: relative;
   width: 910px;
-  margin-top: 240px;
+
   @include mq.desktop-large {
     height: 979px;
-    width: 1590px;
     margin-top: 0;
+    width: 1590px;
   }
 }
 

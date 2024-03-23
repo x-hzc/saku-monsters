@@ -42,8 +42,14 @@
     padding: 22px 45px 28px 26px;
     position: absolute;
     transform: translate(0, 50%);
-    transition: opacity 2s, transform 2s, rotate 2s;
-    -webkit-transition: opacity 2s, transform 2s, rotate 2s;
+    transition: 
+      opacity 2s ease-in-out,
+      transform 2s ease-in-out,
+      rotate 2s ease-in-out;
+    -webkit-transition:
+      opacity 2s ease-in-out,
+      transform 2s ease-in-out,
+      rotate 2s ease-in-out;
 
     .img-container {
       display: block;
