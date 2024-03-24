@@ -24,9 +24,7 @@
   }
 
   .number:hover + .content-container {
-    display: flex;
     opacity: 1;
-    rotate: 360deg;
   }
 
   .content-container {
@@ -35,21 +33,15 @@
     bottom: 50%;
     box-shadow: 12px 13px 43px #00000052;
     color: var(--roadmap-content-color);
-    display: none;
+    display: flex;
     gap: 30px;
     max-width: 735px;
     opacity: 0;
     padding: 22px 45px 28px 26px;
     position: absolute;
     transform: translate(0, 50%);
-    transition: 
-      opacity 2s ease-in-out,
-      transform 2s ease-in-out,
-      rotate 2s ease-in-out;
-    -webkit-transition:
-      opacity 2s ease-in-out,
-      transform 2s ease-in-out,
-      rotate 2s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
 
     .img-container {
       display: block;
