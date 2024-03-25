@@ -1,7 +1,7 @@
 import { atom, useAtom } from 'jotai';
 import { getAllStickers } from '../constants/sticker-images';
 import { ActiveSticker } from '../types/active-sticker';
-import { useDeviceType } from '../../ui/hooks/use-device-type';
+import { useDeviceType } from '../../shared/hooks/use-device-type';
 import { useClickCursor } from '../../ui/hooks/use-click-cursor';
 
 const STICKERS = getAllStickers();

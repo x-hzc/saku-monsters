@@ -6,12 +6,16 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 560px;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 11px;
   margin-top: 240px;
   position: relative;
-  width: 910px;
+
+  @include mq.large-tablet {
+    height: 560px;
+    margin: 0 auto;
+    width: 910px;
+  }
 
   @include mq.desktop-large {
     height: 979px;
@@ -24,8 +28,12 @@
   @include c.card;
   @include c.bg-card;
   background-image: url('../../../../../assets/pngs/bg_grow_green.png');
-  border-radius: 128px;
+  border-radius: 80px;
   position: absolute;
+
+  @include mq.large-tablet {
+    border-radius: 128px;
+  }
 
   @include mq.desktop-large {
     border-radius: 224px;
@@ -68,11 +76,11 @@
   .phases {
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
 
   .opts-container {
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
   }
 
@@ -86,6 +94,11 @@
     margin-top: 3%;
     text-align: center;
 
+    @include mq.tablet-small {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
     @include mq.desktop-large {
       font-size: 22px;
       line-height: 31px;
@@ -93,11 +106,17 @@
   }
 
   .phases {
-    bottom: 3%;
-    position: absolute;
-    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 3% 0;
+    width: 85%;
+
+    @include mq.tablet-small {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
+  .phase-full,
   .phase {
     align-items: center;
     display: flex;
@@ -119,15 +138,45 @@
     }
   }
 
+  .phase-full {
+    grid-column: span 2;
+    grid-row: 1;
+
+    @include mq.tablet-small {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  .phase {
+    grid-row: 2;
+
+    @include mq.tablet-small {
+      grid-row: 1;
+    }
+  }
+
   .egg-container {
-    width: 16%;
+    width: 29px;
+
+    @include mq.desktop-large {
+      width: 15%;
+    }
   }
 
-  .egg-span {
-    margin-top: 2.5%;
+  .baby-container {
+    width: 31px;
+
+    @include mq.desktop-large {
+      width: 15%;
+    }
   }
 
-  .img-container {
-    width: 70%;
+  .adult-container {
+    width: 61px;
+
+    @include mq.desktop-large {
+      width: 30%;
+    }
   }
 }

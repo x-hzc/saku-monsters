@@ -2,11 +2,13 @@ import styles from './grow-card.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo } from 'react';
 import { useCardTitleStore } from '../../hooks/use-card-title-store';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { CardTitleOption } from '../card-title-option/card-title-option';
-import GrowHappiness from '../../../../../assets/pngs/grow_happiness.png';
+import GrowHappinessMobile from '../../../../../assets/pngs/grow_happiness_mobile.png';
+import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop.png';
 import Egg from '../../../../../assets/pngs/egg.png';
-import AdultChu from '../../../../../assets/adult_chu.gif';
-import BabyChu from '../../../../../assets/baby_chu.gif';
+import AdultChu from '../../../../../assets/pngs/grow_adult_chu.png';
+import BabyChu from '../../../../../assets/pngs/grow_baby_chu.png';
 
 export function GrowCard() {
   const { i18n, t } = useTranslation();
@@ -24,6 +26,7 @@ export function GrowCard() {
     [t('grow-card.collect')]: t('grow-card.collect-paragraph'),
   };
   const { currentGrowOption, setCurrentGrowOption } = useCardTitleStore();
+  const { isMobile } = useDeviceType();
 
   const handleSelect = (selectedOption: string) => {
     setCurrentGrowOption(selectedOption);
@@ -49,20 +52,20 @@ export function GrowCard() {
   const growImages = () => {
     return (
       <div className={styles['phases']}>
-        <div className={styles['phase']}>
+        <div className={styles['phase-full']}>
           <div className={styles['egg-container']}>
             <img src={Egg} alt="egg" />
           </div>
-          <span className={styles['egg-span']}>{t('grow-card.egg')}</span>
+          <span>{t('grow-card.egg')}</span>
         </div>
         <div className={styles['phase']}>
-          <div className={styles['img-container']}>
+          <div className={styles['baby-container']}>
             <img src={BabyChu} alt="chu" />
           </div>
           <span>{t('grow-card.baby')}</span>
         </div>
         <div className={styles['phase']}>
-          <div className={styles['img-container']}>
+          <div className={styles['adult-container']}>
             <img src={AdultChu} alt="adult-chu" />
           </div>
           <span>{t('grow-card.adult')}</span>
@@ -84,7 +87,10 @@ export function GrowCard() {
       <div className={styles['bg']} />
       <div className={styles['content']}>
         <div className={styles['gh-container']}>
-          <img src={GrowHappiness} alt="grow-happiness" />
+          <img
+            src={isMobile ? GrowHappinessMobile : GrowHappinessDesktop}
+            alt="grow-happiness"
+          />
         </div>
         <div className={styles['down']}>
           <div className={styles['opts-container']}>
