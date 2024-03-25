@@ -344,8 +344,14 @@
 
   .btns-container {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 11px;
     justify-content: center;
+
+    @include mq.large-tablet {
+      flex-direction: row;
+      gap: 18px;
+    }
   }
 
   .btn,
@@ -358,50 +364,39 @@
   }
 
   .btn {
+    align-items: center;
     color: var(--primary-color);
     display: flex;
     font-size: 10px;
-    justify-content: flex-end;
+    gap: 19px;
+    justify-content: center;
     line-height: 5px;
     padding: 4% 8%;
     position: relative;
     text-transform: capitalize;
     width: 100%;
 
+    @include mq.large-tablet {
+      gap: 5px;
+    }
+
     @include mq.desktop-large {
       font-size: 14px;
+      gap: 12px;
       line-height: 19px;
     }
-  }
 
-  .apple-container,
-  .google-container {
-    position: absolute;
-
-    svg {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
+    span {
+      text-wrap: nowrap;
     }
   }
 
-  .apple-container {
+  .store-icon-container {
     color: var(--primary-color);
-    left: 10%;
-    height: 60%;
-    top: 15%;
+    width: 14px;
 
     @include mq.desktop-large {
-      left: 17%;
-    }
-  }
-
-  .google-container {
-    left: 2%;
-    height: 90%;
-
-    @include mq.desktop-large {
-      left: 8%;
+      width: 20px;
     }
   }
 
