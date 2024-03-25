@@ -11,11 +11,13 @@ import { Filters } from '../filters/filters';
 import { FilterBar } from '../filter-bar/filter-bar';
 import { Information } from '../../../ui/components/information/information';
 import { CircularProgress } from '@mui/material';
+import { useDeviceType } from '../../../ui/hooks/use-device-type';
 
 export function InventoryPage() {
   const { t } = useTranslation();
   const { syncTokens, loadingTokens, filteredTokens, setInitialValue } =
     useTokensFacade();
+  const { isMinLargeTablet, isMinDesktopSmall } = useDeviceType();
 
   useOnInit(() => {
     syncTokens();
@@ -25,7 +27,7 @@ export function InventoryPage() {
     <div className={styles['container']}>
       <div className={styles['header']}>
         <Logo className={styles['logo']} />
-        <LanguageSelector contrasted={true} />
+        {isMinDesktopSmall && <LanguageSelector contrasted={true} />}
       </div>
       <div className={styles['top-content']}>
         <div className={styles['text-container']}>

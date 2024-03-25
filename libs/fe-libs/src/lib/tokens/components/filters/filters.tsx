@@ -13,6 +13,8 @@ import {
   TOKEN_RARITY_COLOR,
 } from '../../helpers/token-color-mapper';
 import classNames from 'classnames';
+import { useDeviceType } from '../../../ui/hooks/use-device-type';
+import { useEffect } from 'react';
 
 export function Filters() {
   const { t } = useTranslation();
@@ -22,11 +24,17 @@ export function Filters() {
     adulthoodFilter,
     rarityFilter,
     toggleRarityFilter,
+    setAdulthoodFilter,
   } = useTokensFacade();
+  const { isMinDesktopSmall } = useDeviceType();
+
+  useEffect(() => {
+    setAdulthoodFilter(isMinDesktopSmall ? TokenAdulthoodType.Adult : null);
+  }, [isMinDesktopSmall]);
   return (
     <div className={styles['container']}>
       <div className={styles['title']}>{t('filter.filters')}</div>
-      <div className={styles['section']}>
+      <div className={classNames(styles['section'], styles['adulthood'])}>
         <div className={styles['title']}>{t('filter.adulthood')}</div>
         <Button
           className={styles['button']}
@@ -65,7 +73,7 @@ export function Filters() {
           <div className={styles['text']}>{t('filter.adult')}</div>
         </Button>
       </div>
-      <div className={styles['section']}>
+      <div className={classNames(styles['section'], styles['rarity'])}>
         <div className={styles['title']}>{t('filter.rarity')}</div>
         <Button
           className={styles['button']}
