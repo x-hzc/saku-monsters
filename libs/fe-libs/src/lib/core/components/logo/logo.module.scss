@@ -1,7 +1,7 @@
 @use 'media-queries' as mq;
-
+@use 'cursors' as c;
 .container {
-  cursor: pointer;
+  @include c.hover;
   width: 15%;
   @include mq.desktop-large {
     width: 25%;

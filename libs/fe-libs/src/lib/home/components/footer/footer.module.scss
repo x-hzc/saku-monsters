@@ -1,6 +1,7 @@
 @use 'media-queries' as mq;
 @use 'button' as btn;
 @use 'card' as c;
+@use 'cursors' as cur;
 
 .container {
   align-items: center;
@@ -130,7 +131,7 @@
   }
 
   .link {
-    cursor: pointer;
+    @include cur.hover;
     font-family: var(--secondary-font-family);
     font-size: 18px;
     letter-spacing: 0.42px;

@@ -1,3 +1,4 @@
+@use 'cursors' as c;
 .container {
   max-height: 1060px;
   height: calc(100vh - 18px);
@@ -41,7 +42,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    cursor: pointer;
+    @include c.hover;
   }
   .text {
     font-size: 14px;
@@ -72,7 +73,7 @@
 
   .play-container {
     border-radius: 50%;
-    cursor: pointer;
+    @include c.hover;
     background-color: var(--primary-color);
     width: 68px;
     height: 65px;
@@ -94,7 +95,7 @@
     aspect-ratio: 1 / 1;
     width: 360px;
     height: 185px;
-    cursor: pointer;
+    @include c.hover;
   }
   .content {
     max-width: 230px;

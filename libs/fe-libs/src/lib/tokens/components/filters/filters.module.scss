@@ -1,5 +1,5 @@
 @use 'media-queries' as mq;
-
+@use 'cursors' as c;
 .container {
   background: var(--primary-color) 0 0 no-repeat padding-box;
   border-radius: 42px;
@@ -61,7 +61,7 @@
     background-image: url('../../../../../assets/pngs/filter-saku.png');
     width: 364px;
     height: 195px;
-    cursor: pointer;
+      @include c.hover;;
   }
   .egg {
     position: absolute;
