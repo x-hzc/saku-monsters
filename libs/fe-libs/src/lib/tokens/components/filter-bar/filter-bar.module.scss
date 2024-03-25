@@ -12,7 +12,7 @@
   padding: 11px 22px;
   align-items: center;
   margin: 0 auto;
-  width: max-content;
+  width: fit-content;
   @include mq.medium-window {
     grid-template-rows: auto;
     justify-content: flex-start;
@@ -71,6 +71,8 @@
     --btn-bg-color: #f8f5f5;
     --btn-color: #e2dfdf;
     --btn-padding-y: 9px;
+    @include mq.fluid(--btn-padding-x, 393px, 1920px, 7px, 17px);
+
     .icon {
       display: flex;
       align-items: center;
