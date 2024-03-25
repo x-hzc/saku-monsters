@@ -5,7 +5,7 @@
 .container {
   margin: 150px 11px 0;
 
-  @include mq.large-tablet {
+  @include mq.tablet-large {
     height: 485px;
     margin: 150px auto 0;
     width: 916px;
@@ -23,7 +23,7 @@
   justify-content: center;
   position: relative;
 
-  @include mq.large-tablet {
+  @include mq.tablet-large {
     height: 435px;
     width: 904px;
   }
@@ -47,7 +47,7 @@
   border-radius: 80px;
   position: absolute;
 
-  @include mq.large-tablet {
+  @include mq.tablet-large {
     border-radius: 122px;
   }
 }
@@ -69,7 +69,7 @@
   width: 100%;
   z-index: 10;
 
-  @include mq.large-tablet {
+  @include mq.tablet-large {
     display: grid;
     grid-template-columns: 52% 48%;
     padding: 0;
@@ -81,7 +81,7 @@
   flex-direction: column;
   gap: 30px;
 
-  @include mq.large-tablet {
+  @include mq.tablet-large {
     padding: 16px 18px 16px 65px;
   }
 
@@ -97,7 +97,7 @@
     justify-content: space-between;
 
     margin-top: 20px;
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       margin-top: 0;
     }
   }
@@ -106,7 +106,7 @@
     display: flex;
     flex-direction: column;
 
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       align-items: center;
       flex-direction: row;
     }
@@ -120,7 +120,7 @@
       font-weight: bold;
       line-height: 50px;
 
-      @include mq.large-tablet {
+      @include mq.tablet-large {
         font-size: 26px;
         line-height: 40px;
       }
@@ -135,7 +135,7 @@
       height: 24px;
       width: 160px;
 
-      @include mq.large-tablet {
+      @include mq.tablet-large {
         height: 21px;
         width: 195px;
       }
@@ -151,7 +151,7 @@
     height: 91px;
     width: 91px;
 
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       display: none;
     }
   }
@@ -160,7 +160,7 @@
     font-size: 23px;
     line-height: 26px;
 
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       font-size: 27px;
       line-height: 39px;
     }
@@ -194,7 +194,7 @@
   position: relative;
   width: 100%;
 
-  @include mq.large-tablet {
+  @include mq.tablet-large {
     justify-content: flex-end;
     padding: 0 2%;
   }
@@ -203,7 +203,7 @@
     height: 317px;
     padding-top: 20px;
 
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       height: auto;
       max-width: 95%;
       padding-top: 0;
@@ -213,7 +213,7 @@
     img {
       border-radius: 25%;
 
-      @include mq.large-tablet {
+      @include mq.tablet-large {
         border-radius: unset;
       }
     }
@@ -228,7 +228,7 @@
     width: 100%;
     z-index: 20;
 
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       display: flex;
     }
 
@@ -252,7 +252,7 @@
     right: -6%;
     z-index: 30;
 
-    @include mq.large-tablet {
+    @include mq.tablet-large {
       bottom: -19%;
     }
 
