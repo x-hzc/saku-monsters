@@ -50,7 +50,7 @@
     @include c.hover;
   }
   .name-container {
-    display: var(--token-name-display);
+    display: var(--token-name-display, flex);
     align-items: center;
     padding: 4px 6px 5px;
     border-radius: 27px;
@@ -60,9 +60,7 @@
     .name {
       margin: 0 auto;
     }
-    .rarity-icon-container {
-     float: left;
-    }
+
   }
   .adulthood-img-container {
     $size: var(--adulthood-size, 67px);
