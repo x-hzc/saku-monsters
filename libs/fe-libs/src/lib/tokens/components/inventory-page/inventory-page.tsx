@@ -7,8 +7,6 @@ import { useOnInit } from '../../../shared/hooks/use-on-init';
 import { Logo } from '../../../core/components/logo/logo';
 import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
 import { Button } from '../../../ui/components/button/button';
-import { TOKEN_RARITY_ICON } from '../../helpers/token-rarity-icon-mapper';
-import { TokenRarityType } from '@saku-monsters/shared';
 import { Filters } from '../filters/filters';
 import { FilterBar } from '../filter-bar/filter-bar';
 import { Information } from '../../../ui/components/information/information';
