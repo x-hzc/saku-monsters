@@ -8,6 +8,9 @@
   display: flex;
   font-weight: 500;
   justify-content: center;
+  &.active {
+    @include c.click;
+  }
 }
 
 @mixin bordered-button {
@@ -24,6 +27,9 @@
   height: $size;
   justify-content: center;
   width: $size;
+  &.active {
+    @include c.click;
+  }
 }
 
 @mixin discover-button {

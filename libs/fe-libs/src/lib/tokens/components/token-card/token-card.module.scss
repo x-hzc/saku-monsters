@@ -48,6 +48,9 @@
     background-color: var(--primary-color);
     border-radius: 50%;
     @include c.hover;
+    &.active {
+      @include c.click;
+    }
   }
   .name-container {
     display: var(--token-name-display, flex);

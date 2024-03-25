@@ -61,7 +61,10 @@
     background-image: url('../../../../../assets/pngs/filter-saku.png');
     width: 364px;
     height: 195px;
-      @include c.hover;;
+    @include c.hover;
+    &.active {
+      @include c.click;
+    }
   }
   .egg {
     position: absolute;

@@ -14,6 +14,9 @@
   &:hover {
     color: var(--primary-color) !important;
   }
+  &:active {
+    @include c.click;
+  }
 
   @include mq.desktop-large {
     font-size: 62px;
