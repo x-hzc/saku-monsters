@@ -3,9 +3,13 @@
 @use 'card' as c;
 
 .container {
-  height: 485px;
-  width: 916px;
-  margin: 150px auto 0;
+  margin: 150px 11px 0;
+
+  @include mq.large-tablet {
+    height: 485px;
+    margin: 150px auto 0;
+    width: 916px;
+  }
 
   @include mq.desktop-large {
     height: 890px;
@@ -13,17 +17,26 @@
   }
 }
 
-.card-container {
+.intro-card-container {
   align-items: center;
   display: flex;
-  height: 435px;
   justify-content: center;
   position: relative;
-  width: 904px;
+
+  @include mq.large-tablet {
+    height: 435px;
+    width: 904px;
+  }
 
   @include mq.desktop-large {
     height: 762px;
     width: 1582px;
+  }
+
+  img,
+  svg {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -31,49 +44,86 @@
   @include c.card;
   @include c.bg-card;
   background-image: url('../../../../../assets/pngs/bg_intro_green.png');
-  border-radius: 122px;
+  border-radius: 80px;
   position: absolute;
+
+  @include mq.large-tablet {
+    border-radius: 122px;
+  }
 }
+
+// .bg-container {
+//   height: 100%;
+//   position: absolute;
+//   width: 100%;
+// }
 
 .content {
   align-items: center;
   color: var(--primary-color);
-  display: grid;
-  grid-template-columns: 52% 48%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  padding: 40px 5% 25px;
   position: relative;
+  width: 100%;
   z-index: 10;
 
-  img,
-  svg {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+  @include mq.large-tablet {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    padding: 0;
   }
 }
 
 .left {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 16px 18px 16px 65px;
+  gap: 30px;
+
+  @include mq.large-tablet {
+    padding: 16px 18px 16px 65px;
+  }
 
   @include mq.desktop-large {
+    gap: 24px;
     padding: 16px 18px 16px 126px;
   }
 
-  .t-container {
+  .up {
     align-items: center;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    @include mq.large-tablet {
+      margin-top: 0;
+    }
+  }
+
+  .t-container {
+    display: flex;
+    flex-direction: column;
+
+    @include mq.large-tablet {
+      align-items: center;
+      flex-direction: row;
+    }
 
     @include mq.desktop-large {
       gap: 25px;
     }
 
     .title {
-      font-size: 26px;
+      font-size: 32px;
       font-weight: bold;
-      line-height: 40px;
+      line-height: 50px;
+
+      @include mq.large-tablet {
+        font-size: 26px;
+        line-height: 40px;
+      }
 
       @include mq.desktop-large {
         font-size: 46px;
@@ -82,8 +132,13 @@
     }
 
     .k-container {
-      height: 21px;
-      width: 195px;
+      height: 24px;
+      width: 160px;
+
+      @include mq.large-tablet {
+        height: 21px;
+        width: 195px;
+      }
 
       @include mq.desktop-large {
         height: 31px;
@@ -92,9 +147,23 @@
     }
   }
 
+  .isml-container {
+    height: 91px;
+    width: 91px;
+
+    @include mq.large-tablet {
+      display: none;
+    }
+  }
+
   .paragraph {
-    font-size: 27px;
-    line-height: 39px;
+    font-size: 23px;
+    line-height: 26px;
+
+    @include mq.large-tablet {
+      font-size: 27px;
+      line-height: 39px;
+    }
 
     @include mq.desktop-large {
       font-size: 47px;
@@ -122,25 +191,48 @@
   display: flex;
   height: 100%;
   justify-content: center;
-  padding: 16px 18px;
   position: relative;
+  width: 100%;
 
-  .bg-egg {
-    @include c.bg-card;
-    background-image: url('../../../../../assets/pngs/bg_intro_egg.png');
-    height: 95%;
-    position: absolute;
+  @include mq.large-tablet {
+    justify-content: flex-end;
+    padding: 0 2%;
+  }
+
+  .bg-intro-egg-container {
+    height: 317px;
+    padding-top: 20px;
+
+    @include mq.large-tablet {
+      height: auto;
+      max-width: 95%;
+      padding-top: 0;
+      position: absolute;
+    }
+
+    img {
+      border-radius: 25%;
+
+      @include mq.large-tablet {
+        border-radius: unset;
+      }
+    }
   }
 
   .bttm {
     align-items: flex-end;
-    display: flex;
+    display: none;
     height: 100%;
     justify-content: flex-start;
+    padding: 5% 4%;
     width: 100%;
     z-index: 20;
 
-    .ism-container {
+    @include mq.large-tablet {
+      display: flex;
+    }
+
+    .ismr-container {
       height: 105px;
       width: 105px;
 
@@ -153,12 +245,16 @@
   }
 
   .ib-container {
-    bottom: -19%;
+    bottom: -46%;
     height: 196px;
     width: 196px;
     position: absolute;
     right: -6%;
     z-index: 30;
+
+    @include mq.large-tablet {
+      bottom: -19%;
+    }
 
     @include mq.desktop-large {
       bottom: -23%;
