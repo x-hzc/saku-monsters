@@ -4,7 +4,10 @@
     "goToInventory": "Go to inventory"
   },
   "inventory": {
-    "log": "Explore and learn about the saku monster universe"
+    "log": "Explore and learn about the saku monster universe",
+    "not-found": "Not Found",
+    "hint": "No monsters found for filters applied",
+    "loading": "Getting Saku Monsters"
   },
   "navigation": {
     "home": "Home",
@@ -66,7 +69,7 @@
     "search": "Search Any Monster",
     "show": "Show filters",
     "hide": "Hide filters",
-    "clear": "Clear filters",
+    "reset": "Reset filters",
     "unique": "{{count}} Unique Monsters",
     "filters": "Filters",
     "adulthood": "Adulthood",

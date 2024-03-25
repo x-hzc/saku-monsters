@@ -1,3 +1,4 @@
+@use 'cursors' as c;
 .container {
   max-height: 1060px;
   height: calc(100vh - 18px);
@@ -27,6 +28,21 @@
   top: 9px;
   left: 0.63%;
   z-index: 1;
+  &.playing {
+    z-index: 5;
+  }
+  .video {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    &.active {
+      display: block;
+      z-index: 5;
+    }
+  }
 }
 
 .nav-menu {
@@ -41,7 +57,12 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    cursor: pointer;
+    @include c.hover;
+    &:active {
+      &.active {
+        @include c.click;
+      }
+    }
   }
   .text {
     font-size: 14px;
@@ -72,7 +93,7 @@
 
   .play-container {
     border-radius: 50%;
-    cursor: pointer;
+    @include c.hover;
     background-color: var(--primary-color);
     width: 68px;
     height: 65px;
@@ -80,6 +101,9 @@
     align-items: center;
     justify-content: center;
     padding-left: 6px;
+    &.active {
+      @include c.click;
+    }
   }
 }
 .bottom-content {
@@ -94,7 +118,10 @@
     aspect-ratio: 1 / 1;
     width: 360px;
     height: 185px;
-    cursor: pointer;
+    @include c.hover;
+    &.active {
+      @include c.click;
+    }
   }
   .content {
     max-width: 230px;

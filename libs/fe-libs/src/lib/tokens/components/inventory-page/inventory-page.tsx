@@ -7,14 +7,15 @@ import { useOnInit } from '../../../shared/hooks/use-on-init';
 import { Logo } from '../../../core/components/logo/logo';
 import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
 import { Button } from '../../../ui/components/button/button';
-import { TOKEN_RARITY_ICON } from '../../helpers/token-rarity-icon-mapper';
-import { TokenRarityType } from '@saku-monsters/shared';
 import { Filters } from '../filters/filters';
 import { FilterBar } from '../filter-bar/filter-bar';
+import { Information } from '../../../ui/components/information/information';
+import { CircularProgress } from '@mui/material';
 
 export function InventoryPage() {
   const { t } = useTranslation();
-  const { syncTokens, loadingTokens, filteredTokens } = useTokensFacade();
+  const { syncTokens, loadingTokens, filteredTokens, setInitialValue } =
+    useTokensFacade();
 
   useOnInit(() => {
     syncTokens();
@@ -35,14 +36,31 @@ export function InventoryPage() {
       </div>
       <div className={styles['content']}>
         <Filters />
-        <div className={styles['grid-area']}>
-          {loadingTokens && <div>Loader</div>}
-          {!loadingTokens &&
-            filteredTokens.length > 0 &&
-            filteredTokens.map((token) => (
+        {loadingTokens && (
+          <Information>
+            <div className={styles['info-title']}>{t('inventory.loading')}</div>
+            <CircularProgress variant={'indeterminate'} />
+          </Information>
+        )}
+        {!loadingTokens && filteredTokens.length === 0 && (
+          <Information>
+            <div className={styles['info-title']}>
+              {t('inventory.not-found')}
+            </div>
+            <div className={styles['hint']}></div>
+            {t('inventory.hint')}
+            <Button onClick={setInitialValue} className={styles['button']}>
+              {t('filter.reset')}
+            </Button>
+          </Information>
+        )}
+        {!loadingTokens && filteredTokens.length > 0 && (
+          <div className={styles['grid-area']}>
+            {filteredTokens.map((token) => (
               <TokenCard token={token} key={token.id} />
             ))}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

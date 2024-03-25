@@ -1,5 +1,5 @@
 @use 'media-queries' as mq;
-
+@use 'cursors' as c;
 .container {
   background: var(--primary-color) 0 0 no-repeat padding-box;
   border-radius: 42px;
@@ -61,7 +61,10 @@
     background-image: url('../../../../../assets/pngs/filter-saku.png');
     width: 364px;
     height: 195px;
-    cursor: pointer;
+    @include c.hover;
+    &.active {
+      @include c.click;
+    }
   }
   .egg {
     position: absolute;
@@ -82,6 +85,7 @@
   --btn-bg-color: #f8f5f5;
   --btn-color: #e2dfdf;
   --btn-padding-y: 9px;
+  transition: all 500ms ease-in-out;
   .icon {
     display: flex;
     align-items: center;

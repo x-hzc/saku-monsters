@@ -4,7 +4,10 @@
     "goToInventory": "Aller à l'inventaire"
   },
   "inventory": {
-    "log": "Explorez et découvrez l'univers des monstres saku"
+    "log": "Explorez et découvrez l'univers des monstres saku",
+    "not-found": "Pas trouvé",
+    "hint": "Aucun monstre trouvé pour les filtres appliqués",
+    "loading": "Obtenir des Monstres Saku"
   },
   "navigation": {
     "home": "Maison",
@@ -65,8 +68,8 @@
   "filter": {
     "search": "Rechercher n'importe quel monstre",
     "show": "Afficher les filtres",
-    "hide": "Masquer les filtres",
-    "clear": "Clair les filtres",
+    "hide": "Cacher les filtres",
+    "reset": "Réinitialiser les filtres",
     "unique": "{{count}} Monstres Uniques",
     "filters": "Filtres",
     "adulthood": "L'âge adulte",

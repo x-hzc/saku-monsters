@@ -47,6 +47,13 @@ export function useTokenFilterStorage() {
     setEggFilter(null);
   }
 
+  function setInitialValue() {
+    setSearchTerm(null);
+    setAdulthoodFilter(TokenAdulthoodType.Adult);
+    setRarityFilter(TokenRarityType.COMMON);
+    setEggFilter(TokenEggType.BlueEgg);
+  }
+
   return {
     adulthoodFilter,
     rarityFilter,
@@ -61,5 +68,6 @@ export function useTokenFilterStorage() {
     toggleRarityFilter,
     toggleEggFilter,
     clearFilters,
+    setInitialValue,
   };
 }

@@ -1,3 +1,5 @@
+@use 'cursors' as c;
+@use 'transitions' as t;
 .container {
   position: relative;
   z-index: 0;
@@ -45,7 +47,10 @@
   .adulthood-img-container {
     background-color: var(--primary-color);
     border-radius: 50%;
-    cursor: pointer;
+    @include c.hover;
+    &.active {
+      @include c.click;
+    }
   }
   .name-container {
     display: var(--token-name-display, flex);
@@ -54,9 +59,11 @@
     border-radius: 27px;
     width: 100%;
     max-width: 276px;
+    text-align: center;
     .name {
       margin: 0 auto;
     }
+
   }
   .adulthood-img-container {
     $size: var(--adulthood-size, 67px);
@@ -66,12 +73,14 @@
     position: absolute;
     top: var(--adulthood-container-top, 5%);
     right: var(--adulthood-container-right, -15%);
-    .adulthood-img {
-      height: 53px;
-      width: 49px;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
+  }
+  .adulthood-img {
+    height: 53px;
+    width: 49px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @include t.show;
   }
   .token-img {
     height: 100%;
@@ -81,5 +90,30 @@
     background-position: center center;
     aspect-ratio: 1/1;
     margin-bottom: var(--token-img-mg-bt, 40px);
+    @include t.show;
+  }
+  .text {
+    @include t.show;
+  }
+  .changing {
+    @include t.hide;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

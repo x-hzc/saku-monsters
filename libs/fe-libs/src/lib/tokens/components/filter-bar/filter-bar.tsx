@@ -7,7 +7,7 @@ import { TokenEggType } from '@saku-monsters/shared';
 import { TOKEN_EGG_COLOR } from '../../helpers/token-color-mapper';
 
 export function FilterBar() {
-  const { tokens, setSearchTerm, toggleEggFilter, eggFilter } =
+  const { tokens, setSearchTerm, toggleEggFilter, eggFilter, searchTerm } =
     useTokensFacade();
   const { t } = useTranslation();
   return (
@@ -59,6 +59,7 @@ export function FilterBar() {
           className={styles['input']}
           placeholder={t('filter.search')}
           onChange={(e) => setSearchTerm(e.target.value)}
+          value={searchTerm ? searchTerm : ''}
         />
       </div>
 

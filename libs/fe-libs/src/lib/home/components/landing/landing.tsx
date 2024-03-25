@@ -11,13 +11,40 @@ import { Button } from '../../../ui/components/button/button';
 import { useRouter } from '../../../routing/hooks/use-router';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
+import { useRef, useState } from 'react';
 
 export function Landing() {
   const { goToInventory, goToHome, goToAppleSakuMonsters } = useRouter();
   const { t } = useTranslation();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<null | HTMLVideoElement>(null);
   return (
     <div className={styles['container']}>
-      <div className={styles['video-container']} />
+      <div
+        className={classNames(styles['video-container'], {
+          [styles['playing']]: isPlaying,
+        })}
+      >
+        <video
+          className={classNames(styles['video'], {
+            [styles['active']]: isPlaying,
+          })}
+          ref={videoRef}
+          onEnded={() => setIsPlaying(false)}
+          controls
+          onPause={() => {
+            if (videoRef && videoRef.current) {
+              videoRef.current.currentTime = 0;
+              setIsPlaying(false);
+            }
+          }}
+        >
+          <source
+            src={'../../../../../assets/hero_video.mp4'}
+            type={'video/mp4'}
+          />
+        </video>
+      </div>
       <div className={styles['content-container']}>
         <div className={styles['nav-menu']}>
           <Logo />
@@ -66,6 +93,10 @@ export function Landing() {
               className={styles['play-container']}
               onClick={(event) => {
                 event.stopPropagation();
+                if (videoRef && !!videoRef.current) {
+                  videoRef.current.play();
+                  setIsPlaying(true);
+                }
               }}
             >
               <PlayIcon />

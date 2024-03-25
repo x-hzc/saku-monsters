@@ -1,7 +1,7 @@
 @use 'media-queries' as mq;
-
+@use 'cursors' as c;
 .opt {
-  cursor: pointer;
+  @include c.hover;
   font-family: var(--secondary-font-family);
   font-size: 30px;
   line-height: 22px;
@@ -13,6 +13,9 @@
 
   &:hover {
     color: var(--primary-color) !important;
+  }
+  &:active {
+    @include c.click;
   }
 
   @include mq.desktop-large {
