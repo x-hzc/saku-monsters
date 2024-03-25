@@ -8,4 +8,5 @@ export interface TokenDTO {
   rarity: TokenRarityType;
   adulthood: TokenAdulthoodType;
   egg: TokenEggType;
+  changingAdulthood?: boolean;
 }

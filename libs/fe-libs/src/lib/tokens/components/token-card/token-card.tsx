@@ -7,13 +7,14 @@ import {
 } from '../../helpers/token-color-mapper';
 import { TOKEN_RARITY_ICON } from '../../helpers/token-rarity-icon-mapper';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
+import classNames from 'classnames';
 export interface TokenCardProps {
   token: TokenDTO;
 }
 
 export function TokenCard({ token }: TokenCardProps) {
   const { tokens, toggleAdulthood } = useTokensFacade();
-  const { id, rarity, name, adulthood } = token;
+  const { id, rarity, name, adulthood, changingAdulthood } = token;
 
   return (
     <div className={styles['container']}>
@@ -25,12 +26,21 @@ export function TokenCard({ token }: TokenCardProps) {
             backgroundColor: TOKEN_RARITY_BG_COLOR[rarity],
           }}
         >
-          {adulthood === TokenAdulthoodType.Baby && 'B'}
-          {adulthood === TokenAdulthoodType.Adult && 'A'}
+          <div
+            className={classNames(styles['text'], {
+              [styles['changing']]: changingAdulthood,
+              [styles['show']]: !changingAdulthood,
+            })}
+          >
+            {adulthood === TokenAdulthoodType.Baby && 'B'}
+            {adulthood === TokenAdulthoodType.Adult && 'A'}
+          </div>
         </div>
         <div className={styles['adulthood-img-container']}>
           <div
-            className={styles['adulthood-img']}
+            className={classNames(styles['adulthood-img'], {
+              [styles['changing']]: changingAdulthood,
+            })}
             onClick={(event) => {
               event.stopPropagation();
               toggleAdulthood(id);
@@ -46,7 +56,9 @@ export function TokenCard({ token }: TokenCardProps) {
           />
         </div>
         <div
-          className={styles['token-img']}
+          className={classNames(styles['token-img'], {
+            [styles['changing']]: changingAdulthood,
+          })}
           style={{
             backgroundImage: `url(${tokenImageMapper(id, adulthood)})`,
           }}

@@ -1,0 +1,10 @@
+.container {
+  background: var(--primary-color) 0 0 no-repeat padding-box;
+  border-radius: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
