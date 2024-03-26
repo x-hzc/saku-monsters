@@ -124,7 +124,11 @@
     text-transform: uppercase;
     text-wrap: nowrap;
     transform: rotate(358deg);
-    width: 190px;
+    width: 180px;
+
+    @include mq.tablet {
+      width: 200px;
+    }
 
     @include mq.medium-tablet {
       font-size: 20px;

@@ -11,7 +11,7 @@
   margin-top: 240px;
   position: relative;
 
-  @include mq.large-tablet {
+  @include mq.medium-tablet {
     height: 560px;
     margin: 0 auto;
     width: 910px;
@@ -31,7 +31,7 @@
   border-radius: 80px;
   position: absolute;
 
-  @include mq.large-tablet {
+  @include mq.medium-tablet {
     border-radius: 128px;
   }
 

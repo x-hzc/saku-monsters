@@ -2,87 +2,158 @@
 @use 'button' as btn;
 
 .container {
-  background-image: url('libs/fe-libs/assets/pngs/bg_phase_two.png');
-  background-position: center center;
-  background-size: 100% 100%;
   aspect-ratio: 1/1;
-  margin: 268px auto 0;
+  background-image: url('libs/fe-libs/assets/pngs/bg_phase_two_mobile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 268px 11px 0;
   position: relative;
   z-index: 5;
 
-  width: 910px;
-  height: 250px;
+  @include mq.medium-tablet {
+    background-image: url('libs/fe-libs/assets/pngs/bg_phase_two_desktop.png');
+    // background-position: center center;
+    // background-size: 100% 100%;
+    height: 250px;
+    margin: 268px auto 0;
+    width: 910px;
+  }
+
   @include mq.x-large-window {
-    width: 1593px;
     height: 429px;
+    width: 1593px;
   }
 }
+
 .content {
-  display: grid;
-  grid-template-columns: minmax(0, 35%) minmax(0, 20%) auto;
-  align-items: center;
-  gap: 50px;
   color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  padding-left: 7%;
-  padding-right: 2%;
-  .title-container {
+  padding: 0 30px;
+
+  @include mq.medium-tablet {
+    align-items: center;
     display: grid;
-    grid-template-columns: 48% auto;
+    gap: 50px;
+    grid-template-columns: minmax(0, 35%) minmax(0, 20%) auto;
+    padding: 0;
+    padding-left: 7%;
+    padding-right: 2%;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
     gap: 25px;
-    svg {
-      width: 125px;
-      height: 20px;
+
+    @include mq.medium-tablet {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 48% auto;
+      justify-items: center;
+    }
+
+    .phase {
+      background-color: var(--phase-two-bg-title-color);
+      border-radius: 10px;
+      font-family: var(--secondary-font-family);
+      font-size: 21px;
+      line-height: 34px;
+      margin: 54px 0 25px 100px;
+      padding: 1% 6%;
+      text-align: center;
+      transform: rotate(4deg);
+      width: 180px;
+
+      @include mq.tablet {
+        width: 200px;
+      }
+
+      @include mq.medium-tablet {
+        font-size: 20px;
+        margin: 0;
+        transform: rotate(358deg);
+        width: 160px;
+      }
+
       @include mq.x-large-window {
-        width: 205px;
-        height: 31px;
+        border-radius: 17px;
+        font-size: 33px;
+        line-height: 61px;
+        width: 220px;
       }
     }
+
+    svg {
+      height: 24px;
+      width: 160px;
+
+      @include mq.medium-tablet {
+        height: 20px;
+        width: 125px;
+      }
+
+      @include mq.x-large-window {
+        height: 31px;
+        width: 205px;
+      }
+    }
+
     .title {
-      grid-column: 1/3;
       font-family: var(--secondary-font-family);
-      text-align: center;
-      font-size: 30px;
-      line-height: 34px;
+      font-size: 41px;
+      grid-column: 1/3;
+      line-height: 45px;
+      text-align: left;
+
+      @include mq.medium-tablet {
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+      }
+
       @include mq.x-large-window {
         font-size: 62px;
         line-height: 77px;
       }
     }
-    .phase {
-      text-align: center;
-      font-family: var(--secondary-font-family);
-      border-radius: 10px;
-      padding: 1% 6%;
-      background-color: var(--phase-two-bg-title-color);
-      transform: matrix(1, -0.03, 0.03, 1, 0, 0);
-      font-size: 20px;
-      line-height: 34px;
-      @include mq.x-large-window {
-        border-radius: 17px;
-        font-size: 33px;
-        line-height: 61px;
-      }
-    }
   }
+
   .discover-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    gap: 45px;
+    margin-top: 10px;
+
+    @include mq.medium-tablet {
+      align-items: center;
+      gap: 16px;
+      margin-top: 0;
+    }
+
     .discover {
+      font-size: 18px;
+      line-height: 25px;
       opacity: 0.93;
-      text-align: center;
-      font-size: 13px;
-      line-height: 20px;
+
+      @include mq.medium-tablet {
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+      }
+
       @include mq.x-large-window {
         font-size: 22px;
         line-height: 31px;
       }
     }
+
     .btn {
       height: 37px;
       width: 214px;
+
       @include mq.x-large-window {
         font-size: 20px;
         height: 57px;
@@ -92,40 +163,66 @@
     }
   }
 }
+
 .cards-container {
-  height: 250px;
+  height: 200px;
+  margin-top: 25px;
   position: relative;
+
+  @include mq.medium-tablet {
+    height: 250px;
+    margin-top: 0;
+    position: relative;
+  }
+
   @include mq.x-large-window {
     height: 429px;
   }
+
   .front-card,
   .back-card {
-    --token-height: 250px;
-    --token-name-display: none;
-    --token-img-mg-bt: 0;
-    --adulthood-container-top: 0;
     --adulthood-container-right: -35%;
+    --adulthood-container-top: 0;
     --adulthood-size: 50px;
+    --token-height: 250px;
+    --token-img-mg-bt: 0;
+    --token-name-display: none;
+
     @include mq.x-large-window {
-      --token-height: 429px;
-      --token-name-display: flex;
-      --token-img-mg-bt: 20px;
-      --adulthood-container-top: 5%;
       --adulthood-container-right: -15%;
+      --adulthood-container-top: 5%;
       --adulthood-size: 67px;
+      --token-height: 429px;
+      --token-img-mg-bt: 20px;
+      --token-name-display: flex;
     }
   }
+
   .front-card {
+    height: 318px;
+    left: 0;
     position: absolute;
-    top: 20px;
-    z-index: 5;
-    transform: matrix(1, -0.09, 0.09, 1, 0, 0);
+    right: 125px;
+    top: 50px;
+    transform: rotate(350deg);
+    width: 160px;
+    z-index: 10;
+
+    @include mq.medium-tablet {
+      transform: matrix(1, -0.09, 0.09, 1, 0, 0);
+    }
   }
+
   .back-card {
+    bottom: -35px;
     position: absolute;
-    z-index: 3;
     right: 0;
-    bottom: 20px;
-    transform: matrix(1, 0.07, -0.07, 1, 0, 0);
+    transform: rotate(6deg);
+    z-index: 5;
+
+    @include mq.medium-tablet {
+      bottom: 20px;
+      transform: matrix(1, 0.07, -0.07, 1, 0, 0);
+    }
   }
 }
