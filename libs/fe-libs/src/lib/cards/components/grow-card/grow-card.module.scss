@@ -17,7 +17,7 @@
     width: 910px;
   }
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     height: 979px;
     margin-top: 0;
     width: 1590px;
@@ -35,7 +35,7 @@
     border-radius: 128px;
   }
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     border-radius: 224px;
   }
 }
@@ -72,7 +72,7 @@
   height: 100%;
   padding: 1% 5%;
 
-  @include mq.tablet-small {
+  @include mq.small-tablet {
     padding: 1% 11%;
   }
 
@@ -88,7 +88,7 @@
     margin-top: 2%;
     width: 100%;
 
-    @include mq.tablet-small {
+    @include mq.small-tablet {
       margin-top: 0;
     }
   }
@@ -103,11 +103,11 @@
     margin: 10% 0;
     text-align: center;
 
-    @include mq.tablet-small {
+    @include mq.small-tablet {
       margin: 3% 0;
     }
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 22px;
       line-height: 31px;
     }
@@ -119,7 +119,7 @@
     margin-bottom: 3%;
     width: 85%;
 
-    @include mq.tablet-small {
+    @include mq.small-tablet {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -139,7 +139,7 @@
       line-height: 30px;
       text-transform: uppercase;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 17px;
         line-height: 69px;
       }
@@ -150,7 +150,7 @@
     grid-column: span 2;
     grid-row: 1;
 
-    @include mq.tablet-small {
+    @include mq.small-tablet {
       grid-column: 1;
       grid-row: 1;
     }
@@ -159,7 +159,7 @@
   .phase {
     grid-row: 2;
 
-    @include mq.tablet-small {
+    @include mq.small-tablet {
       grid-row: 1;
     }
   }
@@ -167,7 +167,7 @@
   .egg-container {
     width: 29px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       width: 15%;
     }
   }
@@ -175,7 +175,7 @@
   .baby-container {
     width: 31px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       width: 15%;
     }
   }
@@ -183,7 +183,7 @@
   .adult-container {
     width: 61px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       width: 30%;
     }
   }

@@ -11,13 +11,13 @@
   margin: 220px 9% 0;
   position: relative;
 
-  @include mq.tablet-large {
+  @include mq.medium-tablet {
     height: 560px;
     margin: 150px auto 0;
     width: 910px;
   }
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     gap: 71px;
     height: 990px;
     width: 1590px;
@@ -31,7 +31,7 @@
   gap: 20px;
   position: relative;
 
-  @include mq.tablet-large {
+  @include mq.medium-tablet {
     align-items: center;
     display: grid;
     gap: unset;
@@ -40,7 +40,7 @@
     width: 100%;
   }
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     grid-template-columns: 62% 33%;
   }
 }
@@ -68,7 +68,7 @@
   transform: rotate(4deg);
   width: 175px;
 
-  @include mq.tablet-large {
+  @include mq.medium-tablet {
     display: none;
   }
 }
@@ -79,12 +79,12 @@
   font-size: 49px;
   line-height: 51px;
 
-  @include mq.tablet-large {
+  @include mq.medium-tablet {
     font-size: 37px;
     line-height: 78px;
   }
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     font-size: 62px;
     line-height: 103px;
   }
@@ -101,11 +101,11 @@
     transform: rotate(358deg);
     width: fit-content;
 
-    @include mq.tablet-large {
+    @include mq.medium-tablet {
       display: flex;
     }
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       border-radius: 17px;
       font-size: 33px;
       line-height: 50px;
@@ -117,12 +117,12 @@
     font-size: 23px;
     line-height: 26px;
 
-    @include mq.tablet-large {
+    @include mq.medium-tablet {
       font-size: 13px;
       line-height: 18px;
     }
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 22px;
       line-height: 27px;
     }
@@ -140,7 +140,7 @@
   transition: transform 0.5s ease;
   width: 100%;
 
-  @include mq.tablet-large {
+  @include mq.medium-tablet {
     gap: unset;
     justify-content: center;
     overflow: visible;
@@ -167,7 +167,7 @@
     border-radius: 55px;
     width: 284px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       border-radius: 100px;
       width: 494px;
     }
@@ -179,7 +179,7 @@
     justify-content: space-around;
     padding: 10%;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       height: 717px;
     }
   }
@@ -199,11 +199,11 @@
     justify-content: space-between;
     padding: 10% 5%;
 
-    @include mq.tablet-large {
+    @include mq.medium-tablet {
       height: 469px;
     }
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       height: 811px;
     }
   }
@@ -224,7 +224,7 @@
       font-size: 30px;
       line-height: 21px;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 50px;
         line-height: 31px;
       }
@@ -236,7 +236,7 @@
       text-transform: capitalize;
       width: min-content;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 16px;
         line-height: 19px;
       }
@@ -247,7 +247,7 @@
     display: flex;
     flex-direction: column;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       gap: 15px;
     }
   }
@@ -261,7 +261,7 @@
     position: relative;
     text-transform: uppercase;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 62px;
       line-height: 69px;
     }
@@ -285,7 +285,7 @@
     cursor: default;
     margin-right: 5%;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       @include btn.rounded-button(65px);
     }
 
@@ -306,7 +306,7 @@
     top: -1%;
     width: 84%;
 
-    @include mq.tablet-large {
+    @include mq.medium-tablet {
       left: 0;
       top: -5%;
       width: 100%;
@@ -318,7 +318,7 @@
     left: 67%;
     width: 30px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       left: 75%;
       width: 50px;
     }
@@ -329,7 +329,7 @@
     left: 71%;
     width: 26px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       left: 73%;
       width: 46px;
     }
@@ -340,7 +340,7 @@
     left: 73%;
     width: 33px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       left: 76%;
       width: 60px;
     }
@@ -353,7 +353,7 @@
     font-size: 12px;
     line-height: 17px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 22px;
       line-height: 31px;
     }
@@ -383,7 +383,7 @@
       line-height: 17px;
       text-transform: uppercase;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 33px;
         line-height: 31px;
       }
@@ -395,7 +395,7 @@
       text-transform: capitalize;
       width: min-content;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 16px;
         line-height: 31px;
       }
@@ -440,7 +440,7 @@
       gap: 5px;
     }
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 14px;
       gap: 12px;
       line-height: 19px;
@@ -455,7 +455,7 @@
     color: var(--primary-color);
     width: 14px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       width: 20px;
     }
   }
@@ -466,7 +466,7 @@
     position: relative;
     width: 110px;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       height: 114px;
       width: 220px;
     }
@@ -485,7 +485,7 @@
       font-size: 25px;
       line-height: 11px;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 50px;
         line-height: 24px;
       }
@@ -496,7 +496,7 @@
       line-height: 31px;
       text-transform: capitalize;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 18px;
         line-height: 51px;
       }
@@ -512,7 +512,7 @@
     top: -15%;
     z-index: 10;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       @include btn.rounded-button(53px);
       right: -15%;
       top: -15%;
@@ -525,7 +525,7 @@
     position: absolute;
     width: 325%;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       bottom: -35%;
       left: 20%;
       width: 255%;

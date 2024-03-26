@@ -11,7 +11,7 @@
   position: relative;
   margin-top: 150px;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     margin-top: 334px;
   }
 
@@ -45,7 +45,7 @@
   width: 356px;
   z-index: 40;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     bottom: 5.67%;
     width: 626px;
   }

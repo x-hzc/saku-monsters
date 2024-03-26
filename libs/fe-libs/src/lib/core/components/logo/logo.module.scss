@@ -3,7 +3,7 @@
 .container {
   @include c.hover;
   width: 15%;
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     width: 25%;
   }
   img {

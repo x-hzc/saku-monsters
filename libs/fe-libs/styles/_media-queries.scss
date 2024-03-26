@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@mixin mobile-small {
+@mixin small-mobile {
   $change-at: 325px;
   @media (min-width: #{$change-at}) {
     @content;
@@ -21,7 +21,7 @@
   }
 }
 
-@mixin tablet-small {
+@mixin small-tablet {
   $change-at: 600px;
   @media (min-width: #{$change-at}) {
     @content;
@@ -35,7 +35,7 @@
   }
 }
 
-@mixin tablet-large {
+@mixin medium-tablet {
   $change-at: 960px;
   @media (min-width: #{$change-at}) {
     @content;
@@ -49,7 +49,7 @@
   }
 }
 
-@mixin desktop-small {
+@mixin small-window {
   $change-at: 1240px;
   @media (min-width: #{$change-at}) {
     @content;
@@ -70,7 +70,7 @@
   }
 }
 
-@mixin desktop-large {
+@mixin x-large-window {
   $change-at: 1920px;
   @media (min-width: #{$change-at}) {
     @content;

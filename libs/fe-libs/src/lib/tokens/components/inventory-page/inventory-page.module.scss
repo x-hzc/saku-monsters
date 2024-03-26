@@ -10,7 +10,7 @@
   width: calc(100% - 52px);
   z-index: 5;
 
-  @include mq.desktop-small {
+  @include mq.small-window {
     padding-top: 47px;
     width: 96%;
   }
@@ -25,7 +25,7 @@
     height: 65px;
     width: 95px;
 
-    @include mq.desktop-small {
+    @include mq.small-window {
       height: 100px;
       width: auto;
     }
@@ -39,7 +39,7 @@
   gap: 21px;
   justify-content: space-between;
 
-  @include mq.desktop-small {
+  @include mq.small-window {
     align-items: center;
     flex-direction: row;
     gap: 120px;
@@ -55,7 +55,7 @@
     gap: 5px;
     padding-left: 0;
 
-    @include mq.desktop-small {
+    @include mq.small-window {
       gap: 15px;
       padding-left: 39px;
     }
@@ -67,7 +67,7 @@
     font-size: 41px;
     line-height: 49px;
     
-    @include mq.desktop-small {
+    @include mq.small-window {
       font-size: 62px;
       line-height: 51px;
     }
@@ -79,7 +79,7 @@
     line-height: 25px;
     opacity: 0.93;
     
-    @include mq.desktop-small {
+    @include mq.small-window {
       font-size: 16px;
       line-height: 20px;
     }
@@ -92,7 +92,7 @@
   margin-bottom: 10px;
   padding-top: 0;
   
-  @include mq.desktop-small {
+  @include mq.small-window {
     padding-top: 30px;
   }
 }
@@ -107,7 +107,7 @@
   padding-bottom: 120px;
   width: 100%;
   
-  @include mq.desktop-small {
+  @include mq.small-window {
     padding-bottom: 10px;
   }
 }

@@ -17,7 +17,7 @@
     grid-template-rows: auto;
     justify-content: flex-start;
   }
-  @include mq.desktop-small {
+  @include mq.small-window {
     margin: 0;
     width: 100%;
     justify-content: center;
@@ -35,7 +35,7 @@
   gap: 22px;
   align-items: center;
   padding: 11px 16px;
-  @include mq.desktop-small {
+  @include mq.small-window {
     display: flex;
   }
   @include mq.tablet {
@@ -95,7 +95,7 @@
 
 .text {
   display: none;
-  @include mq.desktop-small {
+  @include mq.small-window {
     display: block;
   }
 }
