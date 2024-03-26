@@ -19,13 +19,14 @@ export function PhaseOne() {
   return (
     <div className={styles['container']}>
       <div className={styles['up']}>
+        <div className={styles['phase-mobile']}>{t('phase-one.phase')}</div>
         <div className={styles['comp']}>{t('phase-one.compete')}</div>
         <div className={styles['p-container']}>
-          <div className={styles['phase']}>{t('phase-one.phase')}</div>
+          <div className={styles['phase-desktop']}>{t('phase-one.phase')}</div>
           <p className={styles['p']}>{t('phase-one.p-phase')}</p>
         </div>
       </div>
-      <div className={styles['cards-container']}>
+      <div className={styles['po-cards-container']}>
         <div className={styles['bg-blue-c']}>
           <div className={styles['r-container']}>
             <div className={styles['rating']}>4.7</div>

@@ -70,10 +70,14 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 1% 11%;
+  padding: 1% 5%;
+
+  @include mq.tablet-small {
+    padding: 1% 11%;
+  }
 
   .opts-container,
-  .phases {
+  .phases-container {
     align-items: center;
     display: grid;
     justify-items: center;
@@ -81,7 +85,12 @@
 
   .opts-container {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
     width: 100%;
+
+    @include mq.tablet-small {
+      margin-top: 0;
+    }
   }
 
   .opt-g {
@@ -89,14 +98,13 @@
   }
 
   .p {
-    font-size: 13px;
-    line-height: 20px;
-    margin: 3% 0;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10% 0;
     text-align: center;
 
     @include mq.tablet-small {
-      font-size: 18px;
-      line-height: 25px;
+      margin: 3% 0;
     }
 
     @include mq.desktop-large {
@@ -105,9 +113,10 @@
     }
   }
 
-  .phases {
+  .phases-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    margin-bottom: 3%;
     width: 85%;
 
     @include mq.tablet-small {
