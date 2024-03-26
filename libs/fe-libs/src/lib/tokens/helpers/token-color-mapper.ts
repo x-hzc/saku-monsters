@@ -13,7 +13,7 @@ export const TOKEN_RARITY_COLOR: Record<TokenRarityType, string> = {
 export const TOKEN_RARITY_BG_COLOR: Record<TokenRarityType, string> = {
   [TokenRarityType.COMMON]: '#A0F5D2',
   [TokenRarityType.RARE]: '#CCE3F9',
-  [TokenRarityType.EPIC]: '#EBB2FF',
+  [TokenRarityType.EPIC]: '#EB84F6',
   [TokenRarityType.LEGENDARY]: '#FEF1DB',
 };
 

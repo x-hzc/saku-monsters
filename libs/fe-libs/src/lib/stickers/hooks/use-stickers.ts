@@ -17,11 +17,12 @@ export function useStickers() {
   if (isMinDesktopLarge) {
     imgSize = 200;
   }
+  const cursorSize = 24;
   function handleClick(ev: MouseEvent) {
     const stickerIndex = Math.floor(Math.random() * STICKERS.length);
     const rotation = Math.floor(Math.random() * 360) + 180;
-    const xPos = ev.pageX - imgSize / 2;
-    const yPos = ev.pageY - imgSize / 2;
+    const xPos = ev.pageX - imgSize / 2 - cursorSize / 2;
+    const yPos = ev.pageY - imgSize / 2 - cursorSize / 2;
     const newSticker: ActiveSticker = {
       xPos,
       yPos,
