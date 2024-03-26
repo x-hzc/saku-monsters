@@ -102,7 +102,7 @@
     align-items: center;
     flex-direction: row;
     margin-top: 0;
-    padding: 6% 0 2% 12%;
+    padding: 6% 0 2%;
   }
 
   @include mq.x-large-window {
@@ -126,7 +126,7 @@
     transform: rotate(358deg);
     width: 190px;
 
-    @include mq.x-large-window {
+    @include mq.medium-tablet {
       font-size: 20px;
       margin-left: 0;
       transform: rotate(3deg);
@@ -142,7 +142,7 @@
 
   .k-container {
     height: 24px;
-    margin: 35px 0;
+    margin: 35px 0 15px;
     width: 160px;
 
     @include mq.medium-tablet {
@@ -162,11 +162,11 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
   padding: 4% 0;
   width: 100%;
 
   @include mq.x-large-window {
+    justify-items: center;
     padding: 6% 0;
   }
 
