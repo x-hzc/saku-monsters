@@ -3,26 +3,32 @@
 @use 'card' as c;
 
 .container {
-  height: 590px;
-  margin: 316px auto 0;
-  width: 916px;
+  margin: 316px 11px 0;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    height: 590px;
+    margin: 316px auto 0;
+    width: 916px;
+  }
+
+  @include mq.x-large-window {
     height: 1068px;
     width: 1620px;
-    margin-top: 316px;
   }
 }
 
 .card-container {
   align-items: center;
   display: flex;
-  height: 437px;
   justify-content: center;
   position: relative;
-  width: 904px;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    height: 437px;
+    width: 904px;
+  }
+
+  @include mq.x-large-window {
     height: 762px;
     width: 1582px;
   }
@@ -33,10 +39,14 @@
   @include c.bg-card;
   z-index: 2;
   background-image: url('../../../../../assets/pngs/bg_phase_three_blue.png');
-  border-radius: 122px;
+  border-radius: 80px;
   position: absolute;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    border-radius: 122px;
+  }
+
+  @include mq.x-large-window {
     border-radius: 215px;
   }
 }
@@ -44,11 +54,18 @@
 .content {
   align-items: center;
   color: var(--primary-color);
-  display: grid;
-  grid-template-columns: 64% 36%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  padding: 0 10%;
   width: 100%;
   z-index: 10;
+
+  @include mq.medium-tablet {
+    display: grid;
+    grid-template-columns: 64% 36%;
+    padding: 0;
+  }
 
   img,
   svg {
@@ -63,20 +80,32 @@
   flex-direction: column;
   height: 100%;
   justify-content: flex-start;
-  padding: 6% 0% 2% 12%;
   width: 100%;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    padding: 6% 0 2% 12%;
+  }
+
+  @include mq.x-large-window {
     padding: 10% 2% 2% 12%;
   }
 }
 
 .t-container {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
+  flex-direction: column;
+  margin-top: 50px;
   width: 430px;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    align-items: center;
+    flex-direction: row;
+    margin-top: 0;
+    padding: 6% 0 2%;
+  }
+
+  @include mq.x-large-window {
     gap: 25px;
   }
 
@@ -87,16 +116,24 @@
     color: var(--primary-color);
     display: flex;
     font-family: var(--secondary-font-family);
-    font-size: 20px;
+    font-size: 21px;
     justify-content: center;
     line-height: 34px;
+    margin-left: 45px;
     padding: 1% 6%;
     text-transform: uppercase;
     text-wrap: nowrap;
-    transform: rotate(3deg);
-    width: fit-content;
+    transform: rotate(358deg);
+    width: 190px;
 
-    @include mq.desktop-large {
+    @include mq.medium-tablet {
+      font-size: 20px;
+      margin-left: 0;
+      transform: rotate(3deg);
+      width: fit-content;
+    }
+
+    @include mq.x-large-window {
       border-radius: 17px;
       font-size: 33px;
       line-height: 61px;
@@ -104,10 +141,17 @@
   }
 
   .k-container {
-    height: 21px;
-    width: 195px;
+    height: 24px;
+    margin: 35px 0 15px;
+    width: 160px;
 
-    @include mq.desktop-large {
+    @include mq.medium-tablet {
+      height: 21px;
+      margin: 0;
+      width: 195px;
+    }
+
+    @include mq.x-large-window {
       height: 31px;
       width: 205px;
     }
@@ -118,11 +162,11 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
   padding: 4% 0;
   width: 100%;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
+    justify-items: center;
     padding: 6% 0;
   }
 
@@ -132,11 +176,16 @@
 }
 
 .p {
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 25px;
   opacity: 0.93;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  @include mq.x-large-window {
     font-size: 30px;
     line-height: 39px;
   }
@@ -146,23 +195,38 @@
   align-items: center;
   display: flex;
   height: 100%;
-  justify-content: flex-end;
-  padding-right: 3%;
+  justify-content: center;
+  margin: 22px 0 42px;
   width: 100%;
 
+  @include mq.medium-tablet {
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 3%;
+  }
+
   .coins-container {
-    width: 80%;
+    width: 312px;
+
+    @include mq.medium-tablet {
+      width: 80%;
+    }
   }
 
   .ptb-container {
     bottom: -47%;
+    display: none;
     height: 272px;
     position: absolute;
     right: -1%;
     width: 272px;
     z-index: 30;
 
-    @include mq.desktop-large {
+    @include mq.medium-tablet {
+      display: flex;
+    }
+
+    @include mq.x-large-window {
       bottom: -49%;
       height: 486px;
       width: 488px;

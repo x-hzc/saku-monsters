@@ -24,7 +24,7 @@
     line-height: 22px;
   }
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     font-size: 62px;
     line-height: 69px;
   }
@@ -41,7 +41,7 @@
   margin-top: -3%;
   vertical-align: super;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     font-size: 14px;
     margin-top: 3%;
   }

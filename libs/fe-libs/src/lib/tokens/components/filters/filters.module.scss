@@ -6,7 +6,7 @@
   left: -26px;
   bottom: 0;
   z-index: 4;
-  @include mq.desktop-small {
+  @include mq.small-window {
     position: static;
     width: auto;
   }
@@ -23,7 +23,7 @@
     letter-spacing: 0;
     font-size: 21px;
     line-height: 95px;
-    @include mq.desktop-small {
+    @include mq.small-window {
       display: block;
     }
     @include mq.large-window {
@@ -55,7 +55,7 @@
 }
 .store-section {
   display: none;
-  @include mq.desktop-small {
+  @include mq.small-window {
     display: block;
   }
   svg {
@@ -136,7 +136,7 @@
 
 .adulthood {
   display: none;
-  @include mq.desktop-small {
+  @include mq.small-window {
     display: grid;
   }
 }
@@ -146,7 +146,7 @@
   justify-content: center;
   gap: 23px;
   padding-bottom: 0;
-  @include mq.desktop-small {
+  @include mq.small-window {
     display: grid;
     padding-bottom: 30px;
     gap: 15px 12px;
@@ -156,14 +156,14 @@
     width: 51px;
     height: 51px;
     border-radius: 50%;
-    @include mq.desktop-small {
+    @include mq.small-window {
       border-radius: 23px;
       width: auto;
       height: auto;
     }
     .text {
       display: none;
-      @include mq.desktop-small {
+      @include mq.small-window {
         display: block;
       }
     }

@@ -5,10 +5,10 @@
   top: 0;
   left: 0;
   $size: 75px;
-  @include mq.desktop-small {
+  @include mq.small-window {
     $size: 125px;
   }
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     $size: 200px;
   }
   width: $size;

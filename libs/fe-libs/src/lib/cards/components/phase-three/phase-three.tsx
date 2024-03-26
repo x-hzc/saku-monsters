@@ -2,9 +2,11 @@ import styles from './phase-three.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo } from 'react';
 import { useCardTitleStore } from '../../hooks/use-card-title-store';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { CardTitleOption } from '../card-title-option/card-title-option';
 import Kanjis from '../../../../../assets/svgs/kanjis.svg';
-import Coins from '../../../../../assets/pngs/bg_phase_three_coins.png';
+import CoinsMobile from '../../../../../assets/pngs/bg_phase_three_coins_mobile.png';
+import CoinsDesktop from '../../../../../assets/pngs/bg_phase_three_coins_desktop.png';
 import PhaseThreeBirdmonster from '../../../../../assets/pngs/phase_three_birdmonster.png';
 
 export function PhaseThree() {
@@ -22,6 +24,7 @@ export function PhaseThree() {
   };
   const { currentPhaseThreeOption, setCurrentPhaseThreeOption } =
     useCardTitleStore();
+  const { isMaxTablet } = useDeviceType();
 
   const handleSelect = (selectedOption: string) => {
     setCurrentPhaseThreeOption(selectedOption);
@@ -79,7 +82,7 @@ export function PhaseThree() {
           </div>
           <div className={styles['right']}>
             <div className={styles['coins-container']}>
-              <img src={Coins} alt="phase-three-coins" />
+              <img src={isMaxTablet ? CoinsMobile : CoinsDesktop} alt="phase-three-coins" />
             </div>
             <div className={styles['ptb-container']}>
               <img src={PhaseThreeBirdmonster} alt="phase-three-birdmonster" />

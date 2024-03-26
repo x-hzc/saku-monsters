@@ -70,7 +70,7 @@
   width: 100%;
   z-index: 30;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     height: 1083px;
     margin: 9% auto 0;
   }
@@ -85,7 +85,7 @@
   margin-top: 30%;
   width: 35%;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     width: 35%;
   }
 
@@ -97,7 +97,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 46px;
       line-height: 50px;
     }
@@ -114,7 +114,7 @@
   padding: 2% 12%;
   text-transform: uppercase;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     font-size: 30px;
     line-height: 46px;
   }
@@ -125,7 +125,7 @@
   gap: 60px;
   margin: 5%;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     gap: 80px;
     margin: 5% auto;
   }
@@ -139,7 +139,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include mq.desktop-large {
+    @include mq.x-large-window {
       font-size: 28px;
       line-height: 50px;
     }
@@ -152,7 +152,7 @@
   margin-bottom: 3%;
   text-transform: capitalize;
 
-  @include mq.desktop-large {
+  @include mq.x-large-window {
     font-size: 22px;
   }
 }
