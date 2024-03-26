@@ -38,6 +38,9 @@
     flex-direction: row;
     gap: 120px;
     align-items: center;
+    position: sticky;
+    top: 20px;
+    z-index: 10;
   }
   .text-container {
     padding-left: 0;
@@ -76,6 +79,10 @@
   display: flex;
   gap: 20px;
   margin-bottom: 10px;
+  padding-top: 0;
+  @include mq.desktop-small {
+    padding-top: 30px;
+  }
 }
 .grid-area {
   display: grid;
@@ -118,4 +125,10 @@
   --btn-color: #e2dfdf;
   --btn-padding-y: 9px;
   --btn-padding-x: 30px;
+}
+.sticky-container {
+  position: sticky;
+  top: 150px;
+  z-index: 20;
+  align-self: flex-start;
 }
