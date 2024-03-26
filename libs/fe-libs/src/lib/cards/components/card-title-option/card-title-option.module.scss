@@ -1,10 +1,11 @@
 @use 'media-queries' as mq;
 @use 'cursors' as c;
+
 .opt {
   @include c.hover;
+  @include mq.fluid('font-size', 280px, 540px, 16px, 22px);
+  display: flex;
   font-family: var(--secondary-font-family);
-  font-size: 30px;
-  line-height: 22px;
   position: relative;
   text-transform: uppercase;
   transition: color 0.5s ease-in-out;
@@ -18,6 +19,11 @@
     @include c.click;
   }
 
+  @include mq.large-tablet {
+    font-size: 30px;
+    line-height: 22px;
+  }
+
   @include mq.desktop-large {
     font-size: 62px;
     line-height: 69px;
@@ -29,17 +35,14 @@
 }
 
 .sup {
-  bottom: 0;
   font-family: var(--primary-font-family);
   font-size: 10px;
-  left: 103%;
-  line-height: 40px;
-  position: absolute;
+  line-height: normal;
+  margin-top: -3%;
   vertical-align: super;
 
   @include mq.desktop-large {
     font-size: 14px;
-    left: 101%;
-    line-height: 103px;
+    margin-top: 3%;
   }
 }

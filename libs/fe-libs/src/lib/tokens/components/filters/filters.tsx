@@ -13,7 +13,7 @@ import {
   TOKEN_RARITY_COLOR,
 } from '../../helpers/token-color-mapper';
 import classNames from 'classnames';
-import { useDeviceType } from '../../../ui/hooks/use-device-type';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { useEffect } from 'react';
 
 export function Filters() {

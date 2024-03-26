@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { useRouter } from '../../../routing/hooks/use-router';
 import { TokenCard } from '../token-card/token-card';
 import styles from './inventory-page.module.scss';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
@@ -11,13 +10,13 @@ import { Filters } from '../filters/filters';
 import { FilterBar } from '../filter-bar/filter-bar';
 import { Information } from '../../../ui/components/information/information';
 import { CircularProgress } from '@mui/material';
-import { useDeviceType } from '../../../ui/hooks/use-device-type';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 
 export function InventoryPage() {
   const { t } = useTranslation();
   const { syncTokens, loadingTokens, filteredTokens, setInitialValue } =
     useTokensFacade();
-  const { isMinLargeTablet, isMinDesktopSmall } = useDeviceType();
+  const { isMinDesktopSmall } = useDeviceType();
 
   useOnInit(() => {
     syncTokens();
