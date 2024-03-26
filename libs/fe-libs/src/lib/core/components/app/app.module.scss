@@ -2,7 +2,8 @@
 .app-container {
   height: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  // This makes it so that position sticky won't work
+  //overflow: hidden;
   position: relative;
   width: 100%;
   background: transparent
@@ -16,7 +17,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .clicked {

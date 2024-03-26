@@ -28,40 +28,47 @@ export function InventoryPage() {
         <Logo className={styles['logo']} />
         {isMinDesktopSmall && <LanguageSelector contrasted={true} />}
       </div>
-      <div className={styles['top-content']}>
-        <div className={styles['text-container']}>
-          <div className={styles['title']}>SakuLog</div>
-          <div className={styles['text']}>{t('inventory.log')}</div>
-        </div>
-        <FilterBar />
-      </div>
-      <div className={styles['content']}>
-        <Filters />
-        {loadingTokens && (
-          <Information>
-            <div className={styles['info-title']}>{t('inventory.loading')}</div>
-            <CircularProgress variant={'indeterminate'} />
-          </Information>
-        )}
-        {!loadingTokens && filteredTokens.length === 0 && (
-          <Information>
-            <div className={styles['info-title']}>
-              {t('inventory.not-found')}
-            </div>
-            <div className={styles['hint']}></div>
-            {t('inventory.hint')}
-            <Button onClick={setInitialValue} className={styles['button']}>
-              {t('filter.reset')}
-            </Button>
-          </Information>
-        )}
-        {!loadingTokens && filteredTokens.length > 0 && (
-          <div className={styles['grid-area']}>
-            {filteredTokens.map((token) => (
-              <TokenCard token={token} key={token.id} />
-            ))}
+      <div>
+        <div className={styles['top-content']}>
+          <div className={styles['text-container']}>
+            <div className={styles['title']}>SakuLog</div>
+            <div className={styles['text']}>{t('inventory.log')}</div>
           </div>
-        )}
+
+          <FilterBar />
+        </div>
+        <div className={styles['content']}>
+          <div className={styles['sticky-container']}>
+            <Filters />
+          </div>
+          {loadingTokens && (
+            <Information>
+              <div className={styles['info-title']}>
+                {t('inventory.loading')}
+              </div>
+              <CircularProgress variant={'indeterminate'} />
+            </Information>
+          )}
+          {!loadingTokens && filteredTokens.length === 0 && (
+            <Information>
+              <div className={styles['info-title']}>
+                {t('inventory.not-found')}
+              </div>
+              <div className={styles['hint']}></div>
+              {t('inventory.hint')}
+              <Button onClick={setInitialValue} className={styles['button']}>
+                {t('filter.reset')}
+              </Button>
+            </Information>
+          )}
+          {!loadingTokens && filteredTokens.length > 0 && (
+            <div className={styles['grid-area']}>
+              {filteredTokens.map((token) => (
+                <TokenCard token={token} key={token.id} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
