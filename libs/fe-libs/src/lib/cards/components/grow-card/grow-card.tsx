@@ -51,7 +51,7 @@ export function GrowCard() {
 
   const growImages = () => {
     return (
-      <div className={styles['phases']}>
+      <div className={styles['phases-container']}>
         <div className={styles['phase-full']}>
           <div className={styles['egg-container']}>
             <img src={Egg} alt="egg" />
