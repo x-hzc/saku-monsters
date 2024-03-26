@@ -166,8 +166,13 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
   padding: 4% 0;
   width: 100%;
+
+  @include mq.large-handset {
+    justify-items: start;
+  }
 
   @include mq.x-large-window {
     justify-items: center;
