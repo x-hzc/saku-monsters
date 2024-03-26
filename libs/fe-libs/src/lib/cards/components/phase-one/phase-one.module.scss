@@ -139,11 +139,13 @@
   overflow-x: auto;
   transition: transform 0.5s ease;
   width: 100%;
+  padding-bottom: 10px;
 
   @include mq.medium-tablet {
     gap: unset;
     justify-content: center;
     overflow: visible;
+    padding-bottom: 0;
   }
 
   img {
