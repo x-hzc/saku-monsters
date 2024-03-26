@@ -4,7 +4,6 @@
 .opt {
   @include c.hover;
   @include mq.fluid('font-size', 280px, 540px, 16px, 22px);
-  cursor: pointer;
   display: flex;
   font-family: var(--secondary-font-family);
   position: relative;
