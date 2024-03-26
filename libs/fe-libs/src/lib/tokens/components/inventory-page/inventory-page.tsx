@@ -34,13 +34,18 @@ export function InventoryPage() {
             <div className={styles['title']}>SakuLog</div>
             <div className={styles['text']}>{t('inventory.log')}</div>
           </div>
+
           <FilterBar />
         </div>
         <div className={styles['content']}>
-          <Filters />
+          <div className={styles['sticky-container']}>
+            <Filters />
+          </div>
           {loadingTokens && (
             <Information>
-              <div className={styles['info-title']}>{t('inventory.loading')}</div>
+              <div className={styles['info-title']}>
+                {t('inventory.loading')}
+              </div>
               <CircularProgress variant={'indeterminate'} />
             </Information>
           )}
