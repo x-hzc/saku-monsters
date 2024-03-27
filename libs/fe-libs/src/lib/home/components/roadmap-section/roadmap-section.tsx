@@ -1,5 +1,9 @@
 import styles from './roadmap-section.module.scss';
 import cn from 'classnames';
+import { CSSProperties, useState } from 'react';
+import classNames from 'classnames';
+import { ROADMAP_SECTION_COLOR_MAPPER } from '../../helpers/roadmap-section-color-mapper';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 
 export interface RoadmapSectionProps {
   number: number;
@@ -13,25 +17,63 @@ export interface RoadmapSectionProps {
 export function RoadmapSection(props: RoadmapSectionProps) {
   const { number, description, title, contentPosition, image, className } =
     props;
+  const [isOpen, setIsOpen] = useState(false);
+  const [isRead, setIsRead] = useState(false);
+  const { isMinDesktopSmall } = useDeviceType();
+  function getContentPosition(): CSSProperties {
+    if (isMinDesktopSmall) {
+      return contentPosition === 'left'
+        ? {
+            right: 'calc(100% + 20px)',
+          }
+        : { left: 'calc(100% + 20px)' };
+    }
+
+    return {
+      right: contentPosition === 'right' ? '-60%' : undefined,
+      left: contentPosition === 'left' ? '-60%' : undefined,
+      top: '-70%',
+    };
+  }
 
   return (
-    <div
-      className={cn(styles['container'], className)}
-    >
+    <div className={cn(styles['container'], className)}>
       <div
-        className={styles['number']}
+        className={cn(styles['number'], {
+          [styles['rotated']]: number === 1,
+          [styles['open']]: !isMinDesktopSmall && isOpen,
+        })}
+        onMouseEnter={() => {
+          setIsOpen(true);
+          setIsRead(true);
+        }}
+        onMouseLeave={() => {
+          setIsOpen(false);
+        }}
+        onClick={(ev) => {
+          if (isMinDesktopSmall) {
+            return;
+          }
+          ev.stopPropagation();
+          setIsRead(true);
+          setIsOpen(!isOpen);
+        }}
+        style={
+          isRead
+            ? {
+                backgroundColor: ROADMAP_SECTION_COLOR_MAPPER[number],
+                color: '#FFF',
+              }
+            : undefined
+        }
       >
         {number}
       </div>
       <div
-        className={styles['content-container']}
-        style={
-          contentPosition === 'left'
-            ? {
-                right: 'calc(100% + 30px)',
-              }
-            : { left: 'calc(100% + 30px)' }
-        }
+        className={classNames(styles['content-container'], {
+          [styles['open']]: isOpen,
+        })}
+        style={getContentPosition()}
       >
         <div className={styles['img-container']}>
           <img src={image} alt={`section-${number}`} />

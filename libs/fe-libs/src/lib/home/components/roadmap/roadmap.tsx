@@ -2,9 +2,11 @@ import styles from './roadmap.module.scss';
 import { useTranslation } from 'react-i18next';
 import { RoadmapSection } from '../roadmap-section/roadmap-section';
 import RoadMapImage from '../../../../../assets/pngs/rodmap-image.png';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 
 export function Roadmap() {
   const { t } = useTranslation();
+  const { isMinDesktopSmall } = useDeviceType();
   return (
     <div className={styles['container']}>
       <div className={styles['board']}>
@@ -16,7 +18,7 @@ export function Roadmap() {
             number={1}
             title={t('roadmap.1.title')}
             description={t('roadmap.1.description')}
-            contentPosition={'left'}
+            contentPosition={isMinDesktopSmall ? 'left' : 'right'}
             image={RoadMapImage}
           />
         </div>
@@ -43,7 +45,7 @@ export function Roadmap() {
             number={4}
             title={t('roadmap.1.title')}
             description={t('roadmap.1.description')}
-            contentPosition={'right'}
+            contentPosition={isMinDesktopSmall ? 'right' : 'left'}
             image={RoadMapImage}
           />
         </div>
@@ -52,7 +54,7 @@ export function Roadmap() {
             number={5}
             title={t('roadmap.1.title')}
             description={t('roadmap.1.description')}
-            contentPosition={'left'}
+            contentPosition={isMinDesktopSmall ? 'left' : 'right'}
             image={RoadMapImage}
           />
         </div>

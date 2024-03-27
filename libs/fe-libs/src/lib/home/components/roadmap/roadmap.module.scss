@@ -1,47 +1,83 @@
+@use 'media-queries' as mq;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 193px 0 83px 0;
+  @include mq.small-window {
+    display: block;
+    padding: 193px 0 0 0;
+  }
+}
 .board {
   align-items: center;
   background-image: url('libs/fe-libs/assets/pngs/board.png');
   background-size: cover;
   display: flex;
-  height: 401px;
-  margin-left: 22%;
-  padding: 0 165px 0 107px;
-  width: 600px;
-
+  width: 340px;
+  height: 227px;
+  padding: 0 96px 0 59px;
+  @include mq.small-window {
+    margin-left: 22%;
+    padding: 0 165px 0 107px;
+    height: 401px;
+    width: 600px;
+  }
   .text {
     color: var(--primary-color);
-    font: normal normal normal 51px/54px var(--secondary-font-family);
+    font: normal normal normal 26px/27px var(--secondary-font-family);
     letter-spacing: 0;
     text-align: center;
     transform: matrix(1, 0.03, -0.03, 1, 0, 0);
+    @include mq.small-window {
+      font: normal normal normal 51px/54px var(--secondary-font-family);
+    }
   }
 }
 
 .road {
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   .s1 {
-    margin: 0 auto 0 62.5%;
+    margin: 0 20% 0 auto;
+    @include mq.small-window {
+      margin: 0 auto 0 62.5%;
+    }
   }
 
   .s2 {
-    margin: 11% auto 0 70%;
+    margin: 150px 56% 0 auto;
+    @include mq.small-window {
+      margin: 11% auto 0 70%;
+    }
   }
 
   .s3 {
-    margin: 10% 75.3% 0 auto;
+    margin: 42px 25.8% 0 auto;
+    @include mq.small-window {
+      margin: 10% 75.3% 0 auto;
+    }
   }
 
   .s4 {
-    margin: 9% auto 0 40.5%;
+    margin: 109px 62% 0 auto;
+    @include mq.small-window {
+      margin: 9% auto 0 40.5%;
+    }
   }
 
   .s5 {
-    margin: 13% auto 0 71.5%;
+    margin: 73px 30.2% 0 auto;
+    @include mq.small-window {
+      margin: 13% auto 0 71.5%;
+    }
   }
-  
+
   .s6 {
-    margin: 9% 78.7% 10% auto;
+    margin: 183px 13.3% 83px auto;
+    @include mq.small-window {
+      margin: 9% 78.7% 10% auto;
+    }
   }
 }
