@@ -49,7 +49,6 @@ export function RoadmapSection(props: RoadmapSectionProps) {
         }}
         onMouseLeave={() => {
           setIsOpen(false);
-          setIsRead(true);
         }}
         onClick={(ev) => {
           if (isMinDesktopSmall) {
