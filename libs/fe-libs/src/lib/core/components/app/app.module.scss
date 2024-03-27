@@ -1,3 +1,4 @@
+@use 'media-queries' as mq;
 @use 'cursors' as c;
 
 .app-container {
@@ -23,4 +24,24 @@
 
 .clicked {
   @include c.click;
+}
+
+.inventory-footer-logo-position {
+  bottom: 13% !important;
+
+  @media (min-width: 758px) {
+    bottom: 20% !important;
+  }
+
+  @include mq.medium-tablet {
+    bottom: 13% !important;
+  }
+
+  @include mq.small-window {
+    bottom: 16% !important;
+  }
+
+  @include mq.x-large-window {
+    bottom: 22% !important;
+  }
 }

@@ -1,0 +1,194 @@
+@use 'media-queries' as mq;
+@use 'button' as btn;
+@use 'card' as c;
+@use 'cursors' as cur;
+
+.container {
+  align-items: center;
+  background-color: var(--primary-color);
+  clip-path: polygon(100% 100%, 0% 100% , 0.00% 8.00%, 2.00% 7.87%, 4.00% 7.51%, 6.00% 6.92%, 8.00% 6.14%, 10.00% 5.24%, 12.00% 4.25%, 14.00% 3.25%, 16.00% 2.30%, 18.00% 1.45%, 20.00% 0.76%, 22.00% 0.28%, 24.00% 0.03%, 26.00% 0.03%, 28.00% 0.28%, 30.00% 0.76%, 32.00% 1.45%, 34.00% 2.30%, 36.00% 3.25%, 38.00% 4.25%, 40.00% 5.24%, 42.00% 6.14%, 44.00% 6.92%, 46.00% 7.51%, 48.00% 7.87%, 50.00% 8.00%, 52.00% 7.87%, 54.00% 7.51%, 56.00% 6.92%, 58.00% 6.14%, 60.00% 5.24%, 62.00% 4.25%, 64.00% 3.25%, 66.00% 2.30%, 68.00% 1.45%, 70.00% 0.76%, 72.00% 0.28%, 74.00% 0.03%, 76.00% 0.03%, 78.00% 0.28%, 80.00% 0.76%, 82.00% 1.45%, 84.00% 2.30%, 86.00% 3.25%, 88.00% 4.25%, 90.00% 5.24%, 92.00% 6.14%, 94.00% 6.92%, 96.00% 7.51%, 98.00% 7.87%, 100.00% 8.00%);
+  color: var(--black-900);
+  display: grid;
+  grid-template-rows: 20% 30% 40% 10%;
+  height: 976px;
+  justify-items: center;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 30;
+
+  @include mq.medium-tablet {
+    clip-path: polygon(
+      100% 100%,
+      0% 100%,
+      0% 20.44%,
+      2% 20.31%,
+      4% 19.92%,
+      6% 19.3%,
+      8% 18.45%,
+      10% 17.43%,
+      12% 16.27%,
+      14% 15.01%,
+      16% 13.71%,
+      18% 12.43%,
+      20% 11.2%,
+      22% 10.08%,
+      24% 9.12%,
+      26% 8.36%,
+      28% 7.82%,
+      30% 7.53%,
+      32% 7.5%,
+      34% 7.72%,
+      36% 8.2%,
+      38% 8.91%,
+      40% 9.83%,
+      42% 10.91%,
+      44% 12.11%,
+      46% 13.39%,
+      48% 14.69%,
+      50% 15.96%,
+      52% 17.15%,
+      54% 18.21%,
+      56% 19.1%,
+      58% 19.79%,
+      60% 20.24%,
+      62% 20.43%,
+      64% 20.37%,
+      66% 20.04%,
+      68% 19.47%,
+      70% 18.68%,
+      72% 17.7%,
+      74% 16.57%,
+      76% 15.33%,
+      78% 14.04%,
+      80% 12.74%,
+      82% 11.5%,
+      84% 10.35%,
+      86% 9.35%,
+      88% 8.53%,
+      90% 7.93%,
+      92% 7.58%,
+      94% 7.48%,
+      96% 7.64%,
+      98% 8.06%,
+      100% 8.72%
+    );
+    grid-template-rows: 45% 30% 15% 10%;
+    height: 720px;
+  }
+
+  @include mq.x-large-window {
+    height: 1083px;
+    margin: 9% auto 0;
+  }
+}
+
+.t-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  grid-row: 2;
+  justify-content: center;
+  width: 290px;
+
+  @include mq.medium-tablet {
+    width: 400px;
+  }
+
+  @include mq.x-large-window {
+    width: 675px;
+  }
+
+  .title {
+    font-family: var(--secondary-font-family);
+    font-size: 32px;
+    letter-spacing: 0.69px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mq.medium-tablet {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @include mq.x-large-window {
+      font-size: 46px;
+      line-height: 50px;
+    }
+  }
+}
+
+.btn {
+  background-color: var(--blue-500);
+  border-radius: 50px;
+  font-family: var(--secondary-font-family);
+  font-size: 20px;
+  letter-spacing: 0.45px;
+  line-height: 36px;
+  padding: 2% 12%;
+  text-transform: uppercase;
+
+  @include mq.x-large-window {
+    font-size: 30px;
+    line-height: 46px;
+  }
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  grid-row: 3;
+
+  @include mq.medium-tablet {
+    flex-direction: row;
+    gap: 60px;
+    margin: 5%;
+  }
+
+  @include mq.x-large-window {
+    gap: 80px;
+    margin: 5% auto;
+  }
+
+  .link {
+    @include cur.hover;
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    letter-spacing: 0.42px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mq.medium-tablet {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @include mq.x-large-window {
+      font-size: 28px;
+      line-height: 50px;
+    }
+  }
+}
+
+.rights {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  grid-row: 4;
+  letter-spacing: 0.42px;
+  line-height: 22px;
+  text-transform: capitalize;
+
+  @include mq.medium-tablet {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  @include mq.x-large-window {
+    font-size: 22px;
+  }
+}
