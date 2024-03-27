@@ -3,11 +3,13 @@
 @use 'card' as c;
 
 .container {
-  margin: 316px auto 0;
-  width: 328px;
+  // margin: 316px auto 0;
+  margin: 316px 11px 0;
+  // width: 328px;
 
   @include mq.medium-tablet {
     height: 590px;
+    margin: 316px auto 0;
     width: 916px;
   }
 
@@ -37,9 +39,11 @@
 .bg-pt-card {
   @include c.card;
   @include c.bg-card;
-  z-index: 2;
-  background-image: url('../../../../../assets/pngs/bg_phase_three_mobile.png');
+  background-color: var(--blue-700);
+  border-radius: 70px;
+  border: 3px solid var(--primary-color);
   position: absolute;
+  z-index: 5;
 
   @include mq.medium-tablet {
     background-image: url('../../../../../assets/pngs/bg_phase_three_desktop.png');

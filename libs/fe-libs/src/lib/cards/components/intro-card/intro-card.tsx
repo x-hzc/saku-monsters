@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
 import Kanjis from '../../../../../assets/svgs/kanjis.svg';
-// import IntroGreen from '../../../../../assets/pngs/bg_intro_green.png';
 import IntroEgg from '../../../../../assets/pngs/bg_intro_egg.png';
 import IntroSakuMonsters from '../../../../../assets/pngs/intro_saku_monster.png';
 import IntroBirdmonster from '../../../../../assets/pngs/intro_birdmonster.png';
@@ -16,9 +15,6 @@ export function IntroCard() {
     <div className={styles['container']}>
       <div className={styles['intro-card-container']}>
         <div className={styles['bg']} />
-        {/* <div className={styles['bg-container']}>
-          <img src={IntroGreen} alt="bg-intro-green" />
-        </div> */}
         <div className={styles['content']}>
           <div className={styles['left']}>
             <div className={styles['up']}>
