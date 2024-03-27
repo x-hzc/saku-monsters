@@ -1,4 +1,5 @@
 @use 'cursors' as c;
+@use 'media-queries' as mq;
 .container {
   align-items: center;
   display: flex;
@@ -13,45 +14,68 @@
     border: 5px solid var(--primary-color);
     box-shadow: 7px 7px 17px #0000008f;
     color: var(--black-900);
+    transition: all 0.3s ease-in-out;
+    z-index: 90;
     @include c.hover;
     display: flex;
     font-family: var(--secondary-font-family);
-    font-size: 53px;
-    height: 137px;
     justify-content: center;
-    line-height: 69px;
+    font-size: 45px;
+    line-height: 49px;
+    width: 99px;
+    height: 99px;
     transform: matrix(0.98, 0.19, -0.19, 0.98, 0, 0);
-    width: 137px;
     &.active {
       @include c.click;
     }
-  }
-
-  .number:hover + .content-container {
-    opacity: 1;
+    &.open {
+      z-index: 101;
+    }
+    &.rotated {
+      transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
+    }
+    @include mq.small-window {
+      font-size: 53px;
+      line-height: 69px;
+      height: 137px;
+      width: 137px;
+    }
   }
 
   .content-container {
     background-color: var(--primary-color);
-    border-radius: 100px;
+    border-radius: 80px;
     bottom: 50%;
     box-shadow: 12px 13px 43px #00000052;
     color: var(--roadmap-content-color);
     display: flex;
     gap: 30px;
-    max-width: 735px;
+    width: 370px;
     opacity: 0;
-    padding: 22px 45px 28px 26px;
+    padding: 24px 45px;
     position: absolute;
     transform: translate(0, 50%);
-    transition: opacity 0.5s ease-in-out;
-    -webkit-transition: opacity 0.5s ease-in-out;
-
+    transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    z-index: 1;
+    height: 238px;
+    &.open {
+      opacity: 1;
+      z-index: 100;
+    }
+    @include mq.small-window {
+      border-radius: 100px;
+      width: 735px;
+      padding: 22px 45px 28px 26px;
+      height: auto;
+    }
     .img-container {
-      display: block;
+      display: none;
       height: auto;
       width: 229px;
-
+      @include mq.small-window {
+        display: block;
+      }
       img {
         height: 100%;
         object-fit: contain;
@@ -71,21 +95,31 @@
       }
 
       .phase {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 25px;
+        @include mq.small-window {
+          font-size: 20px;
+        }
       }
 
       .title {
-        font-size: 35px;
+        font-size: 32px;
         line-height: 39px;
+        @include mq.small-window {
+          font-size: 35px;
+        }
       }
 
       .description {
         font-family: var(--primary-font-family);
-        font-size: 20px;
+        font-size: 18px;
         line-height: 22px;
-        max-width: 392px;
+        max-width: 278px;
         opacity: 0.93;
+        @include mq.small-window {
+          font-size: 20px;
+          max-width: 392px;
+        }
       }
     }
   }
