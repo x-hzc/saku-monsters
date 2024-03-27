@@ -1,3 +1,4 @@
+@use 'media-queries' as mq;
 .container {
   margin: 0 10px 0 auto;
   transition: all 300ms ease-in-out;
@@ -14,11 +15,22 @@
   }
   &.open {
     position: absolute;
-    width: 85%;
+    width: 75%;
     z-index: 10;
     background-color: var(--primary-color);
     border-radius: 31px;
-    padding: 0 23px;
+    padding: 0 5px;
+    @include mq.large-handset {
+      padding: 0 23px;
+      width: 80%;
+
+    }
+    @include mq.flexible-mobile {
+      width: 85%;
+    }
+    @include mq.tablet {
+      width: 90%;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
