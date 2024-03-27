@@ -36,7 +36,8 @@ export function Footer() {
         </li>
       </ul>
       <div className={styles['rights']}>
-        © 2024 Saku Monsters, {t('footer.rights')}
+        <div>© 2024 Saku Monsters,</div>
+        <div>{t('footer.rights')}</div>
       </div>
     </div>
   );

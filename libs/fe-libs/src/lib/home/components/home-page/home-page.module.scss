@@ -40,23 +40,3 @@
   position: relative;
   z-index: 50;
 }
-
-.footer-saku-logo-container {
-  bottom: 6.2%;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 356px;
-  z-index: 40;
-
-  @include mq.x-large-window {
-    bottom: 5.67%;
-    width: 626px;
-  }
-
-  img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-}
