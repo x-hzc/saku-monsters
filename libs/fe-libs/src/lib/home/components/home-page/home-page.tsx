@@ -10,7 +10,9 @@ import { Roadmap } from '../roadmap/roadmap';
 export function HomePage() {
   return (
     <div className={styles['container']}>
-      <Landing />
+      <div className={styles['landing']}>
+        <Landing />
+      </div>
       <IntroCard />
       <div className={styles['phase-one']}>
         <PhaseOne />

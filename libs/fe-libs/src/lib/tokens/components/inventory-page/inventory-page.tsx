@@ -11,6 +11,7 @@ import { FilterBar } from '../filter-bar/filter-bar';
 import { Information } from '../../../ui/components/information/information';
 import { CircularProgress } from '@mui/material';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
 
 export function InventoryPage() {
   const { t } = useTranslation();
@@ -27,6 +28,7 @@ export function InventoryPage() {
       <div className={styles['header']}>
         <Logo className={styles['logo']} />
         {isMinDesktopSmall && <LanguageSelector contrasted={true} />}
+        {!isMinDesktopSmall && <MenuMobile className={styles['menu']} />}
       </div>
       <div>
         <div className={styles['top-content']}>

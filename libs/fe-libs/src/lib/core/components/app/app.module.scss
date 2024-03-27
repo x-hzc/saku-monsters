@@ -19,7 +19,6 @@
 .content {
   display: flex;
   flex-direction: column;
-
 }
 
 .clicked {
@@ -46,6 +45,7 @@
   }
 }
 
-.inventory-footer-color {
-  background-image: linear-gradient(180deg, #CDEFE5 0%, #E3F2CF 100%);
+.inventory-footer {
+  background-image: linear-gradient(180deg, #cdefe5 0%, #e3f2cf 100%);
+  margin-top: 9% !important;
 }

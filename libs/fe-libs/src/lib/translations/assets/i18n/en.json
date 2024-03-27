@@ -12,7 +12,13 @@
   "navigation": {
     "home": "Home",
     "monsters": "Monsters",
-    "store": "Store"
+    "store": "Store",
+    "menu": "menu",
+    "marketplace": "Marketplace",
+    "log": "SakuLog",
+    "download": "Download",
+    "twitter": "Twitter",
+    "language": "Language"
   },
   "landing": {
     "saku": "saku",

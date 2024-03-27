@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+.landing {
+  padding-bottom: 60px;
+  @include mq.small-window {
+    padding-bottom: 0;
+  }
+}
 .grow-card {
   position: relative;
 

@@ -2,9 +2,13 @@
 @use 'cursors' as c;
 .container {
   @include c.hover;
-  width: 15%;
-  @include mq.x-large-window {
-    width: 25%;
+  width: 25%;
+  max-width: 95px;
+  max-height: 65px;
+  @include mq.small-window {
+    width: 100%;
+    max-width: 100px;
+    max-height: 80px;
   }
   img {
     object-fit: contain;

@@ -40,6 +40,10 @@ export function useRouter() {
     );
   }
 
+  function goToTwitter() {
+    goToExternalSite('https://twitter.com/sakumonsters?lang=en');
+  }
+
   return {
     routes,
     currentPath: location.pathname,
@@ -47,5 +51,6 @@ export function useRouter() {
     goToInventory,
     goToExternalSite,
     goToAppleSakuMonsters,
+    goToTwitter,
   };
 }
