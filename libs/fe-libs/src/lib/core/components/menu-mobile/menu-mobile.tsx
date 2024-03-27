@@ -2,7 +2,7 @@ import styles from './menu-mobile.module.scss';
 import MenuIcon from '../../../../../assets/icons/menu.svg';
 import CloseIcon from '../../../../../assets/icons/close.svg';
 import classNames from 'classnames';
-import { useMenuMobile } from '../../hoos/use-menu-mobile';
+import { useMenuMobile } from '../../hooks/use-menu-mobile';
 import { Logo } from '../logo/logo';
 import { Button } from '../../../ui/components/button/button';
 import { useTranslation } from 'react-i18next';

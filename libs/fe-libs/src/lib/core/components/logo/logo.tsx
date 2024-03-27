@@ -2,7 +2,7 @@ import styles from './logo.module.scss';
 import { useRouter } from '../../../routing/hooks/use-router';
 import SakuLogo from '../../../../../assets/pngs/saku_logo.png';
 import classNames from 'classnames';
-import { useMenuMobile } from '../../hoos/use-menu-mobile';
+import { useMenuMobile } from '../../hooks/use-menu-mobile';
 export interface LogoProps {
   className?: string;
 }
