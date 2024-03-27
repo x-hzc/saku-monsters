@@ -19,7 +19,7 @@
     @include c.click;
   }
 
-  @include mq.large-tablet {
+  @include mq.medium-tablet {
     font-size: 30px;
     line-height: 22px;
   }
