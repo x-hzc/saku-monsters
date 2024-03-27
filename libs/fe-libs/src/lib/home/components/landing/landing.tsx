@@ -5,6 +5,7 @@ import HomeIcon from '../../../../../assets/icons/home.svg';
 import MonstersIcon from '../../../../../assets/icons/monsters.svg';
 import StoreIcon from '../../../../../assets/icons/store.svg';
 import AppleIcon from '../../../../../assets/icons/apple.svg';
+import MenuIcon from '../../../../../assets/icons/menu.svg';
 import { Logo } from '../../../core/components/logo/logo';
 import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
 import { Button } from '../../../ui/components/button/button';
@@ -12,14 +13,42 @@ import { useRouter } from '../../../routing/hooks/use-router';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { useRef, useState } from 'react';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
 
 export function Landing() {
   const { goToInventory, goToHome, goToAppleSakuMonsters } = useRouter();
   const { t } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<null | HTMLVideoElement>(null);
+  const { isMinDesktopSmall } = useDeviceType();
   return (
     <div className={styles['container']}>
+      {!isMinDesktopSmall && (
+        <div className={styles['mobile-header']}>
+          <Logo />
+          <div className={styles['actions']}>
+            <div
+              className={styles['play-container']}
+              onClick={(event) => {
+                event.stopPropagation();
+                if (!videoRef || !videoRef.current) {
+                  return;
+                }
+                if (!isPlaying) {
+                  videoRef.current.play();
+                  return setIsPlaying(true);
+                }
+                setIsPlaying(false);
+                return videoRef.current.pause();
+              }}
+            >
+              <PlayIcon />
+            </div>
+            <MenuMobile />
+          </div>
+        </div>
+      )}
       <div
         className={classNames(styles['video-container'], {
           [styles['playing']]: isPlaying,

@@ -12,7 +12,9 @@ import SakuLogo from '../../../../../assets/pngs/footer_saku_logo.png';
 export function HomePage() {
   return (
     <div className={styles['container']}>
-      <Landing />
+      <div className={styles['landing']}>
+        <Landing />
+      </div>
       <IntroCard />
       <div className={styles['phase-one']}>
         <PhaseOne />
