@@ -11,16 +11,13 @@ export interface FooterProps {
 export function Footer(props: FooterProps) {
   const { className = '' } = props;
   const { t } = useTranslation();
-  const { goToAppleSakuMonsters } = useRouter();
+  const { goToAppleSakuMonsters, goToTwitter } = useRouter();
 
   return (
     <div className={cn(styles['container'], className)}>
       <div className={styles['t-container']}>
         <div className={styles['title']}>{t('footer.place')}</div>
-        <Button
-          className={styles['btn']}
-          onClick={goToAppleSakuMonsters}
-        >
+        <Button className={styles['btn']} onClick={goToTwitter}>
           TWITTER
         </Button>
       </div>
