@@ -12,13 +12,16 @@ import { Information } from '../../../ui/components/information/information';
 import { CircularProgress } from '@mui/material';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
+import { MobileSearch } from '../../../ui/mobile-search/mobile-search';
+import { useMobileSearch } from '../../../ui/hooks/use-mobile-search';
+import classNames from 'classnames';
 
 export function InventoryPage() {
   const { t } = useTranslation();
   const { syncTokens, loadingTokens, filteredTokens, setInitialValue } =
     useTokensFacade();
   const { isMinDesktopSmall } = useDeviceType();
-
+  const { isOpen } = useMobileSearch();
   useOnInit(() => {
     syncTokens();
   });
@@ -26,9 +29,18 @@ export function InventoryPage() {
   return (
     <div className={styles['container']}>
       <div className={styles['header']}>
-        <Logo className={styles['logo']} />
+        <Logo
+          className={classNames(styles['logo'], {
+            [styles['hidden']]: isOpen,
+          })}
+        />
         {isMinDesktopSmall && <LanguageSelector contrasted={true} />}
-        {!isMinDesktopSmall && <MenuMobile className={styles['menu']} />}
+        {!isMinDesktopSmall && (
+          <>
+            <MobileSearch />
+            <MenuMobile className={styles['menu']} />
+          </>
+        )}
       </div>
       <div>
         <div className={styles['top-content']}>
