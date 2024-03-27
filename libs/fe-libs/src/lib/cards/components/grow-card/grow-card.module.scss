@@ -27,11 +27,13 @@
 .bg {
   @include c.card;
   @include c.bg-card;
-  background-image: url('../../../../../assets/pngs/bg_grow_green.png');
-  border-radius: 80px;
+  background-color: var(--lime-green-700);
+  border-radius: 70px;
+  border: 3px solid var(--primary-color);
   position: absolute;
 
   @include mq.medium-tablet {
+    background-image: url('../../../../../assets/pngs/bg_grow_desktop.png');
     border-radius: 128px;
   }
 
