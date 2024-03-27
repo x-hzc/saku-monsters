@@ -19,14 +19,14 @@ export function RoadmapSection(props: RoadmapSectionProps) {
     props;
   const [isOpen, setIsOpen] = useState(false);
   const [isRead, setIsRead] = useState(false);
-  const { isMinLargeTablet } = useDeviceType();
+  const { isMinDesktopSmall } = useDeviceType();
   function getContentPosition(): CSSProperties {
-    if (isMinLargeTablet) {
+    if (isMinDesktopSmall) {
       return contentPosition === 'left'
         ? {
-            right: 'calc(100% + 30px)',
+            right: 'calc(100% + 20px)',
           }
-        : { left: 'calc(100% + 30px)' };
+        : { left: 'calc(100% + 20px)' };
     }
 
     return {
@@ -41,7 +41,7 @@ export function RoadmapSection(props: RoadmapSectionProps) {
       <div
         className={cn(styles['number'], {
           [styles['rotated']]: number === 1,
-          [styles['open']]: !isMinLargeTablet && isOpen,
+          [styles['open']]: !isMinDesktopSmall && isOpen,
         })}
         onMouseEnter={() => {
           setIsOpen(true);
@@ -52,6 +52,9 @@ export function RoadmapSection(props: RoadmapSectionProps) {
           setIsRead(true);
         }}
         onClick={(ev) => {
+          if (isMinDesktopSmall) {
+            return;
+          }
           ev.stopPropagation();
           setIsRead(true);
           setIsOpen(!isOpen);
