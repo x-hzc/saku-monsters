@@ -39,7 +39,7 @@ export function App() {
         />
         <Footer
           className={cn({
-            [styles['inventory-footer-color']]: currentPath === '/inventory',
+            [styles['inventory-footer']]: currentPath === '/inventory',
           })}
         />
       </div>

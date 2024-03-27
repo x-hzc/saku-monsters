@@ -17,6 +17,7 @@
   z-index: 30;
 
   @include mq.medium-tablet {
+    margin-top: -10%;
     clip-path: polygon(
       100% 100%,
       0% 100%,
@@ -78,7 +79,7 @@
 
   @include mq.x-large-window {
     height: 1083px;
-    margin: 9% auto 0;
+    margin: -12% auto 0;
   }
 }
 
@@ -127,7 +128,7 @@
     line-height: 36px;
     padding: 2% 12%;
     text-transform: uppercase;
-  
+
     @include mq.x-large-window {
       font-size: 30px;
       line-height: 46px;
