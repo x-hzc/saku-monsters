@@ -9,6 +9,7 @@
   background-size: 100% 100%;
   margin: 250px auto 0;
   position: relative;
+  width: 350px;
   z-index: 5;
 
   @include mq.medium-tablet {
