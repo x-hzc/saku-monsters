@@ -33,10 +33,15 @@ export function App() {
         <Sticker />
         <FooterLogo
           className={cn({
-            [styles['inventory-footer-logo-position']]: currentPath === '/inventory'
+            [styles['inventory-footer-logo-position']]:
+              currentPath === '/inventory',
           })}
         />
-        <Footer />
+        <Footer
+          className={cn({
+            [styles['inventory-footer-color']]: currentPath === '/inventory',
+          })}
+        />
       </div>
     </div>
   );

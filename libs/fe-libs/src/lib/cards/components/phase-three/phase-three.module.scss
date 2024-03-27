@@ -3,11 +3,11 @@
 @use 'card' as c;
 
 .container {
-  margin: 316px 11px 0;
+  margin: 316px auto 0;
+  width: 328px;
 
   @include mq.medium-tablet {
     height: 590px;
-    margin: 316px auto 0;
     width: 916px;
   }
 
@@ -38,11 +38,11 @@
   @include c.card;
   @include c.bg-card;
   z-index: 2;
-  background-image: url('../../../../../assets/pngs/bg_phase_three_blue.png');
-  border-radius: 80px;
+  background-image: url('../../../../../assets/pngs/bg_phase_three_mobile.png');
   position: absolute;
 
   @include mq.medium-tablet {
+    background-image: url('../../../../../assets/pngs/bg_phase_three_desktop.png');
     border-radius: 122px;
   }
 

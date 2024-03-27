@@ -117,21 +117,21 @@
       line-height: 50px;
     }
   }
-}
 
-.btn {
-  background-color: var(--blue-500);
-  border-radius: 50px;
-  font-family: var(--secondary-font-family);
-  font-size: 20px;
-  letter-spacing: 0.45px;
-  line-height: 36px;
-  padding: 2% 12%;
-  text-transform: uppercase;
-
-  @include mq.x-large-window {
-    font-size: 30px;
-    line-height: 46px;
+  .btn {
+    background-color: var(--blue-500);
+    border-radius: 50px;
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    letter-spacing: 0.45px;
+    line-height: 36px;
+    padding: 2% 12%;
+    text-transform: uppercase;
+  
+    @include mq.x-large-window {
+      font-size: 30px;
+      line-height: 46px;
+    }
   }
 }
 
