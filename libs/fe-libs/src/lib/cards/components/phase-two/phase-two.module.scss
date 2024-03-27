@@ -2,8 +2,9 @@
 @use 'button' as btn;
 
 .container {
-  aspect-ratio: 1/1;
-  background-image: url('libs/fe-libs/assets/pngs/bg_phase_two_mobile.png');
+  background-color: var(--pink-300);
+  border-radius: 70px;
+  border: 3px solid var(--primary-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -13,7 +14,10 @@
   z-index: 5;
 
   @include mq.medium-tablet {
+    background-color: transparent;
     background-image: url('libs/fe-libs/assets/pngs/bg_phase_two_desktop.png');
+    border-radius: unset;
+    border: unset;
     height: 250px;
     margin: 268px auto 0;
     width: 910px;
