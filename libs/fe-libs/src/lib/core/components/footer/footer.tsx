@@ -2,13 +2,19 @@ import styles from './footer.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
+import cn from 'classnames';
 
-export function Footer() {
+export interface FooterProps {
+  className?: string;
+}
+
+export function Footer(props: FooterProps) {
+  const { className = '' } = props;
   const { t } = useTranslation();
   const { goToAppleSakuMonsters } = useRouter();
 
   return (
-    <div className={styles['container']}>
+    <div className={cn(styles['container'], className)}>
       <div className={styles['t-container']}>
         <div className={styles['title']}>{t('footer.place')}</div>
         <Button
@@ -36,7 +42,8 @@ export function Footer() {
         </li>
       </ul>
       <div className={styles['rights']}>
-        © 2024 Saku Monsters, {t('footer.rights')}
+        <div>© 2024 Saku Monsters,</div>
+        <div>{t('footer.rights')}</div>
       </div>
     </div>
   );
