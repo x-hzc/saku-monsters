@@ -30,8 +30,8 @@ export function RoadmapSection(props: RoadmapSectionProps) {
     }
 
     return {
-      right: contentPosition === 'right' ? '-70%' : undefined,
-      left: contentPosition === 'left' ? '-70%' : undefined,
+      right: contentPosition === 'right' ? '-60%' : undefined,
+      left: contentPosition === 'left' ? '-60%' : undefined,
       top: '-70%',
     };
   }
