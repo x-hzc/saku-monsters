@@ -2,7 +2,10 @@
   "name": "@saku-monsters/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build-staging": "nx run-many --target=build --projects=saku-monsters-web --configuration=staging",
+    "build-prod": "nx run-many --target=build --projects=saku-monsters-web --configuration=production"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
