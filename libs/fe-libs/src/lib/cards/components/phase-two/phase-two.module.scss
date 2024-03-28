@@ -8,6 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  // margin: 250px 11px 0;
   margin: 250px auto 0;
   position: relative;
   width: 350px;
@@ -16,8 +17,7 @@
   @include mq.medium-tablet {
     background-color: transparent;
     background-image: url('libs/fe-libs/assets/pngs/bg_phase_two_desktop.png');
-    border-radius: unset;
-    border: unset;
+    border-radius: 55px 120px 120px 125px;
     height: 250px;
     margin: 268px auto 0;
     width: 910px;
