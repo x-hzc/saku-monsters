@@ -6,18 +6,19 @@ import cn from 'classnames';
 import { FooterLogo } from '../footer-logo/footer-logo';
 
 export interface FooterProps {
-  className?: string;
+  containerClassName?: string;
+  contentClassName?: string;
 }
 
 export function Footer(props: FooterProps) {
-  const { className = '' } = props;
+  const { containerClassName = '', contentClassName = '' } = props;
   const { t } = useTranslation();
   const { goToAppleSakuMonsters, goToTwitter } = useRouter();
 
   return (
-    <div className={cn(styles['container'], className)}>
+    <div className={cn(styles['container'], containerClassName)}>
       <FooterLogo />
-      <div className={styles['content']}>
+      <div className={cn(styles['content'], contentClassName)}>
         <div className={styles['t-container']}>
           <div className={styles['title']}>{t('footer.place')}</div>
           <Button className={styles['btn']} onClick={goToTwitter}>

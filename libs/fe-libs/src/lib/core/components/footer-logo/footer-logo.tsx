@@ -1,9 +1,12 @@
 import styles from './footer-logo.module.scss';
-import { FooterProps } from '../footer/footer';
 import SakuLogo from '../../../../../assets/pngs/footer_saku_logo.png';
 import cn from 'classnames';
 
-export function FooterLogo(props: FooterProps) {
+export interface FooterLogoProps {
+  className?: string;
+}
+
+export function FooterLogo(props: FooterLogoProps) {
   const { className = '' } = props;
 
   return (

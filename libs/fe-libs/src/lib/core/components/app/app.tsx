@@ -31,7 +31,7 @@ export function App() {
         <Outlet />
         <Sticker />
         <Footer
-          className={cn({
+          contentClassName={cn({
             [styles['inventory-footer']]: currentPath === '/inventory',
           })}
         />
