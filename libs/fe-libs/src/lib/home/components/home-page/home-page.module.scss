@@ -9,40 +9,129 @@
 }
 
 .landing {
-  padding-bottom: 60px;
+  min-height: 100vh;
+  height: 100vh;
+  padding-bottom: 0;
   @include mq.small-window {
     padding-bottom: 0;
   }
 }
-.grow-card {
+.wrapper {
   position: relative;
-
-  @include mq.medium-tablet {
-    margin-top: 150px;
-  }
-
-  @include mq.x-large-window {
-    margin-top: 334px;
-  }
-
-  .card {
+  .grow-card,
+  .phase-two,
+  .phase-three {
     position: relative;
     z-index: 5;
   }
+  .grow-card {
+    margin-top: 42.5%;
+    @include mq.medium-tablet {
+      margin-top: 17.4%;
+    }
+  }
+  .phase-two {
+    margin-top: 40.5%;
+    @include mq.medium-tablet {
+      margin-top: 25%;
+    }
+    @include mq.x-large-window {
+      margin-top: 14%;
+    }
+  }
+  .phase-three {
+    margin-top: 153.5%;
+    @include mq.medium-tablet {
+      margin-top: 35%;
+    }
+    @include mq.large-tablet {
+      margin-top: 35%;
+    }
+    @include mq.x-large-window {
+      margin-top: 24.3%;
+    }
+  }
+  .roadmap {
+    position: relative;
+    z-index: 2;
+    padding-top: 40%;
+    padding-bottom: 20%;
+    @include mq.small-tablet {
+      padding-top: 60%;
+    }
+    @include mq.medium-tablet {
+      padding-top: 0;
+    }
+    @media (min-width: #{1140px}) {
+    }
 
-  .bg-container {
-    background-image: url('libs/fe-libs/assets/pngs/bg_sakufull.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 5780px;
-    position: absolute;
-    top: 149px;
-    width: 100%;
-    z-index: 1;
+    @include mq.large-window {
+      padding-bottom: 18%;
+    }
+    @include mq.x-large-window {
+    }
+  }
+}
+.roadmap-bg {
+  background-image: url('libs/fe-libs/assets/pngs/home_roadmap_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  transition: all ease-in-out 300ms;
+  z-index: 1;
+  height: 62%;
+  width: 150%;
+  left: -20%;
+  top: 63%;
+  @include mq.large-handset {
+    left: -5%;
+    top: 62%;
+  }
+
+  @include mq.small-tablet {
+    top: 59%;
+    height: 66%;
+    left: 0;
+  }
+  @media (min-width: #{700px}) {
+    top: 60%;
+  }
+  @include mq.tablet {
+    height: 66%;
+  }
+  @include mq.medium-tablet {
+    top: 62%;
   }
 }
 
-.roadmap {
-  position: relative;
-  z-index: 50;
+.bg-container {
+  background-image: url('libs/fe-libs/assets/pngs/bg_sakufull.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  transition: all ease-in-out 300ms;
+  z-index: 1;
+  top: 20%;
+  left: -50%;
+  height: 70%;
+  width: 150%;
+  @include mq.large-handset {
+    left: -10%;
+    top: 22%;
+  }
+  @include mq.medium-tablet {
+    top: 8%;
+    left: 0;
+    height: 98%;
+    width: 100%;
+  }
+  @include mq.large-tablet {
+  }
+  @include mq.small-window {
+    height: 100%;
+    top: 3%;
+  }
+  @include mq.x-large-window{
+    top: 5%;
+  }
 }

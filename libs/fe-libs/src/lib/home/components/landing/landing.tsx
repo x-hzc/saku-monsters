@@ -73,86 +73,88 @@ export function Landing() {
             type={'video/mp4'}
           />
         </video>
-      </div>
-      <div className={styles['content-container']}>
-        <div className={styles['nav-menu']}>
-          <Logo />
-          <div
-            className={styles['link']}
-            onClick={(event) => {
-              event.stopPropagation();
-              goToHome();
-            }}
-          >
-            <HomeIcon />
-            <div className={styles['text']}>{t('navigation.home')}</div>
-          </div>
-          <div
-            className={styles['link']}
-            onClick={(event) => {
-              event.stopPropagation();
-              goToInventory();
-            }}
-          >
-            <MonstersIcon />
-            <div className={styles['text']}>{t('navigation.monsters')}</div>
-          </div>
-          <div
-            className={styles['link']}
-            onClick={(event) => {
-              event.stopPropagation();
-              goToAppleSakuMonsters();
-            }}
-          >
-            <StoreIcon />
-            <div className={styles['text']}>{t('navigation.store')}</div>
-          </div>
-        </div>
-
-        <div className={styles['language-selector']}>
-          <LanguageSelector />
-        </div>
-        <div className={styles['title-container']}>
-          <div className={classNames(styles['top-title'], styles['title'])}>
-            <div>{t('landing.saku')}</div>
-            <LogoKanjiIcon />
-          </div>
-          <div className={classNames(styles['bottom-title'], styles['title'])}>
+        <div className={styles['content-container']}>
+          <div className={styles['nav-menu']}>
+            <Logo />
             <div
-              className={styles['play-container']}
+              className={styles['link']}
               onClick={(event) => {
                 event.stopPropagation();
-                if (videoRef && !!videoRef.current) {
-                  videoRef.current.play();
-                  setIsPlaying(true);
-                }
+                goToHome();
               }}
             >
-              <PlayIcon />
+              <HomeIcon />
+              <div className={styles['text']}>{t('navigation.home')}</div>
             </div>
-            <div>{t('landing.monsters')}</div>
-          </div>
-        </div>
-
-        <div className={styles['bottom-content']}>
-          <div
-            className={styles['saku-card']}
-            onClick={(event) => {
-              event.stopPropagation();
-              goToAppleSakuMonsters();
-            }}
-          />
-          <div className={styles['content']}>
-            <div className={styles['title']}>{t('landing.collect')}</div>
-            <div>{t('landing.download')}</div>
-            <Button
-              onClick={goToAppleSakuMonsters}
-              type={'contained'}
-              className={styles['btn']}
+            <div
+              className={styles['link']}
+              onClick={(event) => {
+                event.stopPropagation();
+                goToInventory();
+              }}
             >
-              <AppleIcon />
-              {t('landing.apple')}
-            </Button>
+              <MonstersIcon />
+              <div className={styles['text']}>{t('navigation.monsters')}</div>
+            </div>
+            <div
+              className={styles['link']}
+              onClick={(event) => {
+                event.stopPropagation();
+                goToAppleSakuMonsters();
+              }}
+            >
+              <StoreIcon />
+              <div className={styles['text']}>{t('navigation.store')}</div>
+            </div>
+          </div>
+
+          <div className={styles['language-selector']}>
+            <LanguageSelector />
+          </div>
+          <div className={styles['title-container']}>
+            <div className={classNames(styles['top-title'], styles['title'])}>
+              <div>{t('landing.saku')}</div>
+              <LogoKanjiIcon />
+            </div>
+            <div
+              className={classNames(styles['bottom-title'], styles['title'])}
+            >
+              <div
+                className={styles['play-container']}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  if (videoRef && !!videoRef.current) {
+                    videoRef.current.play();
+                    setIsPlaying(true);
+                  }
+                }}
+              >
+                <PlayIcon />
+              </div>
+              <div>{t('landing.monsters')}</div>
+            </div>
+          </div>
+
+          <div className={styles['bottom-content']}>
+            <div
+              className={styles['saku-card']}
+              onClick={(event) => {
+                event.stopPropagation();
+                goToAppleSakuMonsters();
+              }}
+            />
+            <div className={styles['content']}>
+              <div className={styles['title']}>{t('landing.collect')}</div>
+              <div>{t('landing.download')}</div>
+              <Button
+                onClick={goToAppleSakuMonsters}
+                type={'contained'}
+                className={styles['btn']}
+              >
+                <AppleIcon />
+                {t('landing.apple')}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

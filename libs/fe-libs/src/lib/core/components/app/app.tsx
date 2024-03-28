@@ -5,7 +5,6 @@ import { useRouter } from '../../../routing/hooks/use-router';
 import { useStickers } from '../../../stickers/hooks/use-stickers';
 import { useClickCursor } from '../../../ui/hooks/use-click-cursor';
 import { Sticker } from '../../../stickers/components/sticker/sticker';
-import { Footer } from '../footer/footer';
 import cn from 'classnames';
 
 export function App() {
@@ -30,11 +29,6 @@ export function App() {
       <div className={styles['content']}>
         <Outlet />
         <Sticker />
-        <Footer
-          contentClassName={cn({
-            [styles['inventory-footer']]: currentPath === '/inventory',
-          })}
-        />
       </div>
     </div>
   );
