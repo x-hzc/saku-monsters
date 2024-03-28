@@ -6,9 +6,9 @@ import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { CardTitleOption } from '../card-title-option/card-title-option';
 import GrowHappinessMobile from '../../../../../assets/pngs/grow_happiness_mobile.png';
 import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop.png';
+import AdultChu from '../../../../../assets/adult_chu.gif';
+import BabyChu from '../../../../../assets/baby_chu.gif';
 import Egg from '../../../../../assets/pngs/egg.png';
-import AdultChu from '../../../../../assets/pngs/grow_adult_chu.png';
-import BabyChu from '../../../../../assets/pngs/grow_baby_chu.png';
 
 export function GrowCard() {
   const { i18n, t } = useTranslation();
