@@ -6,7 +6,6 @@ import { useStickers } from '../../../stickers/hooks/use-stickers';
 import { useClickCursor } from '../../../ui/hooks/use-click-cursor';
 import { Sticker } from '../../../stickers/components/sticker/sticker';
 import { Footer } from '../footer/footer';
-import { FooterLogo } from '../footer-logo/footer-logo';
 import cn from 'classnames';
 
 export function App() {
@@ -31,12 +30,6 @@ export function App() {
       <div className={styles['content']}>
         <Outlet />
         <Sticker />
-        <FooterLogo
-          className={cn({
-            [styles['inventory-footer-logo-position']]:
-              currentPath === '/inventory',
-          })}
-        />
         <Footer
           className={cn({
             [styles['inventory-footer']]: currentPath === '/inventory',

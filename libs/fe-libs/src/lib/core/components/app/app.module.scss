@@ -25,27 +25,6 @@
   @include c.click;
 }
 
-.inventory-footer-logo-position {
-  bottom: 13% !important;
-
-  @media (min-width: 758px) {
-    bottom: 20% !important;
-  }
-
-  @include mq.medium-tablet {
-    bottom: 13% !important;
-  }
-
-  @include mq.small-window {
-    bottom: 16% !important;
-  }
-
-  @include mq.x-large-window {
-    bottom: 22% !important;
-  }
-}
-
 .inventory-footer {
   background-image: linear-gradient(180deg, #cdefe5 0%, #e3f2cf 100%);
-  margin-top: 9% !important;
 }
