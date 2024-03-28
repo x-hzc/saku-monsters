@@ -3,13 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 193px 0 83px 0;
   @include mq.small-window {
     display: block;
-    padding: 193px 0 0 0;
   }
 }
 .board {
+  z-index: 5;
   align-items: center;
   background-image: url('libs/fe-libs/assets/pngs/board.png');
   background-size: cover;
@@ -40,43 +39,44 @@
   flex-direction: column;
   width: 100%;
   .s1 {
-    margin: 0 20% 0 auto;
-    @include mq.small-window {
+    margin: 0 20% 22% auto;
+
+    @include mq.medium-tablet {
       margin: 0 auto 0 62.5%;
     }
   }
 
   .s2 {
-    margin: 150px 56% 0 auto;
-    @include mq.small-window {
+    margin: 11% 54.7% 0 auto;
+    @include mq.medium-tablet {
       margin: 11% auto 0 70%;
     }
   }
 
   .s3 {
-    margin: 42px 25.8% 0 auto;
-    @include mq.small-window {
+    margin: 11% 14.7% 0 auto;
+    @include mq.medium-tablet {
       margin: 10% 75.3% 0 auto;
     }
   }
 
   .s4 {
-    margin: 109px 62% 0 auto;
-    @include mq.small-window {
+    margin: 28.5% 60% 0 auto;
+    @include mq.medium-tablet {
       margin: 9% auto 0 40.5%;
     }
   }
 
   .s5 {
-    margin: 73px 30.2% 0 auto;
-    @include mq.small-window {
+    margin: 19% 29.5% 0 auto;
+    @include mq.medium-tablet {
       margin: 13% auto 0 71.5%;
     }
   }
 
   .s6 {
-    margin: 183px 13.3% 83px auto;
-    @include mq.small-window {
+    margin: 48% 12.9% 0 auto;
+    @include mq.medium-tablet {
       margin: 9% 78.7% 10% auto;
     }
   }

@@ -8,6 +8,20 @@
   position: relative;
   width: 100%;
   z-index: 50;
+  margin-top: -8%;
+  @include mq.large-handset {
+    margin-top: -8%;
+  }
+
+  @include mq.small-tablet {
+    margin-top: -18%;
+  }
+  @include mq.tablet {
+    margin-top: -8%;
+  }
+  @include mq.medium-tablet {
+    margin-top: 0;
+  }
 }
 
 .content {
