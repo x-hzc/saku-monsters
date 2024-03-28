@@ -8,16 +8,17 @@ import { FooterLogo } from '../footer-logo/footer-logo';
 export interface FooterProps {
   containerClassName?: string;
   contentClassName?: string;
+  footerLogoClassName?: string;
 }
 
 export function Footer(props: FooterProps) {
-  const { containerClassName = '', contentClassName = '' } = props;
+  const { containerClassName = '', contentClassName = '', footerLogoClassName = '' } = props;
   const { t } = useTranslation();
   const { goToAppleSakuMonsters, goToTwitter } = useRouter();
 
   return (
     <div className={cn(styles['container'], containerClassName)}>
-      <FooterLogo />
+      <FooterLogo className={footerLogoClassName} />
       <div className={cn(styles['content'], contentClassName)}>
         <div className={styles['t-container']}>
           <div className={styles['title']}>{t('footer.place')}</div>

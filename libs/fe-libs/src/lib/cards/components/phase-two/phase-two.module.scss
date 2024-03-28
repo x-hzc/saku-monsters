@@ -23,6 +23,7 @@
   }
 
   @include mq.x-large-window {
+    border-radius: 60px 210px 210px 215px;
     height: 429px;
     width: 1593px;
   }
@@ -40,9 +41,10 @@
     display: grid;
     gap: 50px;
     grid-template-columns: minmax(0, 35%) minmax(0, 20%) auto;
-    padding: 0;
-    padding-left: 7%;
-    padding-right: 2%;
+    padding: 0 2% 0 7%;
+    // padding: 0;
+    // padding-left: 7%;
+    // padding-right: 2%;
   }
 
   .title-container {
@@ -207,7 +209,7 @@
     right: 125px;
     top: 50px;
     transform: rotate(350deg);
-    width: 160px;
+    width: fit-content;
     z-index: 10;
 
     @include mq.medium-tablet {
@@ -220,6 +222,7 @@
     position: absolute;
     right: 0;
     transform: rotate(6deg);
+    width: fit-content;
     z-index: 5;
 
     @include mq.medium-tablet {

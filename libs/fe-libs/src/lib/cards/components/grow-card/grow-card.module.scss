@@ -114,12 +114,19 @@
 
   .phases-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 110px;
     margin-bottom: 3%;
     width: 85%;
 
     @include mq.small-tablet {
       grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: unset;
+      height: 100px;
+      margin-bottom: unset;
+    }
+
+    @include mq.x-large-window {
+      height: 190px;
     }
   }
 
@@ -157,6 +164,7 @@
 
   .phase {
     grid-row: 2;
+    position: relative;
 
     @include mq.small-tablet {
       grid-row: 1;
@@ -164,26 +172,32 @@
   }
 
   .egg-container {
-    width: 29px;
+    width: 41px;
 
     @include mq.x-large-window {
-      width: 15%;
+      width: 60px;
     }
   }
 
   .baby-container {
-    width: 31px;
+    bottom: 16px;
+    position: absolute;
+    width: 190px;
 
     @include mq.x-large-window {
-      width: 15%;
+      bottom: 52px;
+      width: 270px;
     }
   }
 
   .adult-container {
-    width: 61px;
+    bottom: 16px;
+    position: absolute;
+    width: 178px;
 
     @include mq.x-large-window {
-      width: 30%;
+      bottom: 52px;
+      width: 260px;
     }
   }
 }
