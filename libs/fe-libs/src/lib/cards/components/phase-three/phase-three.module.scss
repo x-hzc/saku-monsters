@@ -186,6 +186,14 @@
   .opt-pt {
     color: var(--blue-300);
   }
+
+  .opt-pt-end {
+    justify-self: flex-end;
+
+    @include mq.medium-tablet {
+      justify-self: unset;
+    }
+  }
 }
 
 .p {

@@ -8,6 +8,7 @@ import Kanjis from '../../../../../assets/svgs/kanjis.svg';
 import CoinsMobile from '../../../../../assets/pngs/bg_phase_three_coins_mobile.png';
 import CoinsDesktop from '../../../../../assets/pngs/bg_phase_three_coins_desktop.png';
 import PhaseThreeBirdmonster from '../../../../../assets/pngs/phase_three_birdmonster.png';
+import cn from 'classnames';
 
 export function PhaseThree() {
   const { i18n, t } = useTranslation();
@@ -74,7 +75,9 @@ export function PhaseThree() {
                     }}
                     option={opt}
                     selected={opt.title === currentPhaseThreeOption}
-                    className={styles['opt-pt']}
+                    className={cn(styles['opt-pt'], {
+                      [styles['opt-pt-end']]: opt.sup === '02'
+                    })}
                   />
                 ))}
             </div>
