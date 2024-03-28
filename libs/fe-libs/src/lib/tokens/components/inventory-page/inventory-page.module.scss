@@ -22,8 +22,17 @@
   justify-content: space-between;
 
   .logo {
+    display: block;
     height: 65px;
     width: 95px;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    &.hidden {
+      opacity: 0;
+      @include mq.small-window {
+        opacity: 1;
+      }
+    }
 
     @include mq.small-window {
       height: 100px;
@@ -155,4 +164,9 @@
   height: calc(100vh + 20px);
   width: calc(100% + 52px);
   left: -26px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
 }

@@ -8,16 +8,22 @@ import { Button } from '../../../ui/components/button/button';
 import { useTranslation } from 'react-i18next';
 import { LanguageSelector } from '../language-selector/language-selector';
 import { useRouter } from '../../../routing/hooks/use-router';
+import { useMobileSearch } from '../../../ui/hooks/use-mobile-search';
 
 export interface MenuMobileProps {
   className?: string;
 }
 export function MenuMobile({ className }: MenuMobileProps) {
   const { toggleMenu, isOpen } = useMenuMobile();
+  const { isOpen: isSearchOpen } = useMobileSearch();
   const { t } = useTranslation();
   const { goToAppleSakuMonsters, goToInventory, goToTwitter } = useRouter();
   return (
-    <div className={styles['container']}>
+    <div
+      className={classNames(styles['container'], {
+        [styles['search-open']]: isSearchOpen,
+      })}
+    >
       <div
         className={styles['icon-container']}
         onClick={(ev) => {
