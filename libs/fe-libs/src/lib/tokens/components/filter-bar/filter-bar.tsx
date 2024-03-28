@@ -58,6 +58,7 @@ export function FilterBar() {
           type={'text'}
           className={styles['input']}
           placeholder={t('filter.search')}
+          onClick={(ev) => ev.stopPropagation()}
           onChange={(e) => setSearchTerm(e.target.value)}
           value={searchTerm ? searchTerm : ''}
         />
