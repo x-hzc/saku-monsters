@@ -13,6 +13,9 @@
   height: 100vh;
   min-height: 100vh;
   padding-bottom: 0;
+  &.playing {
+    z-index: 20;
+  }
   @include mq.small-window {
     padding-bottom: 0;
   }
