@@ -184,3 +184,11 @@
 //     #e3f2cf 100%
 //   ) !important;
 // }
+
+.inventory-footer-bg {
+  background-image: url('../../../../../assets/svgs/bg_footer_wave_mobile.svg');
+
+  @include mq.medium-tablet {
+    background-image: url('../../../../../assets/svgs/bg_footer_wave_desktop.svg');
+  }
+}

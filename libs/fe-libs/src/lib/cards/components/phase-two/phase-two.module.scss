@@ -213,25 +213,38 @@
     height: 318px;
     left: 32%;
     position: absolute;
-    right: 125px;
     top: 50px;
     transform: translateX(-38%) rotate(350deg);
     width: fit-content;
     z-index: 10;
 
+    @include mq.medium-tablet {
+      left: 27%;
+    }
+
+    @include mq.x-large-window {
+      height: fit-content;
+      width: 295px;
+    }
   }
 
   .back-card {
     bottom: -35px;
     position: absolute;
-    // right: 0;
     left: 62%;
     transform: translateX(-40%) rotate(6deg);
     width: fit-content;
     z-index: 5;
 
     @include mq.medium-tablet {
-      bottom: 20px;
+      bottom: 22px;
+      left: 65%;
+      transform: translateX(-40%) rotate(4deg);
+    }
+
+    @include mq.x-large-window {
+      left: 70%;
+      width: 295px;
     }
   }
 }

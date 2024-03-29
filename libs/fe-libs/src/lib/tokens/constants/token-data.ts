@@ -87,7 +87,7 @@ const ODIN: TokenDTO = {
   id: 'ODIN',
   name: 'Odin',
   rarity: TokenRarityType.RARE,
-  adulthood: TokenAdulthoodType.Baby,
+  adulthood: TokenAdulthoodType.Adult,
   egg: TokenEggType.BlueEgg,
 };
 const ANUBA: TokenDTO = {

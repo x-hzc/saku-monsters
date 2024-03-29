@@ -89,7 +89,7 @@ export function InventoryPage() {
       </div>
       <Footer
         containerClassName={styles['inventory-footer-position']}
-        contentClassName={styles['inventory-footer-color']}
+        contentClassName={styles['inventory-footer-bg']}
       />
     </>
   );

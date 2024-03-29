@@ -13,7 +13,7 @@ export interface TokenCardProps {
 }
 
 export function TokenCard({ token }: TokenCardProps) {
-  const { tokens, toggleAdulthood } = useTokensFacade();
+  const { toggleAdulthood } = useTokensFacade();
   const { id, rarity, name, adulthood, changingAdulthood } = token;
 
   return (
