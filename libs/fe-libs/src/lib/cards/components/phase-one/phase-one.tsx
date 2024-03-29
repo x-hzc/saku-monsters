@@ -5,7 +5,7 @@ import Drop from '../../../../../assets/pngs/phase_one_drop.png';
 import Egg from '../../../../../assets/pngs/egg.png';
 import Coin from '../../../../../assets/pngs/phase_one_coin.png';
 import Phantom from '../../../../../assets/svgs/phase_one_phantom_robot.svg';
-import AdultMarina from '../../../../../assets/adult_marina.gif';
+import AdultMarina from '../../../../../assets/gifs/phase_one_adult_marina.gif';
 import AppleIcon from '../../../../../assets/icons/apple_icon.svg';
 import GooglePlayIcon from '../../../../../assets/icons/google_play_icon.svg';
 import { useTranslation } from 'react-i18next';
