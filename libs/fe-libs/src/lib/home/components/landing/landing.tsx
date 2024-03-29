@@ -11,16 +11,17 @@ import { Button } from '../../../ui/components/button/button';
 import { useRouter } from '../../../routing/hooks/use-router';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
+import { useHeroVideo } from '../../hooks/use-hero-video';
 
 export function Landing() {
   const { goToInventory, goToHome, goToAppleSakuMonsters } = useRouter();
   const { t } = useTranslation();
-  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<null | HTMLVideoElement>(null);
   const { isMinDesktopSmall } = useDeviceType();
+  const { setIsPlaying, isPlaying } = useHeroVideo();
   return (
     <div className={styles['container']}>
       {!isMinDesktopSmall && (
@@ -36,6 +37,7 @@ export function Landing() {
                 }
                 if (!isPlaying) {
                   videoRef.current.play();
+                  videoRef.current.requestFullscreen();
                   return setIsPlaying(true);
                 }
                 setIsPlaying(false);
@@ -58,14 +60,16 @@ export function Landing() {
             [styles['active']]: isPlaying,
           })}
           ref={videoRef}
-          onEnded={() => setIsPlaying(false)}
-          controls
-          onPause={() => {
-            if (videoRef && videoRef.current) {
-              videoRef.current.currentTime = 0;
+          onEnded={async () => {
+            try {
+              await document.exitFullscreen();
+            } catch {
+              setIsPlaying(false);
+            } finally {
               setIsPlaying(false);
             }
           }}
+          controls
         >
           <source
             src={'../../../../../assets/hero_video.mp4'}

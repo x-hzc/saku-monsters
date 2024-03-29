@@ -11,9 +11,12 @@ import { Footer } from '../../../core/components/footer/footer';
 import { Cloud } from '../cloud/cloud';
 import { CLOUD_IMAGE_MAPPER } from '../../helpers/cloud-image-mapper';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { useHeroVideo } from '../../hooks/use-hero-video';
+import classNames from 'classnames';
 
 export function HomePage() {
   const { isMaxTablet } = useDeviceType();
+  const { isPlaying } = useHeroVideo();
   return (
     <div className={styles['container']}>
       <div className={styles['app-linear-bg']} />
@@ -71,9 +74,13 @@ export function HomePage() {
           leftPercentage={-5}
           heightPercentage={4.23}
           widthPercentage={34.4}
-          zIndex={isMaxTablet ? 10 : 3}
+          zIndex={3}
         />
-        <div className={styles['landing']}>
+        <div
+          className={classNames(styles['landing'], {
+            [styles['playing']]: isPlaying,
+          })}
+        >
           <Landing />
         </div>
         <div className={styles['intro']}>
