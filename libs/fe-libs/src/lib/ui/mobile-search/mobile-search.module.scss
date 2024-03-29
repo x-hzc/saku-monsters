@@ -1,9 +1,10 @@
 @use 'media-queries' as mq;
+@use 'button' as btn;
 .container {
   margin: 0 10px 0 auto;
   transition: all 300ms ease-in-out;
   .btn {
-    border-radius: 50%;
+    @include btn.rounded-button(64px);
     border-color: var(--black-900);
     border: 1px solid;
     color: var(--black-900);

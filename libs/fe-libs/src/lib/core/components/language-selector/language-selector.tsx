@@ -25,7 +25,7 @@ export function LanguageSelector({ contrasted }: LanguageSelectorProps) {
           onClick={() => i18n.changeLanguage(language)}
           type={'round'}
           className={classNames(styles['button'], {
-            [styles['selected']]: i18n.language === language,
+            [styles['selected']]: i18n.resolvedLanguage === language,
           })}
         >
           {language.split('-')[0].toUpperCase()}

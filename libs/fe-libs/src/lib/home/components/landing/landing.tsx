@@ -5,7 +5,6 @@ import HomeIcon from '../../../../../assets/icons/home.svg';
 import MonstersIcon from '../../../../../assets/icons/monsters.svg';
 import StoreIcon from '../../../../../assets/icons/store.svg';
 import AppleIcon from '../../../../../assets/icons/apple.svg';
-import MenuIcon from '../../../../../assets/icons/menu.svg';
 import { Logo } from '../../../core/components/logo/logo';
 import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
 import { Button } from '../../../ui/components/button/button';

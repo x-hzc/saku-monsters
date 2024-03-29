@@ -8,9 +8,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin: 0 auto;
+  margin: 0 2.8%;
   position: relative;
-  width: 350px;
   z-index: 5;
 
   @include mq.medium-tablet {
@@ -42,9 +41,6 @@
     gap: 50px;
     grid-template-columns: minmax(0, 35%) minmax(0, 20%) auto;
     padding: 0 2% 0 7%;
-    // padding: 0;
-    // padding-left: 7%;
-    // padding-right: 2%;
   }
 
   .title-container {
@@ -170,13 +166,24 @@
 
 .cards-container {
   height: 200px;
-  margin-top: 25px;
+  margin: 25px 0 0;
   position: relative;
+  width: 100%;
+
+  @include mq.small-tablet {
+    margin: 25px auto 0;
+    width: 80%;
+  }
+
+  @include mq.tablet {
+    width: 65%;
+  }
 
   @include mq.medium-tablet {
     height: 250px;
-    margin-top: 0;
+    margin: unset;
     position: relative;
+    width: 100%;
   }
 
   @include mq.x-large-window {
@@ -204,30 +211,27 @@
 
   .front-card {
     height: 318px;
-    left: 0;
+    left: 32%;
     position: absolute;
     right: 125px;
     top: 50px;
-    transform: rotate(350deg);
+    transform: translateX(-38%) rotate(350deg);
     width: fit-content;
     z-index: 10;
 
-    @include mq.medium-tablet {
-      transform: matrix(1, -0.09, 0.09, 1, 0, 0);
-    }
   }
 
   .back-card {
     bottom: -35px;
     position: absolute;
-    right: 0;
-    transform: rotate(6deg);
+    // right: 0;
+    left: 62%;
+    transform: translateX(-40%) rotate(6deg);
     width: fit-content;
     z-index: 5;
 
     @include mq.medium-tablet {
       bottom: 20px;
-      transform: matrix(1, 0.07, -0.07, 1, 0, 0);
     }
   }
 }

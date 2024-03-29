@@ -9,7 +9,7 @@ import IntroBirdmonster from '../../../../../assets/pngs/intro_birdmonster.png';
 
 export function IntroCard() {
   const { t } = useTranslation();
-  const { goToAppleSakuMonsters } = useRouter();
+  const { goToInventory } = useRouter();
 
   return (
     <div className={styles['container']}>
@@ -31,7 +31,7 @@ export function IntroCard() {
             <p className={styles['paragraph']}>{t('intro-card.paragraph')}</p>
             <Button
               className={styles['btn']}
-              onClick={goToAppleSakuMonsters}
+              onClick={goToInventory}
               type={'discover'}
             >
               {t('intro-card.button')}

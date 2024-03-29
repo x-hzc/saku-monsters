@@ -1,3 +1,4 @@
+@use 'button' as btn;
 .container {
   display: flex;
   align-items: center;
@@ -8,9 +9,7 @@
     padding: 14px;
   }
   .selected {
-    border-color: var(--primary-color);
-    border: 1px solid;
-    border-radius: 50%;
+    @include btn.rounded-button(50px);
   }
 }
 .contrasted {

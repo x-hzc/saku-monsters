@@ -17,7 +17,7 @@ export function MenuMobile({ className }: MenuMobileProps) {
   const { toggleMenu, isOpen } = useMenuMobile();
   const { isOpen: isSearchOpen } = useMobileSearch();
   const { t } = useTranslation();
-  const { goToAppleSakuMonsters, goToInventory, goToTwitter } = useRouter();
+  const { goToAppleSakuMonsters, goToInventory, goToTwitter, goToMarketplace } = useRouter();
   return (
     <div
       className={classNames(styles['container'], {
@@ -54,7 +54,7 @@ export function MenuMobile({ className }: MenuMobileProps) {
             onClick={(ev) => {
               ev.stopPropagation();
               toggleMenu();
-              goToAppleSakuMonsters();
+              goToMarketplace();
             }}
           >
             <div className={styles['title']}>{t('navigation.menu')}</div>

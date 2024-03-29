@@ -11,13 +11,13 @@
   position: relative;
 
   @include mq.medium-tablet {
-    height: 560px;
     margin: 0 auto;
     width: 910px;
   }
 
   @include mq.x-large-window {
     height: 979px;
+    width: 1590px;
   }
 }
 
@@ -114,19 +114,20 @@
 
   .phases-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 110px;
+    grid-template-rows: auto 120px;
     margin-bottom: 3%;
     width: 85%;
 
     @include mq.small-tablet {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: unset;
-      height: 100px;
-      margin-bottom: unset;
+      height: 120px;
+      margin-bottom: 1%;
     }
 
     @include mq.x-large-window {
       height: 190px;
+      margin-bottom: unset;
     }
   }
 
@@ -180,23 +181,23 @@
   }
 
   .baby-container {
-    bottom: 16px;
+    bottom: -16px;
     position: absolute;
     width: 190px;
 
     @include mq.x-large-window {
-      bottom: 52px;
+      bottom: 5px;
       width: 270px;
     }
   }
 
   .adult-container {
-    bottom: 16px;
+    bottom: -4px;
     position: absolute;
     width: 178px;
 
     @include mq.x-large-window {
-      bottom: 52px;
+      bottom: 17px;
       width: 260px;
     }
   }

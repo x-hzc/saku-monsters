@@ -9,6 +9,7 @@
   width: 100%;
   z-index: 50;
   margin-top: -8%;
+
   @include mq.large-handset {
     margin-top: -8%;
   }
@@ -16,72 +17,34 @@
   @include mq.small-tablet {
     margin-top: -18%;
   }
+
   @include mq.tablet {
     margin-top: -8%;
   }
+
   @include mq.medium-tablet {
     margin-top: 0;
   }
 }
 
+// .bg-footer {
+//   color: var(--primary-color);
+//   position: absolute;
+//   width: 100%;
+//   z-index: -1;
+
+//   svg {
+//     height: 100%;
+//     object-fit: cover;
+//     width: 100%;
+//   }
+// }
+
 .content {
   align-items: center;
-  background-color: var(--primary-color);
-  clip-path: polygon(
-    100% 100%,
-    0% 100%,
-    0% 8%,
-    2% 7.87%,
-    4% 7.51%,
-    6% 6.92%,
-    8% 6.14%,
-    10% 5.24%,
-    12% 4.25%,
-    14% 3.25%,
-    16% 2.3%,
-    18% 1.45%,
-    20% 0.76%,
-    22% 0.28%,
-    24% 0.03%,
-    26% 0.03%,
-    28% 0.28%,
-    30% 0.76%,
-    32% 1.45%,
-    34% 2.3%,
-    36% 3.25%,
-    38% 4.25%,
-    40% 5.24%,
-    42% 6.14%,
-    44% 6.92%,
-    46% 7.51%,
-    48% 7.87%,
-    50% 8%,
-    52% 7.87%,
-    54% 7.51%,
-    56% 6.92%,
-    58% 6.14%,
-    60% 5.24%,
-    62% 4.25%,
-    64% 3.25%,
-    66% 2.3%,
-    68% 1.45%,
-    70% 0.76%,
-    72% 0.28%,
-    74% 0.03%,
-    76% 0.03%,
-    78% 0.28%,
-    80% 0.76%,
-    82% 1.45%,
-    84% 2.3%,
-    86% 3.25%,
-    88% 4.25%,
-    90% 5.24%,
-    92% 6.14%,
-    94% 6.92%,
-    96% 7.51%,
-    98% 7.87%,
-    100% 8%
-  );
+  background-image: url('../../../../../assets/svgs/bg_footer_wave_mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--black-900);
   display: grid;
   grid-template-rows: 30% 25% 35% 10%;
@@ -90,61 +53,7 @@
   width: 100%;
 
   @include mq.medium-tablet {
-    clip-path: polygon(
-      100% 100%,
-      0% 100%,
-      0% 20.44%,
-      2% 20.31%,
-      4% 19.92%,
-      6% 19.3%,
-      8% 18.45%,
-      10% 17.43%,
-      12% 16.27%,
-      14% 15.01%,
-      16% 13.71%,
-      18% 12.43%,
-      20% 11.2%,
-      22% 10.08%,
-      24% 9.12%,
-      26% 8.36%,
-      28% 7.82%,
-      30% 7.53%,
-      32% 7.5%,
-      34% 7.72%,
-      36% 8.2%,
-      38% 8.91%,
-      40% 9.83%,
-      42% 10.91%,
-      44% 12.11%,
-      46% 13.39%,
-      48% 14.69%,
-      50% 15.96%,
-      52% 17.15%,
-      54% 18.21%,
-      56% 19.1%,
-      58% 19.79%,
-      60% 20.24%,
-      62% 20.43%,
-      64% 20.37%,
-      66% 20.04%,
-      68% 19.47%,
-      70% 18.68%,
-      72% 17.7%,
-      74% 16.57%,
-      76% 15.33%,
-      78% 14.04%,
-      80% 12.74%,
-      82% 11.5%,
-      84% 10.35%,
-      86% 9.35%,
-      88% 8.53%,
-      90% 7.93%,
-      92% 7.58%,
-      94% 7.48%,
-      96% 7.64%,
-      98% 8.06%,
-      100% 8.72%
-    );
+    background-image: url('../../../../../assets/svgs/bg_footer_wave_desktop.svg');
     grid-template-rows: 35% 35% 20% 10%;
     height: 580px;
   }
@@ -174,6 +83,7 @@
   }
 
   .title {
+    color: var(--black-900);
     font-family: var(--secondary-font-family);
     font-size: 32px;
     letter-spacing: 0.69px;
@@ -210,6 +120,7 @@
 }
 
 .links-container {
+  color: var(--black-900);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -249,6 +160,7 @@
 
 .rights {
   align-items: center;
+  color: var(--black-900);
   display: flex;
   flex-direction: column;
   font-size: 16px;

@@ -44,6 +44,10 @@ export function useRouter() {
     goToExternalSite('https://twitter.com/sakumonsters?lang=en');
   }
 
+  function goToMarketplace() {
+    goToExternalSite('https://store.sakumonsters.com/auth/login');
+  }
+
   return {
     routes,
     currentPath: location.pathname,
@@ -52,5 +56,6 @@ export function useRouter() {
     goToExternalSite,
     goToAppleSakuMonsters,
     goToTwitter,
+    goToMarketplace,
   };
 }

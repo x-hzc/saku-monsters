@@ -527,15 +527,15 @@
   }
 
   .nessi-container {
-    bottom: -65%;
-    left: 0;
+    bottom: -180%;
+    left: 15px;
     position: absolute;
-    width: 325%;
+    width: 280%;
 
     @include mq.x-large-window {
-      bottom: -35%;
-      left: 20%;
-      width: 255%;
+      bottom: -100%;
+      left: 40%;
+      width: 210%;
     }
   }
 }
