@@ -94,19 +94,20 @@
   height: 62%;
   left: -20%;
   position: absolute;
-  top: 65%;
+  top: 63%;
   transition: all ease-in-out 300ms;
   width: 150%;
   z-index: 1;
 
   @include mq.large-handset {
+    height: 66%;
     left: -5%;
     top: 62%;
   }
 
   @include mq.small-tablet {
     top: 59%;
-    height: 66%;
+    height: 68%;
     left: 0;
   }
 
@@ -115,10 +116,12 @@
   }
 
   @include mq.tablet {
-    height: 66%;
+    height: 70%;
+    top: 58%;
   }
 
   @include mq.medium-tablet {
+    height: 66%;
     top: 62%;
   }
 }
@@ -147,15 +150,12 @@
     width: 100%;
   }
 
-  @include mq.large-tablet {
-  }
-
   @include mq.small-window {
-    height: 100%;
-    top: 3%;
+    height: 102%;
+    top: 2%;
   }
 
-  @include mq.x-large-window{
+  @include mq.x-large-window {
     top: 5%;
   }
 }
