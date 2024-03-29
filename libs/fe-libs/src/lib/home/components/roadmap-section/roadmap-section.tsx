@@ -17,8 +17,8 @@ export interface RoadmapSectionProps {
 export function RoadmapSection(props: RoadmapSectionProps) {
   const { number, description, title, contentPosition, image, className } =
     props;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isRead, setIsRead] = useState(false);
+  const [isOpen, setIsOpen] = useState(number <= 4);
+  const [isRead, setIsRead] = useState(number <= 4);
   const { isMinDesktopSmall } = useDeviceType();
   function getContentPosition(): CSSProperties {
     if (isMinDesktopSmall) {
