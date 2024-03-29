@@ -39,10 +39,10 @@
   @include mq.small-window {
     background-image: url('../../../../../assets/pngs/landing-bg-desktop.png');
     background-size: 100% 100%;
-    top: 1%;
-    left: 2%;
+    top: 0.5%;
+    left: 18px;
     border-radius: 0;
-    height: 96%;
+    height: 99%;
     width: calc(100% - 18px - 12px);
   }
   &.playing {
