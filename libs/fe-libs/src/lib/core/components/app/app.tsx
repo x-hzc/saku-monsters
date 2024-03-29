@@ -18,6 +18,9 @@ export function App() {
       document.removeEventListener('click', handleClick);
     };
   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPath]);
 
   return (
     <div

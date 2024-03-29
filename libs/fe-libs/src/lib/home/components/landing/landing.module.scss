@@ -9,7 +9,7 @@
   flex-direction: column;
   padding: 0 2.7%;
   gap: 65px;
-  @include mq.small-window {
+  @include mq.large-tablet {
     padding: 30px 45px 26px 27px;
   }
 }
@@ -36,13 +36,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  @include mq.small-window {
+  @include mq.large-tablet {
     background-image: url('../../../../../assets/pngs/landing-bg-desktop.png');
     background-size: 100% 100%;
-    top: 1%;
-    left: 2%;
+    top: 0.5%;
+    left: 18px;
     border-radius: 0;
-    height: 96%;
+    height: 99%;
     width: calc(100% - 18px - 12px);
   }
   &.playing {
@@ -70,7 +70,7 @@
   flex-direction: column;
   color: var(--nav-link-color);
   gap: 20px;
-  @include mq.small-window {
+  @include mq.large-tablet {
     display: flex;
   }
   .link {
@@ -93,7 +93,7 @@
 .language-selector {
   display: none;
   align-self: flex-end;
-  @include mq.small-window {
+  @include mq.large-tablet {
     display: none;
   }
 }
@@ -115,7 +115,7 @@
   @include mq.tablet {
     padding-bottom: 5%;
   }
-  @include mq.small-window {
+  @include mq.large-tablet {
     margin-top: 0;
     font-size: 117px;
     line-height: 103px;
@@ -141,7 +141,7 @@
       display: none;
     }
   }
-  @include mq.small-window {
+  @include mq.large-tablet {
     .title {
       gap: 25px;
       svg {
@@ -170,7 +170,7 @@
   align-items: center;
   justify-content: center;
   padding-left: 6px;
-  @include mq.small-window {
+  @include mq.large-tablet {
     width: 68px;
     height: 65px;
   }
@@ -183,7 +183,7 @@
   margin-top: auto;
   gap: 30px;
   color: var(--primary-color);
-  @include mq.small-window {
+  @include mq.large-tablet {
     display: flex;
   }
   .saku-card {
