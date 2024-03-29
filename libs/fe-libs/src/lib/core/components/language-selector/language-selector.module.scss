@@ -1,20 +1,25 @@
 @use 'button' as btn;
+
 .container {
-  display: flex;
   align-items: center;
   color: var(--primary-color);
+  display: flex;
   gap: 20px;
+
   .button {
     box-shadow: none;
     padding: 14px;
   }
+
   .selected {
     @include btn.rounded-button(50px);
   }
 }
+
 .contrasted {
-  color: var(--language-contrast-color);
   --btn-color: var(--language-contrast-color);
+  color: var(--language-contrast-color);
+
   .selected {
     border-color: var(--language-contrast-color);
   }
