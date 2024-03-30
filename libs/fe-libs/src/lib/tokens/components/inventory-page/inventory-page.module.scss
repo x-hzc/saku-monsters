@@ -50,19 +50,18 @@
 
   @include mq.small-window {
     display: grid;
-    gap: 25px;
+    gap: 20px 50px;
     grid-template-columns: 450px auto;
     grid-template-rows: 130px auto;
     justify-items: center;
   }
 
-  @include mq.medium-window {
+  @include mq.large-window {
     grid-template-rows: 95px auto;
   }
 
   @include mq.x-large-window {
-    column-gap: 120px;
-    row-gap: 20px;
+    gap: 20px 120px;
   }
 }
 
