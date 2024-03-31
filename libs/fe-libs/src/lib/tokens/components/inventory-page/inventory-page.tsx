@@ -1,8 +1,9 @@
-import { useTranslation } from 'react-i18next';
-import { TokensCard } from '../tokens-card/tokens-card';
 import styles from './inventory-page.module.scss';
+import { useTranslation } from 'react-i18next';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
 import { useOnInit } from '../../../shared/hooks/use-on-init';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import { TokensCard } from '../tokens-card/tokens-card';
 import { Logo } from '../../../core/components/logo/logo';
 import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
 import { Button } from '../../../ui/components/button/button';
@@ -10,12 +11,11 @@ import { Filters } from '../filters/filters';
 import { FilterBar } from '../filter-bar/filter-bar';
 import { Information } from '../../../ui/components/information/information';
 import { CircularProgress } from '@mui/material';
-import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
 import { MobileSearch } from '../../../ui/mobile-search/mobile-search';
 import { useMobileSearch } from '../../../ui/hooks/use-mobile-search';
-import classNames from 'classnames';
 import { Footer } from '../../../core/components/footer/footer';
+import cn from 'classnames';
 
 export function InventoryPage() {
   const { t } = useTranslation();
@@ -32,7 +32,7 @@ export function InventoryPage() {
       <div className={styles['container']}>
         <div className={styles['header']}>
           <Logo
-            className={classNames(styles['logo'], {
+            className={cn(styles['logo'], {
               [styles['hidden']]: isOpen,
             })}
           />
