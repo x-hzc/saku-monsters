@@ -129,11 +129,14 @@
   }
 
   @include mq.small-window {
-    margin-top: unset;
-    padding-bottom: 10px;
-
     grid-column: 2;
     grid-row: 2;
+    margin-top: unset;
+    padding-bottom: 10px;
+  }
+
+  @include mq.x-large-window {
+    justify-items: flex-start;
   }
 }
 
@@ -198,8 +201,4 @@
 
 .inventory-footer-bg {
   background-image: url('../../../../../assets/svgs/bg_footer_wave_colored_for_inventory.svg');
-
-  @include mq.medium-tablet {
-    background-image: url('../../../../../assets/svgs/bg_footer_wave_colored_for_inventory.svg');
-  }
 }
