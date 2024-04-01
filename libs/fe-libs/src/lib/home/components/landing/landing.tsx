@@ -51,7 +51,7 @@ export function Landing() {
         })}
       >
         <div
-          className={styles['play-container']}
+          className={classNames(styles['play-container'], styles['close'])}
           onClick={(ev) => {
             ev.stopPropagation();
             return endVideo();
