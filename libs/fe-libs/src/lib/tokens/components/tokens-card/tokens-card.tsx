@@ -11,16 +11,23 @@ import cn from 'classnames';
 
 export interface TokensCardProps {
   token: TokenDTO;
-  className?: string;
+  containerClassName?: string;
+  bubbleImgClassName?: string;
+  tokenImgClassName?: string;
 }
 
 export function TokensCard(props: TokensCardProps) {
-  const { token, className = '' } = props;
+  const {
+    token,
+    containerClassName = '',
+    bubbleImgClassName = '',
+    tokenImgClassName = '',
+  } = props;
   const { toggleAdulthood } = useTokensFacade();
   const { id, rarity, name, adulthood, changingAdulthood } = token;
 
   return (
-    <div className={cn(styles['container'], className)}>
+    <div className={cn(styles['container'], containerClassName)}>
       <div className={styles['content']}>
         <div
           className={styles['adulthood-container']}
@@ -39,11 +46,15 @@ export function TokensCard(props: TokensCardProps) {
             {adulthood === TokenAdulthoodType.Adult && 'A'}
           </div>
         </div>
-        <div className={styles['adulthood-img-container']}>
+        <div className={styles['bubble-img-container']}>
           <div
-            className={cn(styles['adulthood-img'], {
-              [styles['changing']]: changingAdulthood,
-            })}
+            className={cn(
+              styles['bubble-img'],
+              {
+                [styles['changing']]: changingAdulthood,
+              },
+              bubbleImgClassName
+            )}
             onClick={(event) => {
               event.stopPropagation();
               toggleAdulthood(id);
@@ -59,9 +70,13 @@ export function TokensCard(props: TokensCardProps) {
           />
         </div>
         <div
-          className={cn(styles['token-img'], {
-            [styles['changing']]: changingAdulthood,
-          })}
+          className={cn(
+            styles['token-img'],
+            {
+              [styles['changing']]: changingAdulthood,
+            },
+            tokenImgClassName
+          )}
           style={{
             backgroundImage: `url(${tokenImageMapper(id, adulthood)})`,
           }}

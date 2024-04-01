@@ -55,7 +55,7 @@
     padding: 5px;
   }
 
-  .adulthood-img-container {
+  .bubble-img-container {
     $size: var(--adulthood-size, 67px);
     background-color: var(--primary-color);
     box-shadow: 13px 10px 21px #cfcfcf73;
@@ -71,7 +71,7 @@
     }
   }
 
-  .adulthood-img {
+  .bubble-img {
     @include t.show;
     background-repeat: no-repeat;
     background-size: 100% 100%;

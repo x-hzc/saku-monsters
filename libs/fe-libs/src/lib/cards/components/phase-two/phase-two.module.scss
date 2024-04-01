@@ -176,7 +176,7 @@
   }
 
   @include mq.tablet {
-    width: 65%;
+    width: 50%;
   }
 
   @include mq.medium-tablet {
@@ -190,50 +190,77 @@
     height: 429px;
   }
 
-  .front-card,
-  .back-card {
-    --adulthood-container-right: -35%;
-    --adulthood-container-top: 0;
+  .front-card-container,
+  .back-card-container {
+    --adulthood-container-right: -20%;
+    --adulthood-container-top: -10%;
     --adulthood-size: 50px;
     --token-height: 250px;
-    --token-img-mg-bt: 0;
     --token-name-display: none;
 
     @include mq.x-large-window {
-      --adulthood-container-right: -15%;
-      --adulthood-container-top: 5%;
-      --adulthood-size: 67px;
-      --token-height: 429px;
-      --token-img-mg-bt: 20px;
+      --adulthood-container-right: 15%;
+      --adulthood-container-top: -5%;
+      --adulthood-size: 72px;
+      --token-height: 480px;
+      --token-img-mg-bt: 40px;
       --token-name-display: flex;
     }
   }
 
-  .front-card {
-    height: 318px;
-    left: 32%;
+  .front-card-container {
+    left: 19%;
     position: absolute;
     top: 50px;
     transform: translateX(-38%) rotate(350deg);
-    width: fit-content;
     z-index: 10;
 
     @include mq.medium-tablet {
       left: 27%;
     }
 
-    @include mq.x-large-window {
-      height: fit-content;
-      width: 295px;
+    .front-card {
+      height: 257px;
+      max-width: 177px;
+
+      @include mq.x-large-window {
+        height: 490px;
+        max-width: 340px;
+      }
+    }
+
+    .bubble-axle-img {
+      background-size: cover;
+      height: 90px;
+      position: absolute;
+      top: -60%;
+      width: 90px;
+
+      @include mq.x-large-window {
+        height: 150px;
+        top: -75%;
+        width: 150px;
+      }
+    }
+
+    .token-axle-img {
+      background-position: 60% 50% !important;
+      width: 111% !important;
+
+      @include mq.x-large-window {
+        background-position: 80% 50% !important;
+        background-size: cover;
+        height: 130% !important;
+        width: 130% !important;
+      }
     }
   }
 
-  .back-card {
-    bottom: -35px;
+  .back-card-container {
+    bottom: -50px;
     position: absolute;
-    left: 62%;
+    left: 65%;
     transform: translateX(-40%) rotate(6deg);
-    width: fit-content;
     z-index: 5;
 
     @include mq.medium-tablet {
@@ -245,6 +272,34 @@
     @include mq.x-large-window {
       left: 70%;
       width: 295px;
+    }
+
+    .back-card {
+      height: 257px;
+      max-width: 177px;
+
+      @include mq.x-large-window {
+        height: 490px;
+        max-width: 340px;
+      }
+    }
+
+    .bubble-odin-img {
+      display: none;
+    }
+
+    .token-odin-img {
+      background-position: 50% 40% !important;
+      background-size: cover;
+      margin-left: -50px;
+      width: 200%;
+
+      @include mq.x-large-window {
+        background-position: 80% 50% !important;
+        background-size: cover;
+        height: 130% !important;
+        width: 130% !important;
+      }
     }
   }
 }
