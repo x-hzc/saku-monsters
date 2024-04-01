@@ -43,6 +43,11 @@
     padding: 0 2% 0 7%;
   }
 
+  @include mq.x-large-window {
+    grid-template-columns: 30% 20% 43%;
+    padding: 0 2% 0 5%;
+  }
+
   .title-container {
     display: flex;
     flex-direction: column;
@@ -219,13 +224,17 @@
       left: 27%;
     }
 
+    @include mq.x-large-window {
+      left: 20%;
+    }
+
     .front-card {
       height: 257px;
       max-width: 177px;
 
       @include mq.x-large-window {
-        height: 490px;
-        max-width: 340px;
+        height: 460px;
+        max-width: 320px;
       }
     }
 
@@ -269,13 +278,17 @@
       transform: translateX(-40%) rotate(4deg);
     }
 
+    @include mq.x-large-window {
+      left: 68%;
+    }
+
     .back-card {
       height: 257px;
       max-width: 177px;
 
       @include mq.x-large-window {
-        height: 490px;
-        max-width: 340px;
+        height: 460px;
+        max-width: 320px;
       }
     }
 
