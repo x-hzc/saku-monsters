@@ -125,8 +125,7 @@
   width: 100%;
 
   @include mq.tablet {
-    gap: 73px 64px;
-    justify-items: unset;
+    gap: 60px 45px;
   }
 
   @include mq.small-window {
