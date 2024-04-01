@@ -73,12 +73,18 @@
       color: var(--menu-bg-color);
       position: absolute;
       top: 2%;
-      left: 90%;
+      left: 75%;
       z-index: 10;
       padding-left: 0;
       svg {
         height: 50%;
         width: 50%;
+      }
+      @include mq.small-tablet {
+        left: 85%;
+      }
+      @include mq.large-tablet {
+        left: 90%;
       }
     }
     .content-container {
