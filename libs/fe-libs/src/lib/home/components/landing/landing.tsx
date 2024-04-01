@@ -1,6 +1,7 @@
 import styles from './landing.module.scss';
 import LogoKanjiIcon from '../../../../../assets/icons/logo_kanji.svg';
 import PlayIcon from '../../../../../assets/icons/play.svg';
+import CloseIcon from '../../../../../assets/icons/close.svg';
 import HomeIcon from '../../../../../assets/icons/home.svg';
 import MonstersIcon from '../../../../../assets/icons/monsters.svg';
 import StoreIcon from '../../../../../assets/icons/store.svg';
@@ -20,32 +21,26 @@ export function Landing() {
   const { goToInventory, goToHome, goToAppleSakuMonsters } = useRouter();
   const { t } = useTranslation();
   const videoRef = useRef<null | HTMLVideoElement>(null);
-  const { isMinDesktopSmall } = useDeviceType();
-  const { setIsPlaying, isPlaying } = useHeroVideo();
+  const { isMinDesktopSmall, isMinLargeTablet } = useDeviceType();
+  const { setIsPlaying, isPlaying, playVideo, endVideo } =
+    useHeroVideo(videoRef);
   return (
     <div className={styles['container']}>
-      {!isMinDesktopSmall && (
+      {!isMinLargeTablet && (
         <div className={styles['mobile-header']}>
           <Logo />
           <div className={styles['actions']}>
-            <div
-              className={styles['play-container']}
-              onClick={(event) => {
-                event.stopPropagation();
-                if (!videoRef || !videoRef.current) {
-                  return;
-                }
-                if (!isPlaying) {
-                  videoRef.current.play();
-                  videoRef.current.requestFullscreen();
-                  return setIsPlaying(true);
-                }
-                setIsPlaying(false);
-                return videoRef.current.pause();
-              }}
-            >
-              <PlayIcon />
-            </div>
+            {!isPlaying && (
+              <div
+                className={styles['play-container']}
+                onClick={(ev) => {
+                  ev.stopPropagation();
+                  return playVideo();
+                }}
+              >
+                <PlayIcon />
+              </div>
+            )}
             <MenuMobile />
           </div>
         </div>
@@ -55,20 +50,21 @@ export function Landing() {
           [styles['playing']]: isPlaying,
         })}
       >
+        <div
+          className={styles['play-container']}
+          onClick={(ev) => {
+            ev.stopPropagation();
+            return endVideo();
+          }}
+        >
+          <CloseIcon />
+        </div>
         <video
           className={classNames(styles['video'], {
             [styles['active']]: isPlaying,
           })}
           ref={videoRef}
-          onEnded={async () => {
-            try {
-              await document.exitFullscreen();
-            } catch {
-              setIsPlaying(false);
-            } finally {
-              setIsPlaying(false);
-            }
-          }}
+          onEnded={endVideo}
           controls
         >
           <source
