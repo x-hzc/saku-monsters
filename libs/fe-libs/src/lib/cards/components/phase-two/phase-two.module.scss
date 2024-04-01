@@ -269,11 +269,6 @@
       transform: translateX(-40%) rotate(4deg);
     }
 
-    @include mq.x-large-window {
-      left: 70%;
-      width: 295px;
-    }
-
     .back-card {
       height: 257px;
       max-width: 177px;
@@ -295,9 +290,8 @@
       width: 200%;
 
       @include mq.x-large-window {
-        background-position: 80% 50% !important;
-        background-size: cover;
         height: 130% !important;
+        margin-left: -20px;
         width: 130% !important;
       }
     }
