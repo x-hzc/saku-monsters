@@ -7,6 +7,7 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  transition: all ease-in-out 500ms;
   padding: 0 2.7%;
   gap: 65px;
   @include mq.large-tablet {
@@ -46,6 +47,9 @@
     height: 99%;
     width: calc(100% - 18px - 12px);
   }
+  .play-container {
+    opacity: 0;
+  }
   &.playing {
     width: 100%;
     height: 100%;
@@ -57,6 +61,22 @@
       @include mq.large-tablet {
         object-fit: cover;
       }
+    }
+    .play-container {
+      opacity: 1;
+      color: var(--menu-bg-color);
+      position: absolute;
+      top: 2%;
+      left: 90%;
+      z-index: 10;
+      padding-left: 0;
+      svg {
+        height: 50%;
+        width: 50%;
+      }
+    }
+    .content-container {
+      opacity: 0;
     }
   }
   .video {
@@ -181,6 +201,8 @@
   align-items: center;
   justify-content: center;
   padding-left: 6px;
+  opacity: 1;
+  transition: opacity ease-in-out 500ms;
   @include mq.large-tablet {
     width: 68px;
     height: 65px;
