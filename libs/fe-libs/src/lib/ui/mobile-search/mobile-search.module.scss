@@ -20,7 +20,7 @@
     z-index: 10;
     background-color: var(--primary-color);
     border-radius: 31px;
-    padding: 0 5px;
+    padding: 0 5px 0 15px;
     @include mq.large-handset {
       padding: 0 23px;
       width: 80%;

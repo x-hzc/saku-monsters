@@ -7,6 +7,7 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  transition: all ease-in-out 500ms;
   padding: 0 2.7%;
   gap: 65px;
   @include mq.large-tablet {
@@ -40,11 +41,17 @@
   @include mq.large-tablet {
     background-image: url('../../../../../assets/pngs/landing-bg-desktop.png');
     background-size: 100% 100%;
-    top: 0.5%;
+    top: 1%;
     left: 18px;
     border-radius: 0;
-    height: 99%;
+    height: 98%;
     width: calc(100% - 18px - 12px);
+  }
+
+  .close {
+    display: none;
+    opacity: 0;
+    transition: opacity ease-in-out 300ms;
   }
   &.playing {
     width: 100%;
@@ -57,6 +64,31 @@
       @include mq.large-tablet {
         object-fit: cover;
       }
+    }
+    .close {
+      display: flex;
+      opacity: 1;
+    }
+    .play-container {
+      color: var(--menu-bg-color);
+      position: absolute;
+      top: 2%;
+      left: 75%;
+      z-index: 10;
+      padding-left: 0;
+      svg {
+        height: 50%;
+        width: 50%;
+      }
+      @include mq.small-tablet {
+        left: 85%;
+      }
+      @include mq.large-tablet {
+        left: 90%;
+      }
+    }
+    .content-container {
+      opacity: 0;
     }
   }
   .video {
@@ -127,7 +159,7 @@
     padding-bottom: 5%;
   }
   @include mq.large-tablet {
-    margin-top: 0;
+    margin-top: 5%;
     font-size: 117px;
     line-height: 103px;
     padding-left: 12%;
@@ -181,6 +213,8 @@
   align-items: center;
   justify-content: center;
   padding-left: 6px;
+  opacity: 1;
+  transition: opacity ease-in-out 500ms;
   @include mq.large-tablet {
     width: 68px;
     height: 65px;
