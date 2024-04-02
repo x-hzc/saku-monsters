@@ -14,13 +14,13 @@ export function PhaseThree() {
   const { i18n, t } = useTranslation();
   const phaseThreeTitleOptions = useMemo(
     () => [
-      { title: t('phase-three.community'), sup: '01' },
+      { title: t('phase-three.island'), sup: '01' },
       { title: t('phase-three.saku'), sup: '02' },
     ],
     [t]
   );
   const paragraphPerTitleOption = {
-    [t('phase-three.community')]: t('phase-three.community-paragraph'),
+    [t('phase-three.island')]: t('phase-three.island-paragraph'),
     [t('phase-three.saku')]: t('phase-three.saku-paragraph'),
   };
   const { currentPhaseThreeOption, setCurrentPhaseThreeOption } =

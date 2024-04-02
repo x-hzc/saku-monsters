@@ -50,11 +50,11 @@
   },
   "grow-card": {
     "shop": "SHOP",
-    "grow": "GROW",
+    "grow": "GROWTH",
     "collect": "COLLECT",
-    "shop-paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum finibus metus scelerisque commodo. Praesent id mauris massa.",
+    "shop-paragraph": "Visit the Saku Monsters Web Shop to add Gems to your account. You can use Gems to buy Saku Monsters on the Mobile App!",
     "grow-paragraph": "Collect Saku Monsters by hatching them from Saku Monster eggs! There are 150 unique Gen 1 monsters to discover, each with their own characteristics and abilities. Visit the Sakulog to discover each monster and it's phases.",
-    "collect-paragraph": "Sed tristique pellentesque massa sit amet consequat. In tempus, purus quis rhoncus mollis, nunc erat finibus tortor, non viverra purus orci vitae nulla.",
+    "collect-paragraph": "There are many Saku Monsters to collect! As we expand the Sakuverse, more and more Saku Monsters will appear with many more fun things to do!",
     "egg": "EGG PHASE",
     "baby": "BABY PHASE",
     "adult": "ADULT PHASE"
@@ -66,10 +66,10 @@
   },
   "phase-three": {
     "phase": "PHASE 3",
-    "community": "COMMUNITY",
+    "island": "ISLAND",
     "saku": "$SAKU",
-    "community-paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum finibus metus scelerisque commodo. Praesent id mauris massa.",
-    "saku-paragraph": "Now, the highly anticipated Saku Monster genesis event and airdrop are right around the corner. This will mark a major milestone for the project as the $SAKU token starts powering our ecosystem and Sakunomics model. $SAKU will enable key functions like staking, breeding, and empowering holders with governance rights. The utility and demand for $SAKU will continue expanding as we build the rest of our vision."
+    "island-paragraph": "With Phase 3 comes our long-awaited token, $SAKU! We are dedicated to delivering a seamless and engaging experience with the integration of $SAKU, ensuring it's well worth the anticipation.\n\n There will be many innovative and gun ways to use $SAKU, from designing your Island to hunting for exclusive Monsters!",
+    "saku-paragraph": "In the initial two phases, early users have been accumulating coins, setting the stage for the $SAKU airdrop.\n\n This preparation highlights $SAKU's pivotal role in our ecosystem, enhancing user engagement and offering fun experiences in the future."
   },
   "filter": {
     "search": "Search Any Monster",

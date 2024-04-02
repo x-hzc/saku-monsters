@@ -77,7 +77,8 @@
   }
 
   .opts-container,
-  .phases-container {
+  .phases-container,
+  .collect-monsters-container {
     align-items: center;
     display: grid;
     justify-items: center;
@@ -113,7 +114,8 @@
     }
   }
 
-  .phases-container {
+  .phases-container,
+  .collect-monsters-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 120px;
     margin-bottom: 3%;
@@ -133,7 +135,9 @@
   }
 
   .phase-full,
-  .phase {
+  .phase,
+  .monster-full,
+  .monster {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -154,7 +158,8 @@
     }
   }
 
-  .phase-full {
+  .phase-full,
+  .monster-full {
     grid-column: span 2;
     grid-row: 1;
 
@@ -164,7 +169,8 @@
     }
   }
 
-  .phase {
+  .phase,
+  .monster {
     grid-row: 2;
     position: relative;
 
@@ -200,6 +206,69 @@
     @include mq.x-large-window {
       bottom: 17px;
       width: 260px;
+    }
+  }
+
+  .btn {
+    height: 37px;
+    margin: 3% auto 5%;
+    width: 214px;
+
+    @include mq.x-large-window {
+      font-size: 20px;
+      height: 57px;
+      margin: 1% auto 2%;
+      padding: 10px 25px;
+      width: 254px;
+    }
+  }
+
+  .collect-monsters-container {
+    height: 210px;
+    width: 254px;
+
+    @include mq.small-tablet {
+      column-gap: 50px;
+      height: 120px;
+      margin-bottom: 1%;
+      width: 85%;
+    }
+
+    @include mq.x-large-window {
+      height: 190px;
+      margin-bottom: unset;
+    }
+  }
+
+  .shumoku-container {
+    position: absolute;
+    width: 130px;
+
+    @include mq.x-large-window {
+      bottom: 70px;
+      width: 220px;
+    }
+  }
+
+  .howler-container {
+    bottom: 10px;
+    position: absolute;
+    width: 110px;
+
+    @include mq.x-large-window {
+      bottom: 40px;
+      width: 160px;
+    }
+  }
+
+  .datboi-container {
+    bottom: 5px;
+    position: absolute;
+    width: 140px;
+
+    @include mq.x-large-window {
+      bottom: 30px;
+      width: 220px;
     }
   }
 }

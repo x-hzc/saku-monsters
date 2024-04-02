@@ -51,11 +51,11 @@
   },
   "grow-card": {
     "shop": "BOUTIQUE",
-    "grow": "GRANDIR",
+    "grow": "CROISSANCE",
     "collect": "COLLECTER",
-    "shop-paragraph": "Aliquam dolor erat, aliquet eget magna non, venenatis ornare risus. Sed non fermentum felis. Suspendisse ut tellus eget mi eleifend aliquet.",
+    "shop-paragraph": "Visitez la boutique en ligne Saku Monsters pour ajouter des gemmes à votre compte. Vous pouvez utiliser des gemmes pour acheter des monstres Saku sur l'application mobile!",
     "grow-paragraph": "Collectionnez Saku Monsters en les faisant éclore à partir d'œufs de Saku Monsters! Il y a 150 monstres Gen 1 uniques à découvrir, chacun avec ses propres caractéristiques et capacités. Visitez le Sakulog pour découvrir chaque monstre et ses phases.",
-    "collect-paragraph": "Duis luctus mollis nulla sit amet faucibus. Cras lacus nibh, ullamcorper id nibh a, viverra rhoncus turpis. Integer fringilla tincidunt justo, eget vulputate nibh sodales eu.",
+    "collect-paragraph": "Il existe de nombreux Saku Monsters à collectionner ! Au fur et à mesure que nous élargissons le Sakuverse, de plus en plus de Saku Monsters apparaîtront avec beaucoup plus de choses amusantes à faire!",
     "egg": "PHASE ŒUF",
     "baby": "PHASE BÉBÉ",
     "adult": "PHASE ADULTE"
@@ -67,10 +67,10 @@
   },
   "phase-three": {
     "phase": "PHASE 3",
-    "community": "COMMUNAUTÉ",
+    "island": "ÎLE",
     "saku": "$SAKU",
-    "community-paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum finibus metus scelerisque commodo. Praesent id mauris massa.",
-    "saku-paragraph": "Désormais, l’événement très attendu de genèse et le largage de Saku Monster approchent à grands pas. Cela marquera une étape majeure pour le projet alors que le jeton $SAKU commencera à alimenter notre écosystème et notre modèle Sakunomics. $SAKU permettra des fonctions clés telles que le jalonnement, la sélection et l'habilitation des détenteurs avec des droits de gouvernance. L'utilité et la demande de $SAKU continueront de croître à mesure que nous construisons le reste de notre vision."
+    "island-paragraph": "Avec la Phase 3 arrive notre jeton tant attendu, $SAKU! Nous nous engageons à offrir une expérience transparente et engageante avec l'intégration de $SAKU, garantissant que cela en vaut la peine.\n\n Il y aura de nombreuses façons innovantes et efficaces d'utiliser $SAKU, de la conception de votre île à la chasse aux monstres exclusifs!",
+    "saku-paragraph": "Au cours des deux premières phases, les premiers utilisateurs ont accumulé des pièces, ouvrant la voie au largage $SAKU.\n\n Cette préparation met en évidence le rôle central de $SAKU dans notre écosystème, améliorant l'engagement des utilisateurs et offrant des expériences amusantes à l'avenir."
   },
   "filter": {
     "search": "Rechercher n'importe quel monstre",

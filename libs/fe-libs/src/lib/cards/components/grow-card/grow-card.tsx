@@ -3,15 +3,21 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo } from 'react';
 import { useCardTitleStore } from '../../hooks/use-card-title-store';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import { useRouter } from '../../../routing/hooks/use-router';
+import { Button } from '../../../ui/components/button/button';
 import { CardTitleOption } from '../card-title-option/card-title-option';
 import GrowHappinessMobile from '../../../../../assets/pngs/grow_happiness_mobile.png';
 import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop.png';
 import AdultChu from '../../../../../assets/adult_chu.gif';
 import BabyChu from '../../../../../assets/baby_chu.gif';
 import Egg from '../../../../../assets/pngs/egg.png';
+import AdultShumoku from '../../../../../assets/adult_shumoku.gif';
+import AdultHowler from '../../../../../assets/adult_howler.gif';
+import AdultDatboi from '../../../../../assets/adult_datboi.gif';
 
 export function GrowCard() {
   const { i18n, t } = useTranslation();
+  const { goToMarketplace } = useRouter();
   const growTitleOptions = useMemo(
     () => [
       { title: t('grow-card.shop'), sup: '01' },
@@ -46,7 +52,15 @@ export function GrowCard() {
   };
 
   const shopImages = () => {
-    return <></>;
+    return (
+      <Button
+        className={styles['btn']}
+        onClick={goToMarketplace}
+        type={'discover'}
+      >
+        {t('grow-card.shop')}
+      </Button>
+    );
   };
 
   const growImages = () => {
@@ -75,7 +89,28 @@ export function GrowCard() {
   };
 
   const collectImages = () => {
-    return <></>;
+    return (
+      <div className={styles['collect-monsters-container']}>
+        <div className={styles['monster-full']}>
+          <div className={styles['shumoku-container']}>
+            <img src={AdultShumoku} alt="shumoku" />
+          </div>
+          <span>Shumoku</span>
+        </div>
+        <div className={styles['monster']}>
+          <div className={styles['howler-container']}>
+            <img src={AdultHowler} alt="howler" />
+          </div>
+          <span>Howler</span>
+        </div>
+        <div className={styles['monster']}>
+          <div className={styles['datboi-container']}>
+            <img src={AdultDatboi} alt="datboi" />
+          </div>
+          <span>Datboi</span>
+        </div>
+      </div>
+    );
   };
 
   useEffect(() => {

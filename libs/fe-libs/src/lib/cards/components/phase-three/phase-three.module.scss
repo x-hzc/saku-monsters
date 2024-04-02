@@ -198,6 +198,7 @@
   font-size: 18px;
   line-height: 25px;
   opacity: 0.93;
+  white-space: pre-line;
 
   @include mq.medium-tablet {
     font-size: 20px;
