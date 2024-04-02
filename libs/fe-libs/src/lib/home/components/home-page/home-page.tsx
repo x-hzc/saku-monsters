@@ -1,4 +1,7 @@
 import styles from './home-page.module.scss';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { useHeroVideo } from '../../hooks/use-hero-video';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { Landing } from '../landing/landing';
 import { IntroCard } from '../../../cards/components/intro-card/intro-card';
 import { PhaseOne } from '../../../cards/components/phase-one/phase-one';
@@ -6,12 +9,9 @@ import { GrowCard } from '../../../cards/components/grow-card/grow-card';
 import { PhaseTwo } from '../../../cards/components/phase-two/phase-two';
 import { PhaseThree } from '../../../cards/components/phase-three/phase-three';
 import { Roadmap } from '../roadmap/roadmap';
-import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { Footer } from '../../../core/components/footer/footer';
 import { Cloud } from '../cloud/cloud';
 import { CLOUD_IMAGE_MAPPER } from '../../helpers/cloud-image-mapper';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { useHeroVideo } from '../../hooks/use-hero-video';
 import classNames from 'classnames';
 
 export function HomePage() {
@@ -21,6 +21,14 @@ export function HomePage() {
     <div className={styles['container']}>
       <div className={styles['app-linear-bg']} />
       <ParallaxProvider>
+        <Cloud
+          imgSrc={CLOUD_IMAGE_MAPPER[0]}
+          topPercentage={isMaxTablet ? 7 : 10}
+          leftPercentage={75}
+          heightPercentage={3.5}
+          widthPercentage={27.5}
+          traslateX={true}
+        />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[1]}
           topPercentage={isMaxTablet ? 7 : 10}
@@ -42,10 +50,19 @@ export function HomePage() {
           leftPercentage={isMaxTablet ? 80 : 81}
           heightPercentage={3.1}
           widthPercentage={isMaxTablet ? 25 : 22}
+          traslateX={true}
           zIndex={3}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[4]}
+          topPercentage={isMaxTablet ? 17 : 23}
+          leftPercentage={isMaxTablet ? 80 : 81}
+          heightPercentage={3.1}
+          widthPercentage={isMaxTablet ? 25 : 22}
+          zIndex={3}
+        />
+        <Cloud
+          imgSrc={CLOUD_IMAGE_MAPPER[5]}
           topPercentage={isMaxTablet ? 25.5 : 31.3}
           leftPercentage={isMaxTablet ? 25 : 62}
           heightPercentage={1.3}
@@ -53,7 +70,7 @@ export function HomePage() {
           zIndex={isMaxTablet ? 10 : 3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[5]}
+          imgSrc={CLOUD_IMAGE_MAPPER[6]}
           topPercentage={31}
           leftPercentage={-5}
           heightPercentage={3.9}
@@ -61,7 +78,7 @@ export function HomePage() {
           zIndex={3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[6]}
+          imgSrc={CLOUD_IMAGE_MAPPER[7]}
           topPercentage={33}
           leftPercentage={77}
           heightPercentage={5.1}
@@ -69,7 +86,7 @@ export function HomePage() {
           zIndex={3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[7]}
+          imgSrc={CLOUD_IMAGE_MAPPER[8]}
           topPercentage={isMaxTablet ? 36.5 : 35}
           leftPercentage={-5}
           heightPercentage={4.23}

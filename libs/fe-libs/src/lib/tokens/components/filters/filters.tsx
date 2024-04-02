@@ -13,8 +13,6 @@ import {
   TOKEN_RARITY_COLOR,
 } from '../../helpers/token-color-mapper';
 import classNames from 'classnames';
-import { useDeviceType } from '../../../shared/hooks/use-device-type';
-import { useEffect } from 'react';
 
 export function Filters() {
   const { t } = useTranslation();
@@ -26,11 +24,6 @@ export function Filters() {
     toggleRarityFilter,
     setAdulthoodFilter,
   } = useTokensFacade();
-  const { isMinDesktopSmall } = useDeviceType();
-
-  // useEffect(() => {
-  //   setAdulthoodFilter(isMinDesktopSmall ? TokenAdulthoodType.Adult : null);
-  // }, [isMinDesktopSmall]);
 
   return (
     <div className={styles['container']}>
