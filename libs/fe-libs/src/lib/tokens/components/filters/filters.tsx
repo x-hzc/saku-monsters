@@ -28,9 +28,10 @@ export function Filters() {
   } = useTokensFacade();
   const { isMinDesktopSmall } = useDeviceType();
 
-  useEffect(() => {
-    setAdulthoodFilter(isMinDesktopSmall ? TokenAdulthoodType.Adult : null);
-  }, [isMinDesktopSmall]);
+  // useEffect(() => {
+  //   setAdulthoodFilter(isMinDesktopSmall ? TokenAdulthoodType.Adult : null);
+  // }, [isMinDesktopSmall]);
+
   return (
     <div className={styles['container']}>
       <div className={styles['title']}>{t('filter.filters')}</div>
@@ -71,6 +72,22 @@ export function Filters() {
             <AdultIcon />
           </div>
           <div className={styles['text']}>{t('filter.adult')}</div>
+        </Button>
+        <Button
+          className={styles['button']}
+          onClick={() => setAdulthoodFilter(null)}
+          componentStyles={
+            adulthoodFilter === TokenAdulthoodType.All ||
+            adulthoodFilter === null
+              ? {
+                  backgroundColor:
+                    TOKEN_ADULTHOOD_COLOR[TokenAdulthoodType.All],
+                  color: 'var(--primary-color)',
+                }
+              : undefined
+          }
+        >
+          <div className={styles['text']}>{t('filter.all')}</div>
         </Button>
       </div>
       <div className={classNames(styles['section'], styles['rarity'])}>

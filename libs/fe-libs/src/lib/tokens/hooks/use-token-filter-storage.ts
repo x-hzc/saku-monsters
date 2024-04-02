@@ -5,12 +5,11 @@ import {
   TokenRarityType,
 } from '@saku-monsters/shared';
 
-const adulthoodFilterAtom = atom<TokenAdulthoodType | null>(
-  TokenAdulthoodType.Adult
-);
+const adulthoodFilterAtom = atom<TokenAdulthoodType | null>(null);
 const rarityFilterAtom = atom<TokenRarityType | null>(TokenRarityType.COMMON);
 const eggFilterAtom = atom<TokenEggType | null>(TokenEggType.BlueEgg);
 const searchTermAtom = atom<string | null>(null);
+
 export function useTokenFilterStorage() {
   const [adulthoodFilter, setAdulthoodFilter] = useAtom(adulthoodFilterAtom);
   const [rarityFilter, setRarityFilter] = useAtom(rarityFilterAtom);
@@ -49,7 +48,7 @@ export function useTokenFilterStorage() {
 
   function setInitialValue() {
     setSearchTerm(null);
-    setAdulthoodFilter(TokenAdulthoodType.Adult);
+    setAdulthoodFilter(null);
     setRarityFilter(TokenRarityType.COMMON);
     setEggFilter(TokenEggType.BlueEgg);
   }

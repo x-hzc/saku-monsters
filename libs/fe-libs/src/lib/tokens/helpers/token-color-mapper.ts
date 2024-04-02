@@ -20,6 +20,7 @@ export const TOKEN_RARITY_BG_COLOR: Record<TokenRarityType, string> = {
 export const TOKEN_ADULTHOOD_COLOR: Record<TokenAdulthoodType, string> = {
   [TokenAdulthoodType.Adult]: '#FE92E4',
   [TokenAdulthoodType.Baby]: '#5BAFFD',
+  [TokenAdulthoodType.All]: '#FDC25B',
 };
 
 export const TOKEN_EGG_COLOR: Record<TokenEggType, string> = {

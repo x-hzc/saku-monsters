@@ -65,7 +65,6 @@
       z-index: 100;
     }
     @include mq.small-window {
-      // border-radius: 100px;
       max-width: 735px;
       width: fit-content;
       padding: 22px 45px 28px 26px;
