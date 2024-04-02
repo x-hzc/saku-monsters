@@ -1,8 +1,9 @@
 import styles from './roadmap.module.scss';
 import { useTranslation } from 'react-i18next';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { RoadmapSection } from '../roadmap-section/roadmap-section';
 import RoadMapImage from '../../../../../assets/pngs/rodmap-image.png';
-import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import Island from '../../../../../assets/pngs/bg_phase_three_island.png';
 
 export function Roadmap() {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ export function Roadmap() {
             title={t('roadmap.3.title')}
             description={t('roadmap.3.description')}
             contentPosition={'right'}
-            image={RoadMapImage}
+            image={Island}
           />
         </div>
         <div className={styles['s4']}>

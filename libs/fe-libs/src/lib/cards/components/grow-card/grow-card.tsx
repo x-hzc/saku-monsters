@@ -7,7 +7,7 @@ import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
 import { CardTitleOption } from '../card-title-option/card-title-option';
 import GrowHappinessMobile from '../../../../../assets/pngs/grow_happiness_mobile.png';
-import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop.png';
+import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop_hq.png';
 import AdultChu from '../../../../../assets/adult_chu.gif';
 import BabyChu from '../../../../../assets/baby_chu.gif';
 import Egg from '../../../../../assets/pngs/egg.png';
@@ -121,12 +121,15 @@ export function GrowCard() {
     <div className={styles['container']}>
       <div className={styles['bg']} />
       <div className={styles['content']}>
-        <div className={styles['gh-container']}>
-          <img
-            src={isMobile ? GrowHappinessMobile : GrowHappinessDesktop}
-            alt="grow-happiness"
-          />
-        </div>
+        {isMobile ? (
+          <div className={styles['ghm-container']}>
+            <img src={GrowHappinessMobile} alt="grow-happiness" />
+          </div>
+        ) : (
+          <div className={styles['ghd-container']}>
+            <img src={GrowHappinessDesktop} alt="grow-happiness" />
+          </div>
+        )}
         <div className={styles['down']}>
           <div className={styles['opts-container']}>
             {growTitleOptions &&

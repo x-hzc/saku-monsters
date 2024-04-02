@@ -233,6 +233,33 @@
     }
   }
 
+  .island-container {
+    width: 312px;
+
+    @include mq.medium-tablet {
+      height: 418px;
+      width: 90%;
+    }
+
+    @include mq.x-large-window {
+      height: 740px;
+    }
+
+    img {
+      aspect-ratio: 1 / 1;
+
+      border-radius: 70px;
+
+      @include mq.medium-tablet {
+        border-radius: 122px;
+      }
+
+      @include mq.x-large-window {
+        border-radius: 215px;
+      }
+    }
+  }
+
   .ptb-container {
     bottom: -47%;
     display: none;
