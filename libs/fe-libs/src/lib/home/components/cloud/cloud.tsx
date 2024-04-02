@@ -9,6 +9,7 @@ export interface CloudProps {
   topPercentage: number;
   leftPercentage: number;
   traslateX?: boolean;
+  parallaxSpeed?: number;
   zIndex?: number;
 }
 
@@ -20,6 +21,7 @@ export function Cloud(props: CloudProps) {
     widthPercentage,
     heightPercentage,
     traslateX = false,
+    parallaxSpeed = 0,
     zIndex = 20,
   } = props;
 
@@ -28,8 +30,8 @@ export function Cloud(props: CloudProps) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const parallaxSpeed = 0.05;
-      const newLeftPosition = leftPercentage - scrollPosition * parallaxSpeed;
+      const speed = parallaxSpeed;
+      const newLeftPosition = leftPercentage - scrollPosition * speed;
 
       if (newLeftPosition >= 0) {
         setLeftPosition(newLeftPosition);
@@ -41,7 +43,7 @@ export function Cloud(props: CloudProps) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [leftPercentage]);
+  }, [leftPercentage, parallaxSpeed]);
 
   return (
     <Parallax
