@@ -95,8 +95,24 @@
   "roadmap": {
     "stream": "Le flux sans fin",
     "1": {
-      "title": "Mode de Combat",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu"
+      "title": "Concours de robinetterie aux œufs",
+      "description": "Saku Monsters a commencé avec notre concours Egg Tap! Les utilisateurs ont gagné des pièces en s'entraînant à prendre soin d'un œuf de Saku Monsters."
+    },
+    "2": {
+      "title": "Parcours de collecte",
+      "description": "Tout le monde continue son voyage en commençant à collecter les tout premiers monstres Saku, tout en gagnant plus de pièces!"
+    },
+    "3": {
+      "title": "Îles",
+      "description": ""
+    },
+    "4": {
+      "title": "Battle Mode",
+      "description": ""
+    },
+    "5": {
+      "title": "À venir",
+      "description": ""
     }
   },
   "footer": {

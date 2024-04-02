@@ -94,8 +94,24 @@
   "roadmap": {
     "stream": "The never-ending stream",
     "1": {
+      "title": "Egg Tap Competition",
+      "description": "Saku Monsters started with our Egg Tap Competition! Users earned coins as they practiced taking car of a Saku Monsters egg."
+    },
+    "2": {
+      "title": "Collecting Journey",
+      "description": "Everyone continue their Journey by beginning to collect the first ever Saku Monsters, while earning more coins!"
+    },
+    "3": {
+      "title": "Islands",
+      "description": ""
+    },
+    "4": {
       "title": "Battle Mode",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu"
+      "description": ""
+    },
+    "5": {
+      "title": "Coming soon",
+      "description": ""
     }
   },
   "footer": {

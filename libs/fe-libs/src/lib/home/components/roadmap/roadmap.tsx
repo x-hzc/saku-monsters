@@ -25,8 +25,8 @@ export function Roadmap() {
         <div className={styles['s2']}>
           <RoadmapSection
             number={2}
-            title={t('roadmap.1.title')}
-            description={t('roadmap.1.description')}
+            title={t('roadmap.2.title')}
+            description={t('roadmap.2.description')}
             contentPosition={'left'}
             image={RoadMapImage}
           />
@@ -34,8 +34,8 @@ export function Roadmap() {
         <div className={styles['s3']}>
           <RoadmapSection
             number={3}
-            title={t('roadmap.1.title')}
-            description={t('roadmap.1.description')}
+            title={t('roadmap.3.title')}
+            description={t('roadmap.3.description')}
             contentPosition={'right'}
             image={RoadMapImage}
           />
@@ -43,8 +43,8 @@ export function Roadmap() {
         <div className={styles['s4']}>
           <RoadmapSection
             number={4}
-            title={t('roadmap.1.title')}
-            description={t('roadmap.1.description')}
+            title={t('roadmap.4.title')}
+            description={t('roadmap.4.description')}
             contentPosition={isMinDesktopSmall ? 'right' : 'left'}
             image={RoadMapImage}
           />
@@ -52,8 +52,8 @@ export function Roadmap() {
         <div className={styles['s5']}>
           <RoadmapSection
             number={5}
-            title={t('roadmap.1.title')}
-            description={t('roadmap.1.description')}
+            title={t('roadmap.5.title')}
+            description={t('roadmap.5.description')}
             contentPosition={isMinDesktopSmall ? 'left' : 'right'}
             image={RoadMapImage}
           />
@@ -61,8 +61,8 @@ export function Roadmap() {
         <div className={styles['s6']}>
           <RoadmapSection
             number={6}
-            title={t('roadmap.1.title')}
-            description={t('roadmap.1.description')}
+            title={t('roadmap.5.title')}
+            description={t('roadmap.5.description')}
             contentPosition={'right'}
             image={RoadMapImage}
           />
