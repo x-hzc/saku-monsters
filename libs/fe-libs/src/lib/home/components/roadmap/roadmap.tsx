@@ -11,6 +11,7 @@ export function Roadmap() {
     <div className={styles['container']}>
       <div className={styles['board']}>
         <div className={styles['text']}>{t('roadmap.stream')}</div>
+        <div className={styles['phase']}>{t('roadmap.phase')}</div>
       </div>
       <div className={styles['road']}>
         <div className={styles['s1']}>
