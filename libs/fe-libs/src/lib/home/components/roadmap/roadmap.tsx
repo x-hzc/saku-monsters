@@ -56,7 +56,6 @@ export function Roadmap() {
             title={t('roadmap.5.title')}
             description={t('roadmap.5.description')}
             contentPosition={isMinDesktopSmall ? 'left' : 'right'}
-            image={RoadMapImage}
           />
         </div>
         <div className={styles['s6']}>
@@ -65,7 +64,6 @@ export function Roadmap() {
             title={t('roadmap.5.title')}
             description={t('roadmap.5.description')}
             contentPosition={'right'}
-            image={RoadMapImage}
           />
         </div>
       </div>

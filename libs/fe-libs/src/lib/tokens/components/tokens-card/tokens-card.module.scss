@@ -83,6 +83,7 @@
   .name-container {
     align-items: center;
     border-radius: 27px;
+    color: var(--primary-color);
     display: var(--token-name-display, flex);
     grid-column: 1 / span 3;
     grid-row: 3;

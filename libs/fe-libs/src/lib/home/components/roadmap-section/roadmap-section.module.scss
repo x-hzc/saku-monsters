@@ -45,7 +45,7 @@
 
   .content-container {
     background-color: var(--primary-color);
-    border-radius: 80px;
+    border-radius: 60px;
     bottom: 50%;
     box-shadow: 12px 13px 43px #00000052;
     color: var(--roadmap-content-color);
@@ -65,7 +65,7 @@
       z-index: 100;
     }
     @include mq.small-window {
-      border-radius: 100px;
+      // border-radius: 100px;
       max-width: 735px;
       width: fit-content;
       padding: 22px 45px 28px 26px;

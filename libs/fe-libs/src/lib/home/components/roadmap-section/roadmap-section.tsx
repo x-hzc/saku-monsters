@@ -10,13 +10,19 @@ export interface RoadmapSectionProps {
   title: string;
   description: string;
   contentPosition: 'right' | 'left';
-  image: string;
+  image?: string;
   className?: string;
 }
 
 export function RoadmapSection(props: RoadmapSectionProps) {
-  const { number, description, title, contentPosition, image, className } =
-    props;
+  const {
+    number,
+    description,
+    title,
+    contentPosition,
+    image = '',
+    className = '',
+  } = props;
   const [isOpen, setIsOpen] = useState(number <= 4);
   const [isRead, setIsRead] = useState(number <= 4);
   const { isMinDesktopSmall } = useDeviceType();
@@ -75,9 +81,11 @@ export function RoadmapSection(props: RoadmapSectionProps) {
         })}
         style={getContentPosition()}
       >
-        <div className={styles['img-container']}>
-          <img src={image} alt={`section-${number}`} />
-        </div>
+        {image && image !== '' && (
+          <div className={styles['img-container']}>
+            <img src={image} alt={`section-${number}`} />
+          </div>
+        )}
         <div className={styles['information']}>
           <div className={styles['phase']}>Phase {number}</div>
           <div className={styles['title']}>{title}</div>
