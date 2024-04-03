@@ -225,14 +225,6 @@
     padding-right: 3%;
   }
 
-  .coins-container {
-    width: 312px;
-
-    @include mq.medium-tablet {
-      width: 80%;
-    }
-  }
-
   .island-container {
     width: 312px;
 
