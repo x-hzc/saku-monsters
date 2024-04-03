@@ -30,11 +30,12 @@ export function Cloud(props: CloudProps) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const speed = parallaxSpeed;
-      const newLeftPosition = leftPercentage - scrollPosition * speed;
+      const newLeftPosition = leftPercentage - scrollPosition * parallaxSpeed;
 
-      if (newLeftPosition >= 0) {
-        setLeftPosition(newLeftPosition);
+      setLeftPosition(newLeftPosition);
+
+      if (newLeftPosition <= -50) {
+        setLeftPosition(newLeftPosition + 150);
       }
     };
 
