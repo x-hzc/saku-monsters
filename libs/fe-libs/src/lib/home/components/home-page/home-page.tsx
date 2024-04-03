@@ -153,7 +153,9 @@ export function HomePage() {
             <Roadmap />
           </div>
         </div>
-        <Footer />
+        <div className={styles['footer']}>
+          <Footer />
+        </div>
       </ParallaxProvider>
     </div>
   );

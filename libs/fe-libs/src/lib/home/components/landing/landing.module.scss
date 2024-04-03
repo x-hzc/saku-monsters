@@ -12,6 +12,7 @@
   transition: all ease-in-out 500ms;
   padding: 0 2.7%;
   gap: 65px;
+
   @include mq.large-tablet {
     padding: 30px 45px 26px 27px;
   }

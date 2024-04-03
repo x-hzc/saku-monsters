@@ -88,12 +88,29 @@
       padding-top: 0;
     }
 
-    @media (min-width: #{1140px}) {
-    }
-
     @include mq.large-window {
       padding-bottom: 18%;
     }
+  }
+}
+
+.footer {
+  margin-top: 0;
+
+  @media (min-width: 958.6px) {
+    margin-top: -645px;
+  }
+
+  @include mq.medium-tablet {
+    margin-top: 115px;
+  }
+
+  @include mq.small-window {
+    margin-top: 50px;
+  }
+
+  @include mq.x-large-window {
+    margin-top: 250px;
   }
 }
 
