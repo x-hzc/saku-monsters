@@ -79,18 +79,14 @@
 
     .play-container {
       color: var(--menu-bg-color);
-      position: absolute;
-      top: 2%;
-      left: 75%;
-      z-index: 10;
       padding-left: 0;
-
-      @include mq.small-tablet {
-        left: 85%;
-      }
+      position: absolute;
+      right: 7.3%;
+      top: 20px;
+      z-index: 20;
 
       @include mq.large-tablet {
-        left: 90%;
+        right: 30px;
       }
 
       svg {
@@ -296,7 +292,6 @@
       --btn-bg-color: var(--primary-color);
       --btn-color: var(--black-900);
       border-radius: 30px;
-      justify-content: flex-start;
       max-width: 190px;
     }
 

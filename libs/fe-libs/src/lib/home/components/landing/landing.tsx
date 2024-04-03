@@ -1,4 +1,13 @@
 import styles from './landing.module.scss';
+import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRouter } from '../../../routing/hooks/use-router';
+import { useHeroVideo } from '../../hooks/use-hero-video';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import { Logo } from '../../../core/components/logo/logo';
+import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
+import { Button } from '../../../ui/components/button/button';
+import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
 import LogoKanjiIcon from '../../../../../assets/icons/logo_kanji.svg';
 import PlayIcon from '../../../../../assets/icons/play.svg';
 import CloseIcon from '../../../../../assets/icons/close.svg';
@@ -6,24 +15,25 @@ import HomeIcon from '../../../../../assets/icons/home.svg';
 import MonstersIcon from '../../../../../assets/icons/monsters.svg';
 import StoreIcon from '../../../../../assets/icons/store.svg';
 import AppleIcon from '../../../../../assets/icons/apple.svg';
-import { Logo } from '../../../core/components/logo/logo';
-import { LanguageSelector } from '../../../core/components/language-selector/language-selector';
-import { Button } from '../../../ui/components/button/button';
-import { useRouter } from '../../../routing/hooks/use-router';
-import classNames from 'classnames';
-import { useTranslation } from 'react-i18next';
-import { useRef } from 'react';
-import { useDeviceType } from '../../../shared/hooks/use-device-type';
-import { MenuMobile } from '../../../core/components/menu-mobile/menu-mobile';
-import { useHeroVideo } from '../../hooks/use-hero-video';
+import cn from 'classnames';
 
 export function Landing() {
-  const { goToInventory, goToHome, goToAppleSakuMonsters } = useRouter();
   const { t } = useTranslation();
   const videoRef = useRef<null | HTMLVideoElement>(null);
-  const { isMinDesktopSmall, isMinLargeTablet } = useDeviceType();
-  const { setIsPlaying, isPlaying, playVideo, endVideo } =
-    useHeroVideo(videoRef);
+  const {
+    goToInventory,
+    goToHome,
+    goToAppleSakuMonsters,
+    goToMarketplace
+  } = useRouter();
+  const {
+    setIsPlaying,
+    isPlaying,
+    playVideo,
+    endVideo
+  } = useHeroVideo(videoRef);
+  const { isMinLargeTablet } = useDeviceType();
+
   return (
     <div className={styles['container']}>
       {!isMinLargeTablet && (
@@ -46,12 +56,12 @@ export function Landing() {
         </div>
       )}
       <div
-        className={classNames(styles['video-container'], {
+        className={cn(styles['video-container'], {
           [styles['playing']]: isPlaying,
         })}
       >
         <div
-          className={classNames(styles['play-container'], styles['close'])}
+          className={cn(styles['play-container'], styles['close'])}
           onClick={(ev) => {
             ev.stopPropagation();
             return endVideo();
@@ -60,7 +70,7 @@ export function Landing() {
           <CloseIcon />
         </div>
         <video
-          className={classNames(styles['video'], {
+          className={cn(styles['video'], {
             [styles['active']]: isPlaying,
           })}
           ref={videoRef}
@@ -99,7 +109,7 @@ export function Landing() {
               className={styles['link']}
               onClick={(event) => {
                 event.stopPropagation();
-                goToAppleSakuMonsters();
+                goToMarketplace();
               }}
             >
               <StoreIcon />
@@ -111,13 +121,11 @@ export function Landing() {
             <LanguageSelector />
           </div>
           <div className={styles['title-container']}>
-            <div className={classNames(styles['top-title'], styles['title'])}>
+            <div className={cn(styles['top-title'], styles['title'])}>
               <div>{t('landing.saku')}</div>
               <LogoKanjiIcon />
             </div>
-            <div
-              className={classNames(styles['bottom-title'], styles['title'])}
-            >
+            <div className={cn(styles['bottom-title'], styles['title'])}>
               <div
                 className={styles['play-container']}
                 onClick={(event) => {

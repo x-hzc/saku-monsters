@@ -40,7 +40,7 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[3]}
-          topPercentage={isMaxTablet ? 7.7 : isMinDesktopSmall ? 12.7 : 11}
+          topPercentage={isMaxTablet ? 8 : isMinDesktopSmall ? 13 : 12}
           leftPercentage={18}
           heightPercentage={4.3}
           widthPercentage={29.5}
