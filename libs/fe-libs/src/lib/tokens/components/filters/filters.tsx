@@ -4,27 +4,32 @@ import { TOKEN_RARITY_ICON } from '../../helpers/token-rarity-icon-mapper';
 import { TokenAdulthoodType, TokenRarityType } from '@saku-monsters/shared';
 import { useTranslation } from 'react-i18next';
 import LogoKanji from '../../../../../assets/icons/logo_kanji.svg';
+import AdultIcon from '../../../../../assets/icons/adult_icon.svg';
+import BabyIcon from '../../../../../assets/icons/baby_icon.svg';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
 import {
   TOKEN_ADULTHOOD_COLOR,
   TOKEN_RARITY_COLOR,
-} from '../../helpers/token-rarity-color-mapper';
+} from '../../helpers/token-color-mapper';
+import classNames from 'classnames';
 
 export function Filters() {
   const { t } = useTranslation();
   const { goToAppleSakuMonsters } = useRouter();
   const {
-    setRarityFilter,
     toggleAdulthoodFilter,
     adulthoodFilter,
     rarityFilter,
     toggleRarityFilter,
+    setAdulthoodFilter,
+    setRarityFilter,
   } = useTokensFacade();
+
   return (
     <div className={styles['container']}>
       <div className={styles['title']}>{t('filter.filters')}</div>
-      <div className={styles['section']}>
+      <div className={classNames(styles['section'], styles['adulthood'])}>
         <div className={styles['title']}>{t('filter.adulthood')}</div>
         <Button
           className={styles['button']}
@@ -39,7 +44,9 @@ export function Filters() {
               : undefined
           }
         >
-          <div className={styles['icon']}>B</div>
+          <div className={styles['icon']}>
+            <BabyIcon />
+          </div>
           <div className={styles['text']}>{t('filter.baby')}</div>
         </Button>
         <Button
@@ -55,11 +62,31 @@ export function Filters() {
               : undefined
           }
         >
-          <div className={styles['icon']}>A</div>
+          <div className={styles['icon']}>
+            <AdultIcon />
+          </div>
           <div className={styles['text']}>{t('filter.adult')}</div>
         </Button>
+        <Button
+          className={styles['button']}
+          onClick={() => setAdulthoodFilter(null)}
+          componentStyles={
+            adulthoodFilter === null
+              ? {
+                  backgroundColor:
+                    TOKEN_ADULTHOOD_COLOR[TokenAdulthoodType.All],
+                  color: 'var(--primary-color)',
+                }
+              : undefined
+          }
+        >
+          <div className={styles['all-icon']}>
+            {TOKEN_RARITY_ICON[TokenRarityType.ALL]}
+          </div>
+          <div className={styles['text']}>{t('filter.all')}</div>
+        </Button>
       </div>
-      <div className={styles['section']}>
+      <div className={classNames(styles['section'], styles['rarity'])}>
         <div className={styles['title']}>{t('filter.rarity')}</div>
         <Button
           className={styles['button']}
@@ -107,7 +134,7 @@ export function Filters() {
               : undefined
           }
         >
-          <div className={styles['icon']}>
+          <div className={classNames(styles['icon'], styles['epic'])}>
             {TOKEN_RARITY_ICON[TokenRarityType.EPIC]}
           </div>
           <div className={styles['text']}>{t('filter.epic')}</div>
@@ -125,10 +152,27 @@ export function Filters() {
               : undefined
           }
         >
-          <div className={styles['icon']}>
+          <div className={classNames(styles['icon'], styles['legendary'])}>
             {TOKEN_RARITY_ICON[TokenRarityType.LEGENDARY]}
           </div>
           <div className={styles['text']}>{t('filter.legendary')}</div>
+        </Button>
+        <Button
+          className={styles['button']}
+          onClick={() => setRarityFilter(null)}
+          componentStyles={
+            rarityFilter === null
+              ? {
+                  backgroundColor: TOKEN_RARITY_COLOR[TokenRarityType.ALL],
+                  color: 'var(--primary-color)',
+                }
+              : undefined
+          }
+        >
+          <div className={styles['all-icon']}>
+            {TOKEN_RARITY_ICON[TokenRarityType.ALL]}
+          </div>
+          <div className={styles['text']}>{t('filter.all')}</div>
         </Button>
       </div>
       <div className={styles['store-section']}>

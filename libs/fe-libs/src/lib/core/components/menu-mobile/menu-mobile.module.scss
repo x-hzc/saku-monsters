@@ -1,0 +1,101 @@
+@use 'cursors' as c;
+.container {
+  display: flex;
+  &.search-open {
+    margin-left: auto;
+  }
+}
+.icon-container {
+  @include c.hover;
+  display: flex;
+  align-items: center;
+  padding: 20px 21px 21px;
+  color: var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--menu-bg-color);
+  border: 3px solid var(--primary-color);
+}
+
+.content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 105%;
+  width: 100vw;
+  background: transparent linear-gradient(180deg, #5baffd 0%, #e1f1d0 100%) 0 0
+    no-repeat padding-box;
+  color: var(--primary-color);
+  padding: 36px 28px 38px 26px;
+  &.open {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    z-index: 100;
+  }
+  .top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .close-btn {
+    background: #70a9dd 0 0 no-repeat padding-box;
+    border-radius: 50%;
+    border-color: var(--primary-color);
+    border: 3px solid;
+    --btn-padding-x: 22px;
+    --btn-padding-y: 22px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: var(--primary-color);
+
+    .title {
+      text-transform: lowercase;
+      font-family: var(--primary-font-family);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+    .link {
+      @include c.hover;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: var(--secondary-font-family);
+      font-size: 36px;
+      line-height: 49px;
+      letter-spacing: 0;
+    }
+    .download {
+      transform: matrix(1, -0.02, 0.02, 1, 0, 0);
+      background-color: var(--phase-two-bg-title-color);
+      border-radius: 17px;
+      padding: 0 30px;
+    }
+  }
+  .language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text {
+      color: var(--black-900);
+      font-family: var(--secondary-font-family);
+      font-size: 23px;
+      line-height: 49px;
+      letter-spacing: 0;
+    }
+  }
+  .footer {
+    margin-top: auto;
+    color: var(--black-900);
+    font-family: var(--secondary-font-family);
+    font-size: 15px;
+    line-height: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

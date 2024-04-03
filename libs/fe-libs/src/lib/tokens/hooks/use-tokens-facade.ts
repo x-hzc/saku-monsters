@@ -7,18 +7,26 @@ export function useTokensFacade() {
   const tokensStorage = useTokensStorage();
   const tokenFilterStorage = useTokenFilterStorage();
   const { setTokens, setLoadingTokens, tokens } = tokensStorage;
-  const { rarityFilter, searchTerm, adulthoodFilter } = tokenFilterStorage;
+  const {
+    rarityFilter,
+    searchTerm,
+    adulthoodFilter,
+    eggFilter,
+    setInitialValue,
+  } = tokenFilterStorage;
   const filteredTokens = tokens
     .filter((token) => (rarityFilter ? token.rarity === rarityFilter : true))
     .filter((token) =>
       adulthoodFilter ? token.adulthood === adulthoodFilter : true
     )
+    .filter((token) => (eggFilter ? token.egg === eggFilter : true))
     .filter((token) =>
       searchTerm
         ? token.name.toLowerCase().includes(searchTerm.toLowerCase())
         : true
     );
   function syncTokens() {
+    setInitialValue();
     setLoadingTokens(true);
     const tokens = getAllTokens();
     setTokens(tokens);
@@ -31,14 +39,27 @@ export function useTokensFacade() {
         token.id === id
           ? {
               ...token,
-              adulthood:
-                token.adulthood === TokenAdulthoodType.Baby
-                  ? TokenAdulthoodType.Adult
-                  : TokenAdulthoodType.Baby,
+              changingAdulthood: true,
             }
           : token
       )
     );
+    setTimeout(() => {
+      setTokens((tokens) =>
+        tokens.map((token) =>
+          token.id === id
+            ? {
+                ...token,
+                adulthood:
+                  token.adulthood === TokenAdulthoodType.Baby
+                    ? TokenAdulthoodType.Adult
+                    : TokenAdulthoodType.Baby,
+                changingAdulthood: false,
+              }
+            : token
+        )
+      );
+    }, 500);
   }
 
   function findTokenById(id: string) {

@@ -5,9 +5,9 @@ import Drop from '../../../../../assets/pngs/phase_one_drop.png';
 import Egg from '../../../../../assets/pngs/egg.png';
 import Coin from '../../../../../assets/pngs/phase_one_coin.png';
 import Phantom from '../../../../../assets/svgs/phase_one_phantom_robot.svg';
-import AdultMarina from '../../../../../assets/adult_marina.gif';
-import AppleIcon from '../../../../../assets/icons/apple_logo.svg';
-import GooglePlayIcon from '../../../../../assets/icons/google_play_logo.svg';
+import AdultMarina from '../../../../../assets/gifs/phase_one_adult_marina.gif';
+import AppleIcon from '../../../../../assets/icons/apple_icon.svg';
+import GooglePlayIcon from '../../../../../assets/icons/google_play_icon.svg';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
@@ -19,13 +19,14 @@ export function PhaseOne() {
   return (
     <div className={styles['container']}>
       <div className={styles['up']}>
+        <div className={styles['phase-mobile']}>{t('phase-one.phase')}</div>
         <div className={styles['comp']}>{t('phase-one.compete')}</div>
         <div className={styles['p-container']}>
-          <div className={styles['phase']}>{t('phase-one.phase')}</div>
+          <div className={styles['phase-desktop']}>{t('phase-one.phase')}</div>
           <p className={styles['p']}>{t('phase-one.p-phase')}</p>
         </div>
       </div>
-      <div className={styles['cards-container']}>
+      <div className={styles['po-cards-container']}>
         <div className={styles['bg-blue-c']}>
           <div className={styles['r-container']}>
             <div className={styles['rating']}>4.7</div>
@@ -48,7 +49,7 @@ export function PhaseOne() {
           </div>
           <div className={styles['btns-container']}>
             <Button className={styles['btn']} onClick={goToAppleSakuMonsters}>
-              <div className={styles['apple-container']}>
+              <div className={styles['store-icon-container']}>
                 <AppleIcon />
               </div>
               <span>{t('phase-one.apple')}</span>
@@ -58,7 +59,7 @@ export function PhaseOne() {
               onClick={goToAppleSakuMonsters}
               disabled={true}
             >
-              <div className={styles['google-container']}>
+              <div className={styles['store-icon-container']}>
                 <GooglePlayIcon />
               </div>
               <span>{t('phase-one.google')}</span>

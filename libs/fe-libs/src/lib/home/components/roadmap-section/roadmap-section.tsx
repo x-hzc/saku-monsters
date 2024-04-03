@@ -1,49 +1,91 @@
 import styles from './roadmap-section.module.scss';
+import cn from 'classnames';
+import { CSSProperties, useState } from 'react';
 import classNames from 'classnames';
-import { useRef, useState } from 'react';
-import { useOutsideAlerter } from '../../../ui/hooks/use-outside-alerter';
+import { ROADMAP_SECTION_COLOR_MAPPER } from '../../helpers/roadmap-section-color-mapper';
+import { useDeviceType } from '../../../shared/hooks/use-device-type';
 
 export interface RoadmapSectionProps {
   number: number;
   title: string;
   description: string;
   contentPosition: 'right' | 'left';
-  image: string;
+  image?: string;
   className?: string;
 }
 
 export function RoadmapSection(props: RoadmapSectionProps) {
-  const { number, description, title, contentPosition, image, className } =
-    props;
-  const [isOpen, setIsOpen] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  useOutsideAlerter(sectionRef, () => setIsOpen(false));
+  const {
+    number,
+    description,
+    title,
+    contentPosition,
+    image = '',
+    className = '',
+  } = props;
+  const [isOpen, setIsOpen] = useState(number <= 4);
+  const [isRead, setIsRead] = useState(number <= 4);
+  const { isMinDesktopSmall } = useDeviceType();
+  function getContentPosition(): CSSProperties {
+    if (isMinDesktopSmall) {
+      return contentPosition === 'left'
+        ? {
+            right: 'calc(100% + 20px)',
+          }
+        : { left: 'calc(100% + 20px)' };
+    }
+
+    return {
+      right: contentPosition === 'right' ? '-140%' : undefined,
+      left: contentPosition === 'left' ? '-90%' : undefined,
+      top: '-70%',
+    };
+  }
+
   return (
-    <div
-      className={classNames(styles['container'], className)}
-      ref={sectionRef}
-    >
+    <div className={cn(styles['container'], className)}>
       <div
-        className={styles['number']}
-        onClick={() => setIsOpen((prevState) => !prevState)}
+        className={cn(styles['number'], {
+          [styles['rotated']]: number === 1,
+          [styles['open']]: !isMinDesktopSmall && isOpen,
+        })}
+        onMouseEnter={() => {
+          setIsOpen(true);
+          setIsRead(true);
+        }}
+        onMouseLeave={() => {
+          setIsOpen(false);
+        }}
+        onClick={(ev) => {
+          if (isMinDesktopSmall) {
+            return;
+          }
+          ev.stopPropagation();
+          setIsRead(true);
+          setIsOpen(!isOpen);
+        }}
+        style={
+          isRead
+            ? {
+                backgroundColor: ROADMAP_SECTION_COLOR_MAPPER[number],
+                color: '#FFF',
+              }
+            : undefined
+        }
       >
         {number}
       </div>
       <div
         className={classNames(styles['content-container'], {
-          [styles['active']]: isOpen,
+          [styles['open']]: isOpen,
         })}
-        style={
-          contentPosition === 'left'
-            ? {
-                right: 'calc(100% + 30px)',
-              }
-            : { left: 'calc(100% + 30px)' }
-        }
+        style={getContentPosition()}
       >
-        <div className={styles['img-container']}>
-          <img src={image} alt={`section-${number}`} />
-        </div>
+        {image && image !== '' && (
+          <div className={styles['img-container']}>
+            <img src={image} alt={`section-${number}`} />
+          </div>
+        )}
         <div className={styles['information']}>
           <div className={styles['phase']}>Phase {number}</div>
           <div className={styles['title']}>{title}</div>

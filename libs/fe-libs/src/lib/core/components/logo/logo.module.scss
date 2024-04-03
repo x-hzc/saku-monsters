@@ -1,8 +1,21 @@
-.container{
-  font-family: var(--secondary-font-family);
-  font-size: 30px;
-  line-height: 35px;
-  text-transform: uppercase;
-  color: var(--title-color);
-  cursor: pointer;
+@use 'media-queries' as mq;
+@use 'cursors' as c;
+.container {
+  @include c.hover;
+  width: 25%;
+  max-width: 95px;
+  max-height: 65px;
+  @include mq.small-window {
+    width: 100%;
+    max-width: 100px;
+    max-height: 80px;
+  }
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  &:active {
+    @include c.click;
+  }
 }

@@ -1,6 +1,15 @@
 @use 'media-queries' as mq;
-
+@use 'cursors' as c;
 .container {
+  position: fixed;
+  width: calc(100% + 52px);
+  left: -26px;
+  bottom: 0;
+  z-index: 4;
+  @include mq.small-window {
+    position: static;
+    width: auto;
+  }
   background: var(--primary-color) 0 0 no-repeat padding-box;
   border-radius: 42px;
   display: flex;
@@ -8,11 +17,15 @@
   padding: 29px 44px 40px 42px;
   height: min-content;
   .title {
+    display: none;
     font-family: var(--secondary-font-family);
     color: var(--inventory-title-color);
     letter-spacing: 0;
     font-size: 21px;
     line-height: 95px;
+    @include mq.small-window {
+      display: block;
+    }
     @include mq.large-window {
       font-size: 29px;
       line-height: 103px;
@@ -41,7 +54,10 @@
   }
 }
 .store-section {
-  margin-top: 35px;
+  display: none;
+  @include mq.small-window {
+    display: block;
+  }
   svg {
     height: 13px;
     width: 85px;
@@ -62,11 +78,14 @@
     background-image: url('../../../../../assets/pngs/filter-saku.png');
     width: 364px;
     height: 195px;
-    cursor: pointer;
+    @include c.hover;
+    &.active {
+      @include c.click;
+    }
   }
   .egg {
     position: absolute;
-    background-image: url('libs/fe-libs/assets/pngs/egg.png');
+    background-image: url('libs/fe-libs/assets/pngs/egg_big.png');
     width: 112px;
     height: 125px;
     right: calc(-112px / 2);
@@ -77,12 +96,13 @@
 .button {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border-radius: 23px;
   font-size: 16px;
   --btn-bg-color: #f8f5f5;
   --btn-color: #e2dfdf;
   --btn-padding-y: 9px;
+  transition: all 500ms ease-in-out;
   .icon {
     display: flex;
     align-items: center;
@@ -92,12 +112,68 @@
       width: $size;
     }
   }
+  .all-icon {
+    display: flex;
+    align-items: center;
+    svg {
+      height: 28px;
+      width: 28px;
+    }
+  }
+  .epic {
+    svg {
+      width: 29px;
+      height: 27px;
+    }
+  }
+  .legendary {
+    svg {
+      width: 33px;
+      height: 29px;
+    }
+  }
   @include mq.large-window {
     font-size: 21px;
     svg {
       $size: 18px;
       height: $size;
       width: $size;
+    }
+  }
+}
+
+.adulthood {
+  display: none;
+  @include mq.small-window {
+    display: grid;
+  }
+}
+
+.rarity {
+  display: flex;
+  justify-content: center;
+  gap: 23px;
+  padding-bottom: 0;
+  @include mq.small-window {
+    display: grid;
+    padding-bottom: 30px;
+    gap: 15px 12px;
+    justify-content: flex-start;
+  }
+  .button {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    @include mq.small-window {
+      border-radius: 23px;
+      width: auto;
+      height: auto;
+    }
+    .text {
+      display: none;
+      @include mq.small-window {
+        display: block;
+      }
     }
   }
 }

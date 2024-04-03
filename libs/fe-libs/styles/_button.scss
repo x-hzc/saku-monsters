@@ -1,11 +1,16 @@
+@use 'cursors' as c;
+
 @mixin button-base {
+  @include c.hover;
   align-items: center;
   border-radius: 50px;
   border: none;
-  cursor: pointer;
   display: flex;
   font-weight: 500;
   justify-content: center;
+  &.active {
+    @include c.click;
+  }
 }
 
 @mixin bordered-button {
@@ -14,14 +19,17 @@
 }
 
 @mixin rounded-button($size) {
+  @include c.hover;
   align-items: center;
   border-radius: 50%;
   border: 1px solid var(--primary-color);
-  cursor: pointer;
   display: flex;
   height: $size;
   justify-content: center;
   width: $size;
+  &.active {
+    @include c.click;
+  }
 }
 
 @mixin discover-button {
@@ -37,7 +45,20 @@
     var(--yellow-300),
     var(--orange-300)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  box-shadow: 3px 3px 17px var(--black-900-transparence-16);
+  // box-shadow: 3px 3px 17px var(--black-900-transparence-16);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 53%,
+    92% 46%,
+    95% 59%,
+    95% 68%,
+    93% 65%,
+    92% 76%,
+    88% 74%,
+    91% 100%,
+    0 100%
+  );
   color: var(--black-900);
   font-family: var(--secondary-font-family);
   line-height: 31px;

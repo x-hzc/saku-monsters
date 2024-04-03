@@ -1,19 +1,26 @@
+@use 'media-queries' as mq;
+@use 'cursors' as c;
+
 .app-container {
-  height: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
   background: transparent
     linear-gradient(179deg, #f8f5f5 0%, #a6ebd6 52%, #ecf5d1 100%) 0 0 no-repeat
     padding-box;
-  cursor: url('libs/fe-libs/assets/pngs/egg.png'), auto;
+  cursor: var(--default-cursor);
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
 }
+
 .inventory {
   background: var(--inventory-bg-color) 0 0 no-repeat padding-box;
 }
+
 .content {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+}
+
+.clicked {
+  @include c.click;
 }

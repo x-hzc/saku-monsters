@@ -40,6 +40,14 @@ export function useRouter() {
     );
   }
 
+  function goToTwitter() {
+    goToExternalSite('https://twitter.com/sakumonsters?lang=en');
+  }
+
+  function goToMarketplace() {
+    goToExternalSite('https://store.sakumonsters.com/auth/login');
+  }
+
   return {
     routes,
     currentPath: location.pathname,
@@ -47,5 +55,7 @@ export function useRouter() {
     goToInventory,
     goToExternalSite,
     goToAppleSakuMonsters,
+    goToTwitter,
+    goToMarketplace,
   };
 }

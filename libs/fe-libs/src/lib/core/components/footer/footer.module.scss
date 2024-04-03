@@ -1,0 +1,167 @@
+@use 'media-queries' as mq;
+@use 'button' as btn;
+@use 'card' as c;
+@use 'cursors' as cur;
+
+.container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 50;
+  margin-top: -8%;
+
+  @include mq.large-handset {
+    margin-top: -8%;
+  }
+
+  @include mq.small-tablet {
+    margin-top: -18%;
+  }
+
+  @include mq.tablet {
+    margin-top: -8%;
+  }
+
+  @include mq.medium-tablet {
+    margin-top: 0;
+  }
+}
+
+.content {
+  align-items: center;
+  background-image: url('../../../../../assets/svgs/bg_footer_wave_mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--black-900);
+  display: grid;
+  grid-template-rows: 30% 25% 35% 10%;
+  height: 760px;
+  justify-items: center;
+  width: 100%;
+
+  @include mq.medium-tablet {
+    background-image: url('../../../../../assets/svgs/bg_footer_wave_desktop.svg');
+    grid-template-rows: 35% 35% 20% 10%;
+    height: 580px;
+  }
+
+  @include mq.x-large-window {
+    grid-template-rows: 45% 25% 20% 10%;
+    height: 1045px;
+  }
+}
+
+.t-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  grid-row: 2;
+  justify-content: center;
+  width: 290px;
+
+  @include mq.medium-tablet {
+    width: 400px;
+  }
+
+  @include mq.x-large-window {
+    gap: 40px;
+    width: 675px;
+  }
+
+  .title {
+    color: var(--black-900);
+    font-family: var(--secondary-font-family);
+    font-size: 32px;
+    letter-spacing: 0.69px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mq.medium-tablet {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @include mq.x-large-window {
+      font-size: 46px;
+      line-height: 50px;
+    }
+  }
+
+  .btn {
+    background-color: var(--blue-500);
+    border-radius: 50px;
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    letter-spacing: 0.45px;
+    line-height: 36px;
+    padding: 2% 12%;
+    text-transform: uppercase;
+
+    @include mq.x-large-window {
+      font-size: 30px;
+      line-height: 46px;
+    }
+  }
+}
+
+.links-container {
+  color: var(--black-900);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-row: 3;
+
+  @include mq.medium-tablet {
+    flex-direction: row;
+    gap: 60px;
+    margin: 5%;
+  }
+
+  @include mq.x-large-window {
+    gap: 80px;
+    margin: 5% auto;
+  }
+
+  .link {
+    @include cur.hover;
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    letter-spacing: 0.42px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mq.medium-tablet {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @include mq.x-large-window {
+      font-size: 28px;
+      line-height: 50px;
+    }
+  }
+}
+
+.rights {
+  align-items: center;
+  color: var(--black-900);
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  grid-row: 4;
+  letter-spacing: 0.42px;
+  line-height: 22px;
+  text-transform: capitalize;
+
+  @include mq.medium-tablet {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  @include mq.x-large-window {
+    font-size: 22px;
+  }
+}

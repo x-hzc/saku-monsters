@@ -1,0 +1,48 @@
+:root {
+  --default-cursor: url('libs/fe-libs/assets/cursors/cursor-idle.png'), default;
+  --click-cursor: url('libs/fe-libs/assets/cursors/cursor_click_0.png'), auto;
+  --hover-cursor: url('libs/fe-libs/assets/cursors/cursor_hover_0.png'), pointer;
+}
+
+@keyframes clickGIF {
+  0% {
+    cursor: var(--click-cursor);
+  }
+  33% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_click_1.png'), auto;
+  }
+  66% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_click_2.png'), auto;
+  }
+}
+
+@keyframes hoverGIF {
+  0% {
+    cursor: var(--hover-cursor);
+  }
+  16.5% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_hover_1.png'), pointer;
+  }
+  33% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_hover_2.png'), pointer;
+  }
+  49.5% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_hover_3.png'), pointer;
+  }
+  66% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_hover_4.png'), pointer;
+  }
+  82.5% {
+    cursor: url('libs/fe-libs/assets/cursors/cursor_hover_5.png'), pointer;
+  }
+}
+
+@mixin click {
+  cursor: var(--click-cursor);
+  animation: clickGIF 150ms infinite;
+}
+
+@mixin hover {
+  cursor: var(--hover-cursor);
+  animation: hoverGIF 300ms infinite;
+}

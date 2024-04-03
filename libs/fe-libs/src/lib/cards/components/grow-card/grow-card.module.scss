@@ -6,27 +6,36 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 560px;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 11px;
   position: relative;
-  width: 910px;
-  margin-top: 240px;
-  @include mq.desktop-large {
+
+  @include mq.medium-tablet {
+    height: 586px;
+    margin: 0 auto;
+    width: 910px;
+  }
+
+  @include mq.x-large-window {
     height: 979px;
     width: 1590px;
-    margin-top: 0;
   }
 }
 
 .bg {
   @include c.card;
   @include c.bg-card;
-  background-image: url('../../../../../assets/pngs/bg_grow_green.png');
-  border-radius: 128px;
+  background-color: var(--lime-green-700);
+  border-radius: 70px;
+  border: 3px solid var(--primary-color);
   position: absolute;
 
-  @include mq.desktop-large {
+  @include mq.medium-tablet {
+    background-image: url('../../../../../assets/pngs/bg_grow_desktop.png');
+    border-radius: 128px;
+  }
+
+  @include mq.x-large-window {
     border-radius: 224px;
   }
 }
@@ -43,16 +52,43 @@
   z-index: 10;
 
   img {
+    aspect-ratio: 1 / 1;
     height: 100%;
     object-fit: cover;
     width: 100%;
+
+    border-radius: 70px;
+
+    @include mq.medium-tablet {
+      border-radius: 128px;
+    }
+
+    @include mq.x-large-window {
+      border-radius: 224px;
+    }
   }
 }
 
-.gh-container {
-  height: 90%;
+.ghm-container {
+  height: 280px;
   padding: 2.6% 3%;
   width: 100%;
+}
+
+.ghd-container {
+  height: 50%;
+  padding: 2.6% 3%;
+  width: 95%;
+  height: 280px;
+
+  @include mq.medium-tablet {
+    height: 295px;
+  }
+
+  @include mq.x-large-window {
+    height: 480px;
+    width: 100%;
+  }
 }
 
 .down {
@@ -61,18 +97,28 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 1% 11%;
+  padding: 1% 5%;
+
+  @include mq.small-tablet {
+    padding: 1% 11%;
+  }
 
   .opts-container,
-  .phases {
+  .phases-container,
+  .collect-monsters-container {
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
 
   .opts-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
     width: 100%;
+
+    @include mq.small-tablet {
+      margin-top: 0;
+    }
   }
 
   .opt-g {
@@ -80,24 +126,45 @@
   }
 
   .p {
-    font-size: 13px;
-    line-height: 20px;
-    margin-top: 3%;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10% 0;
     text-align: center;
 
-    @include mq.desktop-large {
-      font-size: 22px;
-      line-height: 31px;
+    @include mq.small-tablet {
+      margin: 3% 0;
+    }
+
+    @include mq.x-large-window {
+      font-size: 28px;
+      line-height: 38px;
     }
   }
 
-  .phases {
-    bottom: 3%;
-    position: absolute;
-    width: 70%;
+  .phases-container,
+  .collect-monsters-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 120px;
+    margin-bottom: 3%;
+    width: 85%;
+
+    @include mq.small-tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: unset;
+      height: 120px;
+      margin-bottom: 1%;
+    }
+
+    @include mq.x-large-window {
+      height: 190px;
+      margin-bottom: unset;
+    }
   }
 
-  .phase {
+  .phase-full,
+  .phase,
+  .monster-full,
+  .monster {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -111,22 +178,124 @@
       line-height: 30px;
       text-transform: uppercase;
 
-      @include mq.desktop-large {
+      @include mq.x-large-window {
         font-size: 17px;
         line-height: 69px;
       }
     }
   }
 
+  .phase-full,
+  .monster-full {
+    grid-column: span 2;
+    grid-row: 1;
+
+    @include mq.small-tablet {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  .phase,
+  .monster {
+    grid-row: 2;
+    position: relative;
+
+    @include mq.small-tablet {
+      grid-row: 1;
+    }
+  }
+
   .egg-container {
-    width: 16%;
+    width: 41px;
+
+    @include mq.x-large-window {
+      width: 60px;
+    }
   }
 
-  .egg-span {
-    margin-top: 2.5%;
+  .baby-container {
+    bottom: -16px;
+    position: absolute;
+    width: 190px;
+
+    @include mq.x-large-window {
+      bottom: 5px;
+      width: 270px;
+    }
   }
 
-  .img-container {
-    width: 70%;
+  .adult-container {
+    bottom: -4px;
+    position: absolute;
+    width: 178px;
+
+    @include mq.x-large-window {
+      bottom: 17px;
+      width: 260px;
+    }
+  }
+
+  .btn {
+    height: 37px;
+    margin: 0 auto 5%;
+    width: 214px;
+
+    @include mq.x-large-window {
+      font-size: 20px;
+      height: 57px;
+      margin: 1% auto 2%;
+      padding: 10px 25px;
+      width: 254px;
+    }
+  }
+
+  .collect-monsters-container {
+    height: 210px;
+    width: 254px;
+
+    @include mq.small-tablet {
+      column-gap: 50px;
+      height: 120px;
+      margin-bottom: 1%;
+      width: 85%;
+    }
+
+    @include mq.x-large-window {
+      height: 190px;
+      margin-bottom: unset;
+    }
+  }
+
+  .shumoku-container {
+    position: absolute;
+    width: 130px;
+
+    @include mq.x-large-window {
+      bottom: 90px;
+      width: 220px;
+    }
+  }
+
+  .howler-container {
+    bottom: 10px;
+    position: absolute;
+    width: 110px;
+
+    @include mq.x-large-window {
+      bottom: 40px;
+      width: 160px;
+    }
+  }
+
+  .datboi-container {
+    bottom: 5px;
+    position: absolute;
+    width: 140px;
+
+    @include mq.x-large-window {
+      bottom: 30px;
+      width: 220px;
+    }
   }
 }

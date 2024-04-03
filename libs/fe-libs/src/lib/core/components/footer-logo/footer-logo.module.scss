@@ -1,0 +1,20 @@
+@use 'media-queries' as mq;
+
+.footer-saku-logo-container {
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 50;
+
+  @include mq.x-large-window {
+    width: 626px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}

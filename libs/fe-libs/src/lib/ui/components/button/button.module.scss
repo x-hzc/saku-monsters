@@ -4,14 +4,15 @@
 .btn {
   @include btn.button-base;
   color: var(--btn-color, var(--white-100));
-  box-shadow: 0 3px 9px var(--black-900-transparence-8);
+  // box-shadow: 0 3px 9px var(--black-900-transparence-8);
   gap: 14px;
   line-height: 23px;
   transition: all 240ms ease-in-out;
   padding: var(--btn-padding-y, 6px) var(--btn-padding-x, 17px);
-  &:hover {
-    box-shadow: 0 3px 9px var(--black-900-transparence-15);
-  }
+
+  // &:hover {
+  //   box-shadow: 0 3px 9px var(--black-900-transparence-15);
+  // }
 }
 
 .disabled {
