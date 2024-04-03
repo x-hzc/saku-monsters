@@ -15,15 +15,16 @@ import { CLOUD_IMAGE_MAPPER } from '../../helpers/cloud-image-mapper';
 import classNames from 'classnames';
 
 export function HomePage() {
-  const { isMaxTablet } = useDeviceType();
   const { isPlaying } = useHeroVideo();
+  const { isMaxTablet, isMinDesktopSmall } = useDeviceType();
+
   return (
     <div className={styles['container']}>
       <div className={styles['app-linear-bg']} />
       <ParallaxProvider>
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[1]}
-          topPercentage={isMaxTablet ? 7 : 10}
+          topPercentage={isMaxTablet ? 7 : isMinDesktopSmall ? 12 : 10}
           leftPercentage={75}
           heightPercentage={3.5}
           widthPercentage={27.5}
@@ -32,24 +33,24 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[2]}
-          topPercentage={isMaxTablet ? 7 : 10}
+          topPercentage={isMaxTablet ? 7 : isMinDesktopSmall ? 12 : 10}
           leftPercentage={75}
           heightPercentage={3.5}
           widthPercentage={27.5}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[3]}
-          topPercentage={isMaxTablet ? 7.7 : 11}
+          topPercentage={isMaxTablet ? 7.7 : isMinDesktopSmall ? 12.7 : 11}
           leftPercentage={18}
           heightPercentage={4.3}
           widthPercentage={29.5}
           traslateX={true}
           parallaxSpeed={0.02}
-          zIndex={isMaxTablet ? 2 : 9}
+          zIndex={isMaxTablet ? 2 : isMinDesktopSmall ? 2 : 9}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[4]}
-          topPercentage={isMaxTablet ? 7.7 : 11}
+          topPercentage={isMaxTablet ? 7.7 : isMinDesktopSmall ? 12.7 : 11}
           leftPercentage={isMaxTablet ? -5 : -13}
           heightPercentage={4.3}
           widthPercentage={29.5}
@@ -57,7 +58,7 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[5]}
-          topPercentage={isMaxTablet ? 10 : 19}
+          topPercentage={isMaxTablet ? 10 : isMinDesktopSmall ? 18 : 19}
           leftPercentage={0}
           heightPercentage={4.3}
           widthPercentage={100}
@@ -65,7 +66,7 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[6]}
-          topPercentage={isMaxTablet ? 20 : 29}
+          topPercentage={isMaxTablet ? 26 : isMinDesktopSmall ? 25 : 29}
           leftPercentage={0}
           heightPercentage={4.3}
           widthPercentage={100}
@@ -73,12 +74,12 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[7]}
-          topPercentage={isMaxTablet ? 17 : 23}
+          topPercentage={isMaxTablet ? 28 : 23}
           leftPercentage={isMaxTablet ? 95 : 100}
           heightPercentage={3.1}
           widthPercentage={isMaxTablet ? 25 : 22}
           traslateX={true}
-          parallaxSpeed={0.04}
+          parallaxSpeed={isMaxTablet ? 0.02 : 0.04}
           zIndex={3}
         />
         <Cloud
@@ -91,17 +92,17 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[9]}
-          topPercentage={isMaxTablet ? 25.5 : 32.5}
-          leftPercentage={isMaxTablet ? 25 : 100}
+          topPercentage={isMaxTablet ? 25.5 : isMinDesktopSmall ? 31 : 32.5}
+          leftPercentage={isMaxTablet ? 95 : 100}
           heightPercentage={1.3}
           widthPercentage={isMaxTablet ? 25 : 19}
           traslateX={true}
           parallaxSpeed={0.02}
-          zIndex={isMaxTablet ? 10 : 4}
+          zIndex={isMaxTablet ? 3 : 4}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[10]}
-          topPercentage={31}
+          topPercentage={isMaxTablet ? 31 : isMinDesktopSmall ? 27 : 31}
           leftPercentage={-5}
           heightPercentage={3.9}
           widthPercentage={22.2}
@@ -109,7 +110,7 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[11]}
-          topPercentage={33}
+          topPercentage={isMaxTablet ? 34 : isMinDesktopSmall ? 31 : 33}
           leftPercentage={77}
           heightPercentage={5.1}
           widthPercentage={35.3}
@@ -117,7 +118,7 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[12]}
-          topPercentage={isMaxTablet ? 36.5 : 35}
+          topPercentage={isMaxTablet ? 36.5 : isMinDesktopSmall ? 31 : 35}
           leftPercentage={-5}
           heightPercentage={4.23}
           widthPercentage={34.4}

@@ -23,6 +23,7 @@ export function Filters() {
     rarityFilter,
     toggleRarityFilter,
     setAdulthoodFilter,
+    setRarityFilter,
   } = useTokensFacade();
 
   return (
@@ -70,7 +71,6 @@ export function Filters() {
           className={styles['button']}
           onClick={() => setAdulthoodFilter(null)}
           componentStyles={
-            adulthoodFilter === TokenAdulthoodType.All ||
             adulthoodFilter === null
               ? {
                   backgroundColor:
@@ -153,6 +153,21 @@ export function Filters() {
             {TOKEN_RARITY_ICON[TokenRarityType.LEGENDARY]}
           </div>
           <div className={styles['text']}>{t('filter.legendary')}</div>
+        </Button>
+        <Button
+          className={styles['button']}
+          onClick={() => setRarityFilter(null)}
+          componentStyles={
+            rarityFilter === null
+              ? {
+                  backgroundColor:
+                    TOKEN_ADULTHOOD_COLOR[TokenAdulthoodType.All],
+                  color: 'var(--primary-color)',
+                }
+              : undefined
+          }
+        >
+          <div className={styles['text']}>{t('filter.all')}</div>
         </Button>
       </div>
       <div className={styles['store-section']}>
