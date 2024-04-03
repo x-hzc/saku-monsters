@@ -3,4 +3,5 @@ export enum TokenRarityType {
   RARE = 'RARE',
   EPIC = 'EPIC',
   LEGENDARY = 'LEGENDARY',
+  ALL = 'ALL',
 }

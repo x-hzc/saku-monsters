@@ -9,12 +9,14 @@ export const TOKEN_RARITY_COLOR: Record<TokenRarityType, string> = {
   [TokenRarityType.RARE]: '#5BAFFD',
   [TokenRarityType.EPIC]: '#EB84F6',
   [TokenRarityType.LEGENDARY]: '#FDC25B',
+  [TokenRarityType.ALL]: '#D3D3D3',
 };
 export const TOKEN_RARITY_BG_COLOR: Record<TokenRarityType, string> = {
   [TokenRarityType.COMMON]: '#A0F5D2',
   [TokenRarityType.RARE]: '#CCE3F9',
   [TokenRarityType.EPIC]: '#F6DFFA',
   [TokenRarityType.LEGENDARY]: '#FEF1DB',
+  [TokenRarityType.ALL]: '#D3D3D3',
 };
 
 export const TOKEN_ADULTHOOD_COLOR: Record<TokenAdulthoodType, string> = {

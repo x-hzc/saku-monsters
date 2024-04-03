@@ -112,6 +112,14 @@
       width: $size;
     }
   }
+  .all-icon {
+    display: flex;
+    align-items: center;
+    svg {
+      height: 28px;
+      width: 28px;
+    }
+  }
   .epic {
     svg {
       width: 29px;

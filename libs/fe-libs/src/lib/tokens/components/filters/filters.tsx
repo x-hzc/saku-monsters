@@ -80,6 +80,9 @@ export function Filters() {
               : undefined
           }
         >
+          <div className={styles['all-icon']}>
+            {TOKEN_RARITY_ICON[TokenRarityType.ALL]}
+          </div>
           <div className={styles['text']}>{t('filter.all')}</div>
         </Button>
       </div>
@@ -160,13 +163,15 @@ export function Filters() {
           componentStyles={
             rarityFilter === null
               ? {
-                  backgroundColor:
-                    TOKEN_ADULTHOOD_COLOR[TokenAdulthoodType.All],
+                  backgroundColor: TOKEN_RARITY_COLOR[TokenRarityType.ALL],
                   color: 'var(--primary-color)',
                 }
               : undefined
           }
         >
+          <div className={styles['all-icon']}>
+            {TOKEN_RARITY_ICON[TokenRarityType.ALL]}
+          </div>
           <div className={styles['text']}>{t('filter.all')}</div>
         </Button>
       </div>
