@@ -135,14 +135,17 @@
   display: grid;
   gap: 11px;
   grid-template-columns: 1fr 1fr 1fr;
+  height: 440px;
   justify-items: center;
   overflow-x: auto;
+  overflow-y: hidden;
   transition: transform 0.5s ease;
   width: 100%;
   padding-bottom: 10px;
 
   @include mq.medium-tablet {
     gap: unset;
+    height: auto;
     justify-content: center;
     overflow: visible;
     padding-bottom: 0;
@@ -335,11 +338,11 @@
   .egg-container {
     bottom: -8%;
     left: 71%;
-    width: 26px;
+    width: 38px;
 
     @include mq.x-large-window {
       left: 73%;
-      width: 46px;
+      width: 70px;
     }
   }
 

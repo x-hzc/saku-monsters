@@ -2,7 +2,7 @@ import styles from './phase-one.module.scss';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Phone from '../../../../../assets/pngs/phase_one_phone_hq.png';
 import Drop from '../../../../../assets/pngs/phase_one_drop.png';
-import Egg from '../../../../../assets/pngs/egg.png';
+import Egg from '../../../../../assets/gifs/egg.gif';
 import Coin from '../../../../../assets/pngs/phase_one_coin.png';
 import Phantom from '../../../../../assets/svgs/phase_one_phantom_robot.svg';
 import AdultMarina from '../../../../../assets/gifs/phase_one_adult_marina.gif';

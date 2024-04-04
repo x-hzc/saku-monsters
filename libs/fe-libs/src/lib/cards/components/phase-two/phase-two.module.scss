@@ -231,10 +231,12 @@
     .front-card {
       height: 257px;
       max-width: 177px;
+      width: 177px;
 
       @include mq.x-large-window {
         height: 460px;
         max-width: 320px;
+        width: 320px;
       }
     }
 
@@ -285,10 +287,12 @@
     .back-card {
       height: 257px;
       max-width: 177px;
+      width: 177px;
 
       @include mq.x-large-window {
         height: 460px;
         max-width: 320px;
+        width: 320px;
       }
     }
 
