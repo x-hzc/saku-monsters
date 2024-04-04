@@ -19,11 +19,11 @@
 }
 
 .video-container {
-  background-image: url('../../../../../assets/pngs/landing-bg-mobile.png');
+  aspect-ratio: 1 / 1;
+  background-image: url('../../../../../assets/pngs/landing-bg-mobile-hq.png');
+  background-position: 60% center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  aspect-ratio: 1 / 1;
   height: 83.6%;
   width: 94.6%;
   position: relative;
@@ -32,13 +32,17 @@
   border-radius: 80px;
   transition: all 500ms ease-in;
 
+  @include mq.large-handset {
+    background-position: center center;
+  }
+
   @include mq.large-tablet {
-    background-image: url('../../../../../assets/pngs/landing-bg-desktop.png');
+    background-image: url('../../../../../assets/pngs/landing-bg-desktop-hq.png');
     background-size: 100% 100%;
-    top: 1%;
-    left: 18px;
     border-radius: 0;
     height: 98%;
+    left: 18px;
+    top: 1%;
     width: calc(100% - 18px - 12px);
   }
 
