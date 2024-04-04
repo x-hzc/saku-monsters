@@ -4,7 +4,7 @@ import { useEffect, useMemo } from 'react';
 import { useCardTitleStore } from '../../hooks/use-card-title-store';
 import { CardTitleOption } from '../card-title-option/card-title-option';
 import Kanjis from '../../../../../assets/svgs/kanjis.svg';
-import Island from '../../../../../assets/pngs/bg_phase_three_island.png';
+import Island from '../../../../../assets/gifs/bg_phase_three_island.gif';
 import PhaseThreeBirdmonster from '../../../../../assets/pngs/phase_three_birdmonster.png';
 import cn from 'classnames';
 

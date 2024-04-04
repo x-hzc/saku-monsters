@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { RoadmapSection } from '../roadmap-section/roadmap-section';
 import RoadMapImage from '../../../../../assets/pngs/rodmap-image.png';
-import Island from '../../../../../assets/pngs/bg_phase_three_island.png';
+import Island from '../../../../../assets/gifs/bg_phase_three_island.gif';
 
 export function Roadmap() {
   const { t } = useTranslation();

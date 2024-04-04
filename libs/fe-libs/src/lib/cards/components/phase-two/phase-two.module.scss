@@ -292,6 +292,20 @@
       }
     }
 
+    .bubble-odin-img {
+      background-size: cover;
+      height: 90px;
+      position: absolute;
+      top: -60%;
+      width: 90px;
+
+      @include mq.x-large-window {
+        height: 150px;
+        top: -75%;
+        width: 150px;
+      }
+    }
+
     .token-odin-img {
       background-position: 50% 40% !important;
       background-size: cover;

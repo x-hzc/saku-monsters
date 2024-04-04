@@ -13,6 +13,7 @@
   align-items: center;
   margin: 0 auto;
   width: fit-content;
+  min-width: 280px;
   @include mq.small-window {
     margin: 0;
     width: 100%;
@@ -64,7 +65,6 @@
     border-radius: 23px;
     font-size: 16px;
     --btn-bg-color: #f8f5f5;
-    --btn-color: #e2dfdf;
     --btn-padding-y: 9px;
     @include mq.fluid(--btn-padding-x, 393px, 1920px, 7px, 17px);
 

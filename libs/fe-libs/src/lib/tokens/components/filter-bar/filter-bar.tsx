@@ -7,7 +7,7 @@ import { TokenEggType } from '@saku-monsters/shared';
 import { TOKEN_EGG_COLOR } from '../../helpers/token-color-mapper';
 
 export function FilterBar() {
-  const { tokens, setSearchTerm, toggleEggFilter, eggFilter, searchTerm } =
+  const { filteredTokens, setSearchTerm, toggleEggFilter, eggFilter, searchTerm } =
     useTokensFacade();
   const { t } = useTranslation();
   return (
@@ -25,7 +25,7 @@ export function FilterBar() {
         >
           {t('filter.blue')}
         </Button>
-        <Button
+        {/* <Button
           className={styles['btn']}
           disabled
           onClick={() => toggleEggFilter(TokenEggType.PurpleEgg)}
@@ -50,7 +50,7 @@ export function FilterBar() {
           }}
         >
           {t('filter.golden')}
-        </Button>
+        </Button> */}
       </div>
       <div className={styles['input-container']}>
         <SearchIcon />
@@ -65,7 +65,8 @@ export function FilterBar() {
       </div>
 
       <div className={styles['text']}>
-        {t('filter.unique', { count: tokens.length })}
+        {`${filteredTokens.length} / 150`}{' '}
+        {t('filter.unique')}
       </div>
     </div>
   );
