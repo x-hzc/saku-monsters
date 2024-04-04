@@ -28,12 +28,10 @@ export function HomePage() {
             isMaxTablet
               ? 7
               : isMinDesktopSmall
-              ? 10
-              : isMinDesktopLarge
-              ? 5
+              ? 8
               : 10
           }
-          leftPercentage={isMaxTablet ? 75 : isMinDesktopLarge ? 100 : 75}
+          leftPercentage={isMaxTablet ? 75 : isMinDesktopLarge ? 90 : 75}
           heightPercentage={3.5}
           widthPercentage={27.5}
           traslateX={true}
@@ -46,11 +44,9 @@ export function HomePage() {
               ? 7
               : isMinDesktopSmall
               ? 9
-              : isMinDesktopLarge
-              ? 5
               : 10
           }
-          leftPercentage={isMaxTablet ? 80 : isMinDesktopLarge ? 110 : 80}
+          leftPercentage={isMaxTablet ? 80 : isMinDesktopLarge ? 95 : 80}
           heightPercentage={3.5}
           widthPercentage={27.5}
           traslateX={true}
@@ -71,15 +67,37 @@ export function HomePage() {
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[4]}
           topPercentage={isMaxTablet ? 7.7 : isMinDesktopSmall ? 12.7 : 11}
-          leftPercentage={isMaxTablet ? 3 : isMinDesktopLarge ? 40 : -5}
+          leftPercentage={isMaxTablet ? 3 : isMinDesktopLarge ? 20 : -5}
           heightPercentage={4.3}
           widthPercentage={29.5}
           traslateX={true}
-          parallaxSpeed={0.05}
+          parallaxSpeed={0.04}
           zIndex={isMaxTablet ? 3 : 10}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[5]}
+          topPercentage={isMaxTablet ? 8 : isMinDesktopSmall ? 18 : 22}
+          leftPercentage={isMaxTablet ? 25 : isMinDesktopLarge ? 105 : 0}
+          heightPercentage={4.3}
+          widthPercentage={29.5}
+          traslateX={true}
+          parallaxSpeed={0.04}
+          zIndex={isMaxTablet ? 3 : 10}
+          className={styles['opacity']}
+        />
+        <Cloud
+          imgSrc={CLOUD_IMAGE_MAPPER[6]}
+          topPercentage={isMaxTablet ? 9 : isMinDesktopSmall ? 19 : 23}
+          leftPercentage={isMaxTablet ? 35 : isMinDesktopLarge ? 85 : 5}
+          heightPercentage={4.3}
+          widthPercentage={29.5}
+          traslateX={true}
+          parallaxSpeed={0.04}
+          zIndex={isMaxTablet ? 3 : 10}
+          className={styles['opacity']}
+        />
+        <Cloud
+          imgSrc={CLOUD_IMAGE_MAPPER[7]}
           topPercentage={isMaxTablet ? 10 : isMinDesktopSmall ? 18 : 19}
           leftPercentage={0}
           heightPercentage={4.3}
@@ -87,7 +105,7 @@ export function HomePage() {
           zIndex={2}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[6]}
+          imgSrc={CLOUD_IMAGE_MAPPER[8]}
           topPercentage={isMaxTablet ? 26 : isMinDesktopSmall ? 25 : 29}
           leftPercentage={0}
           heightPercentage={4.3}
@@ -95,7 +113,7 @@ export function HomePage() {
           zIndex={2}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[7]}
+          imgSrc={CLOUD_IMAGE_MAPPER[9]}
           topPercentage={isMaxTablet ? 28 : 23}
           leftPercentage={isMaxTablet ? 95 : 100}
           heightPercentage={3.1}
@@ -105,7 +123,7 @@ export function HomePage() {
           zIndex={3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[8]}
+          imgSrc={CLOUD_IMAGE_MAPPER[10]}
           topPercentage={isMaxTablet ? 17 : 23}
           leftPercentage={isMaxTablet ? 80 : 81}
           heightPercentage={3.1}
@@ -115,7 +133,7 @@ export function HomePage() {
           zIndex={3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[9]}
+          imgSrc={CLOUD_IMAGE_MAPPER[11]}
           topPercentage={isMaxTablet ? 25.5 : isMinDesktopSmall ? 31 : 32.5}
           leftPercentage={isMaxTablet ? 95 : 100}
           heightPercentage={1.3}
@@ -125,7 +143,7 @@ export function HomePage() {
           zIndex={isMaxTablet ? 3 : 4}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[10]}
+          imgSrc={CLOUD_IMAGE_MAPPER[12]}
           topPercentage={isMaxTablet ? 31 : isMinDesktopSmall ? 27 : 31}
           leftPercentage={-5}
           heightPercentage={3.9}
@@ -135,7 +153,7 @@ export function HomePage() {
           zIndex={3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[11]}
+          imgSrc={CLOUD_IMAGE_MAPPER[13]}
           topPercentage={isMaxTablet ? 34 : isMinDesktopSmall ? 31 : 33}
           leftPercentage={77}
           heightPercentage={5.1}
@@ -145,7 +163,7 @@ export function HomePage() {
           zIndex={3}
         />
         <Cloud
-          imgSrc={CLOUD_IMAGE_MAPPER[12]}
+          imgSrc={CLOUD_IMAGE_MAPPER[14]}
           topPercentage={isMaxTablet ? 36.5 : isMinDesktopSmall ? 31 : 35}
           leftPercentage={-5}
           heightPercentage={4.23}

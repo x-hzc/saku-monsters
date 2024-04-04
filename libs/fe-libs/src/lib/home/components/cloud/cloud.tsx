@@ -37,8 +37,8 @@ export function Cloud(props: CloudProps) {
 
       setLeftPosition(newLeftPosition);
 
-      if (newLeftPosition <= -50) {
-        setLeftPosition(newLeftPosition + 150);
+      if (newLeftPosition <= -30) {
+        setLeftPosition(newLeftPosition + 130);
       }
     };
 

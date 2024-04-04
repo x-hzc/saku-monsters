@@ -10,6 +10,8 @@ import Cloud9 from '../../../../assets/pngs/cloud_9.png';
 import Cloud10 from '../../../../assets/pngs/cloud_10.png';
 import Cloud11 from '../../../../assets/pngs/cloud_11.png';
 import Cloud12 from '../../../../assets/pngs/cloud_12.png';
+import Cloud13 from '../../../../assets/pngs/cloud_13.png';
+import Cloud14 from '../../../../assets/pngs/cloud_14.png';
 
 export const CLOUD_IMAGE_MAPPER: Record<number, string> = {
   1: Cloud1,
@@ -24,4 +26,6 @@ export const CLOUD_IMAGE_MAPPER: Record<number, string> = {
   10: Cloud10,
   11: Cloud11,
   12: Cloud12,
+  13: Cloud13,
+  14: Cloud14,
 };

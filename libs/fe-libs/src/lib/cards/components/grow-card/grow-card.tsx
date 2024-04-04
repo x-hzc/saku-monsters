@@ -11,7 +11,7 @@ import BabyChu from '../../../../../assets/baby_chu.gif';
 import Egg from '../../../../../assets/gifs/egg.gif';
 import AdultShumoku from '../../../../../assets/adult_shumoku.gif';
 import AdultHowler from '../../../../../assets/adult_howler.gif';
-import AdultDatboi from '../../../../../assets/adult_datboi.gif';
+import AdultSalagon from '../../../../../assets/adult_datboi.gif';
 
 export function GrowCard() {
   const { i18n, t } = useTranslation();
@@ -101,10 +101,10 @@ export function GrowCard() {
           <span>Howler</span>
         </div>
         <div className={styles['monster']}>
-          <div className={styles['datboi-container']}>
-            <img src={AdultDatboi} alt="datboi" />
+          <div className={styles['salagon-container']}>
+            <img src={AdultSalagon} alt="salagon" />
           </div>
-          <span>Datboi</span>
+          <span>Salagon</span>
         </div>
       </div>
     );
