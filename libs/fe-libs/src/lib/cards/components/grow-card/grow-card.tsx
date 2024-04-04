@@ -2,11 +2,9 @@ import styles from './grow-card.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo } from 'react';
 import { useCardTitleStore } from '../../hooks/use-card-title-store';
-import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { Button } from '../../../ui/components/button/button';
 import { CardTitleOption } from '../card-title-option/card-title-option';
-import GrowHappinessMobile from '../../../../../assets/pngs/grow_happiness_mobile.png';
 import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop_hq.png';
 import AdultChu from '../../../../../assets/adult_chu.gif';
 import BabyChu from '../../../../../assets/baby_chu.gif';
@@ -32,7 +30,6 @@ export function GrowCard() {
     [t('grow-card.collect')]: t('grow-card.collect-paragraph'),
   };
   const { currentGrowOption, setCurrentGrowOption } = useCardTitleStore();
-  const { isMobile } = useDeviceType();
 
   const handleSelect = (selectedOption: string) => {
     setCurrentGrowOption(selectedOption);
@@ -121,15 +118,9 @@ export function GrowCard() {
     <div className={styles['container']}>
       <div className={styles['bg']} />
       <div className={styles['content']}>
-        {isMobile ? (
-          <div className={styles['ghm-container']}>
-            <img src={GrowHappinessMobile} alt="grow-happiness" />
-          </div>
-        ) : (
-          <div className={styles['ghd-container']}>
-            <img src={GrowHappinessDesktop} alt="grow-happiness" />
-          </div>
-        )}
+        <div className={styles['ghd-container']}>
+          <img src={GrowHappinessDesktop} alt="grow-happiness" />
+        </div>
         <div className={styles['down']}>
           <div className={styles['opts-container']}>
             {growTitleOptions &&
