@@ -12,11 +12,11 @@ import { Roadmap } from '../roadmap/roadmap';
 import { Footer } from '../../../core/components/footer/footer';
 import { Cloud } from '../cloud/cloud';
 import { CLOUD_IMAGE_MAPPER } from '../../helpers/cloud-image-mapper';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 export function HomePage() {
   const { isPlaying } = useHeroVideo();
-  const { isMaxTablet, isMinDesktopSmall } = useDeviceType();
+  const { isMaxTablet, isMinDesktopSmall, isMinDesktopLarge } = useDeviceType();
 
   return (
     <div className={styles['container']}>
@@ -24,8 +24,16 @@ export function HomePage() {
       <ParallaxProvider>
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[1]}
-          topPercentage={isMaxTablet ? 7 : isMinDesktopSmall ? 12 : 10}
-          leftPercentage={75}
+          topPercentage={
+            isMaxTablet
+              ? 7
+              : isMinDesktopSmall
+              ? 10
+              : isMinDesktopLarge
+              ? 5
+              : 10
+          }
+          leftPercentage={isMaxTablet ? 75 : isMinDesktopLarge ? 100 : 75}
           heightPercentage={3.5}
           widthPercentage={27.5}
           traslateX={true}
@@ -33,27 +41,41 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[2]}
-          topPercentage={isMaxTablet ? 7 : isMinDesktopSmall ? 12 : 10}
-          leftPercentage={75}
+          topPercentage={
+            isMaxTablet
+              ? 7
+              : isMinDesktopSmall
+              ? 9
+              : isMinDesktopLarge
+              ? 5
+              : 10
+          }
+          leftPercentage={isMaxTablet ? 80 : isMinDesktopLarge ? 110 : 80}
           heightPercentage={3.5}
           widthPercentage={27.5}
+          traslateX={true}
+          parallaxSpeed={0.02}
+          className={styles['opacity']}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[3]}
           topPercentage={isMaxTablet ? 8 : isMinDesktopSmall ? 13 : 12}
-          leftPercentage={18}
+          leftPercentage={isMaxTablet ? 18 : isMinDesktopLarge ? 32 : 18}
           heightPercentage={4.3}
           widthPercentage={29.5}
           traslateX={true}
           parallaxSpeed={0.02}
-          zIndex={isMaxTablet ? 2 : isMinDesktopSmall ? 2 : 9}
+          zIndex={9}
+          className={styles['opacity']}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[4]}
           topPercentage={isMaxTablet ? 7.7 : isMinDesktopSmall ? 12.7 : 11}
-          leftPercentage={isMaxTablet ? -5 : -13}
+          leftPercentage={isMaxTablet ? 3 : isMinDesktopLarge ? 40 : -5}
           heightPercentage={4.3}
           widthPercentage={29.5}
+          traslateX={true}
+          parallaxSpeed={0.05}
           zIndex={isMaxTablet ? 3 : 10}
         />
         <Cloud
@@ -88,6 +110,8 @@ export function HomePage() {
           leftPercentage={isMaxTablet ? 80 : 81}
           heightPercentage={3.1}
           widthPercentage={isMaxTablet ? 25 : 22}
+          traslateX={true}
+          parallaxSpeed={0.05}
           zIndex={3}
         />
         <Cloud
@@ -106,6 +130,8 @@ export function HomePage() {
           leftPercentage={-5}
           heightPercentage={3.9}
           widthPercentage={22.2}
+          traslateX={true}
+          parallaxSpeed={0.01}
           zIndex={3}
         />
         <Cloud
@@ -114,6 +140,8 @@ export function HomePage() {
           leftPercentage={77}
           heightPercentage={5.1}
           widthPercentage={35.3}
+          traslateX={true}
+          parallaxSpeed={0.05}
           zIndex={3}
         />
         <Cloud
@@ -122,10 +150,12 @@ export function HomePage() {
           leftPercentage={-5}
           heightPercentage={4.23}
           widthPercentage={34.4}
+          traslateX={true}
+          parallaxSpeed={0.03}
           zIndex={3}
         />
         <div
-          className={classNames(styles['landing'], {
+          className={cn(styles['landing'], {
             [styles['playing']]: isPlaying,
           })}
         >

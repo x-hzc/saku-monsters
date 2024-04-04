@@ -1,6 +1,7 @@
 import styles from './cloud.module.scss';
 import { useState, useEffect } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import cn from 'classnames';
 
 export interface CloudProps {
   imgSrc: string;
@@ -11,6 +12,7 @@ export interface CloudProps {
   traslateX?: boolean;
   parallaxSpeed?: number;
   zIndex?: number;
+  className?: string;
 }
 
 export function Cloud(props: CloudProps) {
@@ -23,6 +25,7 @@ export function Cloud(props: CloudProps) {
     traslateX = false,
     parallaxSpeed = 0,
     zIndex = 20,
+    className = '',
   } = props;
 
   const [leftPosition, setLeftPosition] = useState(leftPercentage);
@@ -49,7 +52,7 @@ export function Cloud(props: CloudProps) {
   return (
     <Parallax
       speed={-10}
-      className={styles['parallax']}
+      className={cn(styles['parallax'], className)}
       style={{
         top: `${topPercentage}%`,
         left: traslateX ? `${leftPosition}%` : `${leftPercentage}%`,
