@@ -1,6 +1,6 @@
 import styles from './phase-one.module.scss';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Phone from '../../../../../assets/pngs/phase_one_phone.png';
+import Phone from '../../../../../assets/pngs/phase_one_phone_hq.png';
 import Drop from '../../../../../assets/pngs/phase_one_drop.png';
 import Egg from '../../../../../assets/pngs/egg.png';
 import Coin from '../../../../../assets/pngs/phase_one_coin.png';

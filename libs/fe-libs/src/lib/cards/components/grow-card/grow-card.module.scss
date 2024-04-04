@@ -106,12 +106,12 @@
   .opts-container,
   .phases-container,
   .collect-monsters-container {
-    align-items: center;
     display: grid;
     justify-items: center;
   }
 
   .opts-container {
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 2%;
     width: 100%;
@@ -143,6 +143,7 @@
 
   .phases-container,
   .collect-monsters-container {
+    align-items: flex-end;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 120px;
     margin-bottom: 3%;
@@ -189,10 +190,16 @@
   .monster-full {
     grid-column: span 2;
     grid-row: 1;
+    height: 80px;
+    position: relative;
 
     @include mq.small-tablet {
       grid-column: 1;
       grid-row: 1;
+    }
+
+    @include mq.x-large-window {
+      height: -webkit-fill-available;
     }
   }
 
@@ -207,10 +214,13 @@
   }
 
   .egg-container {
-    width: 41px;
+    bottom: 20px;
+    position: absolute;
+    width: 73px;
 
     @include mq.x-large-window {
-      width: 60px;
+      bottom: 55px;
+      width: 110px;
     }
   }
 
@@ -272,7 +282,7 @@
     width: 130px;
 
     @include mq.x-large-window {
-      bottom: 90px;
+      bottom: 18px;
       width: 220px;
     }
   }

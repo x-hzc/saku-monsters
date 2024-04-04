@@ -10,7 +10,7 @@ import GrowHappinessMobile from '../../../../../assets/pngs/grow_happiness_mobil
 import GrowHappinessDesktop from '../../../../../assets/pngs/grow_happiness_desktop_hq.png';
 import AdultChu from '../../../../../assets/adult_chu.gif';
 import BabyChu from '../../../../../assets/baby_chu.gif';
-import Egg from '../../../../../assets/pngs/egg.png';
+import Egg from '../../../../../assets/gifs/egg.gif';
 import AdultShumoku from '../../../../../assets/adult_shumoku.gif';
 import AdultHowler from '../../../../../assets/adult_howler.gif';
 import AdultDatboi from '../../../../../assets/adult_datboi.gif';
