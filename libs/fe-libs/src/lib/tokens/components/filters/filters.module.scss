@@ -67,30 +67,19 @@
     align-items: center;
     gap: 10px;
   }
-  .saku-card,
-  .egg {
+  .saku-card {
+    aspect-ratio: 1 / 1;
+    background-image: url('../../../../../assets/pngs/filter-saku.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    aspect-ratio: 1 / 1;
-  }
-  .saku-card {
-    position: relative;
-    background-image: url('../../../../../assets/pngs/filter-saku.png');
-    width: 364px;
+    border-radius: 22px;
     height: 195px;
+    position: relative;
+    width: 364px;
     @include c.hover;
     &.active {
       @include c.click;
     }
-  }
-  .egg {
-    position: absolute;
-    background-image: url('libs/fe-libs/assets/pngs/egg_big.png');
-    width: 112px;
-    height: 125px;
-    right: calc(-112px / 2);
-    bottom: 50%;
-    transform: translate(0, 50%);
   }
 }
 .button {
