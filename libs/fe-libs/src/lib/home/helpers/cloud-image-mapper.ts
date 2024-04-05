@@ -5,13 +5,13 @@ import Cloud4 from '../../../../assets/pngs/cloud_4.png';
 import Cloud5 from '../../../../assets/pngs/cloud_5.png';
 import Cloud6 from '../../../../assets/pngs/cloud_6.png';
 import Cloud7 from '../../../../assets/pngs/cloud_7.png';
-import Cloud8 from '../../../../assets/pngs/cloud_8.png';
-import Cloud9 from '../../../../assets/pngs/cloud_9.png';
-import Cloud10 from '../../../../assets/pngs/cloud_10.png';
-import Cloud11 from '../../../../assets/pngs/cloud_11.png';
-import Cloud12 from '../../../../assets/pngs/cloud_12.png';
-import Cloud13 from '../../../../assets/pngs/cloud_13.png';
-import Cloud14 from '../../../../assets/pngs/cloud_14.png';
+import Cloud8 from '../../../../assets/pngs/cloud_7.png';
+import Cloud9 from '../../../../assets/pngs/cloud_6.png';
+import Cloud10 from '../../../../assets/pngs/cloud_4.png';
+import Cloud11 from '../../../../assets/pngs/cloud_8.png';
+import Cloud12 from '../../../../assets/pngs/cloud_9.png';
+import Cloud13 from '../../../../assets/pngs/cloud_5.png';
+import Cloud14 from '../../../../assets/pngs/cloud_2.png';
 
 export const CLOUD_IMAGE_MAPPER: Record<number, string> = {
   1: Cloud1,

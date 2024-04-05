@@ -24,13 +24,7 @@ export function HomePage() {
       <ParallaxProvider>
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[1]}
-          topPercentage={
-            isMaxTablet
-              ? 7
-              : isMinDesktopSmall
-              ? 8
-              : 10
-          }
+          topPercentage={isMaxTablet ? 7 : isMinDesktopSmall ? 8 : 10}
           leftPercentage={isMaxTablet ? 75 : isMinDesktopLarge ? 90 : 75}
           heightPercentage={3.5}
           widthPercentage={27.5}
@@ -39,13 +33,7 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[2]}
-          topPercentage={
-            isMaxTablet
-              ? 7
-              : isMinDesktopSmall
-              ? 9
-              : 10
-          }
+          topPercentage={isMaxTablet ? 7 : isMinDesktopSmall ? 9 : 10}
           leftPercentage={isMaxTablet ? 80 : isMinDesktopLarge ? 95 : 80}
           heightPercentage={3.5}
           widthPercentage={27.5}
