@@ -44,6 +44,7 @@
   }
 
   .content-container {
+    align-items: center;
     background-color: var(--primary-color);
     border-radius: 60px;
     bottom: 50%;
@@ -67,18 +68,19 @@
     @include mq.small-window {
       max-width: 735px;
       width: fit-content;
-      padding: 22px 45px 28px 26px;
-      height: auto;
+      padding: 22px 45px 22px 26px;
+      height: 245px;
     }
     .img-container {
       display: none;
       height: auto;
-      width: 229px;
+      width: 200px;
       @include mq.small-window {
         display: block;
       }
       img {
-        border-radius: 60px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50px;
         height: 100%;
         object-fit: contain;
         width: 100%;

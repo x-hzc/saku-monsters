@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { RoadmapSection } from '../roadmap-section/roadmap-section';
 import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
-import RoadMapImage from '../../../../../assets/pngs/rodmap-image.png';
+import DefaultRoadmapImage from '../../../../../assets/pngs/roadmap-image.png';
+import RoadmapPhaseOne from '../../../../../assets/jpgs/roadmap_1.jpg';
+import RoadmapPhaseFour from '../../../../../assets/pngs/roadmap_4.png';
 import Island from '../../../../../assets/gifs/bg_phase_three_island.gif';
 
 export function Roadmap() {
@@ -25,7 +27,7 @@ export function Roadmap() {
             title={t('roadmap.1.title')}
             description={t('roadmap.1.description')}
             contentPosition={isMinDesktopSmall ? 'left' : 'right'}
-            image={RoadMapImage}
+            image={RoadmapPhaseOne}
           />
         </div>
         <div className={styles['s2']}>
@@ -34,7 +36,7 @@ export function Roadmap() {
             title={t('roadmap.2.title')}
             description={t('roadmap.2.description')}
             contentPosition={'left'}
-            image={RoadMapImage}
+            image={DefaultRoadmapImage}
           />
         </div>
         <div className={styles['s3']}>
@@ -52,7 +54,7 @@ export function Roadmap() {
             title={t('roadmap.4.title')}
             description={t('roadmap.4.description')}
             contentPosition={isMinDesktopSmall ? 'right' : 'left'}
-            image={RoadMapImage}
+            image={RoadmapPhaseFour}
           />
         </div>
         <div className={styles['s5']}>
