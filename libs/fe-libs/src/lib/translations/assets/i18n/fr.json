@@ -55,9 +55,9 @@
     "shop-paragraph": "Visitez la boutique en ligne Saku Monsters pour ajouter des gemmes à votre compte. Vous pouvez utiliser des gemmes pour acheter des monstres Saku sur l'application mobile!",
     "grow-paragraph": "Collectionnez Saku Monsters en les faisant éclore à partir d'œufs de Saku Monsters! Il y a 150 monstres Gen 1 uniques à découvrir, chacun avec ses propres caractéristiques et capacités. Visitez le Sakulog pour découvrir chaque monstre et ses phases.",
     "collect-paragraph": "Il existe de nombreux Saku Monsters à collectionner ! Au fur et à mesure que nous élargissons le Sakuverse, de plus en plus de Saku Monsters apparaîtront avec beaucoup plus de choses amusantes à faire!",
-    "egg": "PHASE ŒUF",
-    "baby": "PHASE BÉBÉ",
-    "adult": "PHASE ADULTE"
+    "egg": "ŒUF",
+    "baby": "BÉBÉ",
+    "adult": "ADULTE"
   },
   "phase-two": {
     "phase": "PHASE 2",

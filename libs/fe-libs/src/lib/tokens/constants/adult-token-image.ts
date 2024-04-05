@@ -6,7 +6,7 @@ import Dina from '../../../../assets/adult_dina.gif';
 import Purpcat from '../../../../assets/adult_purpcat.gif';
 import Vaps from '../../../../assets/adult_vaps.gif';
 import Chu from '../../../../assets/adult_chu.gif';
-import DatBoi from '../../../../assets/adult_datboi.gif';
+import Salagon from '../../../../assets/adult_salagon.gif';
 import Soy from '../../../../assets/adult_soy.gif';
 import Beepo from '../../../../assets/adult_beepo.gif';
 import Odin from '../../../../assets/adult_odin.gif';
@@ -33,7 +33,7 @@ export const ADULT_TOKEN_IMAGE: Record<string, string> = {
   PURPCAT: Purpcat,
   VAPS: Vaps,
   CHU: Chu,
-  DATBOI: DatBoi,
+  SALAGON: Salagon,
   SOY: Soy,
   BEEPO: Beepo,
   ODIN: Odin,

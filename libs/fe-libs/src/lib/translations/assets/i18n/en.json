@@ -55,9 +55,9 @@
     "shop-paragraph": "Visit the Saku Monsters Web Shop to add Gems to your account. You can use Gems to buy Saku Monsters on the Mobile App!",
     "grow-paragraph": "Collect Saku Monsters by hatching them from Saku Monster eggs! There are 150 unique Gen 1 monsters to discover, each with their own characteristics and abilities. Visit the Sakulog to discover each monster and it's phases.",
     "collect-paragraph": "There are many Saku Monsters to collect! As we expand the Sakuverse, more and more Saku Monsters will appear with many more fun things to do!",
-    "egg": "EGG PHASE",
-    "baby": "BABY PHASE",
-    "adult": "ADULT PHASE"
+    "egg": "EGG",
+    "baby": "BABY",
+    "adult": "ADULT"
   },
   "phase-two": {
     "phase": "PHASE 2",

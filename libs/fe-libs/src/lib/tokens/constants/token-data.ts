@@ -62,9 +62,9 @@ const CHU: TokenDTO = {
   adulthood: TokenAdulthoodType.Baby,
   egg: TokenEggType.BlueEgg,
 };
-const DATBOI: TokenDTO = {
-  id: 'DATBOI',
-  name: 'Datboi',
+const SALAGON: TokenDTO = {
+  id: 'SALAGON',
+  name: 'Salagon',
   rarity: TokenRarityType.COMMON,
   adulthood: TokenAdulthoodType.Adult,
   egg: TokenEggType.BlueEgg,
@@ -192,7 +192,7 @@ export function getAllTokens(): TokenDTO[] {
     PURPCAT,
     VAPS,
     CHU,
-    DATBOI,
+    SALAGON,
     SOY,
     BEEPO,
     ODIN,

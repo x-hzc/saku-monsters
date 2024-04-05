@@ -6,7 +6,7 @@ import Dina from '../../../../assets/baby_dina.gif';
 import Purpcat from '../../../../assets/baby_purpcat.gif';
 import Vaps from '../../../../assets/baby_vaps.gif';
 import Chu from '../../../../assets/baby_chu.gif';
-import DatBoi from '../../../../assets/baby_datboi.gif';
+import Salagon from '../../../../assets/baby_salagon.gif';
 import Soy from '../../../../assets/baby_soy.gif';
 import Beepo from '../../../../assets/baby_beepo.gif';
 import Odin from '../../../../assets/baby_odin.gif';
@@ -33,7 +33,7 @@ export const BABY_TOKEN_IMAGE: Record<string, string> = {
   PURPCAT: Purpcat,
   VAPS: Vaps,
   CHU: Chu,
-  DATBOI: DatBoi,
+  SALAGON: Salagon,
   SOY: Soy,
   BEEPO: Beepo,
   ODIN: Odin,

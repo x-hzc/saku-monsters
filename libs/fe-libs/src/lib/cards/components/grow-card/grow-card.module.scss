@@ -209,33 +209,39 @@
 
   .egg-container {
     bottom: 20px;
+    height: 73px;
     position: absolute;
     width: 73px;
 
     @include mq.x-large-window {
       bottom: 55px;
+      height: 110px;
       width: 110px;
     }
   }
 
   .baby-container {
     bottom: -16px;
+    height: 190px;
     position: absolute;
     width: 190px;
 
     @include mq.x-large-window {
       bottom: 5px;
+      height: 270px;
       width: 270px;
     }
   }
 
   .adult-container {
     bottom: -4px;
+    height: 178px;
     position: absolute;
     width: 178px;
 
     @include mq.x-large-window {
       bottom: 17px;
+      height: 260px;
       width: 260px;
     }
   }
@@ -272,33 +278,39 @@
   }
 
   .shumoku-container {
+    height: 130px;
     position: absolute;
     width: 130px;
 
     @include mq.x-large-window {
       bottom: 18px;
+      height: 220px;
       width: 220px;
     }
   }
 
   .howler-container {
     bottom: 10px;
+    height: 110px;
     position: absolute;
     width: 110px;
 
     @include mq.x-large-window {
       bottom: 40px;
+      height: 160px;
       width: 160px;
     }
   }
 
   .salagon-container {
     bottom: 5px;
+    height: 140px;
     position: absolute;
     width: 140px;
 
     @include mq.x-large-window {
       bottom: 30px;
+      height: 220px;
       width: 220px;
     }
   }

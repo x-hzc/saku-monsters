@@ -11,7 +11,7 @@ import BabyChu from '../../../../../assets/baby_chu.gif';
 import Egg from '../../../../../assets/gifs/egg.gif';
 import AdultShumoku from '../../../../../assets/adult_shumoku.gif';
 import AdultHowler from '../../../../../assets/adult_howler.gif';
-import AdultSalagon from '../../../../../assets/adult_datboi.gif';
+import AdultSalagon from '../../../../../assets/adult_salagon.gif';
 
 export function GrowCard() {
   const { i18n, t } = useTranslation();
