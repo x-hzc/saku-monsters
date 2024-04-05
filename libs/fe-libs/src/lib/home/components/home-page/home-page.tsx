@@ -98,7 +98,7 @@ export function HomePage() {
           leftPercentage={0}
           heightPercentage={4.3}
           widthPercentage={100}
-          zIndex={2}
+          zIndex={3}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[9]}
