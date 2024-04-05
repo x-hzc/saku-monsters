@@ -1,102 +1,118 @@
+@use 'scrollbar' as s;
 @use 'cursors' as c;
+
 .container {
   display: flex;
+
   &.search-open {
     margin-left: auto;
   }
 }
+
 .icon-container {
   @include c.hover;
-  display: flex;
   align-items: center;
-  padding: 20px 21px 21px;
-  color: var(--primary-color);
-  border-radius: 50%;
   background-color: var(--menu-bg-color);
+  border-radius: 50%;
   border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  padding: 20px 21px 21px;
 }
 
 .content {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 105%;
-  width: 100vw;
+  @include s.scrollbar(8px, #c4c4c4, rgba(196, 196, 196, 0.5));
   background: transparent linear-gradient(180deg, #5baffd 0%, #e1f1d0 100%) 0 0
     no-repeat padding-box;
   color: var(--primary-color);
+  display: none;
+  height: 100vh;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 36px 28px 38px 26px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+
   &.open {
     display: flex;
     flex-direction: column;
     gap: 65px;
     z-index: 100;
   }
+
   .top-content {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 10px 0;
   }
+
   .close-btn {
+    --btn-padding-x: 22px;
+    --btn-padding-y: 22px;
     background: #70a9dd 0 0 no-repeat padding-box;
     border-radius: 50%;
     border-color: var(--primary-color);
     border: 3px solid;
-    --btn-padding-x: 22px;
-    --btn-padding-y: 22px;
   }
+
   .links {
+    align-items: center;
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 25px;
-    color: var(--primary-color);
 
     .title {
-      text-transform: lowercase;
       font-family: var(--primary-font-family);
       font-size: 15px;
       letter-spacing: 0;
+      text-transform: lowercase;
     }
+
     .link {
       @include c.hover;
-      text-align: center;
-      text-transform: uppercase;
       font-family: var(--secondary-font-family);
       font-size: 36px;
-      line-height: 49px;
       letter-spacing: 0;
+      line-height: 49px;
+      text-align: center;
+      text-transform: uppercase;
     }
+
     .download {
-      transform: matrix(1, -0.02, 0.02, 1, 0, 0);
       background-color: var(--phase-two-bg-title-color);
       border-radius: 17px;
       padding: 0 30px;
+      transform: matrix(1, -0.02, 0.02, 1, 0, 0);
     }
   }
+
   .language {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     .text {
       color: var(--black-900);
       font-family: var(--secondary-font-family);
       font-size: 23px;
-      line-height: 49px;
       letter-spacing: 0;
+      line-height: 49px;
     }
   }
+
   .footer {
-    margin-top: auto;
+    align-items: center;
     color: var(--black-900);
-    font-family: var(--secondary-font-family);
-    font-size: 15px;
-    line-height: 29px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-family: var(--secondary-font-family);
+    font-size: 15px;
     gap: 10px;
+    line-height: 29px;
+    margin-top: auto;
   }
 }
