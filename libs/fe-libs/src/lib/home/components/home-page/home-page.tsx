@@ -67,7 +67,7 @@ export function HomePage() {
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[4]}
           topPercentage={isMaxTablet ? 7.7 : isMinDesktopSmall ? 12.7 : 11}
-          leftPercentage={isMaxTablet ? 3 : isMinDesktopLarge ? 20 : -5}
+          leftPercentage={isMaxTablet ? 3 : isMinDesktopLarge ? 25 : 20}
           heightPercentage={4.3}
           widthPercentage={29.5}
           traslateX={true}
@@ -76,24 +76,24 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[5]}
-          topPercentage={isMaxTablet ? 8 : isMinDesktopSmall ? 18 : 22}
-          leftPercentage={isMaxTablet ? 25 : isMinDesktopLarge ? 105 : 0}
+          topPercentage={isMaxTablet ? 8 : isMinDesktopLarge ? 18 : 20}
+          leftPercentage={isMaxTablet ? 25 : isMinDesktopLarge ? 105 : 40}
           heightPercentage={4.3}
           widthPercentage={29.5}
           traslateX={true}
-          parallaxSpeed={0.04}
-          zIndex={isMaxTablet ? 3 : 10}
+          parallaxSpeed={isMaxTablet ? 0.04 : isMinDesktopLarge ? 0.03 : 0.05}
+          zIndex={3}
           className={styles['opacity']}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[6]}
-          topPercentage={isMaxTablet ? 9 : isMinDesktopSmall ? 19 : 23}
-          leftPercentage={isMaxTablet ? 35 : isMinDesktopLarge ? 85 : 5}
+          topPercentage={isMaxTablet ? 9 : isMinDesktopLarge ? 18 : 20}
+          leftPercentage={isMaxTablet ? 35 : isMinDesktopLarge ? 120 : 0}
           heightPercentage={4.3}
           widthPercentage={29.5}
           traslateX={true}
-          parallaxSpeed={0.04}
-          zIndex={isMaxTablet ? 3 : 10}
+          parallaxSpeed={isMinDesktopLarge ? 0.05 : 0.08}
+          zIndex={3}
           className={styles['opacity']}
         />
         <Cloud
@@ -129,23 +129,24 @@ export function HomePage() {
           heightPercentage={3.1}
           widthPercentage={isMaxTablet ? 25 : 22}
           traslateX={true}
-          parallaxSpeed={0.05}
+          parallaxSpeed={0.06}
           zIndex={3}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[11]}
-          topPercentage={isMaxTablet ? 25.5 : isMinDesktopSmall ? 31 : 32.5}
-          leftPercentage={isMaxTablet ? 95 : 100}
+          topPercentage={isMaxTablet ? 25.5 : isMinDesktopLarge ? 30.5 : 28.8}
+          leftPercentage={isMaxTablet ? 95 : isMinDesktopLarge ? 125 : 95}
           heightPercentage={1.3}
           widthPercentage={isMaxTablet ? 25 : 19}
           traslateX={true}
           parallaxSpeed={0.02}
           zIndex={isMaxTablet ? 3 : 4}
+          className={styles['opacity']}
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[12]}
-          topPercentage={isMaxTablet ? 31 : isMinDesktopSmall ? 27 : 31}
-          leftPercentage={-5}
+          topPercentage={isMaxTablet ? 31 : isMinDesktopLarge ? 27 : 31}
+          leftPercentage={isMaxTablet ? 30 : isMinDesktopLarge ? 22 : 24}
           heightPercentage={3.9}
           widthPercentage={22.2}
           traslateX={true}
@@ -154,12 +155,12 @@ export function HomePage() {
         />
         <Cloud
           imgSrc={CLOUD_IMAGE_MAPPER[13]}
-          topPercentage={isMaxTablet ? 34 : isMinDesktopSmall ? 31 : 33}
-          leftPercentage={77}
+          topPercentage={isMaxTablet ? 34 : isMinDesktopSmall ? 26 : 33}
+          leftPercentage={isMaxTablet ? 34 : isMinDesktopSmall ? 20 : 20}
           heightPercentage={5.1}
           widthPercentage={35.3}
           traslateX={true}
-          parallaxSpeed={0.05}
+          parallaxSpeed={0.07}
           zIndex={3}
         />
         <Cloud
@@ -169,7 +170,7 @@ export function HomePage() {
           heightPercentage={4.23}
           widthPercentage={34.4}
           traslateX={true}
-          parallaxSpeed={0.03}
+          parallaxSpeed={isMaxTablet ? 0.02 : isMinDesktopLarge ? 0.04 : 0.03}
           zIndex={3}
         />
         <div
