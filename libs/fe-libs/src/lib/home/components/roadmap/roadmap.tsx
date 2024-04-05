@@ -2,6 +2,7 @@ import styles from './roadmap.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
 import { RoadmapSection } from '../roadmap-section/roadmap-section';
+import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
 import RoadMapImage from '../../../../../assets/pngs/rodmap-image.png';
 import Island from '../../../../../assets/gifs/bg_phase_three_island.gif';
 
@@ -12,7 +13,10 @@ export function Roadmap() {
     <div className={styles['container']}>
       <div className={styles['board']}>
         <div className={styles['text']}>{t('roadmap.stream')}</div>
-        <div className={styles['phase']}>{t('roadmap.phase')}</div>
+        <div className={styles['phase']}>
+          <span>{t('roadmap.phase')}</span>
+          <AllInclusiveIcon />
+        </div>
       </div>
       <div className={styles['road']}>
         <div className={styles['s1']}>

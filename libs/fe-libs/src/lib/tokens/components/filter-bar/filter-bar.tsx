@@ -1,10 +1,10 @@
 import styles from './filter-bar.module.scss';
-import { Button } from '../../../ui/components/button/button';
-import { useTokensFacade } from '../../hooks/use-tokens-facade';
 import { useTranslation } from 'react-i18next';
-import SearchIcon from '../../../../../assets/icons/search.svg';
+import { useTokensFacade } from '../../hooks/use-tokens-facade';
+import { Button } from '../../../ui/components/button/button';
 import { TokenEggType } from '@saku-monsters/shared';
 import { TOKEN_EGG_COLOR } from '../../helpers/token-color-mapper';
+import SearchIcon from '../../../../../assets/icons/search.svg';
 
 export function FilterBar() {
   const { filteredTokens, setSearchTerm, toggleEggFilter, eggFilter, searchTerm } =

@@ -19,7 +19,6 @@
     "download": "Télécharger",
     "twitter": "Twitter",
     "language": "Langue"
-
   },
   "landing": {
     "saku": "Saku",
@@ -51,7 +50,7 @@
   },
   "grow-card": {
     "shop": "BOUTIQUE",
-    "grow": "CROISSANCE",
+    "grow": "GRANDIR",
     "collect": "COLLECTER",
     "shop-paragraph": "Visitez la boutique en ligne Saku Monsters pour ajouter des gemmes à votre compte. Vous pouvez utiliser des gemmes pour acheter des monstres Saku sur l'application mobile!",
     "grow-paragraph": "Collectionnez Saku Monsters en les faisant éclore à partir d'œufs de Saku Monsters! Il y a 150 monstres Gen 1 uniques à découvrir, chacun avec ses propres caractéristiques et capacités. Visitez le Sakulog pour découvrir chaque monstre et ses phases.",
@@ -94,7 +93,7 @@
     "golden": "Oeuf D'or"
   },
   "roadmap": {
-    "phase": "PHASE 4 - ∞",
+    "phase": "PHASE",
     "stream": "Le flux sans fin",
     "1": {
       "title": "Concours de robinetterie aux œufs",

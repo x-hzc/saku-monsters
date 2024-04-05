@@ -14,7 +14,7 @@ import { Button } from '../../../ui/components/button/button';
 
 export function PhaseOne() {
   const { t } = useTranslation();
-  const { goToAppleSakuMonsters } = useRouter();
+  const { goToInventory, goToAppleSakuMonsters } = useRouter();
 
   return (
     <div className={styles['container']}>
@@ -67,7 +67,7 @@ export function PhaseOne() {
           </div>
         </div>
         <div className={styles['bg-green-c']}>
-          <div className={styles['arrow-container']}>
+          <div className={styles['arrow-container']} onClick={goToInventory}>
             <ArrowForwardIosIcon />
           </div>
           <div className={styles['phone-container']}>
