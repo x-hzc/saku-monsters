@@ -124,7 +124,7 @@
   top: 63%;
   transition: all ease-in-out 300ms;
   width: 150%;
-  z-index: 1;
+  z-index: 2;
 
   @include mq.large-handset {
     height: 66%;
@@ -150,6 +150,7 @@
   @include mq.medium-tablet {
     height: 66%;
     top: 62%;
+    z-index: 1;
   }
 }
 

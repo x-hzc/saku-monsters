@@ -1,9 +1,8 @@
 import styles from './roadmap-section.module.scss';
-import cn from 'classnames';
 import { CSSProperties, useState } from 'react';
-import classNames from 'classnames';
 import { ROADMAP_SECTION_COLOR_MAPPER } from '../../helpers/roadmap-section-color-mapper';
 import { useDeviceType } from '../../../shared/hooks/use-device-type';
+import cn from 'classnames';
 
 export interface RoadmapSectionProps {
   number: number;
@@ -23,9 +22,10 @@ export function RoadmapSection(props: RoadmapSectionProps) {
     image = '',
     className = '',
   } = props;
-  const [isOpen, setIsOpen] = useState(number <= 4);
-  const [isRead, setIsRead] = useState(number <= 4);
-  const { isMinDesktopSmall } = useDeviceType();
+  const { isMobile, isMinDesktopSmall } = useDeviceType();
+  const [isOpen, setIsOpen] = useState(number <= 4 && !isMobile);
+  const [isRead, setIsRead] = useState(number <= 4 && !isMobile);
+
   function getContentPosition(): CSSProperties {
     if (isMinDesktopSmall) {
       return contentPosition === 'left'
@@ -76,7 +76,7 @@ export function RoadmapSection(props: RoadmapSectionProps) {
         {number}
       </div>
       <div
-        className={classNames(styles['content-container'], {
+        className={cn(styles['content-container'], {
           [styles['open']]: isOpen,
         })}
         style={getContentPosition()}
