@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import LogoKanji from '../../../../../assets/icons/logo_kanji.svg';
 import AdultIcon from '../../../../../assets/icons/adult_icon.svg';
 import BabyIcon from '../../../../../assets/icons/baby_icon.svg';
+import SakuCard from '../../../../../assets/pngs/filter-saku.png';
 import { useRouter } from '../../../routing/hooks/use-router';
 import { useTokensFacade } from '../../hooks/use-tokens-facade';
 import {
@@ -179,7 +180,9 @@ export function Filters() {
         <div className={styles['title']}>
           {t('filter.store')} <LogoKanji />
         </div>
-        <div className={styles['saku-card']} onClick={goToAppleSakuMonsters} />
+        <div className={styles['saku-card-container']} onClick={goToAppleSakuMonsters}>
+          <img src={SakuCard} alt="saku-card" />
+        </div>
       </div>
     </div>
   );

@@ -65,13 +65,6 @@
     flex-direction: column;
     gap: 25px;
 
-    .title {
-      font-family: var(--primary-font-family);
-      font-size: 15px;
-      letter-spacing: 0;
-      text-transform: lowercase;
-    }
-
     .link {
       @include c.hover;
       font-family: var(--secondary-font-family);

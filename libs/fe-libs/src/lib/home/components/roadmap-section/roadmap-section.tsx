@@ -36,8 +36,8 @@ export function RoadmapSection(props: RoadmapSectionProps) {
     }
 
     return {
-      right: contentPosition === 'right' ? '-140%' : undefined,
-      left: contentPosition === 'left' ? '-90%' : undefined,
+      right: contentPosition === 'right' ? '-100%' : undefined,
+      left: contentPosition === 'left' ? '-70%' : undefined,
       top: '-70%',
     };
   }
@@ -47,21 +47,24 @@ export function RoadmapSection(props: RoadmapSectionProps) {
       <div
         className={cn(styles['number'], {
           [styles['rotated']]: number === 1,
-          [styles['open']]: !isMinDesktopSmall && isOpen,
+          // [styles['open']]: !isMinDesktopSmall && isOpen,
+          [styles['open']]: isOpen,
         })}
-        onMouseEnter={() => {
-          setIsOpen(true);
-          setIsRead(true);
-        }}
-        onMouseLeave={() => {
-          setIsOpen(false);
-        }}
+        // These two events are temporarily disabled
+        // to validate operation on iPhones
+        // onMouseEnter={() => {
+        //   setIsOpen(true);
+        //   setIsRead(true);
+        // }}
+        // onMouseLeave={() => {
+        //   setIsOpen(false);
+        // }}
         onClick={(ev) => {
-          if (isMinDesktopSmall) {
-            return;
-          }
+          // if (isMinDesktopSmall) {
+          //   return;
+          // }
           ev.stopPropagation();
-          setIsRead(true);
+          setIsRead(!isRead);
           setIsOpen(!isOpen);
         }}
         style={
@@ -82,7 +85,7 @@ export function RoadmapSection(props: RoadmapSectionProps) {
         style={getContentPosition()}
       >
         {image && image !== '' && (
-          <div className={styles['img-container']}>
+          <div className={styles[`img-container-${number}`]}>
             <img src={image} alt={`section-${number}`} />
           </div>
         )}

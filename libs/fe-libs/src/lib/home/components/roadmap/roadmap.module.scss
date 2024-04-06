@@ -112,6 +112,7 @@
 
   .s2 {
     margin: 11% 54.7% 0 auto;
+
     @include mq.medium-tablet {
       margin: 11% auto 0 70%;
     }
@@ -119,6 +120,7 @@
 
   .s3 {
     margin: 11% 14.7% 0 auto;
+
     @include mq.medium-tablet {
       margin: 10% 75.3% 0 auto;
     }
@@ -126,6 +128,7 @@
 
   .s4 {
     margin: 28.5% 60% 0 auto;
+
     @include mq.medium-tablet {
       margin: 9% auto 0 40.5%;
     }
@@ -133,6 +136,7 @@
 
   .s5 {
     margin: 19% 29.5% 0 auto;
+
     @include mq.medium-tablet {
       margin: 13% auto 0 71.5%;
     }
@@ -140,6 +144,7 @@
 
   .s6 {
     margin: 48% 12.9% 0 auto;
+    
     @include mq.medium-tablet {
       margin: 9% 78.7% 10% auto;
     }

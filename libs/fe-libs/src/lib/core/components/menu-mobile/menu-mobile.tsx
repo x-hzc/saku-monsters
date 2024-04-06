@@ -50,7 +50,6 @@ export function MenuMobile({ className }: MenuMobileProps) {
           </Button>
         </div>
         <div className={styles['links']}>
-          <div className={styles['title']}>{t('navigation.menu')}</div>
           <div
             className={styles['link']}
             onClick={(ev) => {
@@ -59,7 +58,7 @@ export function MenuMobile({ className }: MenuMobileProps) {
               goToMarketplace();
             }}
           >
-            {t('navigation.marketplace')}
+            {t('navigation.shop')}
           </div>
           <div
             className={styles['link']}
