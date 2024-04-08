@@ -35,6 +35,7 @@
 
   img,
   svg {
+    aspect-ratio: 1 / 1;
     height: 100%;
     width: 100%;
   }
@@ -197,7 +198,12 @@
 
   .bg-intro-egg-container {
     height: 317px;
+    max-width: 286px;
     padding-top: 20px;
+
+    @mixin flexible-mobile {
+      max-width: 90%;
+    }
 
     @include mq.medium-tablet {
       height: auto;
